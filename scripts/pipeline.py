@@ -103,7 +103,10 @@ def progress():
 
 def ingest(source_dir, inventory):
     source_dir = source_dir.resolve()
-    rows = list(csv.DictReader(inventory.open(encoding="utf-8-sig")))
+    previous_path = ROOT / "catalog/episodes.json"
+    previous = {item["source_file"]: item for item in read_json(previous_path)["episodes"] if "source_file" in item} if previous_path.exists() else {}
+    with inventory.open(encoding="utf-8-sig", newline="") as inventory_file:
+        rows = list(csv.DictReader(inventory_file))
     filenames = [r["文件名"] for r in rows]
     if len(filenames) != len(set(filenames)):
         raise ValueError("inventory contains duplicate filenames")
@@ -119,12 +122,15 @@ def ingest(source_dir, inventory):
             raise ValueError("source hash differs from read-only audit: " + filename)
         txt.read_text(encoding="utf-8", errors="strict")
         cues = vtt_cues(vtt)
+        vtt_hash = sha(vtt)
+        if filename in previous and previous[filename].get("vtt_sha256") not in {None, vtt_hash}:
+            raise ValueError("VTT changed since previous intake; do not reset the baseline: " + filename)
         items.append({
             "id": PILOT.get(filename, "ep-" + hashlib.sha256(filename.encode()).hexdigest()[:12]),
             "title_en": Path(filename).stem, "source_file": filename,
             "kind": KINDS[row["类型初筛"]], "guest_series": row["Guest Series"] == "True",
             "word_count": int(row["英文词数"]), "source_sha256": row["SHA256"],
-            "vtt_sha256": sha(vtt), "source_index_date": row["索引日期_未独立核实"] or None,
+            "vtt_sha256": vtt_hash, "source_index_date": row["索引日期_未独立核实"] or None,
             "source_provider": row["来源_来自索引"], "source_url": None, "video_id": None,
             "explicit_excerpt": row["明确AMA节选"] == "True",
             "timeline": {"start_seconds": cues[0]["start"], "end_seconds": cues[-1]["end"], "provenance": "local_vtt_unverified"},
@@ -245,13 +251,18 @@ def status():
     p = progress()["episodes"]
     items = catalog()["episodes"]
     long = [i for i in items if i["kind"] == "long_episode"]
-    counts = dict(collections.Counter(p.get(i["id"], {}).get("status", "pending") for i in long))
-    active = []
+    counts, active = collections.Counter(), []
     for item in long:
         row = p.get(item["id"], {})
-        if row.get("status", "pending") != "pending":
-            active.append({"id": item["id"], "title": item["title_en"], "status": row["status"], "metrics": article_metrics(item["id"])})
-    return {"long_episode_candidates": len(long), "states": counts, "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "active": active, "publication_authorized": False}
+        recorded = row.get("status", "pending")
+        metrics = article_metrics(item["id"]) if recorded != "pending" else None
+        expected = row.get("metrics", {}).get("sha256")
+        stale = recorded in {"draft_complete", "reviewed"} and expected is not None and metrics.get("sha256") != expected
+        effective = "needs_revision" if stale else recorded
+        counts[effective] += 1
+        if recorded != "pending":
+            active.append({"id": item["id"], "title": item["title_en"], "status": effective, "recorded_status": recorded, "verification_stale": stale, "metrics": metrics})
+    return {"long_episode_candidates": len(long), "states": dict(counts), "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "active": active, "publication_authorized": False}
 
 
 def public_path(name):

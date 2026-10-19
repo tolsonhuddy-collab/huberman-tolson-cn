@@ -37,6 +37,8 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 - `private/articles/{id}.md`：可选 H1 和引言，H2 划分自然章节；保留段落、H3、粗体、引用、列表及 http(s) 链接。原始 HTML 一律转义。开头完整的 `---` frontmatter 被剥离，里面的私有来源路径不会进入正文。
 - `private/metadata/{id}.json`：以下字段。只有正文存在且进度为 `draft_complete` 或 `reviewed` 时，首页才提供文章链接。`draft_complete` 明确显示“完整初稿 · 待审核”，不能据此当作审核通过。
 
+内容流水线的 `record` 操作会在进度记录中写入 `metrics.sha256`，把状态绑定到当时 Markdown 文件的完整字节。网站构建会核对这项哈希：`draft_complete` 或 `reviewed` 的稿件若已被修改，本次构建显示“待修订”并撤下文章链接，其他稿件不受影响，构建器不修改原始 `progress.json`。未带 `metrics.sha256` 的既有或虚构输入仍按原状态处理，以兼容旧记录和演示测试；正式流水线应使用带哈希的记录。
+
 ```json
 {
   "id": "episode-slug",
@@ -70,6 +72,6 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 python3 -m unittest discover -s tests -p 'test_site.py' -v
 ```
 
-测试覆盖两篇不同节目各自的标题、来源与时间戳，未知链接保持缺失，章节错配失败，未完成稿不出链接，AMA 节选和其他类别标记，目录锚点及本地资源，HTML/URL 转义，frontmatter 隐藏，私有路径边界，演示与私有全文隔离，以及目录页没有文章控件时 JavaScript 仍可运行。
+测试覆盖两篇不同节目各自的标题、来源与时间戳，未知链接保持缺失，章节错配失败，哈希失配的完成稿或已审核稿自动显示待修订且不改写源记录，未完成稿不出链接，AMA 节选和其他类别标记，目录锚点及本地资源，HTML/URL 转义，frontmatter 隐藏，私有路径边界，演示与私有全文隔离，以及目录页没有文章控件时 JavaScript 仍可运行。
 
 程序测试不替代内容验收。是否覆盖原节目前中后、论证与例子是否完整、转写疑点是否标注、双人访谈的发言人是否清楚，仍由逐篇编辑记录判断。网站不会把这些编辑判断自动设为通过。

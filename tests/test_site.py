@@ -1,5 +1,6 @@
 """Static site behavior and publication-boundary tests; no network or packages."""
 import importlib.util
+import hashlib
 from html.parser import HTMLParser
 import json
 from pathlib import Path
@@ -220,6 +221,33 @@ class SiteTests(unittest.TestCase):
         self.assertEqual(manifest["article_count"], 0)
         self.assertNotIn('href="episodes/episode-a.html"', html)
         self.assertIn("稿件文件缺失", html)
+
+    def test_hash_mismatch_downgrades_current_build_only_and_keeps_other_articles(self):
+        for status in ("draft_complete", "reviewed"):
+            with self.subTest(status=status):
+                self.inputs()
+                path_a = self.root / "private/articles/episode-a.md"
+                path_b = self.root / "private/articles/episode-b.md"
+                self.write_json("private/progress.json", {"episodes": {
+                    "episode-a": {"status": status, "metrics": {"sha256": hashlib.sha256(path_a.read_bytes()).hexdigest()}},
+                    "episode-b": {"status": "reviewed", "metrics": {"sha256": hashlib.sha256(path_b.read_bytes()).hexdigest()}},
+                }})
+                progress_path = self.root / "private/progress.json"
+                original_progress = progress_path.read_bytes()
+                path_a.write_text(path_a.read_text() + "\n稿件在记录状态后被修改。\n")
+                _, progress, _, articles = site.read_private(self.root)
+                self.assertEqual(progress["episode-a"]["status"], "needs_revision")
+                self.assertEqual(progress["episode-b"]["status"], "reviewed")
+                self.assertNotIn("episode-a", articles)
+                self.assertIn("episode-b", articles)
+                manifest = self.private_build()
+                html = (self.root / "private/site/index.html").read_text()
+                self.assertNotIn('href="episodes/episode-a.html"', html)
+                self.assertFalse((self.root / "private/site/episodes/episode-a.html").exists())
+                self.assertIn('href="episodes/episode-b.html"', html)
+                self.assertIn("待修订", html)
+                self.assertEqual(manifest["article_count"], 1)
+                self.assertEqual(progress_path.read_bytes(), original_progress)
 
     def test_numbered_headings_display_once_and_keep_raw_metadata_matching(self):
         self.inputs()

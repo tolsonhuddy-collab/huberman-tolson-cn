@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+import hashlib
 from html import escape
 import json
 import math
@@ -205,9 +206,17 @@ def read_private(root: Path) -> tuple[list[dict], dict, dict, dict]:
                 raise ValueError(f"Metadata ID mismatch: {episode_id}")
             metadata[episode_id] = meta
         if state.get("status") in READY and md_path.is_file():
+            md_bytes = md_path.read_bytes()
+            metrics = state.get("metrics")
+            recorded_sha = metrics.get("sha256") if isinstance(metrics, dict) else None
+            if recorded_sha is not None and recorded_sha != hashlib.sha256(md_bytes).hexdigest():
+                # A recorded review applies to one exact file version. Downgrade
+                # this build's state only; the source progress file stays read-only.
+                progress[episode_id] = {**state, "status": "needs_revision"}
+                continue
             if episode_id not in metadata:
                 raise ValueError(f"Completed article lacks metadata: {episode_id}")
-            articles[episode_id] = md_path.read_text(encoding="utf-8")
+            articles[episode_id] = md_bytes.decode("utf-8")
     return episodes, progress, metadata, articles
 
 

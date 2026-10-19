@@ -1,5 +1,6 @@
 """Boundary tests: source immutability, resumability and publication isolation."""
 import hashlib
+import csv
 import importlib.util
 import json
 import tempfile
@@ -42,6 +43,8 @@ class PipelineTests(unittest.TestCase):
         independent_checks = {k: True for k in ["beginning", "middle", "end", "speaker_attribution", "uncertainty_preserved", "examples_retained", "natural_prose"]}
         p.write_json(self.root / "private/reviews/test.independent-review.json", {"review_kind": "independent_editorial_review", "verdict": "pass", "source_read_in_full": True, "checks": independent_checks, "article_sha256": p.sha(article)})
         article.write_text(article.read_text() + "改动")
+        self.assertEqual(p.status()["active"][0]["status"], "needs_revision")
+        self.assertTrue(p.status()["active"][0]["verification_stale"])
         with self.assertRaisesRegex(ValueError, "changed since"):
             p.record("test", "reviewed", "stale review")
 
@@ -76,6 +79,28 @@ class PipelineTests(unittest.TestCase):
         (self.root / "link.txt").symlink_to(target)
         with self.assertRaises(ValueError):
             p.safe_source(self.root, "link.txt")
+
+    def test_reingest_cannot_silently_reset_changed_subtitle_baseline(self):
+        source = self.root / "input/txt"
+        vtt_dir = source.parent / "vtt"
+        source.mkdir(parents=True)
+        vtt_dir.mkdir()
+        txt = source / "Test.txt"
+        txt.write_text("source unchanged")
+        vtt = vtt_dir / "Test.vtt"
+        vtt.write_text("WEBVTT\n\n00:00:00.000 --> 00:00:01.000\nfirst version\n")
+        audit = self.root / "audit.csv"
+        row = {"文件名": "Test.txt", "SHA256": p.sha(txt), "类型初筛": "常规长节目/Guest Series 候选", "Guest Series": "False", "英文词数": "2", "索引日期_未独立核实": "", "来源_来自索引": "synthetic", "明确AMA节选": "False"}
+        with audit.open("w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=list(row))
+            writer.writeheader()
+            writer.writerow(row)
+        p.ingest(source, audit)
+        baseline = (self.root / "catalog/episodes.json").read_bytes()
+        vtt.write_text(vtt.read_text().replace("first version", "changed subtitle"))
+        with self.assertRaisesRegex(ValueError, "do not reset the baseline"):
+            p.ingest(source, audit)
+        self.assertEqual((self.root / "catalog/episodes.json").read_bytes(), baseline)
 
     def test_code_path_allowlist_excludes_rendered_fulltext(self):
         for path in ["private/articles/a.md", "dist/index.html", "content/article_zh.md", ".openai/hosting.json", ".env", "web/../../private/a.md", "web/photo.jpg"]:
