@@ -69,7 +69,9 @@ def seconds(value):
 
 def vtt_cues(path):
     cues = []
-    for block in re.split(r"\n\s*\n", path.read_text(encoding="utf-8").replace("\r\n", "\n")):
+    # A whitespace-only payload line can precede more text in the same cue.
+    # Only an actually empty line separates cue blocks in these source files.
+    for block in re.split(r"\n\n+", path.read_text(encoding="utf-8").replace("\r\n", "\n")):
         lines = block.splitlines()
         for index, line in enumerate(lines):
             match = STAMP.match(line)

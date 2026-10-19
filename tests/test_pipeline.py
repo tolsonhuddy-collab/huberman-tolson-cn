@@ -80,6 +80,34 @@ class PipelineTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             p.safe_source(self.root, "link.txt")
 
+    def test_vtt_whitespace_payload_line_does_not_drop_following_text(self):
+        source = self.root / "input/txt"
+        vtt_dir = source.parent / "vtt"
+        source.mkdir(parents=True)
+        vtt_dir.mkdir()
+        txt = source / "Test.txt"
+        txt.write_text("Welcome to the podcast. [Music]")
+        vtt = vtt_dir / "Test.vtt"
+        payload = ("WEBVTT\n\n00:00:00.320 --> 00:00:02.149 align:start position:0%\n \n"
+                   "Welcome<00:00:00.500><c> to the podcast.</c>\n\n"
+                   "00:00:02.149 --> 00:00:03.000\n \n\n"
+                   "00:00:03.000 --> 00:00:04.000\n \n[Music]\n")
+        vtt.write_bytes(payload.replace("\n", "\r\n").encode())
+        before = (txt.read_bytes(), vtt.read_bytes())
+        cues = p.vtt_cues(vtt)
+        self.assertEqual([c["text"] for c in cues], ["Welcome to the podcast.", "", "[Music]"])
+        self.assertEqual([(c["start"], c["end"]) for c in cues], [(0.32, 2.149), (2.149, 3.0), (3.0, 4.0)])
+        p.write_json(self.root / "private/local-config.json", {"source_dir": str(source)})
+        p.write_json(self.root / "catalog/episodes.json", {"episodes": [{"id": "test", "kind": "long_episode", "source_file": "Test.txt", "source_sha256": p.sha(txt), "vtt_sha256": p.sha(vtt)}]})
+        result = p.prepare("test", max_words=4)
+        self.assertEqual(result["cue_count"], 3)
+        chunks = "".join((self.root / "private/chunks/test" / c["file"]).read_text() for c in result["chunks"])
+        self.assertIn("[0.320–2.149] Welcome to the podcast.", chunks)
+        self.assertIn("[2.149–3.000] \n", chunks)
+        self.assertIn("[3.000–4.000] [Music]", chunks)
+        self.assertEqual(before, (txt.read_bytes(), vtt.read_bytes()))
+        self.assertEqual(p.progress()["episodes"]["test"]["status"], "pending")
+
     def test_reingest_cannot_silently_reset_changed_subtitle_baseline(self):
         source = self.root / "input/txt"
         vtt_dir = source.parent / "vtt"
