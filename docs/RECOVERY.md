@@ -10,7 +10,7 @@
 
 当前审核总数和建议下一批见 `docs/PROGRESS.md` 与本机 `private/HANDOFF.json`。每篇依次记录真实写作、完整初稿、必要修订与独立全文审核通过；不能以准备分块或作者完成通知直接写入 reviewed。恢复时先查看最新 progress，避免重复派稿。正式选题前查看目录，避免将 Essentials 与长版同时生产或以索引日期冒充原版日期。Guest Series 的篇幅可能显著更长，应单独估量。
 
-本轮恢复点为 `private/HANDOFF.json`，其中记录实际审核总数、同一 Library 文件的版本与哈希、来源完整性、代码提交及待核事项。官方身份与封面证据在本机 `private/reports/homepage-cover-evidence-*.json`；下载尺寸、实际图片检查与 SHA 另行保存，不能把候选 URL 当作像素已验收。第一篇已恢复此前核实的视频身份并核对 15 个本地 cue 起点；其他已核官方页面可提供来源链接，原音及字幕偏移仍须另核。见 `docs/SITE_ACCEPTANCE.md`。
+本轮恢复点为 `private/HANDOFF.json`，其中记录实际审核总数、同一 Library 文件的版本与哈希、来源完整性、代码提交及待核事项。当前汇总在本机 `private/reports/current-source-and-cover-registry.json`，私有预览包内另附 `source-registry.json`，只含源文件名、哈希、官方链接及封面证据。历史官方身份与封面证据保留在本机 `private/reports/homepage-cover-evidence-*.json`；下载尺寸、实际图片检查与 SHA 另行保存，不能把候选 URL 当作像素已验收。第一篇已恢复此前核实的视频身份并核对 15 个本地 cue 起点；其他已核官方页面可提供来源链接，原音及字幕偏移仍须另核。见 `docs/SITE_ACCEPTANCE.md`。
 
 网站构建需要所有可读稿具有一致的 metadata。批次中途完整初稿尚未配齐 metadata 时，构建会停止并保留上一份有效输出；待作者与独编冻结后再同步真实 H2、定位、来源与封面。首发包只纳入实际已验收的篇目，不能在构建失败后把旧包说成已更新。
 
