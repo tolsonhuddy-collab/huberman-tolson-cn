@@ -245,7 +245,19 @@ def source_marker(source: str | None, seconds: object) -> str:
             query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in {"t", "start"}]
             target = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query + [("t", str(sec))]), parts.fragment))
             return f'<a href="{escape(target, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="回听原节目 {stamp}">{stamp} <span>↗</span></a>'
-    return f'<span class="chapter-time">原稿时间 {stamp}</span>'
+    return f'<span class="chapter-time" title="本地 VTT 定位，未独立核对原音">{stamp}</span>'
+
+
+def chapter_provenance(body: str) -> tuple[str, str]:
+    """Move only a standalone opening timestamp paragraph, never prose notes."""
+    paragraphs = re.split(r"\n[ \t]*\n", body.lstrip(), maxsplit=1)
+    first = paragraphs[0].strip()
+    stamp = r"\d{2}:\d{2}:\d{2}(?:\.\d{3})?"
+    bracketed = re.fullmatch(r"〔VTT\s*定位[：:][^〕\r\n]*〕", first)
+    plain = re.fullmatch(r"本地(?:时间轴|字幕定位)[：:]\s*" + stamp + r"(?:\s*[–—\-－~～至]\s*" + stamp + r")?\s*起?[。.]?", first)
+    if (bracketed or plain) and re.search(stamp, first):
+        return paragraphs[1] if len(paragraphs) == 2 else "", first
+    return body, ""
 
 
 def speakers_html(root: Path, staging: Path, episode_id: str, hosts: object, private: bool) -> str:
@@ -285,11 +297,14 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
     if section_meta and (not isinstance(section_meta, list) or any(not isinstance(s, dict) for s in section_meta) or [s.get("title") for s in section_meta] != [t for t, _ in sections]):
         raise ValueError(f"Section metadata must match Markdown H2 titles and order: {ep['id']}")
     source = safe_url(meta.get("source_url"))
-    article = ['<div class="article-intro">' + blocks(intro) + "</div>"] if intro else []
+    article, source_details = [], [blocks(intro)] if intro else []
     for number, (section_title, body) in enumerate(sections, 1):
         sec = section_meta[number - 1].get("source_seconds") if section_meta else None
         shown_title = display_section_title(section_title, number)
-        article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec)}</div><h2>{escape(shown_title)}</h2>{blocks(body)}</section>')
+        reading_body, provenance = chapter_provenance(body)
+        if provenance:
+            source_details.append(f'<div class="chapter-source"><h3>{number:02} {escape(shown_title)}</h3>{blocks(provenance)}</div>')
+        article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec)}</div><h2>{escape(shown_title)}</h2>{blocks(reading_body)}</section>')
     visible_text = "\n".join([title, intro] + [part for pair in sections for part in pair])
     count = len(re.findall(r"[\u4e00-\u9fff]", visible_text))
     source_note = "独立整理的非官方中文精读。原始转写与中文全文仅供本地私有审阅，尚未获得公开分发确认。"
@@ -308,6 +323,8 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         "mobile_toc": "".join(f'<a href="#section-{i}">{i:02} {escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": "\n".join(article),
         "editor_note": escape(str(meta.get("editor_note") or "依据本地英文稿件整理，待逐段核验。")),
+        "reading_note": "依据英文原稿编译，编辑与来源说明见文末。" if private else "原创虚构版式演示，人物与正文均为占位内容。",
+        "source_details": "\n".join(source_details),
         "source_note": escape(source_note),
         "source_tab": f'<a class="source-tab" href="{escape(source, quote=True)}" target="_blank" rel="noopener noreferrer">原节目 ↗</a>' if source else "",
         "source_link": f'<a href="{escape(source, quote=True)}" target="_blank" rel="noopener noreferrer">原节目来源 ↗</a>' if source else "",
@@ -341,8 +358,10 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         if private and readable and hosts and hosts[0].get("portrait"):
             suffix = Path(str(hosts[0]["portrait"])).suffix.lower()
             portrait = f"portraits/{episode_id}-0{suffix}"
-        alt = host_names if portrait != "portrait-placeholder.svg" else "头像占位"
-        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span><div class="card-content"><div class="card-category">{badges}</div><h3>{title_html}</h3>{english}<p class="card-people">{escape(host_names)}</p><p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p></div><img class="card-portrait" src="{escape(portrait, quote=True)}" alt="{escape(alt, quote=True)}" width="52" height="60" loading="lazy"></article>')
+        actual_portrait = portrait != "portrait-placeholder.svg"
+        alt = str(hosts[0].get("name", "本期主讲人")) if actual_portrait else "头像占位"
+        portrait_label = '<span class="card-portrait-label">主持人</span>' if actual_portrait and len(hosts) > 1 else ""
+        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span><div class="card-content"><div class="card-category">{badges}</div><h3>{title_html}</h3>{english}<p class="card-people">{escape(host_names)}</p><p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p></div><div class="card-portrait-wrap"><img class="card-portrait" src="{escape(portrait, quote=True)}" alt="{escape(alt, quote=True)}" width="52" height="60" loading="lazy">{portrait_label}</div></article>')
     counts = Counter(ep["kind"] for ep in episodes)
     readable_count = len(articles)
     notice = "本地私有工作台。完整初稿仍需内容核验；未完成节目仅列目录。全文与人物肖像尚未获准公开分发。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"

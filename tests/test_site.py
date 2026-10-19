@@ -87,7 +87,8 @@ class SiteTests(unittest.TestCase):
             html = (self.root / f"private/site/episodes/episode-{suffix}.html").read_text()
             self.assertNotIn("youtube.com", html)
             self.assertNotIn("javascript:", html)
-            self.assertIn("原稿时间", html)
+            self.assertIn('class="chapter-time"', html)
+            self.assertIn("本地 VTT 定位，未独立核对原音", html)
             self.assertIn("链接尚未核验", html)
 
     def test_non_youtube_source_does_not_invent_time_query(self):
@@ -96,7 +97,72 @@ class SiteTests(unittest.TestCase):
         html = (self.root / "private/site/episodes/episode-a.html").read_text()
         self.assertIn('href="https://example.org/source"', html)
         self.assertNotIn("source?t=", html)
-        self.assertIn("原稿时间 00:15", html)
+        self.assertIn('>00:15</span>', html)
+
+    def test_provenance_is_preserved_in_closed_footer_without_repeated_chapter_lines(self):
+        self.inputs()
+        path = self.root / "private/articles/episode-a.md"
+        path.write_text("# 中文标题 a\n\n中文精读编号：内部编号。\n\n来源有2047条字幕，索引日期尚未核实。\n\n## 起点 a\n\n〔VTT 定位：00:00:15.000—00:00:20.000；主题另见00:00:01.000〕\n\n正文前半，保留条件。\n\n〔编辑注：00:00:17.000 的机制解释仍是假说。〕\n\n## 终点 a\n\n本地时间轴：00:00:20.000–00:00:30.000\n\n正文后半。")
+        self.private_build()
+        html = (self.root / "private/site/episodes/episode-a.html").read_text()
+        reading = html.split('<article id="reading" class="reading-body">', 1)[1].split('</article>', 1)[0]
+        before = html.split('<article id="reading"', 1)[0]
+        footer = html.split('<details class="source-details"', 1)[1]
+        self.assertNotIn("内部编号", before + reading)
+        self.assertNotIn("2047条", before + reading)
+        self.assertNotIn("〔VTT 定位", reading)
+        self.assertNotIn("本地时间轴", reading)
+        self.assertIn("正文前半，保留条件", reading)
+        self.assertIn("机制解释仍是假说", reading)
+        self.assertIn("内部编号", footer)
+        self.assertIn("2047条", footer)
+        self.assertIn("主题另见00:00:01.000", footer)
+        self.assertIn("本地时间轴：00:00:20.000–00:00:30.000", footer)
+        self.assertIn('id="editor-sources"><summary>', html)
+        self.assertNotIn('id="editor-sources" open', html)
+
+    def test_catalog_portrait_alt_names_only_the_person_shown(self):
+        self.inputs()
+        path = self.root / "private/metadata/episode-a.json"
+        meta = json.loads(path.read_text())
+        meta["hosts"] = [{"name": "Andrew Huberman", "role": "主持人", "portrait": "private/host.jpg"}, {"name": "Guest Scientist", "role": "嘉宾"}]
+        path.write_text(json.dumps(meta))
+        (self.root / "private/host.jpg").write_bytes(b"fixture-host-photo")
+        self.private_build()
+        html = (self.root / "private/site/index.html").read_text()
+        self.assertIn('alt="Andrew Huberman"', html)
+        self.assertNotIn('alt="Andrew Huberman · Guest Scientist"', html)
+        self.assertIn('class="card-people">Andrew Huberman · Guest Scientist</p>', html)
+        self.assertIn('class="card-portrait-label">主持人</span>', html)
+
+    def test_whitespace_only_blank_line_does_not_move_article_prose_into_footer(self):
+        self.inputs()
+        for blank in ("  ", "\t"):
+            with self.subTest(blank=repr(blank)):
+                path = self.root / "private/articles/episode-a.md"
+                path.write_text("# 中文标题 a\n\n## 起点 a\n\n〔VTT 定位：00:00:15.000—00:00:20.000〕\n" + blank + "\n正文必须留在阅读区。\n\n〔编辑注：该机制仍是假说。〕\n\n## 终点 a\n\n结尾正文。")
+                self.private_build()
+                html = (self.root / "private/site/episodes/episode-a.html").read_text()
+                reading = html.split('<article id="reading" class="reading-body">', 1)[1].split('</article>', 1)[0]
+                footer = html.split('<details class="source-details"', 1)[1]
+                self.assertIn("正文必须留在阅读区", reading)
+                self.assertIn("该机制仍是假说", reading)
+                self.assertNotIn("正文必须留在阅读区", footer)
+                self.assertNotIn("〔VTT 定位", reading)
+
+    def test_timestamp_paragraph_mixed_with_scientific_prose_stays_in_reading(self):
+        self.inputs()
+        for position in ("〔VTT 定位：00:00:15.000—00:00:20.000〕", "本地时间轴：00:00:15.000–00:00:20.000"):
+            for separator in ("", "\n"):
+                with self.subTest(position=position, separator=repr(separator)):
+                    path = self.root / "private/articles/episode-a.md"
+                    path.write_text("# 中文标题 a\n\n## 起点 a\n\n" + position + separator + "该机制仍是假说。\n\n正文。\n\n## 终点 a\n\n结尾。")
+                    self.private_build()
+                    html = (self.root / "private/site/episodes/episode-a.html").read_text()
+                    reading = html.split('<article id="reading" class="reading-body">', 1)[1].split('</article>', 1)[0]
+                    footer = html.split('<details class="source-details"', 1)[1]
+                    self.assertIn("该机制仍是假说", reading)
+                    self.assertNotIn("该机制仍是假说", footer)
 
     def test_frontmatter_is_not_rendered(self):
         self.inputs()
