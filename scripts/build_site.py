@@ -297,7 +297,10 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
     if section_meta and (not isinstance(section_meta, list) or any(not isinstance(s, dict) for s in section_meta) or [s.get("title") for s in section_meta] != [t for t, _ in sections]):
         raise ValueError(f"Section metadata must match Markdown H2 titles and order: {ep['id']}")
     source = safe_url(meta.get("source_url"))
-    article, source_details = [], [blocks(intro)] if intro else []
+    source_intro = meta.get("source_intro", intro)
+    if not isinstance(source_intro, str):
+        raise ValueError("source_intro must be text")
+    article, source_details = [], [blocks(source_intro)] if source_intro else []
     for number, (section_title, body) in enumerate(sections, 1):
         sec = section_meta[number - 1].get("source_seconds") if section_meta else None
         shown_title = display_section_title(section_title, number)

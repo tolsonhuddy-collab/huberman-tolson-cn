@@ -135,6 +135,35 @@ class SiteTests(unittest.TestCase):
         self.assertIn('class="card-people">Andrew Huberman · Guest Scientist</p>', html)
         self.assertIn('class="card-portrait-label">主持人</span>', html)
 
+    def test_updated_source_intro_replaces_stale_footer_without_changing_prose(self):
+        self.inputs()
+        article = self.root / "private/articles/episode-a.md"
+        article.write_text(article.read_text().replace("引言 a。", "旧来源说明：节目链接未知，由父任务待核。"))
+        original = article.read_bytes()
+        path = self.root / "private/metadata/episode-a.json"
+        meta = json.loads(path.read_text())
+        meta["source_intro"] = "节目来源已核实。时间来自本地 VTT，未独立核对原音。"
+        path.write_text(json.dumps(meta))
+        self.private_build()
+        html = (self.root / "private/site/episodes/episode-a.html").read_text()
+        footer = html.split('<details class="source-details"', 1)[1]
+        reading = html.split('<article id="reading" class="reading-body">', 1)[1].split('</article>', 1)[0]
+        self.assertIn(meta["source_intro"], footer)
+        self.assertNotIn("父任务", html)
+        self.assertNotIn("节目链接未知", html)
+        self.assertIn("正文前半。", reading)
+        self.assertIn("正文后半。", reading)
+        self.assertEqual(article.read_bytes(), original)
+
+    def test_source_intro_rejects_nontext_metadata(self):
+        self.inputs()
+        path = self.root / "private/metadata/episode-a.json"
+        meta = json.loads(path.read_text())
+        meta["source_intro"] = {"invalid": "nested"}
+        path.write_text(json.dumps(meta))
+        with self.assertRaisesRegex(ValueError, "source_intro must be text"):
+            self.private_build()
+
     def test_whitespace_only_blank_line_does_not_move_article_prose_into_footer(self):
         self.inputs()
         for blank in ("  ", "\t"):
