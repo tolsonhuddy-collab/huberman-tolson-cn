@@ -277,6 +277,7 @@ def speakers_html(root: Path, staging: Path, episode_id: str, hosts: object, pri
             (staging / "portraits").mkdir(exist_ok=True)
             shutil.copyfile(path, staging / "portraits" / target)
             portrait, credit, actual = "../portraits/" + target, str(host.get("portrait_credit", "本地参考头像；分发权限尚未确认")), True
+            credit = credit.replace("原样稿所载头像来自 Stanford Profiles；公开使用授权未核定", "头像来源：Stanford Profiles；人物肖像不属于 MIT 代码许可")
         alt = name if actual else name + "的头像占位"
         strips.append(f'<section class="speaker-strip" aria-label="本期主讲人"><div class="portrait-link"><img class="speaker-portrait" src="{portrait}" width="350" height="350" alt="{escape(alt, quote=True)}"></div><div class="speaker-info"><span class="speaker-kicker">{escape(str(host.get("role", "本期主讲人")))}</span><h2>{escape(name)}</h2><p>{escape(str(host.get("bio", "")))}</p><span class="portrait-credit">{escape(credit)}</span></div></section>')
     return "\n".join(strips)
@@ -310,7 +311,7 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec)}</div><h2>{escape(shown_title)}</h2>{blocks(reading_body)}</section>')
     visible_text = "\n".join([title, intro] + [part for pair in sections for part in pair])
     count = len(re.findall(r"[\u4e00-\u9fff]", visible_text))
-    source_note = "独立整理的非官方中文精读。原始转写与中文全文仅供本地私有审阅，尚未获得公开分发确认。"
+    source_note = "独立整理的非官方中文精读。原始英文转写仅用于编校核对，未随本站发布。正文与素材不属于 MIT 代码许可。"
     if not private:
         source_note = "本页为原创虚构版式演示，不对应真实节目；没有使用节目转写、翻译全文或真人肖像。"
     if source is None:
@@ -320,12 +321,12 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         "page_title": escape(title_zh + " · Huberman Lab 中文精读", quote=True), "description": escape(str(meta.get("dek") or "中文长文阅读"), quote=True),
         "title_zh": escape(title_zh), "title_en": escape(str(meta.get("title_en") or ep["title_en"])),
         "dek": '<p class="dek">' + escape(str(meta["dek"])) + "</p>" if meta.get("dek") else "",
-        "edition": "本地私有审阅" if private else "虚构版式演示", "status": STATUSES[state.get("status", "pending")],
+        "edition": "非官方阅读项目" if private else "虚构版式演示", "status": STATUSES[state.get("status", "pending")],
         "episode_meta": f'<span>{KINDS[ep["kind"]]}</span><span>{escape(STATUSES[state.get("status", "pending")])}</span><span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
         "toc": "".join(f'<a href="#section-{i}"><span>{i:02}</span>{escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "mobile_toc": "".join(f'<a href="#section-{i}">{i:02} {escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": "\n".join(article),
-        "editor_note": escape(str(meta.get("editor_note") or "依据本地英文稿件整理，待逐段核验。")),
+        "editor_note": escape(str(meta.get("editor_note") or "依据本地英文稿件整理，待逐段核验。").replace("当前为私有编辑稿，内容公开授权待确认。", "中文精读为非官方独立编辑作品，不构成医疗建议。")),
         "reading_note": "依据英文原稿编译，编辑与来源说明见文末。" if private else "原创虚构版式演示，人物与正文均为占位内容。",
         "source_details": "\n".join(source_details),
         "source_note": escape(source_note),
@@ -406,12 +407,12 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         people = " · ".join(str(h.get("name", "")) for h in meta.get("hosts", []))
         dek = str(meta.get("homepage_dek") or meta.get("dek") or "")
         feature = f'<section id="front-story" class="front-story" aria-labelledby="front-story-title"><a class="front-story-image" href="episodes/{eid}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" fetchpriority="high"></a><div class="front-story-copy"><p class="front-story-label">编辑精选</p><h2 id="front-story-title"><a href="episodes/{eid}.html">{escape(title)}</a></h2><p class="front-story-english" lang="en">{escape(ep["title_en"])}</p><p class="front-story-dek">{escape(dek)}</p><p class="front-story-meta">{escape(people)} · 已校读 · <a href="{escape(cover["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">官方节目页</a></p><a class="front-story-read" href="episodes/{eid}.html">阅读全文</a></div></section>'
-    notice = "本地私有工作台。完整初稿仍需内容核验；未完成节目仅列目录。全文与人物肖像尚未获准公开分发。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"
+    notice = "中文精读为独立编辑整理。正文、节目封面与人物肖像不属于 MIT 代码许可；原节目及素材权利归各自权利人所有。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"
     values = {"description": escape(notice, quote=True), "notice": escape(notice), "total": str(len(episodes)), "cards": "\n".join(cards),
         "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count),
         "counts": escape(" · ".join(f"{KINDS[k]} {counts[k]}" for k in KINDS if counts[k]) + f" · 已有本地稿 {readable_count}"),
         "kind_options": "".join(f'<option value="{kind}">{label}</option>' for kind, label in KINDS.items()),
-        "footer_note": "非官方独立编辑项目。当前构建仅供私有审阅，未部署到公开网站。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
+        "footer_note": "非官方独立编辑项目。本站提供已校读的中文精读，未完成节目仅列目录。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
     return Template((root / "web/index.html").read_text(encoding="utf-8")).substitute(values)
 
 

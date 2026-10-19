@@ -91,6 +91,34 @@ class SiteTests(unittest.TestCase):
             self.assertIn("本地 VTT 定位，未独立核对原音", html)
             self.assertIn("链接尚未核验", html)
 
+    def test_publication_copy_preserves_content_limits_and_frozen_inputs(self):
+        self.inputs(source_b=None)
+        meta_path = self.root / "private/metadata/episode-a.json"
+        meta = json.loads(meta_path.read_text())
+        meta["editor_note"] = "来源已核，原音偏移未核。研究仍有样本限制。当前为私有编辑稿，内容公开授权待确认。"
+        portrait = self.root / "private/reference.jpg"
+        portrait.write_bytes(b"synthetic portrait fixture")
+        meta["hosts"][0].update(portrait="private/reference.jpg", portrait_credit="原样稿所载头像来自 Stanford Profiles；公开使用授权未核定")
+        self.write_json("private/metadata/episode-a.json", meta)
+        article_path = self.root / "private/articles/episode-a.md"
+        before = (meta_path.read_bytes(), article_path.read_bytes())
+        self.private_build()
+        index = (self.root / "private/site/index.html").read_text()
+        article = (self.root / "private/site/episodes/episode-a.html").read_text()
+        self.assertIn("本站提供已校读的中文精读，未完成节目仅列目录。", index)
+        self.assertIn("原节目及素材权利归各自权利人所有。", index)
+        for stale in ["本地私有工作台", "仅供私有审阅", "未部署到公开网站", "尚未获准公开", "授权待确认", "公开使用授权未核定", "本地私有审阅"]:
+            self.assertNotIn(stale, index + article)
+        for kept in ["非官方阅读项目", "来源已核，原音偏移未核。研究仍有样本限制。", "不构成医疗建议", "正文与素材不属于 MIT 代码许可", "原始英文转写仅用于编校核对，未随本站发布。", "头像来源：Stanford Profiles；人物肖像不属于 MIT 代码许可", "正文前半。", "正文后半。", "episode-A&amp;t=15"]:
+            self.assertIn(kept, article)
+        self.assertIn("未独立核对原音", (self.root / "private/site/episodes/episode-b.html").read_text())
+        self.assertNotIn("官方授权合作", index + article)
+        self.assertEqual(before, (meta_path.read_bytes(), article_path.read_bytes()))
+        site.build_site(self.root, Path("dist"), private=False)
+        demo = (self.root / "dist/episodes/demo-reading.html").read_text()
+        self.assertIn("原创虚构版式演示", demo)
+        self.assertNotIn("Stanford Profiles", demo)
+
     def test_non_youtube_source_does_not_invent_time_query(self):
         self.inputs("https://example.org/source", None)
         self.private_build()
