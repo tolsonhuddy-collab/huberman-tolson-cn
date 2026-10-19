@@ -367,6 +367,34 @@ class SiteTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "must match"):
             self.private_build()
 
+    def test_fullwidth_pipe_ordinals_display_once_without_mutating_inputs_or_prose(self):
+        self.inputs()
+        article_path = self.root / "private/articles/episode-a.md"
+        meta_path = self.root / "private/metadata/episode-a.json"
+        for separator in ("｜", "｜ "):
+            with self.subTest(separator=separator):
+                first, last = f"01{separator}起点 a", f"02{separator}终点 a"
+                article_path.write_text(f"# 中文标题 a\n\n## {first}\n\n〔VTT 定位：00:00:15.000—00:00:20.000〕\n\n正文前半，结果仍是假说。\n\n## {last}\n\n正文后半。")
+                meta = json.loads(meta_path.read_text())
+                for section, title in zip(meta["sections"], (first, last)):
+                    section["title"] = title
+                meta_path.write_text(json.dumps(meta))
+                frozen_article, frozen_meta = article_path.read_bytes(), meta_path.read_bytes()
+                self.private_build()
+                html = (self.root / "private/site/episodes/episode-a.html").read_text()
+                self.assertIn('<a href="#section-1"><span>01</span>起点 a</a>', html)
+                self.assertIn('<a href="#section-1">01 起点 a</a>', html)
+                self.assertIn('<h2>起点 a</h2>', html)
+                self.assertIn('<h3>01 起点 a</h3>', html)
+                self.assertNotIn(first, html)
+                self.assertNotIn(last, html)
+                self.assertIn('正文前半，结果仍是假说。', html)
+                self.assertIn('正文后半。', html)
+                self.assertEqual(article_path.read_bytes(), frozen_article)
+                self.assertEqual(meta_path.read_bytes(), frozen_meta)
+        for title in ("24｜小时的节律", "1.5小时", "2026｜研究", "01｜"):
+            self.assertEqual(site.display_section_title(title, 1), title)
+
     def test_readable_articles_come_first_and_numbers_mean_directory_positions(self):
         episodes = self.inputs()
         reordered = [episodes[2], episodes[0], episodes[4], episodes[1], episodes[3]]

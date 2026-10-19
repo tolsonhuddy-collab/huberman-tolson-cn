@@ -284,7 +284,7 @@ def speakers_html(root: Path, staging: Path, episode_id: str, hosts: object, pri
 
 def display_section_title(title: str, number: int) -> str:
     """Hide source heading ordinals while retaining raw titles for validation."""
-    numeric = re.match(r"^\s*(\d{1,3})(?:[.．、)）]\s+|\s+)(\S.*)$", title)
+    numeric = re.match(r"^\s*(\d{1,3})(?:[.．、)）]\s+|｜\s*|\s+)(\S.*)$", title)
     if numeric and int(numeric[1]) == number:
         return numeric[2].strip()
     chinese = re.match(r"^\s*[一二三四五六七八九十百零〇两]+[、.．]\s*(\S.*)$", title)
