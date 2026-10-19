@@ -1,6 +1,22 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#ffffff"><title>Huberman Lab 中文精读 · 节目目录</title><meta name="description" content="$description"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
-<body><a class="skip" href="#catalog">跳到节目目录</a><header class="site-header"><a class="header-edition" href="#catalog">节目目录 <span>· 中文精读</span></a><a class="wordmark" href="index.html">Huberman Lab <span>中文精读</span></a><div class="header-right"><button id="theme-toggle" class="icon-button" aria-label="切换为深色阅读" title="切换阅读底色">◐</button></div></header>
-<main id="top" class="catalog-shell"><header class="catalog-head"><div class="eyebrow"><span>独立编辑项目</span><span class="k-sep">·</span><span class="k-zh">中文精读</span></div><h1>把一场长谈，<br>读成一篇长文。</h1><p class="dek">沿着节目原有的论证与例子，用中文读懂其中的科学、分歧与边界。</p><p class="catalog-notice">$notice</p><p class="catalog-counts">$counts</p></header>
-<section id="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><h2 id="catalog-title">节目目录</h2><p id="result-count" aria-live="polite">共 $total 期</p></div><p class="catalog-order-note">已有本地稿优先排列；左侧数字仅为目录顺序，并非原节目期号。</p><form class="catalog-filters" role="search" onsubmit="return false"><label for="episode-search">搜索节目<input id="episode-search" type="search" placeholder="中文、英文标题或人物" autocomplete="off"></label><label for="kind-filter">节目类别<select id="kind-filter"><option value="all">全部类别</option>$kind_options</select></label><label for="status-filter">阅读状态<select id="status-filter"><option value="all">全部状态</option><option value="readable">已有本地稿</option><option value="pending">尚未完成</option></select></label></form><div id="episode-list" class="episode-list">$cards</div><p id="no-results" class="no-results" hidden>没有符合条件的节目。可以换个关键词或类别。</p></section>
-<footer class="catalog-footer"><p>$footer_note</p><p>版式代码参考 <a href="https://github.com/joeseesun/lexfridman-cn" target="_blank" rel="noopener noreferrer">乔木的播客阅读项目</a> · <a href="qiaomu-LICENSE.txt">MIT 代码许可</a></p></footer></main></body></html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#ffffff"><title>Huberman Lab 中文精读 · 节目目录</title><meta name="description" content="$description"><link rel="stylesheet" href="style.css"><script src="app.js" defer></script></head>
+<body class="catalog-page">
+<a class="skip" href="#catalog">跳到节目目录</a>
+<header class="catalog-masthead">
+  <div class="masthead-top"><span>非官方中文阅读项目</span><div><a href="#about">关于本项目</a><button id="theme-toggle" class="icon-button" aria-label="切换为深色阅读" title="切换阅读底色">◐</button></div></div>
+  <h1><a href="index.html">Huberman Lab <span>中文精读</span></a></h1>
+  <p class="masthead-slogan">把一场长谈，读成一篇长文。</p>
+  <p class="masthead-counts">$total 条节目目录 · $reviewed_count 篇已校读</p>
+</header>
+<div class="catalog-toolbar"><form class="catalog-filters" role="search" onsubmit="return false">
+  <label class="catalog-search" for="episode-search"><span class="sr-only">搜索节目</span><input id="episode-search" type="search" placeholder="搜索主题、嘉宾、中文或英文标题…" autocomplete="off"></label>
+  <input id="status-filter" type="hidden" value="all">
+  <div class="catalog-tabs" role="group" aria-label="阅读范围"><button type="button" data-catalog-status="all" aria-pressed="true">全部</button><button type="button" data-catalog-status="readable" aria-pressed="false">中文精读 <span>$readable_count</span></button><button type="button" data-catalog-status="pending" aria-pressed="false">待整理 <span>$pending_count</span></button></div>
+  <label class="catalog-kind" for="kind-filter"><span class="sr-only">节目类别</span><select id="kind-filter" aria-label="节目类别"><option value="all">全部类别</option>$kind_options</select></label>
+</form></div>
+<main id="top" class="catalog-shell">
+$feature
+<section id="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><h2 id="catalog-title">全部节目</h2><p id="result-count" aria-live="polite">共 $total 期</p></div><div id="episode-list" class="episode-list">$cards</div><p id="no-results" class="no-results" hidden>没有符合条件的节目。可以换个关键词或类别。</p></section>
+<footer id="about" class="catalog-footer"><h2>Huberman Lab 中文精读</h2><p>沿着节目原有的论证与例子，用中文读懂其中的科学、分歧与边界。</p><p>$footer_note</p><details><summary>编辑、来源与目录说明</summary><p>$notice</p><p>$counts</p><p>已有可读稿优先排列；编号仅为目录顺序，并非原节目期号。未知节目封面保持待核实，人物头像与节目封面分别标注。目录索引日期不作首发日期。</p></details><p>版式代码参考 <a href="https://github.com/joeseesun/lexfridman-cn" target="_blank" rel="noopener noreferrer">乔木的播客阅读项目</a> · <a href="qiaomu-LICENSE.txt">MIT 代码许可</a></p></footer>
+</main></body></html>

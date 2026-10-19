@@ -1,6 +1,6 @@
 # Huberman 中文精读
 
-将用户提供的 Huberman Lab 英文转写稿编辑成可独立阅读的中文科普长文，并沿用已认可的杂志阅读版式。本仓库保存代码、目录元数据和工作规范；英文稿、中文全文、真人头像及生成的全文 HTML 默认保留在本地 `private/`。
+将用户提供的 Huberman Lab 英文转写稿编辑成可独立阅读的中文科普长文，并沿用已认可的杂志阅读版式。本仓库保存代码、目录元数据和工作规范；英文稿、中文全文、节目封面、真人头像及生成的全文 HTML 默认保留在本地 `private/`。
 
 当前远端为私有仓库：[tolsonhuddy-collab/huberman-tolson-cn](https://github.com/tolsonhuddy-collab/huberman-tolson-cn)。本地工作目录暂用此前名称 `huberman-lab-cn`。没有上线全文、购买域名或租用服务器。
 
@@ -31,7 +31,7 @@ python3 -m unittest discover -s tests -v
 
 本机输入路径存在 `private/local-config.json`。清单在 `catalog/episodes.json`，逐篇状态与历史在 `private/progress.json`。状态文件原子替换；修改已独立校读稿后需重新校读，审核哈希失效。
 
-网站的安全演示、私有本地构建和模板接口见 [docs/website.md](docs/website.md)。演示可部署到免费静态托管子域名；当前不部署节目全文、不配置 `huberman.tolson.ai`。
+网站的安全演示、私有本地构建、封面协议及托管交接见 [docs/website.md](docs/website.md)。首页为大报头、紧凑筛选、图文精选和三栏目录，正文保留桌面右侧目录、手机折叠目录。演示可部署到静态托管子域名；当前不部署节目全文、不配置 `huberman.tolson.ai`。
 
 ## 编辑与验收
 

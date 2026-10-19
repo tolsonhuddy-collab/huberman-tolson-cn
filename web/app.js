@@ -52,6 +52,7 @@
   const kind = document.getElementById('kind-filter');
   const status = document.getElementById('status-filter');
   const cards = [...document.querySelectorAll('.episode-card')];
+  const catalogTabs = [...document.querySelectorAll('[data-catalog-status]')];
   function filterCatalog() {
     const query = (search?.value || '').trim().toLocaleLowerCase();
     let visible = 0;
@@ -65,7 +66,14 @@
     const count = document.getElementById('result-count'), empty = document.getElementById('no-results');
     if (count) count.textContent = `显示 ${visible} / ${cards.length} 期`;
     if (empty) empty.hidden = visible !== 0;
+    const feature = document.getElementById('front-story');
+    if (feature) feature.hidden = !!query || (!!kind && kind.value !== 'all') || (!!status && status.value !== 'all');
+    catalogTabs.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.catalogStatus === (status?.value || 'all'))));
   }
+  catalogTabs.forEach(button => button.addEventListener('click', () => {
+    if (status) status.value = button.dataset.catalogStatus;
+    filterCatalog();
+  }));
   [search, kind, status].forEach(control => control?.addEventListener('input', filterCatalog));
   if (search) filterCatalog();
 })();

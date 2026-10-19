@@ -348,7 +348,7 @@ class SiteTests(unittest.TestCase):
         self.assertLess(html.index('href="episodes/episode-b.html"'), html.index('An AMA excerpt'))
         self.assertIn('title="目录顺序 1；不是原节目期号"', html)
         self.assertIn('aria-label="目录顺序 1">001</span>', html)
-        self.assertIn("左侧数字仅为目录顺序", html)
+        self.assertIn("编号仅为目录顺序", html)
         self.assertIn("完整初稿 · 待审核", html)
         original = json.loads((self.root / "catalog/episodes.json").read_text())["episodes"]
         self.assertEqual([ep["id"] for ep in original], [ep["id"] for ep in reordered])
@@ -385,6 +385,55 @@ class SiteTests(unittest.TestCase):
         self.assertEqual((self.root / "private/site/portraits/episode-a-0.jpg").read_bytes(), b"fixture-jpg")
         self.assertIn('src="portraits/episode-a-0.jpg"', (self.root / "private/site/index.html").read_text())
 
+    def set_cover(self, suffix, verified=True, path=None):
+        metadata = self.root / f"private/metadata/episode-{suffix}.json"
+        meta = json.loads(metadata.read_text())
+        image = f"private/cover-{suffix}.jpg"
+        (self.root / image).write_bytes(b"fixture-episode-cover")
+        meta["cover"] = {"path": path or image, "verified": verified,
+                         "source_url": "https://example.org/episode?a=1&b=2", "alt": 'Cover "title"'}
+        meta["homepage_dek"] = '<script>Escaped editorial text</script>'
+        metadata.write_text(json.dumps(meta))
+
+    def test_verified_cover_and_reviewed_feature_preserve_safe_editorial_hierarchy(self):
+        self.inputs()
+        self.set_cover("a")
+        self.set_cover("b")
+        self.private_build()
+        html = (self.root / "private/site/index.html").read_text()
+        feature = html.split('<section id="front-story"', 1)[1].split('</section>', 1)[0]
+        self.assertIn('covers/episode-b.jpg', feature)
+        self.assertNotIn('covers/episode-a.jpg', feature)
+        self.assertIn('href="episodes/episode-b.html"', feature)
+        self.assertIn('&lt;script&gt;Escaped editorial text&lt;/script&gt;', feature)
+        self.assertIn('https://example.org/episode?a=1&amp;b=2', feature)
+        self.assertIn('alt="Cover &quot;title&quot;"', feature)
+        self.assertIn('class="card-cover" href="episodes/episode-a.html"', html)
+        self.assertEqual((self.root / "private/site/covers/episode-b.jpg").read_bytes(), b"fixture-episode-cover")
+        self.assertLess(html.index('class="masthead-slogan"'), html.index('id="front-story"'))
+
+    def test_unverified_cover_never_becomes_an_image_or_feature(self):
+        self.inputs()
+        self.set_cover("b", verified=False)
+        self.private_build()
+        html = (self.root / "private/site/index.html").read_text()
+        self.assertNotIn('<section id="front-story"', html)
+        self.assertNotIn('covers/episode-b.jpg', html)
+        self.assertFalse((self.root / "private/site/covers").exists())
+        self.assertIn('节目封面待核实', html)
+
+    def test_unsafe_verified_cover_cannot_replace_a_good_build(self):
+        self.inputs()
+        self.private_build()
+        good = (self.root / "private/site/index.html").read_bytes()
+        for path, error in (("web/portrait-placeholder.svg", "outside private"), ("private/cover.svg", "local raster")):
+            with self.subTest(path=path):
+                (self.root / "private/cover.svg").write_text('<svg/>')
+                self.set_cover("b", path=path)
+                with self.assertRaisesRegex(ValueError, error):
+                    self.private_build()
+                self.assertEqual((self.root / "private/site/index.html").read_bytes(), good)
+
     @unittest.skipUnless(shutil.which("node"), "Node is optional; Python build has no JS runtime dependency")
     def test_reader_script_runs_on_homepage_without_reader_controls(self):
         stub = "global.document={documentElement:{dataset:{},style:{setProperty(){}},scrollHeight:800},getElementById(){return null},querySelectorAll(){return []}};global.window={innerHeight:800,scrollY:0,addEventListener(){}};global.requestAnimationFrame=f=>f();"
@@ -397,13 +446,21 @@ class SiteTests(unittest.TestCase):
         stub = """
 const assert=require('node:assert/strict');
 const control=(value)=>({value,listeners:{},addEventListener(k,f){this.listeners[k]=f;}});
-const nodes={'episode-search':control(''),'kind-filter':control('all'),'status-filter':control('all'),'result-count':{},'no-results':{}};
+const nodes={'episode-search':control(''),'kind-filter':control('all'),'status-filter':control('all'),'result-count':{},'no-results':{},'front-story':{}};
+const tabs=['all','readable','pending'].map(value=>({...control(value),dataset:{catalogStatus:value},setAttribute(k,v){this[k]=v;}}));
 const cards=[{dataset:{search:'sleep article',kind:'long_episode',availability:'readable'}},{dataset:{search:'ama excerpt',kind:'ama',availability:'pending'}}];
-global.document={documentElement:{dataset:{},style:{setProperty(){}},scrollHeight:800},getElementById(k){return nodes[k]||null;},querySelectorAll(s){return s==='.episode-card'?cards:[];}};
+global.document={documentElement:{dataset:{},style:{setProperty(){}},scrollHeight:800},getElementById(k){return nodes[k]||null;},querySelectorAll(s){return s==='.episode-card'?cards:s==='[data-catalog-status]'?tabs:[];}};
 global.window={innerHeight:800,scrollY:0,addEventListener(){}};global.requestAnimationFrame=f=>f();
 """
         checks = """
 assert.equal(cards.filter(x=>!x.hidden).length,2);
+assert.equal(nodes['front-story'].hidden,false);
+tabs[1].listeners.click();
+assert.equal(nodes['status-filter'].value,'readable');
+assert.equal(tabs[1]['aria-pressed'],'true');
+assert.equal(nodes['front-story'].hidden,true);
+tabs[0].listeners.click();
+assert.equal(nodes['front-story'].hidden,false);
 nodes['kind-filter'].value='ama';nodes['kind-filter'].listeners.input();
 assert.deepEqual(cards.map(x=>x.hidden),[true,false]);
 nodes['episode-search'].value='sleep';nodes['episode-search'].listeners.input();

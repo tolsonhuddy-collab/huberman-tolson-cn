@@ -332,7 +332,32 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
     return Template((root / "web/article.html").read_text(encoding="utf-8")).substitute(values)
 
 
-def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: dict, articles: dict, private: bool) -> str:
+def copy_covers(root: Path, staging: Path, metadata: dict, articles: dict, private: bool) -> dict:
+    """Copy only explicitly verified local episode covers into a private build."""
+    covers = {}
+    if not private:
+        return covers
+    for episode_id in articles:
+        cover = metadata[episode_id].get("cover")
+        if not isinstance(cover, dict) or cover.get("verified") is not True:
+            continue
+        source = safe_url(cover.get("source_url"))
+        if not source:
+            raise ValueError(f"Verified cover needs a safe source URL: {episode_id}")
+        path = private_file(root, str(cover.get("path", "")))
+        suffix = path.suffix.lower()
+        if suffix not in {".jpg", ".jpeg", ".png", ".webp"} or not path.is_file():
+            raise ValueError(f"Cover must be a local raster image: {episode_id}")
+        relative = f"covers/{episode_id}{suffix}"
+        (staging / "covers").mkdir(exist_ok=True)
+        shutil.copyfile(path, staging / relative)
+        covers[episode_id] = {"path": relative, "source_url": source,
+                              "alt": str(cover.get("alt") or "节目封面：" + metadata[episode_id].get("title_en", episode_id))}
+    return covers
+
+
+def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: dict, articles: dict, private: bool, covers: dict | None = None) -> str:
+    covers = covers or {}
     cards = []
     # Stable grouping keeps readable work visible while preserving source order
     # inside each group. Display numbers are positions, never episode numbers.
@@ -361,11 +386,26 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         actual_portrait = portrait != "portrait-placeholder.svg"
         alt = str(hosts[0].get("name", "本期主讲人")) if actual_portrait else "头像占位"
         portrait_label = '<span class="card-portrait-label">主持人</span>' if actual_portrait and len(hosts) > 1 else ""
-        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span><div class="card-content"><div class="card-category">{badges}</div><h3>{title_html}</h3>{english}<p class="card-people">{escape(host_names)}</p><p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p></div><div class="card-portrait-wrap"><img class="card-portrait" src="{escape(portrait, quote=True)}" alt="{escape(alt, quote=True)}" width="52" height="60" loading="lazy">{portrait_label}</div></article>')
+        byline_portrait = f'<div class="card-portrait-wrap"><img class="card-portrait" src="{escape(portrait, quote=True)}" alt="{escape(alt, quote=True)}" width="24" height="28" loading="lazy">{portrait_label}</div>' if actual_portrait else ""
+        cover = covers.get(episode_id)
+        media = f'<a class="card-cover" href="episodes/{episode_id}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" loading="lazy"></a>' if cover and readable else '<p class="cover-status">节目封面待核实</p>'
+        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}">{media}<div class="card-content"><div class="card-category"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span>{badges}</div><h3>{title_html}</h3>{english}<div class="card-byline">{byline_portrait}<p class="card-people">{escape(host_names)}</p></div><p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p></div></article>')
     counts = Counter(ep["kind"] for ep in episodes)
     readable_count = len(articles)
+    reviewed_count = sum(ep["id"] in articles and progress.get(ep["id"], {}).get("status") == "reviewed" for ep in episodes)
+    featured = [ep for ep in ordered if ep["id"] in covers and progress.get(ep["id"], {}).get("status") == "reviewed"]
+    featured.sort(key=lambda ep: not metadata[ep["id"]].get("homepage_featured", False))
+    feature = ""
+    if featured:
+        ep = featured[0]
+        eid, meta, cover = ep["id"], metadata[ep["id"]], covers[ep["id"]]
+        title = str(meta.get("title_zh") or ep["title_en"])
+        people = " · ".join(str(h.get("name", "")) for h in meta.get("hosts", []))
+        dek = str(meta.get("homepage_dek") or meta.get("dek") or "")
+        feature = f'<section id="front-story" class="front-story" aria-labelledby="front-story-title"><a class="front-story-image" href="episodes/{eid}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" fetchpriority="high"></a><div class="front-story-copy"><p class="front-story-label">编辑精选</p><h2 id="front-story-title"><a href="episodes/{eid}.html">{escape(title)}</a></h2><p class="front-story-english" lang="en">{escape(ep["title_en"])}</p><p class="front-story-dek">{escape(dek)}</p><p class="front-story-meta">{escape(people)} · 已校读 · <a href="{escape(cover["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">官方节目页</a></p><a class="front-story-read" href="episodes/{eid}.html">阅读全文</a></div></section>'
     notice = "本地私有工作台。完整初稿仍需内容核验；未完成节目仅列目录。全文与人物肖像尚未获准公开分发。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"
     values = {"description": escape(notice, quote=True), "notice": escape(notice), "total": str(len(episodes)), "cards": "\n".join(cards),
+        "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count),
         "counts": escape(" · ".join(f"{KINDS[k]} {counts[k]}" for k in KINDS if counts[k]) + f" · 已有本地稿 {readable_count}"),
         "kind_options": "".join(f'<option value="{kind}">{label}</option>' for kind, label in KINDS.items()),
         "footer_note": "非官方独立编辑项目。当前构建仅供私有审阅，未部署到公开网站。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
@@ -382,11 +422,12 @@ def build_site(root: Path, out: Path, private: bool = False) -> dict:
         (staging / "episodes").mkdir(parents=True)
         for name in ("style.css", "app.js", "qiaomu-LICENSE.txt", "portrait-placeholder.svg"):
             shutil.copyfile(root / "web" / name, staging / name)
+        covers = copy_covers(root, staging, metadata, articles, private)
         for ep in episodes:
             if ep["id"] in articles:
                 html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], private)
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")
-        (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, private), encoding="utf-8")
+        (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, private, covers), encoding="utf-8")
         manifest = {"schema_version": 1, "mode": "private" if private else "synthetic_demo", "episode_count": len(episodes), "article_count": len(articles), "deployed": False}
         (staging / ".huberman-build.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
         if destination.exists():
