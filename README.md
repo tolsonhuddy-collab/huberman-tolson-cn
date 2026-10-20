@@ -93,7 +93,7 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - 非官方项目。
 - 代码以 [MIT](LICENSE) 许可，**仅限代码**。中文精读不适用 MIT。版式改编自 [乔木的 lexfridman-cn](https://github.com/joeseesun/lexfridman-cn)，原声明在 [web/qiaomu-LICENSE.txt](web/qiaomu-LICENSE.txt)。
 - 中文精读是独立的二次创作。如需转载，请署名并链接对应原文页面。
-- 原节目音频与英文转写的版权归 Huberman Lab、嘉宾及制作方所有。本仓库不包含、不分发这些文件。
+- 原节目音频与英文转写的版权归 Huberman Lab、嘉宾及制作方所有。本仓库不包含原始播客文件。
 - 精读可能有偏差，表述以原始访谈为准。详见 [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md)。
 
 ## 已知限制
@@ -121,4 +121,4 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 
 This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
 
-Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers, and are not included or distributed in this repo. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
+Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers. This repository does not include the original podcast files. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
