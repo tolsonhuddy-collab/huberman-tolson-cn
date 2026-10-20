@@ -8,7 +8,7 @@
 
 目前站上有 **41 篇**。例如：[神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html)、[好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html)。
 
-非官方阅读项目。Huberman Lab 没有参与，也不代表其背书或合作。
+非官方项目。
 
 ## 这是什么
 
@@ -88,11 +88,11 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 
 ## 内容与版权边界
 
-- 代码采用 [MIT](LICENSE)，**只覆盖代码和工程文档**。阅读页版式改编自 [乔木的 lexfridman-cn](https://github.com/joeseesun/lexfridman-cn)，原声明在 [web/qiaomu-LICENSE.txt](web/qiaomu-LICENSE.txt)。
-- 中文精读是独立整理的二次创作和综述，不是官方译文。原节目音频、视频和转写的版权归 Huberman Lab 与嘉宾。本仓库不托管、不分发这些原件，也不收录节目封面和人物肖像。
-- 网站上的正文和素材不随 MIT 再许可。范围见 [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md)。
-- 权利人如需移除，请开 [Issue](https://github.com/tolsonhuddy-collab/huberman-tolson-cn/issues)。
-- 文章保留讲者观点、研究条件和转写疑点，不能当作个人诊断或治疗方案。
+- 非官方项目。
+- 代码以 [MIT](LICENSE) 许可，**仅限代码**。中文精读不适用 MIT。版式改编自 [乔木的 lexfridman-cn](https://github.com/joeseesun/lexfridman-cn)，原声明在 [web/qiaomu-LICENSE.txt](web/qiaomu-LICENSE.txt)。
+- 中文精读是独立的二次创作。如需转载，请署名并链接对应原文页面。
+- 原节目音频与英文转写的版权归 Huberman Lab、嘉宾及制作方所有。本仓库不包含、不分发这些文件。
+- 精读可能有偏差，表述以原始访谈为准。详见 [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md)。
 
 ## 已知限制
 
@@ -119,4 +119,4 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 
 This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
 
-Unofficial, and not endorsed by Huberman Lab. Code is [MIT](LICENSE) for code only. The Chinese essays are an independent summary; original audio and transcripts belong to Huberman Lab and the guests. Nothing original is hosted here. Rights holders can request removal via an [Issue](https://github.com/tolsonhuddy-collab/huberman-tolson-cn/issues). See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
+Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers, and are not included or distributed in this repo. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).

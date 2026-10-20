@@ -264,7 +264,7 @@ def status():
         counts[effective] += 1
         if recorded != "pending":
             active.append({"id": item["id"], "title": item["title_en"], "status": effective, "recorded_status": recorded, "verification_stale": stale, "metrics": metrics})
-    return {"long_episode_candidates": len(long), "states": dict(counts), "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "active": active, "publication_authorized": False}
+    return {"long_episode_candidates": len(long), "states": dict(counts), "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "active": active}
 
 
 def public_path(name):
