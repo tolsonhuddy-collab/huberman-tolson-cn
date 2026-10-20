@@ -28,6 +28,11 @@ TRANSITIONS = {
 }
 PUBLIC_ROOT_FILES = {".gitignore", "README.md", "LICENSE", "CONTENT_RIGHTS.md", "DEPENDENCIES.md", "Makefile"}
 PUBLIC_DIRS = {"scripts", "tests", "docs", "catalog", "web", ".github"}
+# User-merged README assets only. Episode imagery remains outside the repository.
+PUBLIC_DOC_IMAGES = {
+    "docs/screenshot-home.png": "ad3c7c21b334ba11e24cfa654aa7e6460a16b233de446a236c1967641beede98",
+    "docs/xiaohongshu.jpg": "85f58e322174ef5f34b2ae7f7623aa9de0765b0d745c1435ff3dba1ae440f0a5",
+}
 STAMP = re.compile(r"^(?P<a>\d{2}:\d{2}:\d{2}\.\d{3})\s+-->\s+(?P<b>\d{2}:\d{2}:\d{2}\.\d{3})")
 
 
@@ -271,7 +276,7 @@ def public_path(name):
     path = Path(name)
     if path.is_absolute() or ".." in path.parts:
         return False
-    return name in PUBLIC_ROOT_FILES or (len(path.parts) > 1 and path.parts[0] in PUBLIC_DIRS and not any(part.startswith(".") and part != ".github" for part in path.parts) and "__pycache__" not in path.parts and path.suffix in {".py", ".md", ".json", ".html", ".css", ".js", ".svg", ".txt", ".yml", ".yaml"})
+    return name in PUBLIC_DOC_IMAGES or name in PUBLIC_ROOT_FILES or (len(path.parts) > 1 and path.parts[0] in PUBLIC_DIRS and not any(part.startswith(".") and part != ".github" for part in path.parts) and "__pycache__" not in path.parts and path.suffix in {".py", ".md", ".json", ".html", ".css", ".js", ".svg", ".txt", ".yml", ".yaml"})
 
 
 def audit_git():
@@ -281,6 +286,17 @@ def audit_git():
     symlinks = [name for name in names if name and (ROOT / name).is_symlink()]
     if bad or symlinks:
         raise ValueError("Git index contains non-allowlisted paths or symlinks: " + ", ".join(bad + symlinks))
+    for name in names:
+        if name in PUBLIC_DOC_IMAGES:
+            if any((ROOT / parent).is_symlink() for parent in Path(name).parents):
+                raise ValueError("Pinned documentation image has a symlinked parent: " + name)
+            entry = subprocess.check_output(["git", "ls-files", "--stage", "--", name], cwd=ROOT).decode().strip().split(maxsplit=3)
+            if len(entry) != 4 or entry[0] != "100644" or entry[2] != "0" or entry[3] != name:
+                raise ValueError("Pinned documentation image must be a non-executable indexed file: " + name)
+            indexed = subprocess.check_output(["git", "show", ":" + name], cwd=ROOT)
+            path = ROOT / name
+            if hashlib.sha256(indexed).hexdigest() != PUBLIC_DOC_IMAGES[name] or not path.is_file() or sha(path) != PUBLIC_DOC_IMAGES[name]:
+                raise ValueError("Pinned documentation image bytes changed: " + name)
     return {"tracked_files": sum(bool(name) for name in names), "path_allowlist": "pass", "note": "Path isolation check; editorial/content inspection is still required."}
 
 

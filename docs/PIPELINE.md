@@ -41,6 +41,8 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 `audit-git` 检查已跟踪路径是否落在允许的代码、文档、目录和模板范围内，并拒绝符号链接。它不阅读正文质量。
 
+README 已有的 `docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹；其他图片、节目封面和完整稿件仍不在允许范围内。
+
 `build_site.py --demo` 不读取 `catalog/` 或 `private/`。输出必须在 `dist/` 内，默认就是 `dist/`。页面是虚构短文。
 
 `build_site.py --private` 读取目录、`private/progress.json`、`private/articles/{id}.md` 和 `private/metadata/{id}.json`。输出必须在 `private/` 下面，且不能盖住文章、元数据、分块、来源映射或审稿目录。默认输出是 `private/site`。构建器只覆盖带有自己标记 `.huberman-build.json` 的旧输出；失败时留下上一份成功结果。构建器不联网，也不部署。

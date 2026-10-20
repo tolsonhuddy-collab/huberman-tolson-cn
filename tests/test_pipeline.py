@@ -136,6 +136,67 @@ class PipelineTests(unittest.TestCase):
         for path in ["README.md", "scripts/pipeline.py", "web/style.css", "web/app.js", "catalog/episodes.json"]:
             self.assertTrue(p.public_path(path), path)
 
+    def test_documentation_images_do_not_allow_other_raster_paths(self):
+        for name in ("docs/screenshot-home.png", "docs/xiaohongshu.jpg"):
+            self.assertTrue(p.public_path(name), name)
+        for name in ("docs/episode.jpg", "docs/new.png", "web/screenshot-home.png", "docs/../docs/xiaohongshu.jpg"):
+            self.assertFalse(p.public_path(name), name)
+
+    def test_git_audit_checks_documentation_worktree_bytes(self):
+        name = "docs/screenshot-home.png"
+        payload = b"approved documentation image fixture"
+        image = self.root / name
+        image.parent.mkdir()
+        image.write_bytes(payload)
+        pins = {name: hashlib.sha256(payload).hexdigest()}
+        entry = b"100644 " + b"0" * 40 + b" 0\t" + name.encode() + b"\n"
+        with patch.object(p, "PUBLIC_DOC_IMAGES", pins), patch.object(p.subprocess, "check_output", side_effect=[name.encode() + b"\0", entry, payload]):
+            self.assertEqual(p.audit_git()["path_allowlist"], "pass")
+        image.write_bytes(b"different worktree image")
+        with patch.object(p, "PUBLIC_DOC_IMAGES", pins), patch.object(p.subprocess, "check_output", side_effect=[name.encode() + b"\0", entry, payload]):
+            with self.assertRaisesRegex(ValueError, "Pinned documentation image bytes changed"):
+                p.audit_git()
+
+    def test_git_audit_rejects_staged_image_change_and_symlink(self):
+        name = "docs/screenshot-home.png"
+        payload = b"approved documentation image fixture"
+        image = self.root / name
+        image.parent.mkdir()
+        image.write_bytes(payload)
+        pins = {name: hashlib.sha256(payload).hexdigest()}
+        entry = b"100644 " + b"0" * 40 + b" 0\t" + name.encode() + b"\n"
+        with patch.object(p, "PUBLIC_DOC_IMAGES", pins), patch.object(p.subprocess, "check_output", side_effect=[name.encode() + b"\0", entry, b"different staged image"]):
+            with self.assertRaisesRegex(ValueError, "Pinned documentation image bytes changed"):
+                p.audit_git()
+        target = self.root / "private/image.png"
+        target.write_bytes(payload)
+        image.unlink()
+        image.symlink_to(target)
+        with patch.object(p, "PUBLIC_DOC_IMAGES", pins), patch.object(p.subprocess, "check_output", return_value=name.encode() + b"\0"):
+            with self.assertRaisesRegex(ValueError, "symlinks"):
+                p.audit_git()
+
+    def test_git_audit_requires_normal_image_index_mode(self):
+        name = "docs/screenshot-home.png"
+        image = self.root / name
+        image.parent.mkdir()
+        image.write_bytes(b"documentation image fixture")
+        for mode in (b"100755", b"120000"):
+            entry = mode + b" " + b"0" * 40 + b" 0\t" + name.encode() + b"\n"
+            with self.subTest(mode=mode), patch.object(p.subprocess, "check_output", side_effect=[name.encode() + b"\0", entry]):
+                with self.assertRaisesRegex(ValueError, "non-executable indexed file"):
+                    p.audit_git()
+
+    def test_git_audit_rejects_documentation_symlink_parent(self):
+        name = "docs/screenshot-home.png"
+        real_docs = self.root / "real-docs"
+        real_docs.mkdir()
+        (real_docs / "screenshot-home.png").write_bytes(b"documentation image fixture")
+        (self.root / "docs").symlink_to(real_docs, target_is_directory=True)
+        with patch.object(p.subprocess, "check_output", return_value=name.encode() + b"\0"):
+            with self.assertRaisesRegex(ValueError, "symlinked parent"):
+                p.audit_git()
+
 
 if __name__ == "__main__":
     unittest.main()
