@@ -4,7 +4,7 @@
 
 把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。文章顺着节目原来的顺序，保留核心论证、机制解释、例子和研究限制，去掉广告、寒暄和重复。访谈标明是谁在说；转写里对不上的地方会注明。
 
-![Huberman Lab 中文精读首页：报头、搜索筛选与节目目录](docs/screenshot-home.png)
+![Huberman Lab 中文精读首页：报头、搜索筛选，以及编辑精选《好睡眠从白天开始》的节目封面](docs/screenshot-home.png)
 
 [**在线阅读 →**](https://huberman-reading-001.tolsonhuddy.chatgpt.site)
 
