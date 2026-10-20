@@ -80,6 +80,26 @@ class SiteTests(unittest.TestCase):
         self.assertNotIn("episode-A", b)
         self.assertEqual(manifest["article_count"], 2)
 
+    def test_reviewed_pages_hide_editorial_status_without_relaxing_draft_warnings(self):
+        self.inputs()
+        progress_path = self.root / "private/progress.json"
+        before = progress_path.read_bytes()
+        self.private_build()
+        index = (self.root / "private/site/index.html").read_text()
+        reviewed = (self.root / "private/site/episodes/episode-b.html").read_text()
+        draft = (self.root / "private/site/episodes/episode-a.html").read_text()
+        for html in (index, reviewed):
+            self.assertNotIn("已审核", html)
+            self.assertNotIn("已校读", html)
+        self.assertIn("2 篇中文精读", index)
+        reviewed_card = index.split('data-search="中文标题 b', 1)[1].split("</article>", 1)[0]
+        self.assertNotIn('class="card-status', reviewed_card)
+        self.assertNotIn('<span></span>', reviewed)
+        self.assertIn('class="reading-status" aria-live="off"><span id="progress-label">', reviewed)
+        self.assertIn("完整初稿 · 待审核", draft)
+        self.assertIn("完整初稿 · 待审核", index)
+        self.assertEqual(before, progress_path.read_bytes())
+
     def test_unknown_source_has_no_fabricated_video_link(self):
         self.inputs(None, "javascript:alert(1)")
         self.private_build()
@@ -105,7 +125,7 @@ class SiteTests(unittest.TestCase):
         self.private_build()
         index = (self.root / "private/site/index.html").read_text()
         article = (self.root / "private/site/episodes/episode-a.html").read_text()
-        self.assertIn("本站提供已校读的中文精读，未完成节目仅列目录。", index)
+        self.assertIn("本站提供中文精读，未完成节目仅列目录。", index)
         self.assertIn("原节目及素材权利归各自权利人所有。", index)
         for stale in ["本地私有工作台", "仅供私有审阅", "未部署到公开网站", "尚未获准公开", "授权待确认", "公开使用授权未核定", "本地私有审阅"]:
             self.assertNotIn(stale, index + article)
@@ -518,6 +538,62 @@ class SiteTests(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, error):
                     self.private_build()
                 self.assertEqual((self.root / "private/site/index.html").read_bytes(), good)
+
+    @unittest.skipUnless(shutil.which("node"), "Node is optional; Python build has no JS runtime dependency")
+    def test_reader_font_defaults_and_saved_preferences_survive_theme_update(self):
+        fixture = r"""
+const vm = require('vm'), fs = require('fs');
+const script = fs.readFileSync(process.argv[1], 'utf8');
+function run(saved, blocked = false) {
+  const storage = {...saved}, styles = {}, elements = {};
+  for (const id of ['font-down', 'font-up', 'font-label', 'theme-toggle'])
+    elements[id] = {listeners: {}, attributes: {}, addEventListener(k, f) {this.listeners[k] = f}, setAttribute(k, v) {this.attributes[k] = v}};
+  const root = {dataset: {}, style: {setProperty(k, v) {styles[k] = v}}, scrollHeight: 1000};
+  vm.runInNewContext(script, {
+    document: {documentElement: root, getElementById(id) {return elements[id] || null}, querySelectorAll() {return []}},
+    window: {innerHeight: 800, scrollY: 0, addEventListener() {}}, requestAnimationFrame(f) {f()},
+    localStorage: {getItem(k) {if (blocked) throw Error('unavailable'); return storage[k] ?? null}, setItem(k, v) {if (blocked) throw Error('unavailable'); storage[k] = v}}
+  });
+  const initial = {size: styles['--read-size'], label: elements['font-label'].value, theme: root.dataset.theme,
+    downDisabled: !!elements['font-down'].disabled, upDisabled: !!elements['font-up'].disabled};
+  elements['font-up'].listeners.click();
+  const afterUp = styles['--read-size'];
+  elements['font-down'].listeners.click();
+  const afterDown = styles['--read-size'];
+  for (let i = 0; i < 10; i++) elements['font-down'].listeners.click();
+  const lower = {size: styles['--read-size'], disabled: elements['font-down'].disabled};
+  for (let i = 0; i < 10; i++) elements['font-up'].listeners.click();
+  return {initial, afterUp, afterDown, lower, upper: {size: styles['--read-size'], disabled: elements['font-up'].disabled}, storage};
+}
+process.stdout.write(JSON.stringify([
+  run({}), run({'huberman-reading-size': '18', 'huberman-reading-theme': 'dark'}),
+  run({'huberman-reading-size': '24'}), run({'huberman-reading-size': '16'}),
+  run({'huberman-reading-size': 'invalid'}), run({}, true)
+]));
+"""
+        result = subprocess.run([shutil.which("node"), "-e", fixture, str(PROJECT / "web/app.js")], text=True, capture_output=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        cases = json.loads(result.stdout)
+        self.assertEqual([c["initial"]["size"] for c in cases], ["20px", "18px", "24px", "16px", "20px", "20px"])
+        self.assertEqual(cases[0]["initial"]["label"], "20")
+        self.assertEqual(cases[1]["initial"]["theme"], "dark")
+        self.assertEqual(cases[1]["storage"]["huberman-reading-theme"], "dark")
+        self.assertEqual((cases[1]["afterUp"], cases[1]["afterDown"]), ("20px", "18px"))
+        self.assertTrue(cases[2]["initial"]["upDisabled"])
+        self.assertTrue(cases[3]["initial"]["downDisabled"])
+        for case in cases:
+            self.assertEqual(case["lower"], {"size": "16px", "disabled": True})
+            self.assertEqual(case["upper"], {"size": "24px", "disabled": True})
+
+    def test_reader_template_starts_at_twenty_with_shared_paper_palette(self):
+        self.inputs()
+        self.private_build()
+        article = (self.root / "private/site/episodes/episode-b.html").read_text()
+        self.assertIn('<output id="font-label" aria-live="polite">20</output>', article)
+        css = (self.root / "private/site/style.css").read_text()
+        self.assertIn('--paper:#f6f3ec;--ink:#272926;--body:#343833;', css)
+        self.assertIn('--read-size:20px;', css)
+        self.assertIn('::selection{background:var(--accent);color:var(--paper)}', css)
 
     @unittest.skipUnless(shutil.which("node"), "Node is optional; Python build has no JS runtime dependency")
     def test_reader_script_runs_on_homepage_without_reader_controls(self):

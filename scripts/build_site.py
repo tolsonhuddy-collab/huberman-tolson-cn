@@ -321,8 +321,9 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         "page_title": escape(title_zh + " · Huberman Lab 中文精读", quote=True), "description": escape(str(meta.get("dek") or "中文长文阅读"), quote=True),
         "title_zh": escape(title_zh), "title_en": escape(str(meta.get("title_en") or ep["title_en"])),
         "dek": '<p class="dek">' + escape(str(meta["dek"])) + "</p>" if meta.get("dek") else "",
-        "edition": "非官方阅读项目" if private else "虚构版式演示", "status": STATUSES[state.get("status", "pending")],
-        "episode_meta": f'<span>{KINDS[ep["kind"]]}</span><span>{escape(STATUSES[state.get("status", "pending")])}</span><span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
+        "edition": "非官方阅读项目" if private else "虚构版式演示",
+        "status_notice": "" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>',
+        "episode_meta": f'<span>{KINDS[ep["kind"]]}</span>' + ("" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>') + f'<span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
         "toc": "".join(f'<a href="#section-{i}"><span>{i:02}</span>{escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "mobile_toc": "".join(f'<a href="#section-{i}">{i:02} {escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": "\n".join(article),
@@ -393,7 +394,8 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         byline_portrait = f'<div class="card-portrait-wrap"><img class="card-portrait" src="{escape(portrait, quote=True)}" alt="{escape(alt, quote=True)}" width="24" height="28" loading="lazy">{portrait_label}</div>' if actual_portrait else ""
         cover = covers.get(episode_id)
         media = f'<a class="card-cover" href="episodes/{episode_id}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" loading="lazy"></a>' if cover and readable else '<p class="cover-status">节目封面待核实</p>'
-        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}">{media}<div class="card-content"><div class="card-category"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span>{badges}</div><h3>{title_html}</h3>{english}<div class="card-byline">{byline_portrait}<p class="card-people">{escape(host_names)}</p></div><p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p></div></article>')
+        status_html = "" if status == "reviewed" and readable else f'<p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p>'
+        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}">{media}<div class="card-content"><div class="card-category"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span>{badges}</div><h3>{title_html}</h3>{english}<div class="card-byline">{byline_portrait}<p class="card-people">{escape(host_names)}</p></div>{status_html}</div></article>')
     counts = Counter(ep["kind"] for ep in episodes)
     readable_count = len(articles)
     reviewed_count = sum(ep["id"] in articles and progress.get(ep["id"], {}).get("status") == "reviewed" for ep in episodes)
@@ -406,13 +408,13 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         title = str(meta.get("title_zh") or ep["title_en"])
         people = " · ".join(str(h.get("name", "")) for h in meta.get("hosts", []))
         dek = str(meta.get("homepage_dek") or meta.get("dek") or "")
-        feature = f'<section id="front-story" class="front-story" aria-labelledby="front-story-title"><a class="front-story-image" href="episodes/{eid}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" fetchpriority="high"></a><div class="front-story-copy"><p class="front-story-label">编辑精选</p><h2 id="front-story-title"><a href="episodes/{eid}.html">{escape(title)}</a></h2><p class="front-story-english" lang="en">{escape(ep["title_en"])}</p><p class="front-story-dek">{escape(dek)}</p><p class="front-story-meta">{escape(people)} · 已校读 · <a href="{escape(cover["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">官方节目页</a></p><a class="front-story-read" href="episodes/{eid}.html">阅读全文</a></div></section>'
+        feature = f'<section id="front-story" class="front-story" aria-labelledby="front-story-title"><a class="front-story-image" href="episodes/{eid}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" fetchpriority="high"></a><div class="front-story-copy"><p class="front-story-label">编辑精选</p><h2 id="front-story-title"><a href="episodes/{eid}.html">{escape(title)}</a></h2><p class="front-story-english" lang="en">{escape(ep["title_en"])}</p><p class="front-story-dek">{escape(dek)}</p><p class="front-story-meta">{escape(people)} · <a href="{escape(cover["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">官方节目页</a></p><a class="front-story-read" href="episodes/{eid}.html">阅读全文</a></div></section>'
     notice = "中文精读为独立编辑整理。正文、节目封面与人物肖像不属于 MIT 代码许可；原节目及素材权利归各自权利人所有。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"
     values = {"description": escape(notice, quote=True), "notice": escape(notice), "total": str(len(episodes)), "cards": "\n".join(cards),
         "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count),
         "counts": escape(" · ".join(f"{KINDS[k]} {counts[k]}" for k in KINDS if counts[k]) + f" · 已有本地稿 {readable_count}"),
         "kind_options": "".join(f'<option value="{kind}">{label}</option>' for kind, label in KINDS.items()),
-        "footer_note": "非官方独立编辑项目。本站提供已校读的中文精读，未完成节目仅列目录。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
+        "footer_note": "非官方独立编辑项目。本站提供中文精读，未完成节目仅列目录。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
     return Template((root / "web/index.html").read_text(encoding="utf-8")).substitute(values)
 
 

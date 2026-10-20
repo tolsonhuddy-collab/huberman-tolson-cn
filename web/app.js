@@ -28,7 +28,7 @@
       if (active) a.setAttribute('aria-current', 'location'); else a.removeAttribute('aria-current');
     });
   }
-  let size = Math.min(24, Math.max(16, Number(read('huberman-reading-size', '18')) || 18));
+  let size = Math.min(24, Math.max(16, Number(read('huberman-reading-size', '20')) || 20));
   const down = document.getElementById('font-down'), up = document.getElementById('font-up'), fontLabel = document.getElementById('font-label');
   function applySize() {
     root.style.setProperty('--read-size', `${size}px`);
