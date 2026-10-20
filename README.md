@@ -2,7 +2,7 @@
 
 **中文** | [English](#english)
 
-把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文，给读不懂英文原片的人看。文章顺着节目原来的顺序，保留核心论证、机制解释、例子和研究限制，去掉广告、寒暄和重复。访谈标明是谁在说；转写里对不上的地方会注明。
+把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。文章顺着节目原来的顺序，保留核心论证、机制解释、例子和研究限制，去掉广告、寒暄和重复。访谈标明是谁在说；转写里对不上的地方会注明。
 
 [**在线阅读 →**](https://huberman-reading-001.tolsonhuddy.chatgpt.site)
 
@@ -115,7 +115,7 @@ taopatric58@gmail.com
 
 ## English
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast, for people who do not follow the English episodes. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **41** essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **41** essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
 
 This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
 
