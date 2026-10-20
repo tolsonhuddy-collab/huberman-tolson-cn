@@ -122,3 +122,9 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
 
 Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers. This repository does not include the original podcast files. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
+
+## 作者 / Author
+
+小红书：Tolson 在叭叭（小红书号 9482664180），写给医疗圈的 AI 观察。
+
+<img src="docs/xiaohongshu.jpg" width="300" alt="Tolson 在叭叭 小红书名片">
