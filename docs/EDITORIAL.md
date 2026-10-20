@@ -30,4 +30,4 @@
 
 先检查原稿前中后是否全部读过，再逐段对照主题、解释和重要例子有无遗漏。重读不确定性和疑误注，检查采访发言人，检查文章能否自然连读。独立编辑可判定稿件达成本次精读标准，不等于核实每个科学断言或原视频完整。
 
-状态顺序为 `pending → drafting → draft_complete → reviewed`。需要修订时使用 `needs_revision`；不能跳过实稿和审核。读者验收、来源视频身份核验、医学事实更新及内容公开授权是另外的状态，不因 `reviewed` 自动通过。
+状态顺序为 `pending → drafting → draft_complete → reviewed`。需要修订时使用 `needs_revision`；不能跳过实稿和审核。读者验收、来源视频身份核验和医学事实更新是另外的核对，不因 `reviewed` 自动通过。
