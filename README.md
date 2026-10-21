@@ -8,7 +8,7 @@
 
 [**在线阅读 →**](https://huberman-reading-001.tolsonhuddy.chatgpt.site)
 
-目前站上已上线 76 篇中文精读。例如：[神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html)、[好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html)。
+目前站上已上线 84 篇中文精读。例如：[神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html)、[好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html)。
 
 会持续更新。
 
@@ -17,7 +17,7 @@
 ## 这是什么
 
 1. **目录。** 仓库收录 370 条节目元数据：长节目 279（含 Guest Series 16）、Essentials 62、AMA 19、现场问答 10。可以按中文标题、英文标题、人物姓名和类别筛选，也可以只看已有精读或待整理。
-2. **中文精读。** 按节目结构写成的长文，一集一个页面。已上线 76 篇中文精读；其余条目只列目录。
+2. **中文精读。** 按节目结构写成的长文，一集一个页面。已上线 84 篇中文精读；其余条目只列目录。
 3. **静态阅读页。** 桌面右侧章节目录，手机上可折叠。字号 16–24px，浅色或深色底，页内显示阅读进度。文末默认收起编辑与来源说明。
 
 ## 核心能力
@@ -103,7 +103,7 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - 克隆这个仓库只能跑测试和 `--demo`。真实转写、中文全文、封面和托管凭据都在 Git 之外。`--private` 需要本机自行准备 `private/`。
 - `prepare` 只对长节目切分字幕。Essentials、AMA、现场问答目前只在目录中。16 条 AMA 标明为节选。
 - 目录里的索引日期未独立核实，不能当成节目首发日期。章节时间来自本地字幕，不表示已经与原音逐秒对齐。
-- 推送代码不会更新线上站点。线上篇数以站点实际页面为准，已上线 76 篇中文精读。
+- 推送代码不会更新线上站点。线上篇数以站点实际页面为准，已上线 84 篇中文精读。
 
 ## 贡献
 
@@ -119,7 +119,7 @@ taopatric58@gmail.com
 
 ## English
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **76** published essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **84** published essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
 
 Updated continuously.
 
