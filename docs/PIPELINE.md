@@ -2,7 +2,7 @@
 
 给维护者。读者向说明在仓库根目录的 [README.md](../README.md)。
 
-脚本只做目录导入、字幕分块、状态登记、源文件核对和静态 HTML 构建。不调用模型，不翻译，不删广告，也不判定科学对错。正文写在本机 `private/`，不进入 Git。
+脚本只做目录导入、字幕分块、状态登记、源文件核对和静态 HTML 构建。不调用模型，不翻译，不删广告，也不判定科学对错。进行中的正文写在本机 `private/`，不进入 Git。已发布的中文精读在 `site/zh/`。
 
 ## 命令
 
@@ -21,9 +21,11 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 
 python3 scripts/build_site.py --private --out private/site
 python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
+
+python3 scripts/build_site.py --published --out dist
 ```
 
-`Makefile` 里有对应目标：`test`、`demo`、`private-site`、`status`、`check-sources`、`audit`。
+`Makefile` 里有对应目标：`test`、`demo`、`private-site`、`published`、`status`、`check-sources`、`audit`。
 
 ## 各步做什么
 
@@ -41,11 +43,13 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 `audit-git` 检查已跟踪路径是否落在允许的代码、文档、目录和模板范围内，并拒绝符号链接。它不阅读正文质量。
 
-README 已有的 `docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹；其他图片、节目封面和完整稿件仍不在允许范围内。
+README 已有的 `docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹。其他图片、节目封面和原始转写仍不在允许范围内。`site/zh/` 下的 `.md` 与 `.json` 可以入库。
 
-`build_site.py --demo` 不读取 `catalog/` 或 `private/`。输出必须在 `dist/` 内，默认就是 `dist/`。页面是虚构短文。
+`build_site.py --demo` 不读取 `catalog/`、`private/` 或 `site/zh/`。输出必须在 `dist/` 内，默认就是 `dist/`。页面是虚构短文。
 
 `build_site.py --private` 读取目录、`private/progress.json`、`private/articles/{id}.md` 和 `private/metadata/{id}.json`。输出必须在 `private/` 下面，且不能盖住文章、元数据、分块、来源映射或审稿目录。默认输出是 `private/site`。构建器只覆盖带有自己标记 `.huberman-build.json` 的旧输出；失败时留下上一份成功结果。构建器不联网，也不部署。
+
+`build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。节目封面和人物肖像不在 `site/zh/` 中，页面使用占位肖像，封面显示「节目封面待核实」。
 
 ## 本机文件
 
@@ -88,4 +92,4 @@ reviewed → needs_revision → drafting 或 draft_complete
 3. 用现有静态托管导入该输出目录。构建器不创建域名，也不读取凭据。
 4. 打开首页筛选、至少一篇正文、手机目录和来源链接，并在未登录状态下再看一遍。记录实际网址和篇数。本地预览通过不等于站点已更新。
 
-推送到 `main` 时，GitHub Actions 用 `--demo` 构建并发布到 GitHub Pages（https://tolsonhuddy-collab.github.io/huberman-tolson-cn/）。页面链接是相对路径，不使用 `<base>`，这样正文里的 `#section` 锚点在 `/huberman-tolson-cn/` 子路径下仍指向当前篇。仓库不含中文全文，这次自动发布是演示构建；主站精读仍按上面的步骤手工上传。Feed 内的页面链接指向主站，不指向 Pages 域名。
+推送到 `main` 时，GitHub Actions 用 `--published` 构建 `site/zh/` 并发布到 GitHub Pages（https://tolsonhuddy-collab.github.io/huberman-tolson-cn/）。页面链接是相对路径，不使用 `<base>`，这样正文里的 `#section` 锚点在 `/huberman-tolson-cn/` 子路径下仍指向当前篇。备用站包含仓库里的全部中文精读。主站仍按上面的步骤手工上传。Feed 内的页面链接指向主站，不指向 Pages 域名。

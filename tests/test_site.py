@@ -260,6 +260,8 @@ class SiteTests(unittest.TestCase):
         (self.root / "catalog/episodes.json").write_text("not JSON: demo must not open this")
         (self.root / "private/handoff").mkdir()
         (self.root / "private/handoff/private.html").write_text("SECRET-HANDOFF")
+        (self.root / "site/zh").mkdir(parents=True)
+        (self.root / "site/zh/secret.md").write_text("SECRET-COMMITTED-ESSAY")
         site.build_site(self.root, Path("dist"))
         files = list((self.root / "dist").rglob("*"))
         contents = "\n".join(path.read_text() for path in files if path.is_file())
@@ -729,6 +731,68 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertTrue((self.root / "dist/podcasts/huberman/feed.xml").is_file())
         self.assertTrue((self.root / "dist/tolson-rss.opml").is_file())
         self.assertTrue((self.root / "dist/.nojekyll").is_file())
+
+    def test_published_build_reads_site_zh_and_keeps_canonical_feed(self):
+        self.write_json("catalog/episodes.json", {"episodes": [
+            {"id": "essay-one", "title_en": "Sleep Essay", "kind": "long_episode"},
+            {"id": "catalog-only", "title_en": "Not written", "kind": "ama"},
+        ]})
+        (self.root / "site/zh").mkdir(parents=True)
+        (self.root / "site/zh/essay-one.md").write_text(
+            "# 已发布标题\n\n导语写在这里。\n\n## 第一章\n\nCOMMITTED-ESSAY-BODY。\n", encoding="utf-8")
+        self.write_json("site/zh/essay-one.json", {
+            "id": "essay-one", "title_zh": "已发布标题", "title_en": "Sleep Essay",
+            "source_url": "https://www.hubermanlab.com/episode/example",
+            "hosts": [{"name": "讲述者", "role": "主持人", "bio": "简介"}],
+            "sections": [{"title": "第一章", "source_seconds": 90}],
+            "editor_note": "编辑说明。",
+        })
+        (self.root / "private/articles/secret.md").write_text("PRIVATE-TRANSCRIPT-SECRET", encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "either"):
+            site.build_site(self.root, Path("dist"), private=True, published=True)
+        manifest = site.build_site(self.root, Path("dist"), published=True)
+        self.assertEqual(manifest["mode"], "published")
+        self.assertEqual(manifest["article_count"], 1)
+        self.assertEqual(manifest["episode_count"], 2)
+        self.assertEqual(manifest["feed_entry_count"], 1)
+        page = (self.root / "dist/episodes/essay-one.html").read_text(encoding="utf-8")
+        built = "\n".join(path.read_text(encoding="utf-8") for path in (self.root / "dist").rglob("*") if path.is_file())
+        self.assertIn("COMMITTED-ESSAY-BODY", page)
+        self.assertIn("非官方阅读项目", page)
+        self.assertNotIn("虚构版式演示", built)
+        self.assertNotIn("PRIVATE-TRANSCRIPT-SECRET", built)
+        self.assertFalse((self.root / "dist/episodes/catalog-only.html").exists())
+        self.assertNotIn("github.io", built)
+        self.assertIn(site.RIGHTS_LINE, (self.root / "dist/feed.xml").read_text(encoding="utf-8"))
+        self.assertIn("https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/essay-one.html", built)
+        index = (self.root / "dist/index.html").read_text(encoding="utf-8")
+        self.assertIn('href="feed.xml"', index)
+        self.assertIn('href="../feed.xml"', page)
+        self.assertNotRegex(index + page, r'(?:href|src)="/')
+        pages = "https://tolsonhuddy-collab.github.io/huberman-tolson-cn/"
+        self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
+        self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
+
+    def test_repository_commits_eighty_four_chinese_essays(self):
+        files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 84 + [".md"] * 84)
+        stems = {}
+        for path in files:
+            stems.setdefault(path.suffix, set()).add(path.stem)
+            self.assertFalse(path.is_symlink())
+        self.assertEqual(stems[".md"], stems[".json"])
+        catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
+        ids = {episode["id"] for episode in catalog["episodes"]}
+        self.assertEqual(len(stems[".md"]), 84)
+        self.assertTrue(stems[".md"] <= ids)
+        for path in files:
+            if path.suffix != ".json":
+                continue
+            meta = json.loads(path.read_text(encoding="utf-8"))
+            self.assertEqual(meta.get("id"), path.stem)
+            raw = path.read_text(encoding="utf-8")
+            self.assertNotIn('"portrait"', raw)
+            self.assertNotIn('"cover"', raw)
 
 
 if __name__ == "__main__":

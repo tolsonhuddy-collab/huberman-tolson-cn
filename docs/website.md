@@ -23,7 +23,15 @@ python3 scripts/build_site.py --demo --out dist
 python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 ```
 
-浏览器访问 `http://127.0.0.1:8000`。演示构建只采用脚本内原创的虚构标题、人物和短文，不读取 `catalog/`、`private/`、交接包或真人肖像。虚构短文仅测试版式，不是精读成稿。`dist/` 是构建产物，不应提交 Git。
+浏览器访问 `http://127.0.0.1:8000`。演示构建只采用脚本内原创的虚构标题、人物和短文，不读取 `catalog/`、`private/`、`site/zh/`、交接包或真人肖像。虚构短文仅测试版式，不是精读成稿。`dist/` 是构建产物，不应提交 Git。
+
+已发布精读：
+
+```sh
+python3 scripts/build_site.py --published --out dist
+```
+
+它只读 `catalog/episodes.json` 与 `site/zh/`，输出到 `dist/`。页面用与主站相同的读者文案。Feed 链接仍指向主站。`site/zh/` 不含节目封面和人物肖像，构建结果使用占位肖像。
 
 私有阅读稿使用独立命令：
 
@@ -34,7 +42,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 本地预览地址是 `http://127.0.0.1:8001`。私有输出必须在项目的 `private/` 下，不能覆盖文章、元信息、交接包、来源映射、分块或审阅目录。构建器只替换带有自身构建标记的既有输出目录，错误输入不会替换上一份有效页面。不要将项目根目录作为 HTTP 服务目录。
 
-构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 84 篇中文精读不是同一份清单。部署步骤见 [PIPELINE.md](PIPELINE.md)。
+构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 84 篇中文精读不是同一份清单。`--published` 构建仓库 `site/zh/` 里的这 84 篇。部署步骤见 [PIPELINE.md](PIPELINE.md)。
 
 每次构建还会重写 `feed.xml`、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`，并用标准库确认这些 XML 可以解析。`feed.xml` 是 Atom，收录本次构建中最近 20 篇可读精读的全文（`content type="html"`），含稳定 id、标题、主站页面链接、published、updated、类别，以及已核验时的原节目链接。Tolson-RSS 按播客分文件，目前只有 Huberman；OPML 列出这些 Feed。首页和正文的 `<head>` 用相对地址自动发现 Atom，因此主站根路径和 GitHub Pages 的 `/huberman-tolson-cn/` 子路径都能找到订阅。Feed 里的链接固定指向主站 https://huberman-reading-001.tolsonhuddy.chatgpt.site 。
 

@@ -229,7 +229,7 @@ def read_private(root: Path) -> tuple[list[dict], dict, dict, dict]:
 
 
 def demo_data() -> tuple[list[dict], dict, dict, dict]:
-    """Fictional text only. Never inspect catalog/, private/, or the handoff bundle."""
+    """Fictional text only. Never inspect catalog/, private/, site/zh/, or the handoff bundle."""
     ep = {"id": "demo-reading", "title_en": "A Fictional Conversation About Reading", "kind": "long_episode", "explicit_excerpt": False}
     meta = {"id": ep["id"], "title_zh": "读一篇长文，留出一点时间", "title_en": ep["title_en"], "dek": "这是为测试版式创作的虚构文章，不来自任何一期节目。", "hosts": [{"name": "示例编辑", "role": "虚构人物", "bio": "用占位人物测试阅读页面。"}], "source_url": None, "sections": [{"title": "从一个小问题开始", "source_seconds": None}, {"title": "为理解留出空间", "source_seconds": None}], "editor_note": "纯版式演示。人物、标题与正文均为本项目原创的虚构占位内容。"}
     md = "# 读一篇长文，留出一点时间\n\n这篇短文只用来查看文字在页面上的样子。它不对应真实节目，也不陈述科学结论。\n\n## 从一个小问题开始\n\n阅读长文时，可以先找一个自己关心的问题。带着这个问题继续读，前后段落的联系会更容易看清。这里的文字只是版式占位，长度也不代表真实精读的标准。\n\n## 为理解留出空间\n\n段落之间留一点空白，目录放在手边。窄屏收起目录，读者仍可从文章上方跳到需要的位置。字号与底色也可以按习惯调整。\n"
@@ -587,29 +587,76 @@ def write_feeds(staging: Path, episodes: list[dict], progress: dict, metadata: d
     return len(entries)
 
 
-def build_site(root: Path, out: Path, private: bool = False) -> dict:
+def read_published(root: Path) -> tuple[list[dict], dict, dict, dict]:
+    """Committed Chinese essays in site/zh. Does not read private/ or English sources."""
+    catalog = json.loads((root / "catalog/episodes.json").read_text(encoding="utf-8"))
+    episodes = catalog.get("episodes")
+    if not isinstance(episodes, list):
+        raise ValueError("catalog/episodes.json must contain an episodes list")
+    base = (root / "site" / "zh").resolve()
+    if not base.is_dir() or not inside(base, root.resolve()):
+        raise ValueError("Published essays must live in site/zh/")
+    seen, by_id = set(), {}
+    for ep in episodes:
+        episode_id = ep.get("id", "")
+        if not isinstance(episode_id, str) or not ID.fullmatch(episode_id) or episode_id in seen:
+            raise ValueError("Episode IDs must be unique safe slugs")
+        if ep.get("kind") not in KINDS:
+            raise ValueError(f"Unknown episode kind: {episode_id}")
+        seen.add(episode_id)
+        by_id[episode_id] = ep
+    for path in base.iterdir():
+        if path.is_symlink() or not path.is_file() or path.suffix not in {".md", ".json"} or not ID.fullmatch(path.stem) or path.stem not in by_id:
+            raise ValueError(f"site/zh file is not a catalog essay: {path.name}")
+    metadata, articles, progress = {}, {}, {}
+    for episode_id in by_id:
+        md_path, meta_path = base / f"{episode_id}.md", base / f"{episode_id}.json"
+        if md_path.exists() != meta_path.exists():
+            raise ValueError(f"Published essay needs both markdown and metadata: {episode_id}")
+        if not md_path.is_file():
+            continue
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+        if not isinstance(meta, dict) or meta.get("id") != episode_id:
+            raise ValueError(f"Metadata ID mismatch: {episode_id}")
+        metadata[episode_id] = meta
+        articles[episode_id] = md_path.read_text(encoding="utf-8")
+        progress[episode_id] = {"status": "reviewed"}
+    if not articles:
+        raise ValueError("site/zh has no published essays")
+    return episodes, progress, metadata, articles
+
+
+def build_site(root: Path, out: Path, private: bool = False, published: bool = False) -> dict:
+    if private and published:
+        raise ValueError("Choose either --private or --published")
     root = root.resolve()
-    destination = output_path(root, out, private)
-    episodes, progress, metadata, articles = read_private(root) if private else demo_data()
+    destination = output_path(root, out, private and not published)
+    if published:
+        episodes, progress, metadata, articles = read_published(root)
+    elif private:
+        episodes, progress, metadata, articles = read_private(root)
+    else:
+        episodes, progress, metadata, articles = demo_data()
+    real = private or published
     destination.parent.mkdir(parents=True, exist_ok=True)
     with tempfile.TemporaryDirectory(prefix=".huberman-build-", dir=destination.parent) as tmp:
         staging = Path(tmp) / "site"
         (staging / "episodes").mkdir(parents=True)
         for name in ("style.css", "app.js", "qiaomu-LICENSE.txt", "portrait-placeholder.svg"):
             shutil.copyfile(root / "web" / name, staging / name)
-        covers = copy_covers(root, staging, metadata, articles, private)
+        covers = copy_covers(root, staging, metadata, articles, real)
         fragments = {}
         for ep in episodes:
             if ep["id"] in articles:
                 fragment = reading_fragment(ep, metadata[ep["id"]], articles[ep["id"]])
                 fragments[ep["id"]] = fragment
-                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], private, fragment)
+                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], real, fragment)
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")
-        (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, private, covers), encoding="utf-8")
+        (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, real, covers), encoding="utf-8")
         feed_entry_count = write_feeds(staging, episodes, progress, metadata, fragments)
         (staging / ".nojekyll").write_text("", encoding="utf-8")
         manifest = {
-            "schema_version": 1, "mode": "private" if private else "synthetic_demo",
+            "schema_version": 1, "mode": "published" if published else "private" if private else "synthetic_demo",
             "episode_count": len(episodes), "article_count": len(articles),
             "feed_entry_count": feed_entry_count, "deployed": False,
         }
@@ -625,10 +672,11 @@ def main() -> None:
     modes = parser.add_mutually_exclusive_group(required=True)
     modes.add_argument("--demo", action="store_true", help="Build only fictional demo content; no private inputs")
     modes.add_argument("--private", action="store_true", help="Build owner-private articles below private/")
+    modes.add_argument("--published", action="store_true", help="Build committed Chinese essays in site/zh into dist/")
     parser.add_argument("--out", type=Path, help="Output path; defaults to dist or private/site")
     args = parser.parse_args()
     try:
-        manifest = build_site(ROOT, args.out or Path("private/site" if args.private else "dist"), args.private)
+        manifest = build_site(ROOT, args.out or Path("private/site" if args.private else "dist"), args.private, args.published)
     except (ValueError, OSError, KeyError, TypeError) as error:
         parser.exit(1, f"Build failed: {error}\n")
     print(json.dumps(manifest, ensure_ascii=False))

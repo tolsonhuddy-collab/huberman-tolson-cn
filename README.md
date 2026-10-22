@@ -19,6 +19,8 @@
 - 主站：https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - 备用站：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ （主站打不开时用备用站）
 
+已发布的中文精读在仓库 `site/zh/`（每篇一份 Markdown 和一份元数据）。备用站由这些稿件构建。
+
 ## 订阅 / RSS
 
 - 全文 Feed（Atom，最近 20 篇）：https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
@@ -40,7 +42,7 @@
 | 筛选 | 首页匹配中文标题、英文标题、人物和类别，并可只看已有精读或待整理。筛选时精选区隐藏。 |
 | 阅读页 | 桌面目录随滚动高亮；手机目录可折叠。字号与底色记在本机。文末可展开来源。 |
 | 来源 | 核实过的节目链接写在文末。没有核实的视频地址留空，不编造。章节时间来自本地字幕。 |
-| 本地构建 | Python 3.10+ 标准库。`--demo` 只做虚构版式；真实转写和中文全文不在 Git 里。 |
+| 本地构建 | Python 3.10+ 标准库。`--demo` 只做虚构版式；`--published` 用 `site/zh/` 构建已发布精读。英文转写不在 Git 里。 |
 | 订阅 | 每次构建重写 Atom 全文 Feed（最近 20 篇）、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`。 |
 
 ## 快速开始
@@ -80,6 +82,11 @@ dist/（--demo，虚构稿）或 private/site/（--private，本地稿）
         │  手工交给静态托管
         ▼
 https://huberman-reading-001.tolsonhuddy.chatgpt.site
+
+site/zh/（已发布中文精读，入库）
+        │  scripts/build_site.py --published
+        ▼
+dist/ → GitHub Pages 备用站
 ```
 
 命令、审稿状态和部署检查见 [流水线说明](docs/PIPELINE.md)。稿件字段见 [网站与输入协议](docs/website.md)，写法见 [编辑规范](docs/EDITORIAL.md)。
@@ -92,6 +99,7 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 │   └── pipeline.py          # 导入、分块、状态、源核对、Git 路径审计
 ├── tests/                   # unittest
 ├── catalog/episodes.json    # 370 条目录元数据，不含正文
+├── site/zh/                 # 已发布中文精读（Markdown + 元数据）
 ├── web/                     # 首页与文章模板、样式、阅读脚本
 │   └── qiaomu-LICENSE.txt   # 版式来源的 MIT 声明
 ├── .github/workflows/       # 推送到 main 后发布 GitHub Pages 备用站
@@ -113,16 +121,16 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 
 ## 已知限制
 
-- 克隆这个仓库只能跑测试和 `--demo`。真实转写、中文全文、封面和托管凭据都在 Git 之外。`--private` 需要本机自行准备 `private/`。
+- 克隆后可以跑测试、`--demo` 和 `--published`。已发布中文精读在 `site/zh/`。英文转写、节目封面、人物肖像和托管凭据都在 Git 之外。`--private` 需要本机自行准备 `private/`。
 - `prepare` 只对长节目切分字幕。Essentials、AMA、现场问答目前只在目录中。16 条 AMA 标明为节选。
 - 目录里的索引日期未独立核实，不能当成节目首发日期。章节时间来自本地字幕，不表示已经与原音逐秒对齐。
-- 推送代码不会更新线上站点。线上篇数以站点实际页面为准，已上线 84 篇中文精读。
+- 推送到 `main` 会更新 GitHub Pages 备用站。主站仍由现有托管流程更新。线上篇数以站点实际页面为准，已上线 84 篇中文精读。
 
 ## 贡献
 
 - 错字、人名、数字或明显误读：开 Issue，写上篇目标题或页面地址。
 - 构建、阅读页、流水线的修复：提 Pull Request。提交前可跑 `python3 scripts/pipeline.py audit-git`。
-- 不要把原片、转写、中文全文、节目图片或凭据提交进仓库。
+- 不要把原片、英文转写、节目图片或凭据提交进仓库。已发布的中文精读放在 `site/zh/`。
 
 ## 联系
 
@@ -141,13 +149,15 @@ Updated continuously.
 - Primary: https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - Backup: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ (use this if the primary site does not open)
 
+Published Chinese essays are in `site/zh/` (one Markdown file and one metadata file per essay). The backup site is built from those files.
+
 ## Subscribe / RSS
 
 - Full-text Atom feed, latest 20 essays: https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
 - Tolson-RSS (Huberman): https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml
 - OPML list: https://huberman-reading-001.tolsonhuddy.chatgpt.site/tolson-rss.opml
 
-This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
+This repository holds catalog metadata (370 entries), the published Chinese essays in `site/zh/`, a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
 
 Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers. This repository does not include the original podcast files. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
 

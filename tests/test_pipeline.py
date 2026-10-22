@@ -133,8 +133,10 @@ class PipelineTests(unittest.TestCase):
     def test_code_path_allowlist_excludes_rendered_fulltext(self):
         for path in ["private/articles/a.md", "dist/index.html", "content/article_zh.md", ".openai/hosting.json", ".env", "web/../../private/a.md", "web/photo.jpg"]:
             self.assertFalse(p.public_path(path), path)
-        for path in ["README.md", "scripts/pipeline.py", "web/style.css", "web/app.js", "catalog/episodes.json", ".github/workflows/pages.yml"]:
+        for path in ["README.md", "scripts/pipeline.py", "web/style.css", "web/app.js", "catalog/episodes.json", ".github/workflows/pages.yml", "site/zh/002-master-sleep.md", "site/zh/002-master-sleep.json"]:
             self.assertTrue(p.public_path(path), path)
+        for path in ["site/zh/cover.jpg", "site/zh/portrait.png", "site/zh/episode.txt", "site/zh/episode.vtt", "site/zh/audio.mp3", "site/index.html"]:
+            self.assertFalse(p.public_path(path), path)
 
     def test_documentation_images_do_not_allow_other_raster_paths(self):
         for name in ("docs/screenshot-home.png", "docs/xiaohongshu.jpg"):

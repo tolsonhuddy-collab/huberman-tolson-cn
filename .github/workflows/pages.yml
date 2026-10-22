@@ -29,8 +29,8 @@ jobs:
           python-version: "3.12"
       - name: Test
         run: python3 -m unittest discover -s tests -v
-      - name: Build demo site
-        run: python3 scripts/build_site.py --demo --out dist
+      - name: Build published site
+        run: python3 scripts/build_site.py --published --out dist
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
