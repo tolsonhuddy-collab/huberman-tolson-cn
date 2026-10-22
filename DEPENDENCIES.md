@@ -1,6 +1,6 @@
 # 依赖与成本
 
-内容流水线与静态构建：Python 3.10+，标准库 `argparse/csv/hashlib/html/json/pathlib/re/tempfile/unittest` 等，无第三方 Python 包，无安装步骤。
+内容流水线与静态页：Python 3.10+，标准库 `argparse/csv/hashlib/html/json/pathlib/re/tempfile/unittest` 等。阅读页没有运行时依赖。生成 RSS 卡片时构建步骤使用 Pillow，以及一份不提交进仓库的 Noto Sans SC（`HUB_CJK_FONT`）。没有这份中文字体时构建失败，不用节目封面或肖像代替。
 
 前端：原生 HTML、CSS、JavaScript，无打包器、数据库、服务端或运行时 API。浏览器本地存储仅保存字号和阅读底色。构建应使用本地静态素材，不依赖外链字体/CDN。
 
@@ -12,4 +12,4 @@
 
 托管：已有静态站点使用既有子域名与托管流程；已上线 84 篇中文精读，访问开放及验证由托管端执行。本轮未新增域名、服务器、套餐或凭据；代码推送和本地构建不等于部署成功。本文不承诺第三方的永久免费配额。
 
-GitHub Pages：`.github/workflows/pages.yml` 在推送到 `main` 时，用 `site/zh/` 的 `--published` 构建发布备用站。不新增域名、服务器或凭据。主站仍走既有托管流程。原始英文转写不在 Git 中。
+GitHub Pages：`.github/workflows/pages.yml` 在推送到 `main` 时安装 Pillow 和 Noto Sans SC，再用 `site/zh/` 的 `--published --base-url` 构建发布备用站。不新增域名、服务器或凭据。主站仍走既有托管流程。原始英文转写不在 Git 中。

@@ -9,9 +9,11 @@ import hashlib
 from html import escape
 import json
 import math
+import os
 from pathlib import Path
 import re
 import shutil
+import subprocess
 from string import Template
 import tempfile
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
@@ -22,6 +24,9 @@ CANONICAL_ORIGIN = "https://huberman-reading-001.tolsonhuddy.chatgpt.site"
 FEED_LIMIT = 20
 RIGHTS_LINE = "非官方精读，未获授权，版权归原作者"
 ATOM = "http://www.w3.org/2005/Atom"
+MEDIA = "http://search.yahoo.com/mrss/"
+DATE_FLOOR = datetime(2000, 1, 1, tzinfo=timezone.utc)
+BRAND = "Huberman Lab 中文精读"
 # Tolson-RSS keeps one Atom file per podcast. This site currently has Huberman essays only.
 PODCASTS = ({"slug": "huberman", "title": "Huberman Lab 中文精读"},)
 KINDS = {"long_episode": "长节目", "essentials": "Essentials", "ama": "AMA", "live_qa": "现场问答"}
@@ -231,7 +236,7 @@ def read_private(root: Path) -> tuple[list[dict], dict, dict, dict]:
 def demo_data() -> tuple[list[dict], dict, dict, dict]:
     """Fictional text only. Never inspect catalog/, private/, site/zh/, or the handoff bundle."""
     ep = {"id": "demo-reading", "title_en": "A Fictional Conversation About Reading", "kind": "long_episode", "explicit_excerpt": False}
-    meta = {"id": ep["id"], "title_zh": "读一篇长文，留出一点时间", "title_en": ep["title_en"], "dek": "这是为测试版式创作的虚构文章，不来自任何一期节目。", "hosts": [{"name": "示例编辑", "role": "虚构人物", "bio": "用占位人物测试阅读页面。"}], "source_url": None, "sections": [{"title": "从一个小问题开始", "source_seconds": None}, {"title": "为理解留出空间", "source_seconds": None}], "editor_note": "纯版式演示。人物、标题与正文均为本项目原创的虚构占位内容。"}
+    meta = {"id": ep["id"], "title_zh": "读一篇长文，留出一点时间", "title_en": ep["title_en"], "dek": "这是为测试版式创作的虚构文章，不来自任何一期节目。", "hosts": [{"name": "示例编辑", "role": "虚构人物", "bio": "用占位人物测试阅读页面。"}], "source_url": None, "published": "2024-06-01T00:00:00Z", "sections": [{"title": "从一个小问题开始", "source_seconds": None}, {"title": "为理解留出空间", "source_seconds": None}], "editor_note": "纯版式演示。人物、标题与正文均为本项目原创的虚构占位内容。"}
     md = "# 读一篇长文，留出一点时间\n\n这篇短文只用来查看文字在页面上的样子。它不对应真实节目，也不陈述科学结论。\n\n## 从一个小问题开始\n\n阅读长文时，可以先找一个自己关心的问题。带着这个问题继续读，前后段落的联系会更容易看清。这里的文字只是版式占位，长度也不代表真实精读的标准。\n\n## 为理解留出空间\n\n段落之间留一点空白，目录放在手边。窄屏收起目录，读者仍可从文章上方跳到需要的位置。字号与底色也可以按习惯调整。\n"
     pending = {"id": "demo-excerpt", "title_en": "Fictional AMA Excerpt — Not Yet Written", "kind": "ama", "explicit_excerpt": True}
     return [ep, pending], {ep["id"]: {"status": "reviewed"}}, {ep["id"]: meta}, {ep["id"]: md}
@@ -326,7 +331,7 @@ def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
     }
 
 
-def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict, md: str, private: bool, fragment: dict | None = None) -> str:
+def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict, md: str, private: bool, fragment: dict | None = None, og_image: str = "") -> str:
     fragment = fragment or reading_fragment(ep, meta, md)
     title_zh, source, sections = fragment["title_zh"], fragment["source"], fragment["sections"]
     count = fragment["count"]
@@ -337,6 +342,7 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         source_note += " 原节目链接尚未核验，未生成回听链接。"
     values = {
         "page_title": escape(title_zh + " · Huberman Lab 中文精读", quote=True), "description": escape(str(meta.get("dek") or "中文长文阅读"), quote=True),
+        "og_image": escape(og_image, quote=True),
         "title_zh": escape(title_zh), "title_en": escape(str(meta.get("title_en") or ep["title_en"])),
         "dek": '<p class="dek">' + escape(str(meta["dek"])) + "</p>" if meta.get("dek") else "",
         "edition": "非官方阅读项目" if private else "虚构版式演示",
@@ -380,13 +386,19 @@ def copy_covers(root: Path, staging: Path, metadata: dict, articles: dict, priva
     return covers
 
 
+def directory_numbers(episodes: list[dict], progress: dict, articles: dict) -> dict[str, int]:
+    """Catalog card order: readable essays first, original catalog order inside each group."""
+    ordered = sorted(episodes, key=lambda ep: not (ep["id"] in articles and progress.get(ep["id"], {}).get("status") in READY))
+    return {ep["id"]: number for number, ep in enumerate(ordered, 1)}
+
+
 def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: dict, articles: dict, private: bool, covers: dict | None = None) -> str:
     covers = covers or {}
+    numbers = directory_numbers(episodes, progress, articles)
     cards = []
-    # Stable grouping keeps readable work visible while preserving source order
-    # inside each group. Display numbers are positions, never episode numbers.
-    ordered = sorted(episodes, key=lambda ep: not (ep["id"] in articles and progress.get(ep["id"], {}).get("status") in READY))
-    for number, ep in enumerate(ordered, 1):
+    ordered = sorted(episodes, key=lambda ep: numbers[ep["id"]])
+    for ep in ordered:
+        number = numbers[ep["id"]]
         episode_id = ep["id"]
         meta = metadata.get(episode_id, {})
         status = progress.get(episode_id, {}).get("status", "pending")
@@ -438,11 +450,19 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
     return Template((root / "web/index.html").read_text(encoding="utf-8")).substitute(values)
 
 
-def canonical(path: str = "") -> str:
-    """Absolute URL on the primary site. Feed links never point at a mirror."""
+def normalize_base(value: str | None) -> str:
+    """Prefix for feed, OPML, and card URLs. The Pages build passes its own path prefix."""
+    base = (value or CANONICAL_ORIGIN).strip() or CANONICAL_ORIGIN
+    parts = urlsplit(base)
+    if parts.scheme not in {"http", "https"} or not parts.netloc or parts.username or parts.password or parts.query or parts.fragment:
+        raise ValueError("base URL must be an http(s) URL without credentials or a query")
+    return base.rstrip("/")
+
+
+def site_url(base: str, path: str = "") -> str:
     if not path:
-        return CANONICAL_ORIGIN + "/"
-    return CANONICAL_ORIGIN + "/" + path.lstrip("/")
+        return base.rstrip("/") + "/"
+    return base.rstrip("/") + "/" + path.lstrip("/")
 
 
 def parse_time(value: object) -> datetime | None:
@@ -466,23 +486,134 @@ def atom_time(value: datetime) -> str:
     return value.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
-def entry_times(state: dict, meta: dict) -> tuple[datetime, datetime]:
-    """Prefer recorded essay timestamps. Index dates are not publication dates."""
-    published = parse_time(meta.get("published") or meta.get("published_at") or state.get("published_at"))
+def essay_paths(episode_id: str, *, published: bool, private: bool) -> tuple[str, ...]:
+    if published:
+        return (f"site/zh/{episode_id}.md", f"site/zh/{episode_id}.json")
+    if private:
+        return (f"private/articles/{episode_id}.md", f"private/metadata/{episode_id}.json")
+    return ()
+
+
+def git_file_dates(root: Path, paths: tuple[str, ...]) -> tuple[datetime | None, datetime | None]:
+    """Earliest and latest commit timestamps for the essay files. Index dates are not used."""
+    added, latest = None, None
+    for rel in paths:
+        if not (root / rel).is_file():
+            continue
+        try:
+            log = subprocess.check_output(
+                ["git", "-C", str(root), "log", "--follow", "--format=%aI", "--", rel],
+                text=True, stderr=subprocess.DEVNULL,
+            )
+        except (subprocess.CalledProcessError, FileNotFoundError):
+            continue
+        times = [stamp for line in log.splitlines() if (stamp := parse_time(line.strip()))]
+        if not times:
+            continue
+        newest, oldest = times[0], times[-1]
+        latest = newest if latest is None or newest > latest else latest
+        added = oldest if added is None or oldest < added else added
+    return added, latest
+
+
+def file_mtime(root: Path, paths: tuple[str, ...]) -> datetime | None:
+    times = [datetime.fromtimestamp((root / rel).stat().st_mtime, timezone.utc) for rel in paths if (root / rel).is_file()]
+    return min(times) if times else None
+
+
+def require_feed_date(value: datetime, episode_id: str, label: str) -> datetime:
+    when = value.astimezone(timezone.utc)
+    if when < DATE_FLOOR:
+        raise ValueError(f"{episode_id} feed {label} is before 2000: {atom_time(when)}")
+    return when
+
+
+def entry_times(state: dict, meta: dict, root: Path, paths: tuple[str, ...]) -> tuple[datetime, datetime]:
+    """Episode publish date from essay metadata, then the essay's git date. Never the epoch."""
+    episode_id = str(meta.get("id") or "feed")
+    published = parse_time(meta.get("published") or meta.get("published_at") or meta.get("date_published") or state.get("published_at"))
     updated = parse_time(meta.get("updated") or meta.get("updated_at") or state.get("updated_at") or state.get("reviewed_at"))
-    if published is None:
+    if published is None and updated is not None:
         published = updated
+    if published is None:
+        added, latest = git_file_dates(root, paths)
+        published = added or file_mtime(root, paths)
+        if updated is None:
+            updated = latest
+    if published is None:
+        raise ValueError(f"No publish date for {episode_id}")
     if updated is None:
         updated = published
-    if published is None or updated is None:
-        fallback = datetime(1970, 1, 1, tzinfo=timezone.utc)
-        published = published or fallback
-        updated = updated or published
-    return published, updated
+    return require_feed_date(published, episode_id, "published"), require_feed_date(updated, episode_id, "updated")
 
 
-def entry_html(meta: dict, fragment: dict) -> str:
-    parts = [f"<p>{escape(RIGHTS_LINE)}</p>"]
+def find_cjk_font() -> Path:
+    candidates = []
+    if os.environ.get("HUB_CJK_FONT"):
+        candidates.append(Path(os.environ["HUB_CJK_FONT"]))
+    candidates.extend([
+        Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
+        Path("/usr/share/fonts/truetype/noto/NotoSansCJK-Regular.ttc"),
+        Path("/usr/share/fonts/truetype/wqy/wqy-microhei.ttc"),
+        Path("/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf"),
+    ])
+    for path in candidates:
+        if path.is_file():
+            return path
+    raise ValueError("CJK font not found. Set HUB_CJK_FONT to a Noto Sans SC file.")
+
+
+def wrap_chars(text: str, font: object, max_width: float) -> list[str]:
+    lines, current = [], ""
+    for char in text:
+        trial = current + char
+        if font.getlength(trial) <= max_width or not current:
+            current = trial
+        else:
+            lines.append(current)
+            current = char
+    if current:
+        lines.append(current)
+    return lines
+
+
+def render_og_card(path: Path, title: str, number: int) -> None:
+    """Original 1200×630 card. Text only: no episode covers, portraits, or photos."""
+    from PIL import Image, ImageDraw, ImageFont
+    font_file = str(find_cjk_font())
+    image = Image.new("RGB", (1200, 630), "#f4f1ea")
+    draw = ImageDraw.Draw(image)
+    draw.rectangle((0, 0, 1200, 630), outline="#1e3a34", width=10)
+    brand = ImageFont.truetype(font_file, 32)
+    number_font = ImageFont.truetype(font_file, 36)
+    draw.text((72, 58), BRAND, font=brand, fill="#1e3a34")
+    label = f"{number:03d}"
+    width = draw.textbbox((0, 0), label, font=number_font)[2]
+    draw.text((1128 - width, 54), label, font=number_font, fill="#1e3a34")
+    caption = ImageFont.truetype(font_file, 22)
+    caption_width = draw.textbbox((0, 0), "目录", font=caption)[2]
+    draw.text((1128 - caption_width, 100), "目录", font=caption, fill="#6d675e")
+    size, lines, title_font = 64, [], None
+    while size >= 36:
+        title_font = ImageFont.truetype(font_file, size)
+        lines = wrap_chars(title, title_font, 1056)
+        if len(lines) <= 4:
+            break
+        size -= 4
+    if len(lines) > 4:
+        lines = lines[:4]
+        lines[-1] = lines[-1].rstrip() + "…"
+    y = 190
+    for line in lines:
+        draw.text((72, y), line, font=title_font, fill="#1c1e1c")
+        y += int(size * 1.38)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    image.save(path, "JPEG", quality=90, optimize=True)
+
+
+def entry_html(meta: dict, fragment: dict, image_url: str) -> str:
+    alt = fragment["title_zh"]
+    parts = [f'<img src="{escape(image_url, quote=True)}" alt="{escape(alt, quote=True)}">', f"<p>{escape(RIGHTS_LINE)}</p>"]
     dek = meta.get("dek")
     if isinstance(dek, str) and dek.strip():
         parts.append("<p>" + escape(dek.strip()) + "</p>")
@@ -492,8 +623,8 @@ def entry_html(meta: dict, fragment: dict) -> str:
     return "\n".join(parts)
 
 
-def select_feed_entries(episodes: list[dict], progress: dict, metadata: dict, fragments: dict) -> list[dict]:
-    """Latest readable essays. Undated essays sort after any recorded timestamp."""
+def select_feed_entries(root: Path, episodes: list[dict], progress: dict, metadata: dict, fragments: dict, *, published_mode: bool, private: bool) -> list[dict]:
+    """Latest readable essays by their real publish or update time."""
     selected = []
     for index, ep in enumerate(episodes):
         episode_id = ep["id"]
@@ -504,7 +635,7 @@ def select_feed_entries(episodes: list[dict], progress: dict, metadata: dict, fr
         if state.get("status") not in READY:
             continue
         meta = metadata[episode_id]
-        published, updated = entry_times(state, meta)
+        published, updated = entry_times(state, meta, root, essay_paths(episode_id, published=published_mode, private=private))
         selected.append({
             "id": episode_id, "index": index, "ep": ep, "meta": meta, "fragment": fragment,
             "published": published, "updated": updated,
@@ -517,6 +648,7 @@ def select_feed_entries(episodes: list[dict], progress: dict, metadata: dict, fr
 def write_xml(path: Path, element: ET.Element) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     ET.register_namespace("", ATOM)
+    ET.register_namespace("media", MEDIA)
     tree = ET.ElementTree(element)
     ET.indent(tree, space="  ")
     tree.write(path, encoding="utf-8", xml_declaration=True)
@@ -526,8 +658,12 @@ def write_xml(path: Path, element: ET.Element) -> None:
         raise ValueError(f"Feed XML did not parse: {path.name}: {error}") from error
 
 
-def atom_feed(entries: list[dict], *, feed_id: str, self_path: str, title: str) -> ET.Element:
-    updated = max((item["updated"] for item in entries), default=datetime(1970, 1, 1, tzinfo=timezone.utc))
+def atom_feed(entries: list[dict], *, feed_id: str, self_path: str, title: str, base: str, image_sizes: dict[str, int]) -> ET.Element:
+    if entries:
+        updated = max(item["updated"] for item in entries)
+    else:
+        updated = datetime.now(timezone.utc)
+    updated = require_feed_date(updated, "feed", "updated")
     feed = ET.Element(f"{{{ATOM}}}feed")
     feed.set("{http://www.w3.org/XML/1998/namespace}lang", "zh-CN")
 
@@ -540,8 +676,8 @@ def atom_feed(entries: list[dict], *, feed_id: str, self_path: str, title: str) 
     add(feed, "title", title)
     add(feed, "id", feed_id)
     add(feed, "updated", atom_time(updated))
-    add(feed, "link", attrib={"rel": "self", "type": "application/atom+xml", "href": canonical(self_path)})
-    add(feed, "link", attrib={"rel": "alternate", "type": "text/html", "href": canonical()})
+    add(feed, "link", attrib={"rel": "self", "type": "application/atom+xml", "href": site_url(base, self_path)})
+    add(feed, "link", attrib={"rel": "alternate", "type": "text/html", "href": site_url(base)})
     author = add(feed, "author")
     add(author, "name", "Tolson")
     add(feed, "rights", RIGHTS_LINE)
@@ -552,17 +688,21 @@ def atom_feed(entries: list[dict], *, feed_id: str, self_path: str, title: str) 
         add(entry, "title", fragment["title_zh"])
         add(entry, "updated", atom_time(item["updated"]))
         add(entry, "published", atom_time(item["published"]))
-        add(entry, "link", attrib={"rel": "alternate", "type": "text/html", "href": canonical(f"episodes/{item['id']}.html")})
+        page = site_url(base, f"episodes/{item['id']}.html")
+        image = site_url(base, f"og/{item['id']}.jpg")
+        add(entry, "link", attrib={"rel": "alternate", "type": "text/html", "href": page})
+        add(entry, "link", attrib={"rel": "enclosure", "type": "image/jpeg", "href": image, "length": str(image_sizes[item["id"]])})
         if fragment["source"]:
             add(entry, "link", attrib={"rel": "related", "type": "text/html", "href": fragment["source"], "title": "原节目"})
+        ET.SubElement(entry, f"{{{MEDIA}}}thumbnail", {"url": image, "width": "1200", "height": "630"})
         add(entry, "category", attrib={"term": ep["kind"], "label": KINDS[ep["kind"]]})
         add(entry, "rights", RIGHTS_LINE)
-        add(entry, "content", entry_html(meta, fragment), {"type": "html"})
+        add(entry, "content", entry_html(meta, fragment, image), {"type": "html"})
     return feed
 
 
-def write_feeds(staging: Path, episodes: list[dict], progress: dict, metadata: dict, fragments: dict) -> int:
-    entries = select_feed_entries(episodes, progress, metadata, fragments)
+def write_feeds(staging: Path, root: Path, episodes: list[dict], progress: dict, metadata: dict, fragments: dict, *, published_mode: bool, private: bool, base: str, image_sizes: dict[str, int]) -> int:
+    entries = select_feed_entries(root, episodes, progress, metadata, fragments, published_mode=published_mode, private=private)
     documents = [(staging / "feed.xml", "tag:huberman-reading-001.tolsonhuddy.chatgpt.site,2026:feed", "feed.xml", PODCASTS[0]["title"])]
     for podcast in PODCASTS:
         documents.append((
@@ -572,7 +712,7 @@ def write_feeds(staging: Path, episodes: list[dict], progress: dict, metadata: d
             podcast["title"],
         ))
     for path, feed_id, self_path, title in documents:
-        write_xml(path, atom_feed(entries, feed_id=feed_id, self_path=self_path, title=title))
+        write_xml(path, atom_feed(entries, feed_id=feed_id, self_path=self_path, title=title, base=base, image_sizes=image_sizes))
     opml = ET.Element("opml", {"version": "2.0"})
     head = ET.SubElement(opml, "head")
     ET.SubElement(head, "title").text = "Tolson-RSS"
@@ -581,7 +721,7 @@ def write_feeds(staging: Path, episodes: list[dict], progress: dict, metadata: d
     for podcast in PODCASTS:
         ET.SubElement(group, "outline", {
             "type": "rss", "text": podcast["title"], "title": podcast["title"],
-            "xmlUrl": canonical(f"podcasts/{podcast['slug']}/feed.xml"), "htmlUrl": canonical(),
+            "xmlUrl": site_url(base, f"podcasts/{podcast['slug']}/feed.xml"), "htmlUrl": site_url(base),
         })
     write_xml(staging / "tolson-rss.opml", opml)
     return len(entries)
@@ -626,10 +766,11 @@ def read_published(root: Path) -> tuple[list[dict], dict, dict, dict]:
     return episodes, progress, metadata, articles
 
 
-def build_site(root: Path, out: Path, private: bool = False, published: bool = False) -> dict:
+def build_site(root: Path, out: Path, private: bool = False, published: bool = False, base_url: str | None = None) -> dict:
     if private and published:
         raise ValueError("Choose either --private or --published")
     root = root.resolve()
+    base = normalize_base(base_url)
     destination = output_path(root, out, private and not published)
     if published:
         episodes, progress, metadata, articles = read_published(root)
@@ -642,18 +783,23 @@ def build_site(root: Path, out: Path, private: bool = False, published: bool = F
     with tempfile.TemporaryDirectory(prefix=".huberman-build-", dir=destination.parent) as tmp:
         staging = Path(tmp) / "site"
         (staging / "episodes").mkdir(parents=True)
+        (staging / "og").mkdir()
         for name in ("style.css", "app.js", "qiaomu-LICENSE.txt", "portrait-placeholder.svg"):
             shutil.copyfile(root / "web" / name, staging / name)
         covers = copy_covers(root, staging, metadata, articles, real)
-        fragments = {}
+        numbers = directory_numbers(episodes, progress, articles)
+        fragments, image_sizes = {}, {}
         for ep in episodes:
             if ep["id"] in articles:
                 fragment = reading_fragment(ep, metadata[ep["id"]], articles[ep["id"]])
                 fragments[ep["id"]] = fragment
-                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], real, fragment)
+                card = staging / "og" / f"{ep['id']}.jpg"
+                render_og_card(card, fragment["title_zh"], numbers[ep["id"]])
+                image_sizes[ep["id"]] = card.stat().st_size
+                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], real, fragment, site_url(base, f"og/{ep['id']}.jpg"))
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")
         (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, real, covers), encoding="utf-8")
-        feed_entry_count = write_feeds(staging, episodes, progress, metadata, fragments)
+        feed_entry_count = write_feeds(staging, root, episodes, progress, metadata, fragments, published_mode=published, private=private, base=base, image_sizes=image_sizes)
         (staging / ".nojekyll").write_text("", encoding="utf-8")
         manifest = {
             "schema_version": 1, "mode": "published" if published else "private" if private else "synthetic_demo",
@@ -674,9 +820,10 @@ def main() -> None:
     modes.add_argument("--private", action="store_true", help="Build owner-private articles below private/")
     modes.add_argument("--published", action="store_true", help="Build committed Chinese essays in site/zh into dist/")
     parser.add_argument("--out", type=Path, help="Output path; defaults to dist or private/site")
+    parser.add_argument("--base-url", default=os.environ.get("HUB_BASE_URL"), help="Absolute site prefix for feed, OPML, and card links. Defaults to the primary site.")
     args = parser.parse_args()
     try:
-        manifest = build_site(ROOT, args.out or Path("private/site" if args.private else "dist"), args.private, args.published)
+        manifest = build_site(ROOT, args.out or Path("private/site" if args.private else "dist"), args.private, args.published, args.base_url)
     except (ValueError, OSError, KeyError, TypeError) as error:
         parser.exit(1, f"Build failed: {error}\n")
     print(json.dumps(manifest, ensure_ascii=False))

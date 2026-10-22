@@ -3,6 +3,7 @@ import importlib.util
 import hashlib
 from html.parser import HTMLParser
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -264,11 +265,13 @@ class SiteTests(unittest.TestCase):
         (self.root / "site/zh/secret.md").write_text("SECRET-COMMITTED-ESSAY")
         site.build_site(self.root, Path("dist"))
         files = list((self.root / "dist").rglob("*"))
-        contents = "\n".join(path.read_text() for path in files if path.is_file())
+        contents = "\n".join(path.read_text(encoding="utf-8") for path in files if path.is_file() and path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"})
         self.assertNotIn("SECRET-", contents)
         self.assertNotIn("Title A", contents)
         self.assertNotIn("episode-a.html", contents)
-        self.assertFalse(any(path.suffix.lower() in {".jpg", ".png", ".webp"} for path in files))
+        rasters = [path for path in files if path.suffix.lower() in {".jpg", ".png", ".webp"}]
+        self.assertTrue(rasters)
+        self.assertTrue(all(path.parent.name == "og" and path.suffix == ".jpg" for path in rasters))
         self.assertIn("虚构", contents)
 
     def test_private_output_and_input_symlinks_cannot_escape(self):
@@ -645,7 +648,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             episodes.append({"id": episode_id, "title_en": f"English {number}", "kind": kind})
             progress["episodes"][episode_id] = {"status": "reviewed", "updated_at": f"2024-01-{(number + 1):02d}T03:04:05Z"}
         episodes.append({"id": "ep-skip", "title_en": "Skipped revision", "kind": "ama"})
-        progress["episodes"]["ep-00"]["updated_at"] = "not-a-date"
+        progress["episodes"]["ep-00"]["updated_at"] = "2000-01-02T00:00:00Z"
         progress["episodes"]["ep-skip"] = {"status": "needs_revision", "updated_at": "2024-06-01T00:00:00Z"}
         self.write_json("catalog/episodes.json", {"episodes": episodes})
         self.write_json("private/progress.json", progress)
@@ -699,6 +702,14 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertNotIn("<未转义>", content.text)
         raw = (self.root / "private/site/feed.xml").read_text(encoding="utf-8")
         self.assertNotIn("github.io", raw)
+        self.assertNotIn("1970-01-01", raw)
+        self.assertEqual(root_feed.findtext(f"{atom}updated"), "2024-01-21T03:04:05Z")
+        self.assertIn(f'<img src="https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg"', content.text)
+        enclosure = next(link for link in newest.findall(f"{atom}link") if link.get("rel") == "enclosure")
+        self.assertEqual(enclosure.get("href"), "https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg")
+        self.assertEqual(enclosure.get("type"), "image/jpeg")
+        thumb = newest.find("{http://search.yahoo.com/mrss/}thumbnail")
+        self.assertEqual((thumb.get("url"), thumb.get("width"), thumb.get("height")), ("https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg", "1200", "630"))
         self.assertNotIn("不应出现在订阅", raw)
         self.assertNotIn("前半正文 0。", raw)
         essentials = next(entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-19"))
@@ -715,6 +726,8 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         pages = "https://tolsonhuddy-collab.github.io/huberman-tolson-cn/"
         index = (self.root / "private/site/index.html").read_text(encoding="utf-8")
         article = (self.root / "private/site/episodes/ep-20.html").read_text(encoding="utf-8")
+        self.assertIn('property="og:image" content="https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg"', article)
+        self.assertIn('name="twitter:image" content="https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg"', article)
         self.assertIn('rel="alternate" type="application/atom+xml"', index)
         self.assertIn('href="feed.xml"', index)
         self.assertIn('href="../feed.xml"', article)
@@ -756,7 +769,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(manifest["episode_count"], 2)
         self.assertEqual(manifest["feed_entry_count"], 1)
         page = (self.root / "dist/episodes/essay-one.html").read_text(encoding="utf-8")
-        built = "\n".join(path.read_text(encoding="utf-8") for path in (self.root / "dist").rglob("*") if path.is_file())
+        built = "\n".join(path.read_text(encoding="utf-8") for path in (self.root / "dist").rglob("*") if path.is_file() and path.suffix.lower() not in {".jpg", ".jpeg", ".png", ".webp"})
         self.assertIn("COMMITTED-ESSAY-BODY", page)
         self.assertIn("非官方阅读项目", page)
         self.assertNotIn("虚构版式演示", built)
@@ -793,6 +806,75 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             raw = path.read_text(encoding="utf-8")
             self.assertNotIn('"portrait"', raw)
             self.assertNotIn('"cover"', raw)
+            published = site.parse_time(meta.get("published"))
+            self.assertIsNotNone(published, path.name)
+            self.assertGreaterEqual(published, site.DATE_FLOOR)
+
+    def test_pages_base_url_cards_and_real_dates(self):
+        self.write_json("catalog/episodes.json", {"episodes": [
+            {"id": "essay-new", "title_en": "Newer", "kind": "long_episode", "source_index_date": "1990-01-01"},
+            {"id": "essay-old", "title_en": "Older", "kind": "long_episode", "source_index_date": "1991-01-01"},
+            {"id": "essay-git", "title_en": "From git", "kind": "ama", "source_index_date": "1992-06-01"},
+        ]})
+        (self.root / "site/zh").mkdir(parents=True)
+        essays = {
+            "essay-new": ("较新的中文标题", "2025-07-07T08:00:00Z"),
+            "essay-old": ("较早的中文标题", "2021-01-11T09:00:00Z"),
+        }
+        for episode_id, (title, published) in essays.items():
+            (self.root / "site/zh" / f"{episode_id}.md").write_text(f"# {title}\n\n导语。\n\n## 第一章\n\n正文 {episode_id}。\n", encoding="utf-8")
+            self.write_json(f"site/zh/{episode_id}.json", {
+                "id": episode_id, "title_zh": title, "published": published,
+                "source_url": "https://www.hubermanlab.com/episode/example",
+                "sections": [{"title": "第一章", "source_seconds": 10}],
+            })
+        (self.root / "site/zh/essay-git.md").write_text("# 只有提交时间\n\n导语。\n\n## 第一章\n\n正文来自提交。\n", encoding="utf-8")
+        self.write_json("site/zh/essay-git.json", {
+            "id": "essay-git", "title_zh": "只有提交时间",
+            "source_url": "https://www.hubermanlab.com/episode/example",
+            "sections": [{"title": "第一章", "source_seconds": None}],
+        })
+        env = os.environ.copy()
+        env.update({
+            "GIT_AUTHOR_NAME": "Feed Test", "GIT_AUTHOR_EMAIL": "feed@example.com",
+            "GIT_COMMITTER_NAME": "Feed Test", "GIT_COMMITTER_EMAIL": "feed@example.com",
+            "GIT_AUTHOR_DATE": "2022-05-06T07:08:09Z", "GIT_COMMITTER_DATE": "2022-05-06T07:08:09Z",
+        })
+        subprocess.run(["git", "init"], cwd=self.root, check=True, capture_output=True)
+        subprocess.run(["git", "add", "site/zh/essay-git.md", "site/zh/essay-git.json"], cwd=self.root, check=True, capture_output=True)
+        subprocess.run(["git", "commit", "-m", "add essay"], cwd=self.root, check=True, capture_output=True, env=env)
+        pages = "https://tolsonhuddy-collab.github.io/huberman-tolson-cn"
+        manifest = site.build_site(self.root, Path("dist"), published=True, base_url=pages + "/")
+        self.assertEqual(manifest["feed_entry_count"], 3)
+        atom = "{http://www.w3.org/2005/Atom}"
+        feed = ET.parse(self.root / "dist/feed.xml")
+        root = feed.getroot()
+        self.assertEqual(root.findtext(f"{atom}updated"), "2025-07-07T08:00:00Z")
+        self.assertEqual(root.find(f"{atom}link[@rel='self']").get("href"), pages + "/feed.xml")
+        entries = root.findall(f"{atom}entry")
+        self.assertEqual([entry.findtext(f"{atom}id").rsplit(":", 1)[-1] for entry in entries], ["essay-new", "essay-git", "essay-old"])
+        self.assertEqual(entries[0].findtext(f"{atom}published"), "2025-07-07T08:00:00Z")
+        self.assertEqual(entries[1].findtext(f"{atom}published"), "2022-05-06T07:08:09Z")
+        self.assertEqual(entries[2].findtext(f"{atom}published"), "2021-01-11T09:00:00Z")
+        raw = (self.root / "dist/feed.xml").read_text(encoding="utf-8")
+        self.assertNotIn("1970-01-01", raw)
+        self.assertNotIn("1990-01-01", raw)
+        self.assertNotIn("huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/", raw)
+        self.assertIn(pages + "/episodes/essay-new.html", raw)
+        self.assertIn(pages + "/og/essay-new.jpg", raw)
+        opml = ET.parse(self.root / "dist/tolson-rss.opml")
+        self.assertEqual([node.get("xmlUrl") for node in opml.getroot().iter("outline") if node.get("xmlUrl")], [pages + "/podcasts/huberman/feed.xml"])
+        page = (self.root / "dist/episodes/essay-new.html").read_text(encoding="utf-8")
+        self.assertIn(f'property="og:image" content="{pages}/og/essay-new.jpg"', page)
+        from PIL import Image
+        with Image.open(self.root / "dist/og/essay-new.jpg") as card:
+            self.assertEqual(card.size, (1200, 630))
+        self.write_json("site/zh/essay-old.json", {
+            "id": "essay-old", "title_zh": "较早的中文标题", "published": "1999-12-31T00:00:00Z",
+            "sections": [{"title": "第一章", "source_seconds": 10}],
+        })
+        with self.assertRaisesRegex(ValueError, "before 2000"):
+            site.build_site(self.root, Path("dist/too-old"), published=True)
 
 
 if __name__ == "__main__":

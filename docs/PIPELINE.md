@@ -104,4 +104,4 @@ reviewed → needs_revision → drafting 或 draft_complete
 3. 用现有静态托管导入该输出目录。构建器不创建域名，也不读取凭据。
 4. 打开首页筛选、至少一篇正文、手机目录和来源链接，并在未登录状态下再看一遍。记录实际网址和篇数。本地预览通过不等于站点已更新。
 
-推送到 `main` 时，GitHub Actions 用 `--published` 构建 `site/zh/` 并发布到 GitHub Pages（https://tolsonhuddy-collab.github.io/huberman-tolson-cn/）。页面链接是相对路径，不使用 `<base>`，这样正文里的 `#section` 锚点在 `/huberman-tolson-cn/` 子路径下仍指向当前篇。备用站包含仓库里的全部中文精读。主站仍按上面的步骤手工上传。Feed 内的页面链接指向主站，不指向 Pages 域名。
+推送到 `main` 时，GitHub Actions 用 `--published --base-url https://tolsonhuddy-collab.github.io/huberman-tolson-cn/` 构建 `site/zh/` 并发布到 GitHub Pages。页面里的样式和正文链接仍是相对路径，不使用 `<base>`，这样 `#section` 锚点在 `/huberman-tolson-cn/` 子路径下仍指向当前篇。这次构建的 Feed self、条目链接、OPML 和卡片地址指向备用站。为主站构建时不传 `--base-url`，那些链接仍指向主站。主站页面仍按上面的步骤手工上传。
