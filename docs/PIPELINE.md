@@ -43,7 +43,7 @@ python3 scripts/build_site.py --published --out dist
 
 `audit-git` 检查已跟踪路径是否落在允许的代码、文档、目录和模板范围内，并拒绝符号链接。它不阅读正文质量。
 
-README 已有的 `docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹。其他图片、节目封面和原始转写仍不在允许范围内。`site/zh/` 下的 `.md` 与 `.json` 可以入库。
+`docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹。其他图片、节目封面和原始转写仍不在允许范围内。`site/zh/` 下的 `.md` 与 `.json` 可以入库。
 
 `build_site.py --demo` 不读取 `catalog/`、`private/` 或 `site/zh/`。输出必须在 `dist/` 内，默认就是 `dist/`。页面是虚构短文。
 
