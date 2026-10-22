@@ -547,6 +547,10 @@ def entry_times(state: dict, meta: dict, root: Path, paths: tuple[str, ...]) -> 
     return require_feed_date(published, episode_id, "published"), require_feed_date(updated, episode_id, "updated")
 
 
+_FONT_CACHE: dict[tuple[str, int], object] = {}
+LEADING_PUNCT = set("，。、：；！？,.;:!?）)」』】》")
+
+
 def find_cjk_font() -> Path:
     candidates = []
     if os.environ.get("HUB_CJK_FONT"):
@@ -563,52 +567,229 @@ def find_cjk_font() -> Path:
     raise ValueError("CJK font not found. Set HUB_CJK_FONT to a Noto Sans SC file.")
 
 
-def wrap_chars(text: str, font: object, max_width: float) -> list[str]:
-    lines, current = [], ""
-    for char in text:
-        trial = current + char
-        if font.getlength(trial) <= max_width or not current:
-            current = trial
-        else:
-            lines.append(current)
-            current = char
-    if current:
-        lines.append(current)
+def font_file(kind: str) -> Path:
+    """Noto Sans CJK SC. CI downloads the files; a missing bold face falls back to regular."""
+    env = {"sans": "HUB_CJK_FONT", "sans-bold": "HUB_CJK_SANS_BOLD"}[kind]
+    if os.environ.get(env) and Path(os.environ[env]).is_file():
+        return Path(os.environ[env])
+    names = {
+        "sans": ("NotoSansCJKsc-Regular.otf",),
+        "sans-bold": ("NotoSansCJKsc-Bold.otf",),
+    }[kind]
+    for folder in (Path("/tmp/fonts"), Path("/usr/share/fonts/opentype/noto"), Path("/usr/share/fonts/truetype/noto")):
+        for name in names:
+            candidate = folder / name
+            if candidate.is_file():
+                return candidate
+    if kind != "sans":
+        return font_file("sans")
+    return find_cjk_font()
+
+
+def load_font(kind: str, size: int):
+    path = font_file(kind)
+    key = (str(path), size)
+    font = _FONT_CACHE.get(key)
+    if font is None:
+        from PIL import ImageFont
+        font = ImageFont.truetype(str(path), size)
+        _FONT_CACHE[key] = font
+    return font
+
+
+def balanced_title_lines(text: str, font: object, max_width: float, max_lines: int) -> list[str] | None:
+    """Break a title into lines of similar width. Rejects a one-glyph or punctuation-led line."""
+    text = " ".join(text.split())
+    if not text:
+        return []
+    widths = [font.getlength(ch) for ch in text]
+    prefix = [0.0]
+    for width in widths:
+        prefix.append(prefix[-1] + width)
+    total = prefix[-1]
+    if total <= max_width and len(text) > 1:
+        return [text]
+    best: tuple[float, list[str]] | None = None
+    for count in range(2, max_lines + 1):
+        ideal = min(max_width, total / count)
+        cost = [[1e18] * (len(text) + 1) for _ in range(count + 1)]
+        prev = [[-1] * (len(text) + 1) for _ in range(count + 1)]
+        cost[0][0] = 0
+        for line_no in range(1, count + 1):
+            for end in range(line_no, len(text) + 1):
+                for start in range(line_no - 1, end):
+                    if cost[line_no - 1][start] >= 1e18:
+                        continue
+                    width = prefix[end] - prefix[start]
+                    if width > max_width + 0.5:
+                        continue
+                    piece = text[start:end]
+                    penalty = (width - ideal) ** 2 / 50 + (max_width - width) * 0.08
+                    if piece[:1] in LEADING_PUNCT:
+                        penalty += 50000
+                    if len(piece) == 1:
+                        penalty += 80000
+                    if line_no == count and end == len(text) and len(piece) <= 2:
+                        penalty += 20000
+                    if end < len(text) and piece[-1:] not in set("，、：；") and any(char in "，、：；" for char in text):
+                        penalty += 8000
+                    next_cost = cost[line_no - 1][start] + penalty
+                    if next_cost < cost[line_no][end]:
+                        cost[line_no][end] = next_cost
+                        prev[line_no][end] = start
+        if cost[count][len(text)] >= 1e18:
+            continue
+        lines, end = [], len(text)
+        for line_no in range(count, 0, -1):
+            start = prev[line_no][end]
+            lines.append(text[start:end])
+            end = start
+        lines.reverse()
+        lines = _repair_title_lines(lines, font, max_width)
+        if lines is None:
+            continue
+        if best is None or cost[count][len(text)] < best[0]:
+            best = (cost[count][len(text)], lines)
+    return None if best is None else best[1]
+
+
+def _repair_title_lines(lines: list[str], font: object, max_width: float) -> list[str] | None:
+    if len(lines) < 2:
+        return lines
+    while len(lines[-1]) < 2 or lines[-1][:1] in LEADING_PUNCT:
+        if len(lines[-2]) <= 2:
+            return None
+        lines[-1] = lines[-2][-1] + lines[-1]
+        lines[-2] = lines[-2][:-1]
+        if font.getlength(lines[-1]) > max_width or font.getlength(lines[-2]) > max_width:
+            return None
     return lines
 
 
-def render_og_card(path: Path, title: str, number: int) -> None:
-    """Original 1200×630 card. Text only: no episode covers, portraits, or photos."""
-    from PIL import Image, ImageDraw, ImageFont
-    font_file = str(find_cjk_font())
-    image = Image.new("RGB", (1200, 630), "#f4f1ea")
-    draw = ImageDraw.Draw(image)
-    draw.rectangle((0, 0, 1200, 630), outline="#1e3a34", width=10)
-    brand = ImageFont.truetype(font_file, 32)
-    number_font = ImageFont.truetype(font_file, 36)
-    draw.text((72, 58), BRAND, font=brand, fill="#1e3a34")
-    label = f"{number:03d}"
-    width = draw.textbbox((0, 0), label, font=number_font)[2]
-    draw.text((1128 - width, 54), label, font=number_font, fill="#1e3a34")
-    caption = ImageFont.truetype(font_file, 22)
-    caption_width = draw.textbbox((0, 0), "目录", font=caption)[2]
-    draw.text((1128 - caption_width, 100), "目录", font=caption, fill="#6d675e")
-    size, lines, title_font = 64, [], None
-    while size >= 36:
-        title_font = ImageFont.truetype(font_file, size)
-        lines = wrap_chars(title, title_font, 1056)
-        if len(lines) <= 4:
-            break
-        size -= 4
-    if len(lines) > 4:
-        lines = lines[:4]
-        lines[-1] = lines[-1].rstrip() + "…"
-    y = 190
+def _title_lines_ok(text: str, lines: list[str]) -> bool:
+    if not lines or any(len(line) < 2 or line[:1] in LEADING_PUNCT for line in lines):
+        return False
+    marks = set("，、：；")
+    if any(char in marks for char in text):
+        # Keep a clause together. A line may end on the title's own punctuation.
+        if any(line[-1] not in marks for line in lines[:-1]):
+            return False
+    return True
+
+
+def fit_title(text: str, kind: str, max_width: float, max_size: int, min_size: int) -> tuple[object, list[str], int]:
+    """Largest readable setting whose lines stay even and do not orphan a glyph."""
+    best: tuple[tuple, object, list[str], int] | None = None
+    marks = set("，、：；")
+    has_marks = any(char in marks for char in text)
+    for size in range(max_size, min_size - 1, -2):
+        font = load_font(kind, size)
+        for cap in (2, 3, 4):
+            lines = balanced_title_lines(text, font, max_width, cap)
+            if not lines or not _title_lines_ok(text, lines):
+                continue
+            widths = [font.getlength(line) for line in lines]
+            spread = max(widths) - min(widths)
+            broken = sum(line[-1] not in marks for line in lines[:-1]) if has_marks else 0
+            # Clause breaks first, then larger type, then similar line widths, then fewer lines.
+            rank = (broken, -size, spread, len(lines))
+            if best is None or rank < best[0]:
+                best = (rank, font, lines, size)
+    if best is not None:
+        return best[1], best[2], best[3]
+    font = load_font(kind, min_size)
+    lines = balanced_title_lines(text, font, max_width, 4) or [text]
+    return font, lines, min_size
+
+
+def card_guest(meta: dict) -> str:
+    hosts = meta.get("hosts") if isinstance(meta.get("hosts"), list) else []
+    guests, speakers = [], []
+    for host in hosts:
+        if not isinstance(host, dict):
+            continue
+        name = str(host.get("name") or "").strip()
+        if not name:
+            continue
+        role = str(host.get("role") or "")
+        if "嘉宾" in role or "来宾" in role:
+            guests.append(name)
+        else:
+            speakers.append(name)
+    names = guests or speakers
+    return "、".join(names)
+
+
+def card_date(meta: dict) -> str:
+    parsed = parse_time(meta.get("published") or meta.get("published_at") or meta.get("date_published"))
+    return "" if parsed is None else parsed.astimezone(timezone.utc).strftime("%Y.%m.%d")
+
+
+def _draw_lines(draw, lines: list[str], font, x: int, y: int, fill: str, size: int, leading: float = 1.18) -> None:
+    step = int(size * leading)
     for line in lines:
-        draw.text((72, y), line, font=title_font, fill="#1c1e1c")
-        y += int(size * 1.38)
+        draw.text((x, y), line, font=font, fill=fill)
+        y += step
+
+
+def _save_card(image, path: Path) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    image.save(path, "JPEG", quality=90, optimize=True)
+    image.save(path, "JPEG", quality=92, optimize=True)
+
+
+def _draw_chip(draw, origin: tuple[int, int], text: str, font, fill: str, ink: str) -> tuple[int, int, int, int]:
+    """Small category chip, matching hubermanlab.com's light-gray chip."""
+    x, y = origin
+    left, top, right, bottom = font.getbbox(text)
+    pad_x, pad_y = 14, 8
+    box = (x, y, int(x + (right - left) + pad_x * 2), int(y + (bottom - top) + pad_y * 2))
+    draw.rounded_rectangle(box, radius=4, fill=fill)
+    draw.text((x + pad_x - left, y + pad_y - top), text, font=font, fill=ink)
+    return box
+
+
+def render_og_card(path: Path, title: str, number: int, meta: dict | None = None, body: str = "") -> None:
+    """1200×630 card in the Huberman Lab episode-page palette. Text only.
+
+    From hubermanlab.com and an episode page (fetched 2026-10-22): the page is white,
+    the hero wash is #f4f5f6, headings are Inter in black at a tight leading, and the
+    accent is #00aeef, used as a solid band with white type. Chinese is set in
+    Noto Sans CJK SC, the grotesque that stands in for Inter. No logo, photos, or episode art.
+    """
+    from PIL import Image, ImageDraw
+    del body
+    meta = meta or {}
+    image = Image.new("RGB", (1200, 630), "#f4f5f6")
+    draw = ImageDraw.Draw(image)
+    chip = _draw_chip(draw, (72, 48), "中文精读", load_font("sans-bold", 26), "#dfddd6", "#302f2c")
+    date = card_date(meta)
+    if date:
+        date_font = load_font("sans", 28)
+        _, date_top, _, date_bottom = date_font.getbbox(date)
+        date_y = chip[1] + (chip[3] - chip[1] - (date_bottom - date_top)) / 2 - date_top
+        draw.text((chip[2] + 22, date_y), date, font=date_font, fill="#302f2c")
+    label = f"{number:03d}"
+    number_font = load_font("sans-bold", 64)
+    _, num_top, _, _ = number_font.getbbox(label)
+    draw.text((1128 - number_font.getlength(label), chip[1] - num_top), label, font=number_font, fill="#000000")
+    font, lines, size = fit_title(title, "sans-bold", 1056, 92, 48)
+    leading = 1.1
+    block = int(size * leading) * max(len(lines) - 1, 0) + size
+    title_y = chip[3] + 36
+    _draw_lines(draw, lines, font, 72, title_y, "#000000", size, leading)
+    guest = card_guest(meta)
+    if guest:
+        guest_y = min(title_y + block + 28, 500)
+        draw.text((72, guest_y), guest, font=load_font("sans", 32), fill="#000000")
+    draw.rectangle((0, 548, 1200, 630), fill="#00aeef")
+    brand = load_font("sans", 30)
+    note, sep = "Huberman Lab 中文精读", "  ·  "
+    _, brand_top, _, brand_bottom = brand.getbbox(note)
+    band_y = 548 + (82 - (brand_bottom - brand_top)) / 2 - brand_top
+    draw.text((72, band_y), note, font=brand, fill="#ffffff")
+    draw.text((72 + brand.getlength(note), band_y), sep, font=brand, fill="#ffffff")
+    draw.text((72 + brand.getlength(note + sep), band_y), "非官方", font=load_font("sans-bold", 30), fill="#ffffff")
+    _save_card(image, path)
 
 
 def entry_html(meta: dict, fragment: dict, image_url: str) -> str:
@@ -794,7 +975,7 @@ def build_site(root: Path, out: Path, private: bool = False, published: bool = F
                 fragment = reading_fragment(ep, metadata[ep["id"]], articles[ep["id"]])
                 fragments[ep["id"]] = fragment
                 card = staging / "og" / f"{ep['id']}.jpg"
-                render_og_card(card, fragment["title_zh"], numbers[ep["id"]])
+                render_og_card(card, fragment["title_zh"], numbers[ep["id"]], metadata[ep["id"]], articles[ep["id"]])
                 image_sizes[ep["id"]] = card.stat().st_size
                 html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], real, fragment, site_url(base, f"og/{ep['id']}.jpg"))
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")

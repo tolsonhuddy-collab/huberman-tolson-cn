@@ -1,6 +1,6 @@
 # 依赖与成本
 
-内容流水线与静态页：Python 3.10+，标准库 `argparse/csv/hashlib/html/json/pathlib/re/tempfile/unittest` 等。阅读页没有运行时依赖。生成 RSS 卡片时构建步骤使用 Pillow，以及一份不提交进仓库的 Noto Sans SC（`HUB_CJK_FONT`）。没有这份中文字体时构建失败，不用节目封面或肖像代替。
+内容流水线与静态页：Python 3.10+，标准库 `argparse/csv/hashlib/html/json/pathlib/re/tempfile/unittest` 等。阅读页没有运行时依赖。生成 RSS 卡片时构建步骤使用 Pillow，以及不提交进仓库的 Noto Sans CJK SC Regular 与 Bold（`HUB_CJK_FONT`、`HUB_CJK_SANS_BOLD`）。没有这份中文字体时构建失败，不用节目封面或肖像代替。
 
 前端：原生 HTML、CSS、JavaScript，无打包器、数据库、服务端或运行时 API。浏览器本地存储仅保存字号和阅读底色。构建应使用本地静态素材，不依赖外链字体/CDN。
 

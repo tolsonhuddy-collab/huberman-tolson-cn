@@ -876,6 +876,17 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         with self.assertRaisesRegex(ValueError, "before 2000"):
             site.build_site(self.root, Path("dist/too-old"), published=True)
 
+    def test_card_title_does_not_orphan_a_glyph(self):
+        title = "神经系统如何工作，又如何被经验改变"
+        font = site.load_font("sans-bold", 72)
+        lines = site.balanced_title_lines(title, font, 900, 3)
+        self.assertIsNotNone(lines)
+        self.assertEqual("".join(lines), title)
+        self.assertTrue(all(len(line) >= 2 for line in lines))
+        self.assertTrue(all(not line.startswith(tuple("，。、：；")) for line in lines))
+        fitted, wrapped, _size = site.fit_title(title, "sans-bold", 1056, 86, 48)
+        self.assertGreaterEqual(fitted.getlength(wrapped[-1]), fitted.getlength("变") * 2)
+
 
 if __name__ == "__main__":
     unittest.main()
