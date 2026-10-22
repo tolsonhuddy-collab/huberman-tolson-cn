@@ -51,6 +51,18 @@ README 已有的 `docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项
 
 `build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。节目封面和人物肖像不在 `site/zh/` 中，页面使用占位肖像，封面显示「节目封面待核实」。
 
+## 每次发布的顺序
+
+1. 先 `git pull` 拉取 `main` 最新代码，保留已有修改。
+2. 每篇同时更新 `site/zh/{id}.md` 与同名 `.json`，沿用现有字段；素材按当前用户授权及适用的版权、隐私约束处理。
+3. 运行 `python3 scripts/build_site.py --published`，先解决报错。`--demo` 仅供测试。
+4. 核对 README.md、README.en.md 及站点「关于」的实际已发布篇数；目前英文说明在 README.md 内，尚无独立 README.en.md。不要改 README 的版权声明或历史记录。
+5. commit 后 push 到 `main`，确认 GitHub Actions 的「GitHub Pages」运行成功。
+6. 按既有 Sites 流程同步构建结果到主站，保持原网址和公开范围。备用站使用 GitHub Pages 子路径，页面与订阅入口保持相对链接。
+7. 核实两站正文及订阅地址，报告新增篇目、实际总数、Actions 和双站结果。
+
+`feed.xml`、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml` 均由构建生成，不手工编辑。私有审稿记录和凭据不上传。此前对英文转写、音频、节目封面和人物照片的一概禁入限制已由用户撤销；这不要求批量上传，仍须按实际需要及适用权利处理。
+
 ## 本机文件
 
 | 路径 | 作用 |

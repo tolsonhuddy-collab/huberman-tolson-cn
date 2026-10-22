@@ -4,7 +4,7 @@
 <body class="catalog-page">
 <a class="skip" href="#catalog">跳到节目目录</a>
 <header class="catalog-masthead">
-  <div class="masthead-top"><span>非官方中文阅读项目</span><div><a href="#about">关于本项目</a><button id="theme-toggle" class="icon-button" aria-label="切换为深色阅读" title="切换阅读底色">◐</button></div></div>
+  <div class="masthead-top"><span>非官方中文阅读项目</span><div><a href="$feed_href" aria-label="订阅中文精读 RSS">RSS 订阅</a><a href="#about">关于本项目</a><button id="theme-toggle" class="icon-button" aria-label="切换为深色阅读" title="切换阅读底色">◐</button></div></div>
   <h1><a href="index.html">Huberman Lab <span>中文精读</span></a></h1>
   <p class="masthead-slogan">把一场长谈，读成一篇长文。</p>
   <p class="masthead-counts">$total 条节目目录 · $readable_count 篇中文精读</p>
@@ -18,5 +18,5 @@
 <main id="top" class="catalog-shell">
 $feature
 <section id="catalog" aria-labelledby="catalog-title"><div class="catalog-heading"><h2 id="catalog-title">全部节目</h2><p id="result-count" aria-live="polite">共 $total 期</p></div><div id="episode-list" class="episode-list">$cards</div><p id="no-results" class="no-results" hidden>没有符合条件的节目。可以换个关键词或类别。</p></section>
-<footer id="about" class="catalog-footer"><h2>Huberman Lab 中文精读</h2><p>沿着节目原有的论证与例子，用中文读懂其中的科学、分歧与边界。</p><p>$footer_note</p><details><summary>编辑、来源与目录说明</summary><p>$notice</p><p>$counts</p><p>已有可读稿优先排列；编号仅为目录顺序，并非原节目期号。未知节目封面保持待核实，人物头像与节目封面分别标注。目录索引日期不作首发日期。</p></details><p>版式代码参考 <a href="https://github.com/joeseesun/lexfridman-cn" target="_blank" rel="noopener noreferrer">乔木的播客阅读项目</a> · <a href="qiaomu-LICENSE.txt">MIT 代码许可</a></p></footer>
+<footer id="about" class="catalog-footer"><h2>Huberman Lab 中文精读</h2><p>沿着节目原有的论证与例子，用中文读懂其中的科学、分歧与边界。</p><p>已有 $readable_count 篇中文精读。</p><p>$footer_note</p><p><a href="$feed_href">全文 RSS · 最近 20 篇</a> · <a href="podcasts/huberman/feed.xml">Huberman 分订阅源</a> · <a href="tolson-rss.opml">OPML 订阅清单</a></p><details><summary>编辑、来源与目录说明</summary><p>$notice</p><p>$counts</p><p>已有可读稿优先排列；编号仅为目录顺序，并非原节目期号。未知节目封面保持待核实，人物头像与节目封面分别标注。目录索引日期不作首发日期。</p></details><p>版式代码参考 <a href="https://github.com/joeseesun/lexfridman-cn" target="_blank" rel="noopener noreferrer">乔木的播客阅读项目</a> · <a href="qiaomu-LICENSE.txt">MIT 代码许可</a></p></footer>
 </main></body></html>
