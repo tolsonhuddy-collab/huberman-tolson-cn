@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from datetime import datetime, timezone
 import hashlib
 from html import escape
 import json
@@ -14,8 +15,15 @@ import shutil
 from string import Template
 import tempfile
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
+from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
+CANONICAL_ORIGIN = "https://huberman-reading-001.tolsonhuddy.chatgpt.site"
+FEED_LIMIT = 20
+RIGHTS_LINE = "非官方精读，未获授权，版权归原作者"
+ATOM = "http://www.w3.org/2005/Atom"
+# Tolson-RSS keeps one Atom file per podcast. This site currently has Huberman essays only.
+PODCASTS = ({"slug": "huberman", "title": "Huberman Lab 中文精读"},)
 KINDS = {"long_episode": "长节目", "essentials": "Essentials", "ama": "AMA", "live_qa": "现场问答"}
 STATUSES = {"pending": "尚未开始", "drafting": "正在编写", "draft_complete": "完整初稿 · 待审核", "reviewed": "已审核", "needs_revision": "待修订"}
 READY = {"draft_complete", "reviewed"}
@@ -292,7 +300,8 @@ def display_section_title(title: str, number: int) -> str:
     return chinese[1].strip() if chinese else title
 
 
-def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict, md: str, private: bool) -> str:
+def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
+    """Reader-facing essay HTML. Standalone timestamp lines stay out of the body."""
     title, intro, sections = parse_article(md)
     section_meta = meta.get("sections", [])
     if section_meta and (not isinstance(section_meta, list) or any(not isinstance(s, dict) for s in section_meta) or [s.get("title") for s in section_meta] != [t for t, _ in sections]):
@@ -311,25 +320,35 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec)}</div><h2>{escape(shown_title)}</h2>{blocks(reading_body)}</section>')
     visible_text = "\n".join([title, intro] + [part for pair in sections for part in pair])
     count = len(re.findall(r"[\u4e00-\u9fff]", visible_text))
+    return {
+        "article": "\n".join(article), "source_details": source_details, "source": source, "count": count,
+        "title_zh": str(meta.get("title_zh") or title or ep["title_en"]), "sections": sections,
+    }
+
+
+def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict, md: str, private: bool, fragment: dict | None = None) -> str:
+    fragment = fragment or reading_fragment(ep, meta, md)
+    title_zh, source, sections = fragment["title_zh"], fragment["source"], fragment["sections"]
+    count = fragment["count"]
     source_note = "独立整理的非官方中文精读。原始英文转写仅用于编校核对，未随本站发布。正文与素材不属于 MIT 代码许可。"
     if not private:
         source_note = "本页为原创虚构版式演示，不对应真实节目；没有使用节目转写、翻译全文或真人肖像。"
     if source is None:
         source_note += " 原节目链接尚未核验，未生成回听链接。"
-    title_zh = str(meta.get("title_zh") or title or ep["title_en"])
     values = {
         "page_title": escape(title_zh + " · Huberman Lab 中文精读", quote=True), "description": escape(str(meta.get("dek") or "中文长文阅读"), quote=True),
         "title_zh": escape(title_zh), "title_en": escape(str(meta.get("title_en") or ep["title_en"])),
         "dek": '<p class="dek">' + escape(str(meta["dek"])) + "</p>" if meta.get("dek") else "",
         "edition": "非官方阅读项目" if private else "虚构版式演示",
+        "feed_href": "../feed.xml",
         "status_notice": "" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>',
         "episode_meta": f'<span>{KINDS[ep["kind"]]}</span>' + ("" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>') + f'<span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
         "toc": "".join(f'<a href="#section-{i}"><span>{i:02}</span>{escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "mobile_toc": "".join(f'<a href="#section-{i}">{i:02} {escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
-        "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": "\n".join(article),
+        "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": fragment["article"],
         "editor_note": escape(str(meta.get("editor_note") or "依据本地英文稿件整理，待逐段核验。").replace("当前为私有编辑稿，内容公开授权待确认。", "中文精读为非官方独立编辑作品，不构成医疗建议。")),
         "reading_note": "依据英文原稿编译，编辑与来源说明见文末。" if private else "原创虚构版式演示，人物与正文均为占位内容。",
-        "source_details": "\n".join(source_details),
+        "source_details": "\n".join(fragment["source_details"]),
         "source_note": escape(source_note),
         "source_tab": f'<a class="source-tab" href="{escape(source, quote=True)}" target="_blank" rel="noopener noreferrer">原节目 ↗</a>' if source else "",
         "source_link": f'<a href="{escape(source, quote=True)}" target="_blank" rel="noopener noreferrer">原节目来源 ↗</a>' if source else "",
@@ -414,8 +433,158 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count),
         "counts": escape(" · ".join(f"{KINDS[k]} {counts[k]}" for k in KINDS if counts[k]) + f" · 已有本地稿 {readable_count}"),
         "kind_options": "".join(f'<option value="{kind}">{label}</option>' for kind, label in KINDS.items()),
+        "feed_href": "feed.xml",
         "footer_note": "非官方独立编辑项目。本站提供中文精读，未完成节目仅列目录。" if private else "代码可以独立部署为静态演示。真实节目全文、原始字幕与真人头像不包含在演示中。"}
     return Template((root / "web/index.html").read_text(encoding="utf-8")).substitute(values)
+
+
+def canonical(path: str = "") -> str:
+    """Absolute URL on the primary site. Feed links never point at a mirror."""
+    if not path:
+        return CANONICAL_ORIGIN + "/"
+    return CANONICAL_ORIGIN + "/" + path.lstrip("/")
+
+
+def parse_time(value: object) -> datetime | None:
+    if not isinstance(value, str):
+        return None
+    text = value.strip()
+    if not text:
+        return None
+    if text.endswith("Z"):
+        text = text[:-1] + "+00:00"
+    try:
+        parsed = datetime.fromisoformat(text)
+    except ValueError:
+        return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def atom_time(value: datetime) -> str:
+    return value.astimezone(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def entry_times(state: dict, meta: dict) -> tuple[datetime, datetime]:
+    """Prefer recorded essay timestamps. Index dates are not publication dates."""
+    published = parse_time(meta.get("published") or meta.get("published_at") or state.get("published_at"))
+    updated = parse_time(meta.get("updated") or meta.get("updated_at") or state.get("updated_at") or state.get("reviewed_at"))
+    if published is None:
+        published = updated
+    if updated is None:
+        updated = published
+    if published is None or updated is None:
+        fallback = datetime(1970, 1, 1, tzinfo=timezone.utc)
+        published = published or fallback
+        updated = updated or published
+    return published, updated
+
+
+def entry_html(meta: dict, fragment: dict) -> str:
+    parts = [f"<p>{escape(RIGHTS_LINE)}</p>"]
+    dek = meta.get("dek")
+    if isinstance(dek, str) and dek.strip():
+        parts.append("<p>" + escape(dek.strip()) + "</p>")
+    parts.append(fragment["article"])
+    if fragment["source"]:
+        parts.append(f'<p><a href="{escape(fragment["source"], quote=True)}">原节目</a></p>')
+    return "\n".join(parts)
+
+
+def select_feed_entries(episodes: list[dict], progress: dict, metadata: dict, fragments: dict) -> list[dict]:
+    """Latest readable essays. Undated essays sort after any recorded timestamp."""
+    selected = []
+    for index, ep in enumerate(episodes):
+        episode_id = ep["id"]
+        fragment = fragments.get(episode_id)
+        if fragment is None:
+            continue
+        state = progress.get(episode_id, {})
+        if state.get("status") not in READY:
+            continue
+        meta = metadata[episode_id]
+        published, updated = entry_times(state, meta)
+        selected.append({
+            "id": episode_id, "index": index, "ep": ep, "meta": meta, "fragment": fragment,
+            "published": published, "updated": updated,
+        })
+    selected.sort(key=lambda item: (item["updated"], item["published"], item["index"], item["id"]))
+    selected.reverse()
+    return selected[:FEED_LIMIT]
+
+
+def write_xml(path: Path, element: ET.Element) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    ET.register_namespace("", ATOM)
+    tree = ET.ElementTree(element)
+    ET.indent(tree, space="  ")
+    tree.write(path, encoding="utf-8", xml_declaration=True)
+    try:
+        ET.parse(path)
+    except ET.ParseError as error:
+        raise ValueError(f"Feed XML did not parse: {path.name}: {error}") from error
+
+
+def atom_feed(entries: list[dict], *, feed_id: str, self_path: str, title: str) -> ET.Element:
+    updated = max((item["updated"] for item in entries), default=datetime(1970, 1, 1, tzinfo=timezone.utc))
+    feed = ET.Element(f"{{{ATOM}}}feed")
+    feed.set("{http://www.w3.org/XML/1998/namespace}lang", "zh-CN")
+
+    def add(parent: ET.Element, tag: str, text: str | None = None, attrib: dict | None = None) -> ET.Element:
+        node = ET.SubElement(parent, f"{{{ATOM}}}{tag}", attrib or {})
+        if text is not None:
+            node.text = text
+        return node
+
+    add(feed, "title", title)
+    add(feed, "id", feed_id)
+    add(feed, "updated", atom_time(updated))
+    add(feed, "link", attrib={"rel": "self", "type": "application/atom+xml", "href": canonical(self_path)})
+    add(feed, "link", attrib={"rel": "alternate", "type": "text/html", "href": canonical()})
+    author = add(feed, "author")
+    add(author, "name", "Tolson")
+    add(feed, "rights", RIGHTS_LINE)
+    for item in entries:
+        ep, meta, fragment = item["ep"], item["meta"], item["fragment"]
+        entry = add(feed, "entry")
+        add(entry, "id", f"tag:huberman-reading-001.tolsonhuddy.chatgpt.site,2026:episode:{item['id']}")
+        add(entry, "title", fragment["title_zh"])
+        add(entry, "updated", atom_time(item["updated"]))
+        add(entry, "published", atom_time(item["published"]))
+        add(entry, "link", attrib={"rel": "alternate", "type": "text/html", "href": canonical(f"episodes/{item['id']}.html")})
+        if fragment["source"]:
+            add(entry, "link", attrib={"rel": "related", "type": "text/html", "href": fragment["source"], "title": "原节目"})
+        add(entry, "category", attrib={"term": ep["kind"], "label": KINDS[ep["kind"]]})
+        add(entry, "rights", RIGHTS_LINE)
+        add(entry, "content", entry_html(meta, fragment), {"type": "html"})
+    return feed
+
+
+def write_feeds(staging: Path, episodes: list[dict], progress: dict, metadata: dict, fragments: dict) -> int:
+    entries = select_feed_entries(episodes, progress, metadata, fragments)
+    documents = [(staging / "feed.xml", "tag:huberman-reading-001.tolsonhuddy.chatgpt.site,2026:feed", "feed.xml", PODCASTS[0]["title"])]
+    for podcast in PODCASTS:
+        documents.append((
+            staging / "podcasts" / podcast["slug"] / "feed.xml",
+            f"tag:huberman-reading-001.tolsonhuddy.chatgpt.site,2026:podcast:{podcast['slug']}",
+            f"podcasts/{podcast['slug']}/feed.xml",
+            podcast["title"],
+        ))
+    for path, feed_id, self_path, title in documents:
+        write_xml(path, atom_feed(entries, feed_id=feed_id, self_path=self_path, title=title))
+    opml = ET.Element("opml", {"version": "2.0"})
+    head = ET.SubElement(opml, "head")
+    ET.SubElement(head, "title").text = "Tolson-RSS"
+    body = ET.SubElement(opml, "body")
+    group = ET.SubElement(body, "outline", {"text": "Tolson-RSS", "title": "Tolson-RSS"})
+    for podcast in PODCASTS:
+        ET.SubElement(group, "outline", {
+            "type": "rss", "text": podcast["title"], "title": podcast["title"],
+            "xmlUrl": canonical(f"podcasts/{podcast['slug']}/feed.xml"), "htmlUrl": canonical(),
+        })
+    write_xml(staging / "tolson-rss.opml", opml)
+    return len(entries)
 
 
 def build_site(root: Path, out: Path, private: bool = False) -> dict:
@@ -429,12 +598,21 @@ def build_site(root: Path, out: Path, private: bool = False) -> dict:
         for name in ("style.css", "app.js", "qiaomu-LICENSE.txt", "portrait-placeholder.svg"):
             shutil.copyfile(root / "web" / name, staging / name)
         covers = copy_covers(root, staging, metadata, articles, private)
+        fragments = {}
         for ep in episodes:
             if ep["id"] in articles:
-                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], private)
+                fragment = reading_fragment(ep, metadata[ep["id"]], articles[ep["id"]])
+                fragments[ep["id"]] = fragment
+                html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], private, fragment)
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")
         (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, private, covers), encoding="utf-8")
-        manifest = {"schema_version": 1, "mode": "private" if private else "synthetic_demo", "episode_count": len(episodes), "article_count": len(articles), "deployed": False}
+        feed_entry_count = write_feeds(staging, episodes, progress, metadata, fragments)
+        (staging / ".nojekyll").write_text("", encoding="utf-8")
+        manifest = {
+            "schema_version": 1, "mode": "private" if private else "synthetic_demo",
+            "episode_count": len(episodes), "article_count": len(articles),
+            "feed_entry_count": feed_entry_count, "deployed": False,
+        }
         (staging / ".huberman-build.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
         if destination.exists():
             shutil.rmtree(destination)

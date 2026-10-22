@@ -84,6 +84,8 @@ reviewed → needs_revision → drafting 或 draft_complete
 源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 84 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
-2. 只上传构建结果里的 `index.html`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。
+2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。
 3. 用现有静态托管导入该输出目录。构建器不创建域名，也不读取凭据。
 4. 打开首页筛选、至少一篇正文、手机目录和来源链接，并在未登录状态下再看一遍。记录实际网址和篇数。本地预览通过不等于站点已更新。
+
+推送到 `main` 时，GitHub Actions 用 `--demo` 构建并发布到 GitHub Pages（https://tolsonhuddy-collab.github.io/huberman-tolson-cn/）。页面链接是相对路径，不使用 `<base>`，这样正文里的 `#section` 锚点在 `/huberman-tolson-cn/` 子路径下仍指向当前篇。仓库不含中文全文，这次自动发布是演示构建；主站精读仍按上面的步骤手工上传。Feed 内的页面链接指向主站，不指向 Pages 域名。

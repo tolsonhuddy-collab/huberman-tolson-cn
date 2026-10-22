@@ -14,6 +14,17 @@
 
 非官方项目。
 
+## 访问地址
+
+- 主站：https://huberman-reading-001.tolsonhuddy.chatgpt.site
+- 备用站：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ （主站打不开时用备用站）
+
+## 订阅 / RSS
+
+- 全文 Feed（Atom，最近 20 篇）：https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
+- Tolson-RSS（Huberman）：https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml
+- 订阅清单 OPML：https://huberman-reading-001.tolsonhuddy.chatgpt.site/tolson-rss.opml
+
 ## 这是什么
 
 1. **目录。** 仓库收录 370 条节目元数据：长节目 279（含 Guest Series 16）、Essentials 62、AMA 19、现场问答 10。可以按中文标题、英文标题、人物姓名和类别筛选，也可以只看已有精读或待整理。
@@ -30,6 +41,7 @@
 | 阅读页 | 桌面目录随滚动高亮；手机目录可折叠。字号与底色记在本机。文末可展开来源。 |
 | 来源 | 核实过的节目链接写在文末。没有核实的视频地址留空，不编造。章节时间来自本地字幕。 |
 | 本地构建 | Python 3.10+ 标准库。`--demo` 只做虚构版式；真实转写和中文全文不在 Git 里。 |
+| 订阅 | 每次构建重写 Atom 全文 Feed（最近 20 篇）、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`。 |
 
 ## 快速开始
 
@@ -82,6 +94,7 @@ https://huberman-reading-001.tolsonhuddy.chatgpt.site
 ├── catalog/episodes.json    # 370 条目录元数据，不含正文
 ├── web/                     # 首页与文章模板、样式、阅读脚本
 │   └── qiaomu-LICENSE.txt   # 版式来源的 MIT 声明
+├── .github/workflows/       # 推送到 main 后发布 GitHub Pages 备用站
 ├── docs/                    # 流水线、输入协议、编辑规范、验收
 ├── private/                 # 本地稿件与素材（.gitignore，克隆后没有）
 ├── CONTENT_RIGHTS.md        # 代码许可与内容权利
@@ -122,6 +135,17 @@ taopatric58@gmail.com
 A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **84** published essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
 
 Updated continuously.
+
+## Where to read
+
+- Primary: https://huberman-reading-001.tolsonhuddy.chatgpt.site
+- Backup: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ (use this if the primary site does not open)
+
+## Subscribe / RSS
+
+- Full-text Atom feed, latest 20 essays: https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
+- Tolson-RSS (Huberman): https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml
+- OPML list: https://huberman-reading-001.tolsonhuddy.chatgpt.site/tolson-rss.opml
 
 This repository holds catalog metadata (370 entries), a stdlib Python site builder, and bookkeeping scripts. Transcripts and Chinese full text are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only.
 

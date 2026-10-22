@@ -36,6 +36,8 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 84 篇中文精读不是同一份清单。部署步骤见 [PIPELINE.md](PIPELINE.md)。
 
+每次构建还会重写 `feed.xml`、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`，并用标准库确认这些 XML 可以解析。`feed.xml` 是 Atom，收录本次构建中最近 20 篇可读精读的全文（`content type="html"`），含稳定 id、标题、主站页面链接、published、updated、类别，以及已核验时的原节目链接。Tolson-RSS 按播客分文件，目前只有 Huberman；OPML 列出这些 Feed。首页和正文的 `<head>` 用相对地址自动发现 Atom，因此主站根路径和 GitHub Pages 的 `/huberman-tolson-cn/` 子路径都能找到订阅。Feed 里的链接固定指向主站 https://huberman-reading-001.tolsonhuddy.chatgpt.site 。
+
 ## 输入协议
 
 私有构建读取：

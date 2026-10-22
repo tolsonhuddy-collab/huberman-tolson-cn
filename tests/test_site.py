@@ -8,7 +8,8 @@ import shutil
 import subprocess
 import tempfile
 import unittest
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
+from xml.etree import ElementTree as ET
 
 PROJECT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("build_site", PROJECT / "scripts/build_site.py")
@@ -633,6 +634,101 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         script = stub + (PROJECT / "web/app.js").read_text() + checks
         result = subprocess.run([shutil.which("node"), "-e", script], text=True, capture_output=True)
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_full_text_atom_feed_opml_and_relative_discovery(self):
+        episodes, progress = [], {"episodes": {}}
+        for number in range(21):
+            episode_id = f"ep-{number:02d}"
+            kind = "essentials" if number == 19 else "long_episode"
+            episodes.append({"id": episode_id, "title_en": f"English {number}", "kind": kind})
+            progress["episodes"][episode_id] = {"status": "reviewed", "updated_at": f"2024-01-{(number + 1):02d}T03:04:05Z"}
+        episodes.append({"id": "ep-skip", "title_en": "Skipped revision", "kind": "ama"})
+        progress["episodes"]["ep-00"]["updated_at"] = "not-a-date"
+        progress["episodes"]["ep-skip"] = {"status": "needs_revision", "updated_at": "2024-06-01T00:00:00Z"}
+        self.write_json("catalog/episodes.json", {"episodes": episodes})
+        self.write_json("private/progress.json", progress)
+        for number in range(21):
+            episode_id = f"ep-{number:02d}"
+            title = "标题 & 二十 <未转义>" if number == 20 else f"标题 {number}"
+            source = "https://example.org/episode-20" if number == 20 else None
+            dek = "导语二十" if number == 20 else None
+            body = "符号 A & B 以及 <tag>。" if number == 20 else f"后半正文 {number}。"
+            (self.root / "private/articles" / f"{episode_id}.md").write_text(
+                f"---\nsecret_path: /private/sources/{episode_id}.txt\n---\n# {title}\n\n〔VTT 定位：00:00:01.000—00:00:02.000〕\n\n## 前半 {number}\n\n前半正文 {number}。\n\n## 后半 {number}\n\n{body}\n",
+                encoding="utf-8",
+            )
+            meta = {"id": episode_id, "title_zh": title, "source_url": source, "sections": [
+                {"title": f"前半 {number}", "source_seconds": None}, {"title": f"后半 {number}", "source_seconds": None}]}
+            if dek:
+                meta["dek"] = dek
+            self.write_json(f"private/metadata/{episode_id}.json", meta)
+        (self.root / "private/articles/ep-skip.md").write_text("# 跳过\n\n## 一\n\n不应出现在订阅。\n", encoding="utf-8")
+        self.write_json("private/metadata/ep-skip.json", {"id": "ep-skip", "title_zh": "跳过", "source_url": "https://example.org/skip",
+            "sections": [{"title": "一", "source_seconds": None}]})
+        manifest = self.private_build()
+        self.assertEqual(manifest["feed_entry_count"], 20)
+        atom = "{http://www.w3.org/2005/Atom}"
+        root_feed = ET.parse(self.root / "private/site/feed.xml").getroot()
+        podcast_feed = ET.parse(self.root / "private/site/podcasts/huberman/feed.xml").getroot()
+        opml = ET.parse(self.root / "private/site/tolson-rss.opml")
+        entries = root_feed.findall(f"{atom}entry")
+        self.assertEqual(len(entries), 20)
+        self.assertEqual([entry.findtext(f"{atom}id") for entry in entries], [entry.findtext(f"{atom}id") for entry in podcast_feed.findall(f"{atom}entry")])
+        newest = entries[0]
+        self.assertEqual(newest.findtext(f"{atom}title"), "标题 & 二十 <未转义>")
+        self.assertEqual(newest.findtext(f"{atom}id"), "tag:huberman-reading-001.tolsonhuddy.chatgpt.site,2026:episode:ep-20")
+        self.assertEqual(newest.findtext(f"{atom}published"), "2024-01-21T03:04:05Z")
+        self.assertEqual(newest.findtext(f"{atom}updated"), "2024-01-21T03:04:05Z")
+        links = {(link.get("rel"), link.get("href"), link.get("title")) for link in newest.findall(f"{atom}link")}
+        self.assertIn(("alternate", "https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-20.html", None), links)
+        self.assertIn(("related", "https://example.org/episode-20", "原节目"), links)
+        category = newest.find(f"{atom}category")
+        self.assertEqual((category.get("term"), category.get("label")), ("long_episode", "长节目"))
+        content = newest.find(f"{atom}content")
+        self.assertEqual(content.get("type"), "html")
+        self.assertIn("非官方精读，未获授权，版权归原作者", content.text)
+        self.assertIn("导语二十", content.text)
+        self.assertIn("前半正文 20。", content.text)
+        self.assertIn("符号 A &amp; B 以及 &lt;tag&gt;。", content.text)
+        self.assertNotIn("<tag>", content.text)
+        self.assertIn('href="https://example.org/episode-20"', content.text)
+        self.assertNotIn("VTT 定位", content.text)
+        self.assertNotIn("secret_path", content.text)
+        self.assertNotIn("<未转义>", content.text)
+        raw = (self.root / "private/site/feed.xml").read_text(encoding="utf-8")
+        self.assertNotIn("github.io", raw)
+        self.assertNotIn("不应出现在订阅", raw)
+        self.assertNotIn("前半正文 0。", raw)
+        essentials = next(entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-19"))
+        self.assertEqual(essentials.find(f"{atom}category").get("label"), "Essentials")
+        undated = [entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-00")]
+        self.assertEqual(undated, [])
+        bare = next(entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-01"))
+        self.assertIsNone(next((link for link in bare.findall(f"{atom}link") if link.get("rel") == "related"), None))
+        self.assertEqual(root_feed.find(f"{atom}link[@rel='self']").get("href"), "https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml")
+        self.assertEqual(podcast_feed.find(f"{atom}link[@rel='self']").get("href"), "https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml")
+        listed = [node.get("xmlUrl") for node in opml.getroot().iter("outline") if node.get("xmlUrl")]
+        self.assertEqual(listed, ["https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml"])
+        self.assertIn("Tolson-RSS", ET.tostring(opml.getroot(), encoding="unicode"))
+        pages = "https://tolsonhuddy-collab.github.io/huberman-tolson-cn/"
+        index = (self.root / "private/site/index.html").read_text(encoding="utf-8")
+        article = (self.root / "private/site/episodes/ep-20.html").read_text(encoding="utf-8")
+        self.assertIn('rel="alternate" type="application/atom+xml"', index)
+        self.assertIn('href="feed.xml"', index)
+        self.assertIn('href="../feed.xml"', article)
+        self.assertEqual(urljoin(pages, "feed.xml"), pages + "feed.xml")
+        self.assertEqual(urljoin(pages + "episodes/ep-20.html", "../feed.xml"), pages + "feed.xml")
+        self.assertEqual(urljoin(pages + "episodes/ep-20.html", "../style.css"), pages + "style.css")
+        self.assertNotRegex(index + article, r'(?:href|src)="/')
+        site.build_site(self.root, Path("dist"), private=False)
+        demo = ET.parse(self.root / "dist/feed.xml").getroot()
+        demo_entry = demo.find(f"{atom}entry")
+        self.assertIn("带着这个问题继续读", demo_entry.find(f"{atom}content").text)
+        self.assertIn(site.RIGHTS_LINE, demo_entry.find(f"{atom}content").text)
+        self.assertEqual(demo_entry.find(f"{atom}link[@rel='alternate']").get("href"), "https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/demo-reading.html")
+        self.assertTrue((self.root / "dist/podcasts/huberman/feed.xml").is_file())
+        self.assertTrue((self.root / "dist/tolson-rss.opml").is_file())
+        self.assertTrue((self.root / "dist/.nojekyll").is_file())
 
 
 if __name__ == "__main__":
