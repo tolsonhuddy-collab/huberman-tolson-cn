@@ -2,7 +2,7 @@
 
 原节目来源已核实，链接见上方。章节时间来自用户提供的本地 VTT，尚未独立核对原音及字幕偏移。
 
-原节目：Understand & Improve Memory Using Science-Based Tools。讲述者：安德鲁·休伯曼（Andrew Huberman）。官方节目身份已由本地核验记录确认：官方节目页；本文据本地TXT全文编译，以raw VTT真实cue首尾定位，字幕未经原音偏移校准，未独立核论文与当前科学事实。首发日未核；广告与重复寒暄删去，原稿疑点随文注明。
+原节目：Understand & Improve Memory Using Science-Based Tools。讲述者：安德鲁·休伯曼（Andrew Huberman）。官方节目身份已由本地核验记录确认：[官方节目页](https://www.hubermanlab.com/episode/understand-and-improve-memory-using-science-based-tools)；本文据本地TXT全文编译，以raw VTT真实cue首尾定位，字幕未经原音偏移校准，未独立核论文与当前科学事实。首发日未核；广告与重复寒暄删去，原稿疑点随文注明。
 
 ## 记住一件事，也是在记住它与生活的关系
 

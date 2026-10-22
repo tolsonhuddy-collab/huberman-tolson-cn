@@ -2,7 +2,7 @@
 
 原节目来源已核实，链接见上方。章节时间来自用户提供的本地 VTT，尚未独立核对原音及字幕偏移。
 
-本文依据《The Science of Love, Desire and Attachment》的本地英文转写与VTT编写。官方完整节目页及视频身份（gMRph_BvHB4）已核；首发日期、原音与字幕偏移未独立核实。章节时间取自本地字幕。研究、解释与个人判断均按安德鲁·休伯曼（Andrew Huberman）本期讲述呈现，未另行核实论文或更新临床结论。
+本文依据《The Science of Love, Desire and Attachment》的本地英文转写与VTT编写。[官方完整节目页](https://www.hubermanlab.com/episode/the-science-of-love-desire-and-attachment)及视频身份（gMRph_BvHB4）已核；首发日期、原音与字幕偏移未独立核实。章节时间取自本地字幕。研究、解释与个人判断均按安德鲁·休伯曼（Andrew Huberman）本期讲述呈现，未另行核实论文或更新临床结论。
 
 ## 吸引力并不只在眼睛里：气味、周期和避孕药的比较
 

@@ -2,7 +2,7 @@
 
 原节目来源已核实，链接见上方。章节时间来自用户提供的本地 VTT，尚未独立核对原音及字幕偏移。
 
-本文依据《Controlling Sugar Cravings & Metabolism with Science-Based Tools》的完整本地转写稿整理。官方节目页与官方视频身份已核；各节时间仅取本地 VTT，未经原音独立校准，首发日期未核。
+本文依据《Controlling Sugar Cravings & Metabolism with Science-Based Tools》的完整本地转写稿整理。[官方节目页](https://www.hubermanlab.com/episode/controlling-sugar-cravings-and-metabolism-with-science-based-tools)与[官方视频](https://youtu.be/VAEzZeaV5zM)身份已核；各节时间仅取本地 VTT，未经原音独立校准，首发日期未核。
 
 ## 糖不是一个简单的好坏问题
 
