@@ -23,9 +23,11 @@
 
 ## 订阅 / RSS
 
-- 全文 Feed（Atom，最近 20 篇）：https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
-- Tolson-RSS（Huberman）：https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml
-- 订阅清单 OPML：https://huberman-reading-001.tolsonhuddy.chatgpt.site/tolson-rss.opml
+- 全文 Feed（Atom，最近 20 篇）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+- Tolson-RSS（Huberman）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
+- 订阅清单 OPML：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
+
+备用站构建的 Feed 链接指向备用站。为主站单独构建时不传 `--base-url`，链接仍指向主站。
 
 ## 这是什么
 
@@ -153,9 +155,11 @@ Published Chinese essays are in `site/zh/` (one Markdown file and one metadata f
 
 ## Subscribe / RSS
 
-- Full-text Atom feed, latest 20 essays: https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml
-- Tolson-RSS (Huberman): https://huberman-reading-001.tolsonhuddy.chatgpt.site/podcasts/huberman/feed.xml
-- OPML list: https://huberman-reading-001.tolsonhuddy.chatgpt.site/tolson-rss.opml
+- Full-text Atom feed, latest 20 essays: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+- Tolson-RSS (Huberman): https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
+- OPML list: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
+
+The Pages build writes those feed links to the Pages site. A primary-site build omits `--base-url` and keeps primary-site links.
 
 This repository holds catalog metadata (370 entries), the published Chinese essays in `site/zh/`, a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
 

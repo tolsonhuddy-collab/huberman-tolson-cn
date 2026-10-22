@@ -1,6 +1,6 @@
 # Backup mirror. Page assets stay document-relative so they resolve under
 # /huberman-tolson-cn/ without a <base> tag (a base tag would retarget #section anchors).
-# Feed entry links are written to the canonical primary origin by the builder.
+# This build passes its own base URL so feed, OPML, and card links point here.
 name: GitHub Pages
 
 on:
@@ -27,10 +27,20 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - name: Install Pillow and Noto Sans SC
+        run: |
+          python3 -m pip install --disable-pip-version-check pillow
+          mkdir -p "$RUNNER_TEMP/fonts"
+          curl -fsSL -o "$RUNNER_TEMP/fonts/NotoSansCJKsc-Regular.otf" \
+            https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf
+          curl -fsSL -o "$RUNNER_TEMP/fonts/NotoSansCJKsc-Bold.otf" \
+            https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Bold.otf
+          echo "HUB_CJK_FONT=$RUNNER_TEMP/fonts/NotoSansCJKsc-Regular.otf" >> "$GITHUB_ENV"
+          echo "HUB_CJK_SANS_BOLD=$RUNNER_TEMP/fonts/NotoSansCJKsc-Bold.otf" >> "$GITHUB_ENV"
       - name: Test
         run: python3 -m unittest discover -s tests -v
       - name: Build published site
-        run: python3 scripts/build_site.py --published --out dist
+        run: python3 scripts/build_site.py --published --out dist --base-url https://tolsonhuddy-collab.github.io/huberman-tolson-cn/
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
