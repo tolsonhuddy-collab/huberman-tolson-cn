@@ -31,7 +31,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 python3 scripts/build_site.py --published --out dist
 ```
 
-它只读 `catalog/episodes.json` 与 `site/zh/`，输出到 `dist/`。页面用与主站相同的读者文案。Feed 链接仍指向主站。`site/zh/` 不含节目封面和人物肖像，构建结果使用占位肖像。
+它只读 `catalog/episodes.json` 与 `site/zh/`，输出到 `dist/`。页面用与主站相同的读者文案。不传 `--base-url` 时，Feed 链接指向主站；GitHub Pages 构建会传入备用站地址。`site/zh/` 不含节目封面和人物肖像，构建结果使用占位肖像，并另行生成 `dist/og/` 文字卡片。
 
 私有阅读稿使用独立命令：
 
@@ -44,7 +44,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 84 篇中文精读不是同一份清单。`--published` 构建仓库 `site/zh/` 里的这 84 篇。部署步骤见 [PIPELINE.md](PIPELINE.md)。
 
-每次构建还会重写 `feed.xml`、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`，并用标准库确认这些 XML 可以解析。`feed.xml` 是 Atom，收录本次构建中最近 20 篇可读精读的全文（`content type="html"`），含稳定 id、标题、主站页面链接、published、updated、类别，以及已核验时的原节目链接。Tolson-RSS 按播客分文件，目前只有 Huberman；OPML 列出这些 Feed。首页和正文的 `<head>` 用相对地址自动发现 Atom，因此主站根路径和 GitHub Pages 的 `/huberman-tolson-cn/` 子路径都能找到订阅。Feed 里的链接固定指向主站 https://huberman-reading-001.tolsonhuddy.chatgpt.site 。
+每次构建还会重写 `feed.xml`、`podcasts/huberman/feed.xml`、`tolson-rss.opml` 和 `og/{id}.jpg`，并用标准库确认这些 XML 可以解析。`feed.xml` 是 Atom，收录本次构建中最近 20 篇可读精读的全文（`content type="html"`），含稳定 id、标题、页面链接、published、updated、类别、已核验时的原节目链接，以及一张 1200×630 的文字卡片（`media:thumbnail`、`enclosure`，正文顶部 `<img>`）。日期来自 `site/zh` 元数据里的节目首发时间 `published`；没有这项时用该稿的 Git 提交时间，不用目录索引日期，也不用 1970。早于 2000 年的日期会让构建失败。卡片是浅灰底、黑字、青色底栏的 1200×630 文字图，含中文标题、目录序号、发布日期、嘉宾（若有）和「Huberman Lab 中文精读 · 非官方」。不用节目封面、人物照片或官方标志。首页和正文的 `<head>` 用相对地址自动发现 Atom。Feed、OPML 和 `og:image` 使用本次构建的 `--base-url`，默认是主站 https://huberman-reading-001.tolsonhuddy.chatgpt.site 。
 
 ## 输入协议
 
@@ -89,7 +89,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 }
 ```
 
-`sections` 可留空，届时没有章节来源时间。提供该列表时，标题、数量与顺序必须严格匹配 Markdown H2，否则停止构建。时间只使用显式输入的非负秒数，不推测节目位置。已核验的 YouTube 节目 URL 可生成该节目自己的时间链接；其他来源只显示小号本地时间定位，提示与完整声明说明其核验范围，不推测第三方站点的定位语法。来源 URL 缺失或不安全时不生成原节目链接。
+`sections` 可留空，届时没有章节来源时间。提供该列表时，标题、数量与顺序必须严格匹配 Markdown H2，否则停止构建。时间只使用显式输入的非负秒数，不推测节目位置。已核验的 YouTube 节目 URL 可生成该节目自己的时间链接；其他来源只显示小号本地时间定位，提示与完整声明说明其核验范围，不推测第三方站点的定位语法。来源 URL 缺失或不安全时不生成原节目链接。`published` 是节目的原始发布时间，Feed 用它作为条目的 published；没有这项时改用稿件进入 Git 的时间。目录里的 `source_index_date` 不作为发布日期。
 
 `source_intro` 是可选文本，只替换页面文末原有的稿前来源说明；省略时保留 Markdown 中的原说明。它用于在节目身份补充核实后更新读者可见的来源信息，不修改已审核稿、章节正文或审稿哈希。应逐条保留原说明中的实质限制，不能将来源身份核验写成原音或科学事实核验，也不应出现制作协调术语。
 
