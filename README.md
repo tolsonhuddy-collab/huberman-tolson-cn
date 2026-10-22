@@ -29,6 +29,15 @@
 
 备用站构建的 Feed 链接指向备用站。为主站单独构建时不传 `--base-url`，链接仍指向主站。
 
+### Obsidian 订阅
+
+1. 打开 Obsidian 设置 → 第三方插件 → 浏览，搜索 RSS Dashboard（作者 amatya-aditya），安装并启用。
+2. 从左侧边栏打开它，点「+」，粘贴 Feed 地址：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+3. 必须把 Auto delete articles duration 设为 Disabled。默认 30 天会藏起全部文章，因为这些节目的发布日期更早。已经添加过的话，用 Adjust per-feed filter settings 修改。
+4. 刷新后可以看到全文和卡片。
+
+github.io 在中国大陆可能较慢，打不开时重试或换网络。手机版 Obsidian 步骤相同。
+
 ## 这是什么
 
 1. **目录。** 仓库收录 370 条节目元数据：长节目 279（含 Guest Series 16）、Essentials 62、AMA 19、现场问答 10。可以按中文标题、英文标题、人物姓名和类别筛选，也可以只看已有精读或待整理。
@@ -160,6 +169,15 @@ Published Chinese essays are in `site/zh/` (one Markdown file and one metadata f
 - OPML list: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
 
 The Pages build writes those feed links to the Pages site. A primary-site build omits `--base-url` and keeps primary-site links.
+
+### Subscribe in Obsidian
+
+1. Open Settings → Community plugins → Browse, search for RSS Dashboard (by amatya-aditya), install it, and enable it.
+2. Open it from the left sidebar, click +, and paste the feed URL: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+3. Set Auto delete articles duration to Disabled. This is required. The default of 30 days hides every essay, because the episodes are older than that. If the feed is already added, change it with Adjust per-feed filter settings.
+4. Refresh to see the full text and the cards.
+
+github.io may be slow in mainland China. If it does not load, retry or switch networks. Mobile Obsidian uses the same steps.
 
 This repository holds catalog metadata (370 entries), the published Chinese essays in `site/zh/`, a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
 
