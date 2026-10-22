@@ -1,4 +1,4 @@
-.PHONY: test status check-sources demo private-site audit
+.PHONY: test status check-sources demo private-site published audit
 test:
 	python3 -m unittest discover -s tests -v
 status:
@@ -9,5 +9,7 @@ demo:
 	python3 scripts/build_site.py --demo --out dist
 private-site:
 	python3 scripts/build_site.py --private --out private/site
+published:
+	python3 scripts/build_site.py --published --out dist
 audit:
 	python3 scripts/pipeline.py audit-git

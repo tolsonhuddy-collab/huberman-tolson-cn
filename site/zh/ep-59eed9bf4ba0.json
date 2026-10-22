@@ -1,0 +1,193 @@
+{
+  "id": "ep-59eed9bf4ba0",
+  "title_zh": "糖与加工食品：从肠道、肝脏到食物选择",
+  "title_en": "How Sugar & Processed Foods Impact Your Health ｜ Dr. Robert Lustig",
+  "source_url": "https://www.hubermanlab.com/episode/dr-robert-lustig-how-sugar-processed-foods-impact-your-health",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Robert Lustig",
+      "role": "嘉宾 / 对谈者",
+      "bio": "本期嘉宾"
+    }
+  ],
+  "editor_note": "依据用户提供的英文转写稿编辑。节目身份已对照官方完整期页面；章节定位来自同批本地 VTT，未独立核对原音及字幕偏移。数字与识别疑点见文内编辑注。中文精读为非官方独立编辑作品，不构成医疗建议。",
+  "sections": [
+    {
+      "title": "吃下去的热量，不等于身体得到的全部",
+      "source_seconds": 440
+    },
+    {
+      "title": "蛋白质的处理成本，和一块牛排的算术",
+      "source_seconds": 733
+    },
+    {
+      "title": "同样九卡路里，脂肪的作用也可能不同",
+      "source_seconds": 1036
+    },
+    {
+      "title": "葡萄糖的必要性，怎样引出激素问题",
+      "source_seconds": 1102
+    },
+    {
+      "title": "果糖与水果，不能只看分子名称",
+      "source_seconds": 1330
+    },
+    {
+      "title": "三种酶，以及主持人追问的体内强度",
+      "source_seconds": 1594
+    },
+    {
+      "title": "剂量、长期暴露与寿命比较的边界",
+      "source_seconds": 1782
+    },
+    {
+      "title": "贝果之后，血糖与胰岛素发生了什么",
+      "source_seconds": 2222
+    },
+    {
+      "title": "一只肾脏受损的小鼠，究竟说明什么",
+      "source_seconds": 2557
+    },
+    {
+      "title": "从细胞增长谈到氧气，论证走得很远",
+      "source_seconds": 2746
+    },
+    {
+      "title": "尿酸与血管，再回到碳水的去向",
+      "source_seconds": 3121
+    },
+    {
+      "title": "果糖、肠道与他反对升糖指数的理由",
+      "source_seconds": 3355
+    },
+    {
+      "title": "肠道的屏障，需要怎样的食物",
+      "source_seconds": 3662
+    },
+    {
+      "title": "他允许餐后甜点，反对整天都像在吃甜点",
+      "source_seconds": 3907
+    },
+    {
+      "title": "价格为什么没有让人放下甜饮",
+      "source_seconds": 4059
+    },
+    {
+      "title": "面包里的糖，为什么也有保存作用",
+      "source_seconds": 4310
+    },
+    {
+      "title": "知道风险以后，个人选择就够了吗",
+      "source_seconds": 4695
+    },
+    {
+      "title": "食物选择的成本，谁在承担",
+      "source_seconds": 5187
+    },
+    {
+      "title": "超加工食品是否还是食物：来宾的强判断",
+      "source_seconds": 5560
+    },
+    {
+      "title": "NOVA分类与那一小份甜点",
+      "source_seconds": 5904
+    },
+    {
+      "title": "肉的来源、支链氨基酸与一颗完整的蛋",
+      "source_seconds": 6224
+    },
+    {
+      "title": "维生素D：低水平的关联，为何没有自动变成补充的效果",
+      "source_seconds": 6474
+    },
+    {
+      "title": "皮质醇需要时间条件，海拔也不是一个减重处方",
+      "source_seconds": 6821
+    },
+    {
+      "title": "批评医药产业，也要保留药物适用的例外",
+      "source_seconds": 7219
+    },
+    {
+      "title": "LDL、甘油三酯与被切开的监管",
+      "source_seconds": 7513
+    },
+    {
+      "title": "汽水税之外，文化变化为什么以几十年计算",
+      "source_seconds": 7784
+    },
+    {
+      "title": "学校厨房的消失，与一个重新做饭的项目",
+      "source_seconds": 8044
+    },
+    {
+      "title": "三处脂肪储存，和一个被主持人追问后的纠正",
+      "source_seconds": 8360
+    },
+    {
+      "title": "无糖汽水：一个四组比较，与尚未结束的争论",
+      "source_seconds": 8797
+    },
+    {
+      "title": "晨间没有胰岛素反应，为何后来吃得更多",
+      "source_seconds": 9094
+    },
+    {
+      "title": "与食品公司合作时，他承认加工食品可以被改造",
+      "source_seconds": 9282
+    },
+    {
+      "title": "饥饿与奖赏：讲者怎样把胰岛素接到大脑",
+      "source_seconds": 9577
+    },
+    {
+      "title": "咖啡因把“有强化作用”和“有毒”分开了",
+      "source_seconds": 9835
+    },
+    {
+      "title": "GLP-1的减重效果，和来宾最担心的代价",
+      "source_seconds": 9928
+    },
+    {
+      "title": "旧减重药的警讯，不能移植成新药的数据",
+      "source_seconds": 10369
+    },
+    {
+      "title": "他支持适合的患者用药，主持人也提出另一幅图景",
+      "source_seconds": 10479
+    },
+    {
+      "title": "想吃和不想动，是否也有生化背景",
+      "source_seconds": 10801
+    },
+    {
+      "title": "“个人责任”的产业历史，是他提出的另一层问题",
+      "source_seconds": 11158
+    },
+    {
+      "title": "把立场放到餐桌：一轮具体食品问答",
+      "source_seconds": 11328
+    },
+    {
+      "title": "一种纤维产品的主张，必须和任职披露一起读",
+      "source_seconds": 11625
+    },
+    {
+      "title": "“没有标签”的说法，经一份牛肉包装修正了",
+      "source_seconds": 11831
+    },
+    {
+      "title": "从医院售卖机到学校供餐，环境怎样承载选择",
+      "source_seconds": 11955
+    },
+    {
+      "title": "最后看配料表：他给出的规则，也有适用边界",
+      "source_seconds": 12174
+    }
+  ]
+}

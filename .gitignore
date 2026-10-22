@@ -1,3 +1,5 @@
+# Local transcripts, audio, English sources, in-progress drafts, and private builds.
+# Published Chinese essays are tracked in site/zh/.
 private/
 .env
 .env.*

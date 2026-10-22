@@ -27,7 +27,7 @@ TRANSITIONS = {
     "needs_revision": {"drafting", "draft_complete"}, "reviewed": {"needs_revision"},
 }
 PUBLIC_ROOT_FILES = {".gitignore", "README.md", "LICENSE", "CONTENT_RIGHTS.md", "DEPENDENCIES.md", "Makefile"}
-PUBLIC_DIRS = {"scripts", "tests", "docs", "catalog", "web", ".github"}
+PUBLIC_DIRS = {"scripts", "tests", "docs", "catalog", "web", ".github", "site"}
 # User-merged README assets only. Episode imagery remains outside the repository.
 PUBLIC_DOC_IMAGES = {
     "docs/screenshot-home.png": "ad3c7c21b334ba11e24cfa654aa7e6460a16b233de446a236c1967641beede98",
@@ -276,7 +276,15 @@ def public_path(name):
     path = Path(name)
     if path.is_absolute() or ".." in path.parts:
         return False
-    return name in PUBLIC_DOC_IMAGES or name in PUBLIC_ROOT_FILES or (len(path.parts) > 1 and path.parts[0] in PUBLIC_DIRS and not any(part.startswith(".") and part != ".github" for part in path.parts) and "__pycache__" not in path.parts and path.suffix in {".py", ".md", ".json", ".html", ".css", ".js", ".svg", ".txt", ".yml", ".yaml"})
+    if name in PUBLIC_DOC_IMAGES or name in PUBLIC_ROOT_FILES:
+        return True
+    if len(path.parts) <= 1 or path.parts[0] not in PUBLIC_DIRS:
+        return False
+    if any(part.startswith(".") and part != ".github" for part in path.parts) or "__pycache__" in path.parts:
+        return False
+    # site/zh holds published Chinese essays only. Transcripts and rendered HTML stay out.
+    allowed = {".md", ".json"} if path.parts[0] == "site" else {".py", ".md", ".json", ".html", ".css", ".js", ".svg", ".txt", ".yml", ".yaml"}
+    return path.suffix in allowed
 
 
 def audit_git():

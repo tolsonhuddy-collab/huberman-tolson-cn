@@ -1,0 +1,76 @@
+{
+  "id": "001-nervous-system",
+  "title_zh": "神经系统如何工作，又如何被经验改变",
+  "title_en": "How Your Nervous System Works & Changes",
+  "source_url": "https://www.youtube.com/watch?v=H-XfCl-HpRM",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 讲述者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "editor_note": "依据用户提供的英文转写稿编辑。节目身份已对照官方完整期页面；章节定位来自同批本地 VTT，未独立核对原音及字幕偏移。数字与识别疑点见文内编辑注。中文精读为非官方独立编辑作品，不构成医疗建议。",
+  "sections": [
+    {
+      "title": "大脑之外，还有一整个来回传话的系统",
+      "source_seconds": 303
+    },
+    {
+      "title": "神经元怎样把电信号变成一段经验",
+      "source_seconds": 428
+    },
+    {
+      "title": "从战争伤口到一张熟悉的脸",
+      "source_seconds": 647
+    },
+    {
+      "title": "感觉决定了我们能接收到怎样的世界",
+      "source_seconds": 871
+    },
+    {
+      "title": "注意力照到哪里，哪里就进入知觉",
+      "source_seconds": 1050
+    },
+    {
+      "title": "情绪背后的化学调节",
+      "source_seconds": 1312
+    },
+    {
+      "title": "同一种物质，为何会带来不同反应",
+      "source_seconds": 1481
+    },
+    {
+      "title": "思考走进过去和未来，行动把它带回现实",
+      "source_seconds": 1658
+    },
+    {
+      "title": "刻意做事时，人要同时照看时间、路径和结果",
+      "source_seconds": 1899
+    },
+    {
+      "title": "成人仍然能学会，只是改变的方式有了不同",
+      "source_seconds": 2210
+    },
+    {
+      "title": "失去视觉后，一块脑组织还能做什么",
+      "source_seconds": 2414
+    },
+    {
+      "title": "警觉让人醒过来，注意把经验标出来",
+      "source_seconds": 2497
+    },
+    {
+      "title": "练习之后，学习还在继续",
+      "source_seconds": 2717
+    },
+    {
+      "title": "清醒与休息之间，有一架不断移动的跷跷板",
+      "source_seconds": 3017
+    },
+    {
+      "title": "白天的注意力，也有起伏与重新进入的过程",
+      "source_seconds": 3264
+    }
+  ]
+}
