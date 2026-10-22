@@ -2,32 +2,18 @@
 
 **中文** | [English](#english)
 
-把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。文章顺着节目原来的顺序，保留核心论证、机制解释、例子和研究限制，去掉广告、寒暄和重复。访谈标明是谁在说；转写里对不上的地方会注明。
-
-![Huberman Lab 中文精读首页：报头、搜索筛选，以及编辑精选《好睡眠从白天开始》的节目封面](docs/screenshot-home.png)
-
-[**在线阅读 →**](https://huberman-reading-001.tolsonhuddy.chatgpt.site)
-
-目前站上已上线 84 篇中文精读。例如：[神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html)、[好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html)。
-
-会持续更新。
-
-非官方项目。
+把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。目前站上已上线 84 篇中文精读。会持续更新。非官方项目。
 
 ## 访问地址
 
 - 主站：https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - 备用站：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ （主站打不开时用备用站）
 
-已发布的中文精读在仓库 `site/zh/`（每篇一份 Markdown 和一份元数据）。备用站由这些稿件构建。
-
 ## 订阅 / RSS
 
 - 全文 Feed（Atom，最近 20 篇）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
 - Tolson-RSS（Huberman）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
 - 订阅清单 OPML：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
-
-备用站构建的 Feed 链接指向备用站。为主站单独构建时不传 `--base-url`，链接仍指向主站。
 
 ### Obsidian 订阅
 
@@ -38,137 +24,38 @@
 
 github.io 在中国大陆可能较慢，打不开时重试或换网络。手机版 Obsidian 步骤相同。
 
-## 这是什么
+## 版权说明
 
-1. **目录。** 仓库收录 370 条节目元数据：长节目 279（含 Guest Series 16）、Essentials 62、AMA 19、现场问答 10。可以按中文标题、英文标题、人物姓名和类别筛选，也可以只看已有精读或待整理。
-2. **中文精读。** 按节目结构写成的长文，一集一个页面。已上线 84 篇中文精读；其余条目只列目录。
-3. **静态阅读页。** 桌面右侧章节目录，手机上可折叠。字号 16–24px，浅色或深色底，页内显示阅读进度。文末默认收起编辑与来源说明。
+非官方项目。转载请署名并链接对应原文页面。原节目音频与英文转写的版权归 Huberman Lab、嘉宾及制作方所有。详见 [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md)。
 
-## 核心能力
-
-| 能力 | 说明 |
-|---|---|
-| 中文精读 | 保留论证、机制、例子和研究限制；删广告、寒暄、重复。访谈写明发言人。转写疑误留在正文里。 |
-| 节目目录 | 370 条元数据在 `catalog/episodes.json`。有正文的卡片链到独立页面，没有正文的只显示标题和类别。 |
-| 筛选 | 首页匹配中文标题、英文标题、人物和类别，并可只看已有精读或待整理。筛选时精选区隐藏。 |
-| 阅读页 | 桌面目录随滚动高亮；手机目录可折叠。字号与底色记在本机。文末可展开来源。 |
-| 来源 | 核实过的节目链接写在文末。没有核实的视频地址留空，不编造。章节时间来自本地字幕。 |
-| 本地构建 | Python 3.10+ 标准库。`--demo` 只做虚构版式；`--published` 用 `site/zh/` 构建已发布精读。英文转写不在 Git 里。 |
-| 订阅 | 每次构建重写 Atom 全文 Feed（最近 20 篇）、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml`。 |
-
-## 快速开始
-
-需要 Python 3.10 或更新版本。测试和演示只用标准库，不用安装 Python 包、Node 或模型接口。
-
-```sh
-git clone https://github.com/tolsonhuddy-collab/huberman-tolson-cn.git
-cd huberman-tolson-cn
-python3 -m unittest discover -s tests -v
-python3 scripts/build_site.py --demo --out dist
-python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
-```
-
-打开 `http://127.0.0.1:8000`。这是本机预览。演示页标题是「读一篇长文，留出一点时间」，人物和正文都是虚构的，用来看版式。请把服务目录指到 `dist/`，不要把仓库根目录暴露出去。
-
-依赖说明见 [DEPENDENCIES.md](DEPENDENCIES.md)。
-
-## 工作原理
-
-脚本负责登记、分块、状态和静态构建。写作和审稿在脚本之外完成。脚本不调用模型，也不自动翻译。
-
-```text
-TXT + 同名 VTT + 盘点 CSV
-        │  scripts/pipeline.py ingest
-        ▼
-catalog/episodes.json          目录元数据（入库）
-        │  prepare --id          只切分字幕
-        ▼
-private/chunks、source-maps    本地，不入库
-        │  写作、审稿、record     正文与状态写入 private/
-        ▼
-private/articles、metadata、reviews、progress.json
-        │  scripts/build_site.py
-        ▼
-dist/（--demo，虚构稿）或 private/site/（--private，本地稿）
-        │  手工交给静态托管
-        ▼
-https://huberman-reading-001.tolsonhuddy.chatgpt.site
-
-site/zh/（已发布中文精读，入库）
-        │  scripts/build_site.py --published
-        ▼
-dist/ → GitHub Pages 备用站
-```
-
-命令、审稿状态和部署检查见 [流水线说明](docs/PIPELINE.md)。稿件字段见 [网站与输入协议](docs/website.md)，写法见 [编辑规范](docs/EDITORIAL.md)。
-
-## 项目结构
-
-```text
-├── scripts/
-│   ├── build_site.py        # 静态站构建（标准库）
-│   └── pipeline.py          # 导入、分块、状态、源核对、Git 路径审计
-├── tests/                   # unittest
-├── catalog/episodes.json    # 370 条目录元数据，不含正文
-├── site/zh/                 # 已发布中文精读（Markdown + 元数据）
-├── web/                     # 首页与文章模板、样式、阅读脚本
-│   └── qiaomu-LICENSE.txt   # 版式来源的 MIT 声明
-├── .github/workflows/       # 推送到 main 后发布 GitHub Pages 备用站
-├── docs/                    # 流水线、输入协议、编辑规范、验收
-├── private/                 # 本地稿件与素材（.gitignore，克隆后没有）
-├── CONTENT_RIGHTS.md        # 代码许可与内容权利
-├── DEPENDENCIES.md
-├── LICENSE                  # MIT，仅代码与工程文档
-└── Makefile                 # test、demo、private-site、status、audit
-```
-
-## 内容与版权边界
-
-- 非官方项目。
-- 代码以 [MIT](LICENSE) 许可，**仅限代码**。中文精读不适用 MIT。版式改编自 [乔木的 lexfridman-cn](https://github.com/joeseesun/lexfridman-cn)，原声明在 [web/qiaomu-LICENSE.txt](web/qiaomu-LICENSE.txt)。
-- 中文精读是独立的二次创作。如需转载，请署名并链接对应原文页面。
-- 原节目音频与英文转写的版权归 Huberman Lab、嘉宾及制作方所有。本仓库不包含原始播客文件。
-- 精读可能有偏差，表述以原始访谈为准。详见 [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md)。
-
-## 已知限制
-
-- 克隆后可以跑测试、`--demo` 和 `--published`。已发布中文精读在 `site/zh/`。英文转写、节目封面、人物肖像和托管凭据都在 Git 之外。`--private` 需要本机自行准备 `private/`。
-- `prepare` 只对长节目切分字幕。Essentials、AMA、现场问答目前只在目录中。16 条 AMA 标明为节选。
-- 目录里的索引日期未独立核实，不能当成节目首发日期。章节时间来自本地字幕，不表示已经与原音逐秒对齐。
-- 推送到 `main` 会更新 GitHub Pages 备用站。主站仍由现有托管流程更新。线上篇数以站点实际页面为准，已上线 84 篇中文精读。
-
-## 贡献
-
-- 错字、人名、数字或明显误读：开 Issue，写上篇目标题或页面地址。
-- 构建、阅读页、流水线的修复：提 Pull Request。提交前可跑 `python3 scripts/pipeline.py audit-git`。
-- 不要把原片、英文转写、节目图片或凭据提交进仓库。已发布的中文精读放在 `site/zh/`。
+版式改编自 [乔木的 lexfridman-cn](https://github.com/joeseesun/lexfridman-cn)，原声明在 [web/qiaomu-LICENSE.txt](web/qiaomu-LICENSE.txt)。
 
 ## 联系
 
 taopatric58@gmail.com
 
+小红书：Tolson 在叭叭（小红书号 9482664180），写给医疗圈的 AI 观察。
+
+<img src="docs/xiaohongshu.jpg" width="300" alt="Tolson 在叭叭 小红书名片">
+
+维护和构建说明见 [docs/开发说明.md](docs/开发说明.md)。
+
 ---
 
 ## English
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. Essays keep the original order, arguments, examples, and limits, and drop ads and filler. The public site has **84** published essays: [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site).
-
-Updated continuously.
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 84 published essays. Updated continuously. Unofficial.
 
 ## Where to read
 
 - Primary: https://huberman-reading-001.tolsonhuddy.chatgpt.site
 - Backup: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/ (use this if the primary site does not open)
 
-Published Chinese essays are in `site/zh/` (one Markdown file and one metadata file per essay). The backup site is built from those files.
-
 ## Subscribe / RSS
 
 - Full-text Atom feed, latest 20 essays: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
 - Tolson-RSS (Huberman): https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
 - OPML list: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
-
-The Pages build writes those feed links to the Pages site. A primary-site build omits `--base-url` and keeps primary-site links.
 
 ### Subscribe in Obsidian
 
@@ -179,12 +66,16 @@ The Pages build writes those feed links to the Pages site. A primary-site build 
 
 github.io may be slow in mainland China. If it does not load, retry or switch networks. Mobile Obsidian uses the same steps.
 
-This repository holds catalog metadata (370 entries), the published Chinese essays in `site/zh/`, a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
+## Rights
 
-Unofficial. Code is [MIT](LICENSE) for code only; the Chinese essays are not MIT. They are an independent second-creation summary: if you republish one, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers. This repository does not include the original podcast files. The essays may contain errors; the original interviews are authoritative. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md). The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
+Unofficial. If you republish an essay, attribute it and link to that episode page. Original audio and transcripts belong to Huberman Lab, the guests, and the producers. See [CONTENT_RIGHTS.md](CONTENT_RIGHTS.md).
 
-## 作者 / Author
+The reading layout is adapted from [joeseesun/lexfridman-cn](https://github.com/joeseesun/lexfridman-cn).
 
-小红书：Tolson 在叭叭（小红书号 9482664180），写给医疗圈的 AI 观察。
+## Contact
 
-<img src="docs/xiaohongshu.jpg" width="300" alt="Tolson 在叭叭 小红书名片">
+taopatric58@gmail.com
+
+Xiaohongshu: Tolson 在叭叭 (9482664180).
+
+Maintainer and build notes: [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md).
