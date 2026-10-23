@@ -131,9 +131,9 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual((self.root / "catalog/episodes.json").read_bytes(), baseline)
 
     def test_code_path_allowlist_excludes_rendered_fulltext(self):
-        for path in ["private/articles/a.md", "dist/index.html", "content/article_zh.md", ".openai/hosting.json", ".env", "web/../../private/a.md", "web/photo.jpg"]:
+        for path in ["private/articles/a.md", "dist/index.html", "content/article_zh.md", ".openai/hosting.json", ".env", "web/../../private/a.md", "web/photo.jpg", "README.private.md"]:
             self.assertFalse(p.public_path(path), path)
-        for path in ["README.md", "scripts/pipeline.py", "web/style.css", "web/app.js", "catalog/episodes.json", ".github/workflows/pages.yml", "site/zh/002-master-sleep.md", "site/zh/002-master-sleep.json"]:
+        for path in ["README.md", "README.en.md", "scripts/pipeline.py", "web/style.css", "web/app.js", "catalog/episodes.json", ".github/workflows/pages.yml", "site/zh/002-master-sleep.md", "site/zh/002-master-sleep.json"]:
             self.assertTrue(p.public_path(path), path)
         for path in ["site/zh/cover.jpg", "site/zh/portrait.png", "site/zh/episode.txt", "site/zh/episode.vtt", "site/zh/audio.mp3", "site/index.html"]:
             self.assertFalse(p.public_path(path), path)

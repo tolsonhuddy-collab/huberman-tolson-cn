@@ -26,7 +26,7 @@ TRANSITIONS = {
     "draft_complete": {"reviewed", "needs_revision"},
     "needs_revision": {"drafting", "draft_complete"}, "reviewed": {"needs_revision"},
 }
-PUBLIC_ROOT_FILES = {".gitignore", "README.md", "LICENSE", "CONTENT_RIGHTS.md", "DEPENDENCIES.md", "Makefile"}
+PUBLIC_ROOT_FILES = {".gitignore", "README.md", "README.en.md", "LICENSE", "CONTENT_RIGHTS.md", "DEPENDENCIES.md", "Makefile"}
 PUBLIC_DIRS = {"scripts", "tests", "docs", "catalog", "web", ".github", "site"}
 # User-merged README assets only. Episode imagery remains outside the repository.
 PUBLIC_DOC_IMAGES = {
