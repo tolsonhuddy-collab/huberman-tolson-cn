@@ -97,7 +97,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 节目封面与人物头像分别管理。封面必须先核对官方完整期页面、实际图片 URL、尺寸和画面题字，记录证据后才能将 `cover.verified` 设为 `true`。构建器只复制 `private/` 内已有的 JPG、PNG 或 WebP，输出为相对路径 `covers/{id}.*`；未验证封面保留“节目封面待核实”文字，不拿通用头像或 Essentials 短版替代。首页精选还要求文章状态为 `reviewed`，`homepage_featured` 仅在符合条件者中优先排序。演示构建不读取或复制任何私有节目封面。
 
-官方节目身份与原音对齐是两项证据。已核实的官方节目页面可直接填入 `source_url`，此时文章提供来源链接，章节仍显示带“未独立核对原音”提示的本地字幕时间。只有明确提供已核实的 YouTube URL 时才生成视频时间链接；这本身不证明原音与字幕偏移已经校准。
+官方节目身份与原音对齐是两项证据。已核实的官方节目页面可直接填入 `source_url`，此时文章提供来源链接，章节仍显示带“未独立核对原音”提示的转写时间。目录 `timeline.provenance` 或章节 `timestamp_provenance` 为 `public_provider_paragraph_start_unverified_audio` 时，提示明确写为第三方转写段落起点，不冒称本地 VTT。只有明确提供已核实的 YouTube URL 时才生成视频时间链接；这本身不证明原音与字幕偏移已经校准。
 
 ## 托管交接与发布范围
 

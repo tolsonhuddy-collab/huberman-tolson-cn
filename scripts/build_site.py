@@ -242,7 +242,7 @@ def demo_data() -> tuple[list[dict], dict, dict, dict]:
     return [ep, pending], {ep["id"]: {"status": "reviewed"}}, {ep["id"]: meta}, {ep["id"]: md}
 
 
-def source_marker(source: str | None, seconds: object) -> str:
+def source_marker(source: str | None, seconds: object, provenance: str | None = None) -> str:
     if seconds is None:
         return ""
     if isinstance(seconds, bool) or not isinstance(seconds, (int, float)) or not math.isfinite(seconds) or seconds < 0:
@@ -258,7 +258,8 @@ def source_marker(source: str | None, seconds: object) -> str:
             query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in {"t", "start"}]
             target = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query + [("t", str(sec))]), parts.fragment))
             return f'<a href="{escape(target, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="回听原节目 {stamp}">{stamp} <span>↗</span></a>'
-    return f'<span class="chapter-time" title="本地 VTT 定位，未独立核对原音">{stamp}</span>'
+    note = "第三方转写段落定位，未独立核对原音" if provenance == "public_provider_paragraph_start_unverified_audio" else "本地 VTT 定位，未独立核对原音"
+    return f'<span class="chapter-time" title="{note}">{stamp}</span>'
 
 
 def chapter_provenance(body: str) -> tuple[str, str]:
@@ -318,11 +319,13 @@ def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
     article, source_details = [], [blocks(source_intro)] if source_intro else []
     for number, (section_title, body) in enumerate(sections, 1):
         sec = section_meta[number - 1].get("source_seconds") if section_meta else None
+        timing_provenance = section_meta[number - 1].get("timestamp_provenance") if section_meta else None
+        timing_provenance = timing_provenance or ep.get("timeline", {}).get("provenance")
         shown_title = display_section_title(section_title, number)
         reading_body, provenance = chapter_provenance(body)
         if provenance:
             source_details.append(f'<div class="chapter-source"><h3>{number:02} {escape(shown_title)}</h3>{blocks(provenance)}</div>')
-        article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec)}</div><h2>{escape(shown_title)}</h2>{blocks(reading_body)}</section>')
+        article.append(f'<section id="section-{number}" class="chapter"><div class="chapter-kicker"><span>{number:02}</span>{source_marker(source, sec, timing_provenance)}</div><h2>{escape(shown_title)}</h2>{blocks(reading_body)}</section>')
     visible_text = "\n".join([title, intro] + [part for pair in sections for part in pair])
     count = len(re.findall(r"[\u4e00-\u9fff]", visible_text))
     return {
@@ -772,15 +775,21 @@ def render_og_card(path: Path, title: str, number: int, meta: dict | None = None
     number_font = load_font("sans-bold", 64)
     _, num_top, _, _ = number_font.getbbox(label)
     draw.text((1128 - number_font.getlength(label), chip[1] - num_top), label, font=number_font, fill="#000000")
-    font, lines, size = fit_title(title, "sans-bold", 1056, 92, 48)
     leading = 1.1
-    block = int(size * leading) * max(len(lines) - 1, 0) + size
     title_y = chip[3] + 36
-    _draw_lines(draw, lines, font, 72, title_y, "#000000", size, leading)
     guest = card_guest(meta)
+    guest_font = load_font("sans", 32)
+    available = 528 - title_y - (28 + guest_font.getbbox(guest)[3] if guest else 0)
+    font, lines, size = fit_title(title, "sans-bold", 1056, 92, 48)
+    block = int(size * leading) * max(len(lines) - 1, 0) + size
+    if block > available:
+        maximum = max(48, int(available / (leading * max(len(lines) - 1, 0) + 1)))
+        font, lines, size = fit_title(title, "sans-bold", 1056, maximum, 48)
+        block = int(size * leading) * max(len(lines) - 1, 0) + size
+    _draw_lines(draw, lines, font, 72, title_y, "#000000", size, leading)
     if guest:
-        guest_y = min(title_y + block + 28, 500)
-        draw.text((72, guest_y), guest, font=load_font("sans", 32), fill="#000000")
+        guest_y = title_y + block + 28
+        draw.text((72, guest_y), guest, font=guest_font, fill="#000000")
     draw.rectangle((0, 548, 1200, 630), fill="#00aeef")
     brand = load_font("sans", 30)
     note, sep = "Huberman Lab 中文精读", "  ·  "

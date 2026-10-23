@@ -786,9 +786,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_eighty_nine_chinese_essays(self):
+    def test_repository_commits_ninety_five_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 89 + [".md"] * 89)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 95 + [".md"] * 95)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -796,7 +796,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 89)
+        self.assertEqual(len(stems[".md"]), 95)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -809,6 +809,34 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             published = site.parse_time(meta.get("published"))
             self.assertIsNotNone(published, path.name)
             self.assertGreaterEqual(published, site.DATE_FLOOR)
+
+    def test_public_provider_paragraph_times_do_not_claim_vtt(self):
+        ep = {"id": "provider-essay", "title_en": "Example", "timeline": {
+            "provenance": "public_provider_paragraph_start_unverified_audio",
+        }}
+        meta = {"source_url": "https://www.hubermanlab.com/episode/example", "sections": [
+            {"title": "第一章", "source_seconds": 90},
+        ]}
+        md = "# 标题\n\n导语。\n\n## 第一章\n\n正文。\n"
+        html = site.reading_fragment(ep, meta, md)["article"]
+        self.assertIn("第三方转写段落定位，未独立核对原音", html)
+        self.assertNotIn("本地 VTT", html)
+        ep["timeline"]["provenance"] = "local_vtt_unverified"
+        self.assertIn("本地 VTT 定位", site.reading_fragment(ep, meta, md)["article"])
+
+    def test_six_2026_full_episode_dates(self):
+        dates = {
+            "ep-48628f59d8cd": "2026-01-05T09:00:00Z",
+            "ep-3b4e0847739b": "2026-01-12T09:00:00Z",
+            "ep-a04a308f176e": "2026-05-11T08:00:00Z",
+            "ep-1c02cb35c6f0": "2026-03-16T08:00:00Z",
+            "ep-e0ae20af0cac": "2026-01-26T09:00:00Z",
+            "ep-7cdb88401f4d": "2026-05-25T08:00:00Z",
+        }
+        for episode_id, published in dates.items():
+            meta = json.loads((PROJECT / f"site/zh/{episode_id}.json").read_text())
+            self.assertEqual(meta["published"], published)
+            self.assertNotIn("essentials", meta["title_en"].lower())
 
     def test_pages_base_url_cards_and_real_dates(self):
         self.write_json("catalog/episodes.json", {"episodes": [

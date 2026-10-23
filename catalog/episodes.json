@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "counts": {
-    "long_episode": 279,
+    "long_episode": 283,
     "essentials": 62,
     "ama": 19,
     "live_qa": 10
@@ -7406,6 +7406,106 @@
         "start_seconds": 0.199,
         "end_seconds": 2099.159,
         "provenance": "local_vtt_unverified"
+      }
+    },
+    {
+      "id": "ep-a04a308f176e",
+      "title_en": "Master Self Control & Overcome Procrastination | Dr. Kentaro Fujita",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 30218,
+      "source_file": "fujita.txt",
+      "source_sha256": "04ed74f147e296f0d404be3c438f3d94b156361015e591c3294686ff6f90824f",
+      "vtt_sha256": null,
+      "source_index_date": null,
+      "source_published_date": "2026-05-11",
+      "published": "2026-05-11T08:00:00Z",
+      "source_provider": "Podscripts public visible third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/master-self-control-overcome-procrastination-kentaro-fujita",
+      "transcript_url": "https://podscripts.co/podcasts/huberman-lab/master-self-control-overcome-procrastination-dr-kentaro-fujita",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "paragraph_start_count": 271,
+        "first_start_seconds": 0,
+        "last_start_seconds": 8874,
+        "audio_verified": false,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      }
+    },
+    {
+      "id": "ep-1c02cb35c6f0",
+      "title_en": "Science-Based Meditation Tools to Improve Your Brain & Health | Dr. Richard Davidson",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 26980,
+      "source_file": "davidson.txt",
+      "source_sha256": "148b8870564ec45338d221f81d9a32028f0ded54bf90a95172d049eea5b4259c",
+      "vtt_sha256": null,
+      "source_index_date": null,
+      "source_published_date": "2026-03-16",
+      "published": "2026-03-16T08:00:00Z",
+      "source_provider": "Podscripts public visible third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/science-based-meditation-tools-to-improve-your-brain-and-health-richard-davidson",
+      "transcript_url": "https://podscripts.co/podcasts/huberman-lab/science-based-meditation-tools-to-improve-your-brain-health-dr-richard-davidson",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "paragraph_start_count": 285,
+        "first_start_seconds": 0,
+        "last_start_seconds": 9786,
+        "audio_verified": false,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      }
+    },
+    {
+      "id": "ep-e0ae20af0cac",
+      "title_en": "Science & Tools of Learning & Memory | Dr. David Eagleman",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 29858,
+      "source_file": "eagleman.txt",
+      "source_sha256": "acb460acce304a706feaf7f59a03ddb5d5a698a09db8df4beedbee8d30d09996",
+      "vtt_sha256": null,
+      "source_index_date": null,
+      "source_published_date": "2026-01-26",
+      "published": "2026-01-26T09:00:00Z",
+      "source_provider": "Podscripts public visible third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/science-and-tools-of-learning-and-memory-david-eagleman",
+      "transcript_url": "https://podscripts.co/podcasts/huberman-lab/science-tools-of-learning-memory-dr-david-eagleman",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "paragraph_start_count": 297,
+        "first_start_seconds": 0,
+        "last_start_seconds": 8635,
+        "audio_verified": false,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      }
+    },
+    {
+      "id": "ep-7cdb88401f4d",
+      "title_en": "Build Muscle, Great Posture & Resilience to Injury | Jeff Cavaliere",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 29232,
+      "source_file": "cavaliere.txt",
+      "source_sha256": "3013885d50b14428d898412f02e155d0636039fe1669d082ab0ea787c7632d99",
+      "vtt_sha256": null,
+      "source_index_date": null,
+      "source_published_date": "2026-05-25",
+      "published": "2026-05-25T08:00:00Z",
+      "source_provider": "Podscripts public visible third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/build-muscle-great-posture-and-resilience-to-injury-jeff-cavaliere",
+      "transcript_url": "https://podscripts.co/podcasts/huberman-lab/build-muscle-great-posture-resilience-to-injury-jeff-cavaliere",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "paragraph_start_count": 309,
+        "first_start_seconds": 0,
+        "last_start_seconds": 8180,
+        "audio_verified": false,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
       }
     }
   ]
