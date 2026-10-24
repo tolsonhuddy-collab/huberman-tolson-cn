@@ -56,7 +56,7 @@ python3 scripts/build_site.py --published --out dist
 1. 先 `git pull` 拉取 `main` 最新代码，保留已有修改。
 2. 每篇同时更新 `site/zh/{id}.md` 与同名 `.json`，沿用现有字段；素材按当前用户授权及适用的版权、隐私约束处理。
 3. 运行 `python3 scripts/build_site.py --published`，先解决报错。`--demo` 仅供测试。
-4. 核对 README.md、README.en.md 及站点「关于」的实际已发布篇数；目前英文说明在 README.md 内，尚无独立 README.en.md。不要改 README 的版权声明或历史记录。
+4. 核对 README.md、README.en.md 及站点「关于」的实际已发布篇数；英文说明同步维护在 README.en.md。不要改 README 的版权声明或历史记录。
 5. commit 后 push 到 `main`，确认 GitHub Actions 的「GitHub Pages」运行成功。
 6. 按既有 Sites 流程同步构建结果到主站，保持原网址和公开范围。备用站使用 GitHub Pages 子路径，页面与订阅入口保持相对链接。
 7. 核实两站正文及订阅地址，报告新增篇目、实际总数、Actions 和双站结果。
@@ -95,9 +95,13 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 写法要求见 [EDITORIAL.md](EDITORIAL.md)。页面验收见 [SITE_ACCEPTANCE.md](SITE_ACCEPTANCE.md)。
 
+## 缺少全文的节目
+
+优先处理已有完整 transcript 的未做节目，不用节目摘要替代全文。需要 STT 或付费 API 的节目先跳过，统一登记在本机 `private/STT-paid-backlog.json`，日后集中处理，不逐项打断用户。每条记录精确标题、官方链接、原节目日期、查过的转录来源及全文缺口或付费原因；时长只有核实后才填写，否则记为未知。未经新授权不采购、不转录、不调用付费 API。未检查过的节目不能直接标为需要 STT。403 只记访问未验证警告，不绕过限制。
+
 ## 部署检查
 
-源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 95 篇中文精读。本地 `--private` 构建不是这条发布命令。
+源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 105 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
 2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。
