@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "counts": {
-    "long_episode": 303,
+    "long_episode": 318,
     "essentials": 62,
     "ama": 19,
     "live_qa": 10
@@ -7977,6 +7977,336 @@
         "provenance": "public_provider_paragraph_start_unverified_audio"
       },
       "published": "2026-02-02T09:00:00Z"
+    },
+    {
+      "id": "ep-78f6f5ffa993",
+      "title_en": "What Makes Great Leaders & How to Live an Extraordinary Life | Dr. Jared Diamond",
+      "source_file": "diamond.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 17667,
+      "source_sha256": "9e603e7c4c04e198fd52f4fb94246ca416afd8a16be277d6466fdb9504fea4e0",
+      "vtt_sha256": null,
+      "source_index_date": "2026-10-19",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/what-makes-great-leaders-and-how-to-live-an-extraordinary-life-jared-diamond",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 6787,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-10-19T08:00:00Z"
+    },
+    {
+      "id": "ep-43172c733089",
+      "title_en": "How to Accelerate Learning & Improve Education | Joe Liemandt",
+      "source_file": "liemandt.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 32241,
+      "source_sha256": "7de25e95b82412bd1baf6cf4e2741c1b0a4af7ee585e60336dc2fed9a39ba74e",
+      "vtt_sha256": null,
+      "source_index_date": "2026-08-31",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/how-to-accelerate-learning-and-improve-education-joe-liemandt",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9197,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-08-31T08:00:00Z"
+    },
+    {
+      "id": "ep-9b1fb0261224",
+      "title_en": "Bringing Extinct Species Back to Life | Dr. Beth Shapiro",
+      "source_file": "shapiro.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 27307,
+      "source_sha256": "c770876820cc92efcf67300f37df0d90608f08cf6164ca616e8aaed2bfbaba56",
+      "vtt_sha256": null,
+      "source_index_date": "2026-10-05",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/bringing-extinct-species-back-to-life-dr-beth-shapiro",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 8114,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-10-05T08:00:00Z"
+    },
+    {
+      "id": "ep-a8ecb0ae0c81",
+      "title_en": "What Humans, Animals and Plants Tell Us About Consciousness | Michael Pollan",
+      "source_file": "pollan.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 22335,
+      "source_sha256": "12360878a304efda6cbcda3d6e3fd606286d365a41b45ae06a2dde7107e792da",
+      "vtt_sha256": null,
+      "source_index_date": "2026-09-28",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/what-humans-animals-and-plants-tell-us-about-consciousness-michael-pollan",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7328,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-09-28T08:00:00Z"
+    },
+    {
+      "id": "ep-c24d3ee59354",
+      "title_en": "Neuroscience of Emotions & Tools for Improving Emotion Regulation | Dr. Ralph Adolphs",
+      "source_file": "adolphs.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 25863,
+      "source_sha256": "0dde83a3eede4fef1f6cc76efd9dbfc87739d072f241332f5c5c09d2da568f44",
+      "vtt_sha256": null,
+      "source_index_date": "2026-08-17",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/neuroscience-of-emotions-and-tools-for-improving-emotion-regulation-ralph-adolphs",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7756,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-08-17T08:00:00Z"
+    },
+    {
+      "id": "ep-226daf018467",
+      "title_en": "Tools to Bolster Your Mental Health & Confidence | Dr. Paul Conti",
+      "source_file": "conti.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 26360,
+      "source_sha256": "28adf27174ff7ccc1861de5b50b31787638eeda8a5a72b106357811e0127657b",
+      "vtt_sha256": null,
+      "source_index_date": "2026-05-04",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/tools-to-bolster-your-mental-health-and-confidence-paul-conti",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7786,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-05-04T08:00:00Z"
+    },
+    {
+      "id": "ep-c09c96510c0c",
+      "title_en": "Peptides: The Science, Uses & Safety | Dr. Abud Bakri",
+      "source_file": "bakri.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 36917,
+      "source_sha256": "3255d719b369a634b2cf6dc6867a5f97dca1ee09e9ca4f2fa6ad9f7865922ff6",
+      "vtt_sha256": null,
+      "source_index_date": "2026-06-01",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/peptides-the-science-uses-and-safety-abud-bakri",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 10090,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-06-01T08:00:00Z"
+    },
+    {
+      "id": "ep-5d4a2f70af51",
+      "title_en": "The Best Vitality & Health Protocols | Dr. Rhonda Patrick",
+      "source_file": "patrick.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 43014,
+      "source_sha256": "9a65aa49fabc31e4fc5a7a923c3a91e123c923d42e82011394e521655ac47d83",
+      "vtt_sha256": null,
+      "source_index_date": "2026-03-23",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/the-best-vitality-and-health-protocols-rhonda-patrick",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 12624,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-03-23T08:00:00Z"
+    },
+    {
+      "id": "ep-966dac96a166",
+      "title_en": "Avoiding, Treating & Curing Cancer With the Immune System | Dr. Alex Marson",
+      "source_file": "marson.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 26137,
+      "source_sha256": "0d35697b096718bb7d64fc82e6f255ec32849e26d7701e5835e1f2d25f112329",
+      "vtt_sha256": null,
+      "source_index_date": "2026-03-09",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/avoiding-treating-and-curing-cancer-with-the-immune-system-alex-marson",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 8794,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-03-09T08:00:00Z"
+    },
+    {
+      "id": "ep-3e049bc03de9",
+      "title_en": "Restore Youthfulness & Vitality to the Aging Brain & Body | Dr. Tony Wyss-Coray",
+      "source_file": "wysscoray.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 19978,
+      "source_sha256": "d8aff823d4cb240f4daa17c898bba2d09c8e08eba78521844c32e3430c4cb12c",
+      "vtt_sha256": null,
+      "source_index_date": "2026-02-23",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/restore-youthfulness-and-vitality-to-the-aging-brain-and-body-tony-wyss-coray",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7140,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-02-23T09:00:00Z"
+    },
+    {
+      "id": "ep-b480bf029986",
+      "title_en": "Build Muscle & Strength & Forge Your Life Path | Dorian Yates",
+      "source_file": "yates.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 31744,
+      "source_sha256": "9edd4e70d9723e171bd881616f011c0123686f0c1d9948235c3b580fb08764a3",
+      "vtt_sha256": null,
+      "source_index_date": "2026-01-19",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/build-muscle-and-strength-and-forge-your-life-path-dorian-yates",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 10035,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-01-19T09:00:00Z"
+    },
+    {
+      "id": "ep-71a750278d03",
+      "title_en": "The Mental Frame & Specific Daily Actions to Succeed | Andy Stumpf",
+      "source_file": "stumpf.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 36207,
+      "source_sha256": "6823d7f8cd89ec6388f3bc7de6c217a173bd69f05e27b1af289a15103195eb2b",
+      "vtt_sha256": null,
+      "source_index_date": "2026-06-15",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/the-mental-frame-and-specific-daily-actions-to-succeed-andy-stumpf",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 10489,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-06-15T08:00:00Z"
+    },
+    {
+      "id": "ep-13a459db84a2",
+      "title_en": "Male Roles, Obligations and Options for Building a Fulfilling Life | Scott Galloway",
+      "source_file": "galloway.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 32064,
+      "source_sha256": "1ade6526d9cb2ac44b3e983a1565338a48e9bd66eb97fadefb4b2512a86a6284",
+      "vtt_sha256": null,
+      "source_index_date": "2026-04-27",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/male-roles-obligations-and-options-for-building-a-fulfilling-life-scott-galloway",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9301,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-04-27T08:00:00Z"
+    },
+    {
+      "id": "ep-e8faa4a6a0ce",
+      "title_en": "How Hormones Shape Sexual Orientation & Behavior | Dr. Marc Breedlove",
+      "source_file": "breedlove.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 22907,
+      "source_sha256": "dfdbfafa661ed22dda7894eaa131770a030797da39bf0a2c6af399c4ba8baf47",
+      "vtt_sha256": null,
+      "source_index_date": "2026-03-30",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/how-hormones-shape-sexual-orientation-and-behavior-marc-breedlove",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7852,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-03-30T08:00:00Z"
+    },
+    {
+      "id": "ep-b3f93de0e165",
+      "title_en": "How Genes Shape Your Risk Taking & Morals | Dr. Kathryn Paige Harden",
+      "source_file": "harden.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 27565,
+      "source_sha256": "ca3a4ecc960fd9095ee43a9d9e313083dc64c56fc99de471ee4197ecb6e808e5",
+      "vtt_sha256": null,
+      "source_index_date": "2026-02-09",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/how-genes-shape-your-risk-taking-and-morals-kathryn-paige-harden",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9699,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-02-09T09:00:00Z"
     }
   ]
 }

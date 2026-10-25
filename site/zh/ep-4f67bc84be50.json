@@ -1,0 +1,159 @@
+{
+  "id": "ep-4f67bc84be50",
+  "title_zh": "别等世界变安静：听力、耳鸣与大脑健康之间的真实联系",
+  "title_en": "Protect & Improve Your Hearing & Brain Health | Dr. Konstantina Stankovic",
+  "source_url": "https://www.hubermanlab.com/episode/protect-improve-your-hearing-brain-health-konstantina-stankovic",
+  "published": "2025-10-13T08:00:00Z",
+  "editor_note": "依据完整访谈转写作原创中文综合精读，删广告、订阅口播与无效重复。研究条件、讲者推测和个人经历分别保留。不是诊疗指南，未逐秒回听，也未逐篇核对所有论文。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Konstantina Stankovic",
+      "role": "嘉宾 / 对谈者",
+      "bio": "康斯坦蒂娜·斯坦科维奇 · 耳鼻咽喉头颈外科医生、听觉研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "耳朵出了问题，失去的可能不只是音量",
+      "source_seconds": 252.699
+    },
+    {
+      "title": "从空气振动到一句听懂的话",
+      "source_seconds": 311.06
+    },
+    {
+      "title": "一枚硬币上的小器官，为什么如此难研究",
+      "source_seconds": 446.949
+    },
+    {
+      "title": "耳蜗不是一条把所有声音混在一起的管道",
+      "source_seconds": 779.812
+    },
+    {
+      "title": "为什么一句话会留在心里很久",
+      "source_seconds": 1491.3
+    },
+    {
+      "title": "耳鸣的声音是真的体验，却未必来自外界",
+      "source_seconds": 1546.628
+    },
+    {
+      "title": "演唱会后恢复正常，不等于什么都没发生",
+      "source_seconds": 1984.2
+    },
+    {
+      "title": "分贝不能按日常加减的直觉理解",
+      "source_seconds": 2072.085
+    },
+    {
+      "title": "耳塞的数字，要和环境、佩戴一起看",
+      "source_seconds": 2381.767
+    },
+    {
+      "title": "镁的研究有线索，不能替代声暴露管理",
+      "source_seconds": 2434.099
+    },
+    {
+      "title": "对耳鸣有帮助的个案，不能推广成通用补充剂",
+      "source_seconds": 2732.008
+    },
+    {
+      "title": "同一个诊断名称，背后可能是很多种疾病",
+      "source_seconds": 2870.333
+    },
+    {
+      "title": "更精细的诊断，正在追赶这个过小的器官",
+      "source_seconds": 3046.938
+    },
+    {
+      "title": "耳鸣需要评估，也需要减少它占据生活的空间",
+      "source_seconds": 3567.286
+    },
+    {
+      "title": "人工耳蜗的耳鸣结果，适用于谁很重要",
+      "source_seconds": 3743.158
+    },
+    {
+      "title": "耳机是否安全，关键是声音进入耳朵后有多大",
+      "source_seconds": 4001.022
+    },
+    {
+      "title": "同一份噪声，对不同耳朵可能不是同一份伤害",
+      "source_seconds": 4108.861
+    },
+    {
+      "title": "一次受刺激之后，别急着叠上下一次",
+      "source_seconds": 4201.102
+    },
+    {
+      "title": "需要防噪，也需要保留正常的声音生活",
+      "source_seconds": 4434.529
+    },
+    {
+      "title": "从子宫到海洋，声音环境一直在塑造生命",
+      "source_seconds": 4468.438
+    },
+    {
+      "title": "听力与认知相关，直接因果仍在研究",
+      "source_seconds": 4810.405
+    },
+    {
+      "title": "与听不清的人说话，先关掉背景声",
+      "source_seconds": 4986.552
+    },
+    {
+      "title": "助听器要解决的，远不只是把声音放大",
+      "source_seconds": 5320.064
+    },
+    {
+      "title": "听见自己的眼球，可能是一个结构性线索",
+      "source_seconds": 5626.032
+    },
+    {
+      "title": "听觉和平衡，为什么住在同一处",
+      "source_seconds": 5880.792
+    },
+    {
+      "title": "人工耳蜗背后，是好奇心驱动的基础研究",
+      "source_seconds": 6270.084
+    },
+    {
+      "title": "感觉困难常常看不见，误解却很容易发生",
+      "source_seconds": 6770.582
+    },
+    {
+      "title": "女性、男性与激素：平均差异不能替代个人判断",
+      "source_seconds": 6981.769
+    },
+    {
+      "title": "药物风险，应该进入用药讨论而不是自行停药",
+      "source_seconds": 7218.233
+    },
+    {
+      "title": "污染物进入毛细胞，不等于已经证明人的功能损害",
+      "source_seconds": 7430.896
+    },
+    {
+      "title": "鸟能再生毛细胞，人类为什么仍要珍惜现有细胞",
+      "source_seconds": 7746.09
+    },
+    {
+      "title": "从口腔重建，看见另一个尚未解开的生物学问题",
+      "source_seconds": 8001.726
+    },
+    {
+      "title": "听觉也值得丰富，而不只是避免受伤",
+      "source_seconds": 8200.858
+    },
+    {
+      "title": "多种感觉相互补位，技术还不能代替共同生活",
+      "source_seconds": 8382.547
+    }
+  ],
+  "updated": "2026-10-25T10:19:51Z"
+}

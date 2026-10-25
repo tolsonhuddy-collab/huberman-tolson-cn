@@ -1,0 +1,183 @@
+{
+  "id": "ep-c09c96510c0c",
+  "title_zh": "肽不是一种答案：从BPC-157、胸腺到减重药，分清机制、证据与风险",
+  "title_en": "Peptides: The Science, Uses & Safety | Dr. Abud Bakri",
+  "source_url": "https://www.hubermanlab.com/episode/peptides-the-science-uses-and-safety-abud-bakri",
+  "published": "2026-06-01T08:00:00Z",
+  "editor_note": "依完整公开机器转写作原创中文综合精读，分清动物研究、人体资料、个案和假说。少数原稿疑误另以FDA一手资料作定向核对并明确编辑注，不冒称所有医学文献已核。未逐秒回听，不提供购买/注射/用药方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Abud Bakri",
+      "role": "嘉宾 / 对谈者",
+      "bio": "阿布德·巴克里 · 内科医生"
+    }
+  ],
+  "sections": [
+    {
+      "title": "“肽好不好”这个问题，先少了一个主语",
+      "source_seconds": 203
+    },
+    {
+      "title": "已知受体与未知受体，带来不同程度的可解释性",
+      "source_seconds": 281
+    },
+    {
+      "title": "BPC-157的来路，与网上的天然叙事不同",
+      "source_seconds": 432
+    },
+    {
+      "title": "动物修复结果，为什么会吸引运动人群",
+      "source_seconds": 691
+    },
+    {
+      "title": "修复并不等于把所有炎症关掉",
+      "source_seconds": 1034
+    },
+    {
+      "title": "神经行为线索有趣，仍不能替代戒断或精神科治疗",
+      "source_seconds": 1072
+    },
+    {
+      "title": "人体资料薄在哪里，要讲到具体试验",
+      "source_seconds": 1237
+    },
+    {
+      "title": "没有看到某种毒性，不等于已经证明安全",
+      "source_seconds": 1175
+    },
+    {
+      "title": "监管状态是带日期和地点的问题",
+      "source_seconds": 1508
+    },
+    {
+      "title": "一则奥运奖牌故事，不能成为临床证据",
+      "source_seconds": 1722
+    },
+    {
+      "title": "GLP药物的成功，也改变了整个购买市场",
+      "source_seconds": 1810
+    },
+    {
+      "title": "医生参与，可以增加照护，也可能有经济激励",
+      "source_seconds": 1932
+    },
+    {
+      "title": "同一个化学名称，也可能装在不同质量的瓶子里",
+      "source_seconds": 2076
+    },
+    {
+      "title": "血管生成是修复线索，也是必须问的风险",
+      "source_seconds": 2492
+    },
+    {
+      "title": "真要研究，先决定想证明什么",
+      "source_seconds": 2989
+    },
+    {
+      "title": "两个恢复很快的故事，仍不知道没有用药会怎样",
+      "source_seconds": 3256
+    },
+    {
+      "title": "年轻、好奇、有人推荐，都不等于需要干预",
+      "source_seconds": 3497
+    },
+    {
+      "title": "医患共同决定，也必须把未知说完整",
+      "source_seconds": 3684
+    },
+    {
+      "title": "Pinealon和Epitalon，名字相似却不是同一样东西",
+      "source_seconds": 4041
+    },
+    {
+      "title": "REM睡眠的个人体验，没有被研究自动证实",
+      "source_seconds": 4382
+    },
+    {
+      "title": "影响基因表达，不等于已经完成一种抗衰老治疗",
+      "source_seconds": 4434
+    },
+    {
+      "title": "松果体、节律与延寿研究，要拆开来看",
+      "source_seconds": 5051
+    },
+    {
+      "title": "胸腺缩小，不代表成年后完全没作用",
+      "source_seconds": 5390
+    },
+    {
+      "title": "把胸腺变大的试验，不是全套延寿证据",
+      "source_seconds": 5649
+    },
+    {
+      "title": "Thymosin α1的作用想象，不能借错批准身份",
+      "source_seconds": 5730
+    },
+    {
+      "title": "TB-500、Thymalin、Thymulin，不能只凭名字相近替换",
+      "source_seconds": 5904
+    },
+    {
+      "title": "动物研究到宠物，也不是一次无条件跨越",
+      "source_seconds": 6095
+    },
+    {
+      "title": "GHK-Cu与胶原，涉及重塑而不只是多长一点",
+      "source_seconds": 6680
+    },
+    {
+      "title": "外用研究不能为注射背书，蓝颜色也不是鉴真",
+      "source_seconds": 8146
+    },
+    {
+      "title": "生病后没有充分恢复，是研究问题，不是已经找到一个免疫分数",
+      "source_seconds": 7245
+    },
+    {
+      "title": "生长激素释放剂，与生长激素本身并不相同",
+      "source_seconds": 7425
+    },
+    {
+      "title": "肌肉、皮肤与长寿，可能不是同一个方向",
+      "source_seconds": 7696
+    },
+    {
+      "title": "一次PSA升高，把个人兴奋重新拉回风险",
+      "source_seconds": 7896
+    },
+    {
+      "title": "GLP药物有更扎实的临床位置，也仍需要具体判断",
+      "source_seconds": 8524
+    },
+    {
+      "title": "停药以后会怎样，不能只看最初掉了多少体重",
+      "source_seconds": 8724
+    },
+    {
+      "title": "情绪低落、没动力，可能包含多条路径",
+      "source_seconds": 8486
+    },
+    {
+      "title": "生育力变化，不等于把减重药变成生殖治疗",
+      "source_seconds": 9086
+    },
+    {
+      "title": "医生自己的错误试用，也说明剂量不能凭猜",
+      "source_seconds": 9188
+    },
+    {
+      "title": "Retatrutide的三个靶点，不等于三个好处无代价相加",
+      "source_seconds": 9246
+    },
+    {
+      "title": "研究兴趣可以保留，底线是别把未知伪装成知道",
+      "source_seconds": 9727
+    }
+  ],
+  "updated": "2026-10-25T11:15:16Z"
+}

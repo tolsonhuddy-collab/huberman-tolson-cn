@@ -1,0 +1,159 @@
+{
+  "id": "ep-3e049bc03de9",
+  "title_zh": "血液能告诉我们多少年龄：年轻因子、器官时钟与健康寿命的证据边界",
+  "title_en": "Restore Youthfulness & Vitality to the Aging Brain & Body | Dr. Tony Wyss-Coray",
+  "source_url": "https://www.hubermanlab.com/episode/restore-youthfulness-and-vitality-to-the-aging-brain-and-body-tony-wyss-coray",
+  "published": "2026-02-23T09:00:00Z",
+  "editor_note": "完整机器转写原创精读，分开动物实验、人类预测、早试验与愿景。AMBAR人数、PRP器械监管、外泌体获批状态与蛋白拼写有显式原始来源核对；非全面抗衰医学更新。商业关联、转写疑漏否定与未知机制保留。第三方时间未校原音。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授。"
+    },
+    {
+      "name": "托尼·维斯-科雷（Tony Wyss-Coray）",
+      "role": "嘉宾",
+      "bio": "斯坦福大学神经学教授，研究衰老、循环因子与神经退行性疾病。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "年轻与年老小鼠共享循环，能提出什么问题",
+      "source_seconds": 187
+    },
+    {
+      "title": "血液既是窗口，也可能参与推动变化",
+      "source_seconds": 293
+    },
+    {
+      "title": "人的血浆分段，怎样走到早期试验",
+      "source_seconds": 529
+    },
+    {
+      "title": "血浆置换的试验人数，不能照着口头总数写",
+      "source_seconds": 643
+    },
+    {
+      "title": "年轻环境可能补上好的，也可能稀释或抑制坏的",
+      "source_seconds": 962
+    },
+    {
+      "title": "不同细胞接收到的，并不是同一封信",
+      "source_seconds": 1087
+    },
+    {
+      "title": "他没有建议大家现在储存年轻时的血",
+      "source_seconds": 1199
+    },
+    {
+      "title": "不同器官，可能走在不同的年龄轨迹上",
+      "source_seconds": 1390
+    },
+    {
+      "title": "蛋白时钟与“年龄差”，首先是预测模型",
+      "source_seconds": 1533
+    },
+    {
+      "title": "商业平台希望形成闭环，但闭环仍需验证",
+      "source_seconds": 1706
+    },
+    {
+      "title": "NAD升高，与人类寿命延长隔着好几层证据",
+      "source_seconds": 1990
+    },
+    {
+      "title": "活力、健康寿命与总寿命，可能并不同向",
+      "source_seconds": 2194
+    },
+    {
+      "title": "衰老的波浪，不是每个人都必须经过的生日关卡",
+      "source_seconds": 2454
+    },
+    {
+      "title": "日光与寿命的相关，不是忽略其他风险的许可",
+      "source_seconds": 2718
+    },
+    {
+      "title": "运动后的血浆，把器官之间的对话显出来",
+      "source_seconds": 2830
+    },
+    {
+      "title": "限制热量的信号，也可能通过循环传递",
+      "source_seconds": 3027
+    },
+    {
+      "title": "为什么年长者修复变慢，仍有许多细节不清楚",
+      "source_seconds": 3212
+    },
+    {
+      "title": "走向药物，需要从动物因果到人的受控试验",
+      "source_seconds": 3378
+    },
+    {
+      "title": "未经验证的细胞注射，风险不是一个抽象词",
+      "source_seconds": 3580
+    },
+    {
+      "title": "PRP的制备设备获准，不等于各种注射都已获批",
+      "source_seconds": 3742
+    },
+    {
+      "title": "外泌体是信息包，不是因为名字新就有临床证明",
+      "source_seconds": 3833
+    },
+    {
+      "title": "环境问题，需要分清物质、暴露和研究层级",
+      "source_seconds": 3948
+    },
+    {
+      "title": "“间歇性禁食”这个名称，覆盖了不同实验",
+      "source_seconds": 4387
+    },
+    {
+      "title": "两位讲者自己的进食习惯，不是统一处方",
+      "source_seconds": 4565
+    },
+    {
+      "title": "脑脊液给了另一扇研究窗口",
+      "source_seconds": 4755
+    },
+    {
+      "title": "突触蛋白比值，预测的是风险而非命运",
+      "source_seconds": 4954
+    },
+    {
+      "title": "运动不是一种东西，运动员研究也不是处方比赛",
+      "source_seconds": 5095
+    },
+    {
+      "title": "自愿挑战与被迫承受，可能不是同一种压力",
+      "source_seconds": 5347
+    },
+    {
+      "title": "脑力活动的乐趣，与疾病治疗效果要分开",
+      "source_seconds": 5521
+    },
+    {
+      "title": "葡萄酒里的社交，不证明酒精是必要成分",
+      "source_seconds": 5776
+    },
+    {
+      "title": "呼吸改变血液成分，是他们想做的研究",
+      "source_seconds": 6071
+    },
+    {
+      "title": "可穿戴与光照，测得更多不等于解释都完成",
+      "source_seconds": 6302
+    },
+    {
+      "title": "从器官时钟，走向细胞类型的预测",
+      "source_seconds": 6596
+    },
+    {
+      "title": "遗传病蛋白图谱，希望把相关推向机制",
+      "source_seconds": 6774
+    }
+  ],
+  "updated": "2026-10-25T11:00:14Z"
+}

@@ -786,9 +786,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_one_hundred_fifteen_chinese_essays(self):
+    def test_repository_commits_one_hundred_thirty_five_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 115 + [".md"] * 115)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 135 + [".md"] * 135)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -796,7 +796,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 115)
+        self.assertEqual(len(stems[".md"]), 135)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -852,6 +852,26 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-4933405f0f80": "2026-04-06T08:00:00Z",
             "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
             "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
+            "ep-615bf4370e1b": "2025-08-11T08:00:00Z",
+            "ep-4f67bc84be50": "2025-10-13T08:00:00Z",
+            "ep-7286c0b5fb3c": "2025-03-24T08:00:00Z",
+            "ep-46847b969704": "2025-02-17T09:00:00Z",
+            "ep-78f6f5ffa993": "2026-10-19T08:00:00Z",
+            "ep-43172c733089": "2026-08-31T08:00:00Z",
+            "ep-9b1fb0261224": "2026-10-05T08:00:00Z",
+            "ep-a8ecb0ae0c81": "2026-09-28T08:00:00Z",
+            "ep-c24d3ee59354": "2026-08-17T08:00:00Z",
+            "ep-226daf018467": "2026-05-04T08:00:00Z",
+            "ep-4a3d9d5b8a6c": "2025-01-13T09:00:00Z",
+            "ep-c09c96510c0c": "2026-06-01T08:00:00Z",
+            "ep-5d4a2f70af51": "2026-03-23T08:00:00Z",
+            "ep-966dac96a166": "2026-03-09T08:00:00Z",
+            "ep-3e049bc03de9": "2026-02-23T09:00:00Z",
+            "ep-b480bf029986": "2026-01-19T09:00:00Z",
+            "ep-71a750278d03": "2026-06-15T08:00:00Z",
+            "ep-13a459db84a2": "2026-04-27T08:00:00Z",
+            "ep-e8faa4a6a0ce": "2026-03-30T08:00:00Z",
+            "ep-b3f93de0e165": "2026-02-09T09:00:00Z",
         }
         for episode_id, published in dates.items():
             meta = json.loads((PROJECT / f"site/zh/{episode_id}.json").read_text())

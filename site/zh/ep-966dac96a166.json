@@ -1,0 +1,175 @@
+{
+  "id": "ep-966dac96a166",
+  "title_zh": "把免疫细胞变成药物：癌症、CRISPR与可编程治疗的希望和边界",
+  "title_en": "Avoiding, Treating & Curing Cancer With the Immune System | Dr. Alex Marson",
+  "source_url": "https://www.hubermanlab.com/episode/avoiding-treating-and-curing-cancer-with-the-immune-system-alex-marson",
+  "published": "2026-03-09T08:00:00Z",
+  "editor_note": "完整公开机器转写上的原创精读；明确已用治疗、试验、模型与愿望。Emily年龄、机场扫描类型、基因编辑婴儿案处罚另有原始来源编辑核对，非全面医学文献更新；保留商业顾问/创办关联。段落时间未校准原音。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授。"
+    },
+    {
+      "name": "亚历克斯·马森（Alex Marson）",
+      "role": "嘉宾",
+      "bio": "医生科学家，研究免疫细胞基因调控与工程化治疗，工作涉及UCSF和格拉德斯通研究所。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "生物学开始从读懂细胞，走向给细胞新指令",
+      "source_seconds": 163
+    },
+    {
+      "title": "免疫系统既要发现异常，也要容忍自己",
+      "source_seconds": 352
+    },
+    {
+      "title": "T细胞的识别器，先有多样性，再经过筛选",
+      "source_seconds": 514
+    },
+    {
+      "title": "B细胞把识别能力变成可释放的抗体",
+      "source_seconds": 761
+    },
+    {
+      "title": "“免疫力更强”，不是一个足够精确的目标",
+      "source_seconds": 964
+    },
+    {
+      "title": "早期耐受，不等于盲目让孩子接触危险",
+      "source_seconds": 1242
+    },
+    {
+      "title": "自身免疫，是检查失效，不是简单多一点防御",
+      "source_seconds": 1340
+    },
+    {
+      "title": "局部警报，为什么会变成全身难受",
+      "source_seconds": 1528
+    },
+    {
+      "title": "需要的抗生素，不是对免疫系统作弊",
+      "source_seconds": 1671
+    },
+    {
+      "title": "癌症是细胞演化，也是整体协调的失守",
+      "source_seconds": 1848
+    },
+    {
+      "title": "时间与遗传风险，会改变这场概率游戏",
+      "source_seconds": 2201
+    },
+    {
+      "title": "先抓明确风险，也承认环境资料的缺口",
+      "source_seconds": 2396
+    },
+    {
+      "title": "机场扫描这一段，需要区分设备类型",
+      "source_seconds": 2644
+    },
+    {
+      "title": "食物、剂量与风险，不能靠一个词完成推理",
+      "source_seconds": 2739
+    },
+    {
+      "title": "化疗与靶向药之后，为什么还要找新路线",
+      "source_seconds": 2985
+    },
+    {
+      "title": "检查点抑制剂，尝试把T细胞的刹车松开",
+      "source_seconds": 3145
+    },
+    {
+      "title": "CAR-T，是给细胞装上人工设计的识别器",
+      "source_seconds": 3298
+    },
+    {
+      "title": "Emily的故事，同时包含突破与重症风险",
+      "source_seconds": 3372
+    },
+    {
+      "title": "CD19的成功，并不意味着完全不碰正常细胞",
+      "source_seconds": 3884
+    },
+    {
+      "title": "实体瘤还需要识别、进入与坚持",
+      "source_seconds": 3970
+    },
+    {
+      "title": "生酮与低谷氨酰胺饮食的问题，本期没有答案",
+      "source_seconds": 4032
+    },
+    {
+      "title": "CRISPR的另一条来路，是细菌自己的防御",
+      "source_seconds": 4110
+    },
+    {
+      "title": "Cas9像剪刀，向导RNA决定去哪里",
+      "source_seconds": 4505
+    },
+    {
+      "title": "能定点切，不等于不会产生意外",
+      "source_seconds": 4647
+    },
+    {
+      "title": "编辑不一定都要把DNA双链切断",
+      "source_seconds": 4747
+    },
+    {
+      "title": "把工具送进真实T细胞，曾经是关键难关",
+      "source_seconds": 5010
+    },
+    {
+      "title": "临床试验中的工程细胞，还在证明自己",
+      "source_seconds": 5306
+    },
+    {
+      "title": "从晚期治疗走向更早，不等于已经能普遍预防",
+      "source_seconds": 5403
+    },
+    {
+      "title": "病毒与脂质颗粒，都在解决“送到哪里”",
+      "source_seconds": 5583
+    },
+    {
+      "title": "mRNA是暂时模板，疫苗与基因编辑不是同一件事",
+      "source_seconds": 6082
+    },
+    {
+      "title": "科学信任的问题，也嵌在社会经历里",
+      "source_seconds": 6233
+    },
+    {
+      "title": "识别模块，可以带着药，也可以牵来细胞",
+      "source_seconds": 6573
+    },
+    {
+      "title": "胚胎编辑事件，暴露了另一种不可逆范围",
+      "source_seconds": 6967
+    },
+    {
+      "title": "马森划的界线，是不把编辑传给下一代",
+      "source_seconds": 7353
+    },
+    {
+      "title": "测序更深，也不代表能把孩子排成完美顺序",
+      "source_seconds": 7554
+    },
+    {
+      "title": "同一种清除思路，也可能用于某些自身免疫病",
+      "source_seconds": 7888
+    },
+    {
+      "title": "大规模编辑加单细胞测量，尝试编写功能地图",
+      "source_seconds": 8032
+    },
+    {
+      "title": "需要现在储存T细胞或皮肤细胞吗",
+      "source_seconds": 8293
+    }
+  ],
+  "updated": "2026-10-25T10:56:14Z"
+}

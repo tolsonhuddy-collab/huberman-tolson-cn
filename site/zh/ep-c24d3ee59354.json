@@ -1,0 +1,155 @@
+{
+  "id": "ep-c24d3ee59354",
+  "title_zh": "情绪不是脸上的标签：从大脑、身体到可练习的调节能力",
+  "title_en": "Neuroscience of Emotions & Tools for Improving Emotion Regulation | Dr. Ralph Adolphs",
+  "source_url": "https://www.hubermanlab.com/episode/neuroscience-of-emotions-and-tools-for-improving-emotion-regulation-ralph-adolphs",
+  "published": "2026-08-17T08:00:00Z",
+  "editor_note": "依据完整公开机器转写原创综合精读，删广告、口播与无意义重复。病例、个人实践与研究假说分别归属。第三方段落时间未校准原音，未独立核验全部科学文献，不替代临床判断。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授。"
+    },
+    {
+      "name": "拉尔夫·阿道夫斯（Ralph Adolphs）",
+      "role": "嘉宾",
+      "bio": "加州理工学院心理学、神经科学与生物学教授，研究情绪与社会认知。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "情绪处在反射与深思熟虑之间",
+      "source_seconds": 240
+    },
+    {
+      "title": "它为什么会突然夺走注意力",
+      "source_seconds": 508
+    },
+    {
+      "title": "强度会变化，状态也会留下来",
+      "source_seconds": 698
+    },
+    {
+      "title": "记不起电影，悲伤却还在",
+      "source_seconds": 799
+    },
+    {
+      "title": "动物有情绪，不必先解决意识之谜",
+      "source_seconds": 1097
+    },
+    {
+      "title": "没有情绪，也可能失去决策方向",
+      "source_seconds": 1552
+    },
+    {
+      "title": "分辨得更细，不必每次都找到一个词",
+      "source_seconds": 1696
+    },
+    {
+      "title": "重评也可能变成反复纠缠",
+      "source_seconds": 1852
+    },
+    {
+      "title": "冰浴故事的证据只有一个人",
+      "source_seconds": 2004
+    },
+    {
+      "title": "超长距离里的低谷，不会永远按直线延长",
+      "source_seconds": 2232
+    },
+    {
+      "title": "敬畏把视角从当下移开一点",
+      "source_seconds": 2497
+    },
+    {
+      "title": "杏仁核损伤，没有给恐惧找到一个按钮",
+      "source_seconds": 2792
+    },
+    {
+      "title": "一张摆拍的脸，不等于一个人的内心",
+      "source_seconds": 2857
+    },
+    {
+      "title": "我们常读到的是变化，而不是某一副表情",
+      "source_seconds": 3122
+    },
+    {
+      "title": "同一个人，仍可能被身体内部的警报吓到",
+      "source_seconds": 3465
+    },
+    {
+      "title": "身体情绪热图，画出的首先是概念",
+      "source_seconds": 3622
+    },
+    {
+      "title": "岛叶让身体变化进入体验，但不只处理情绪",
+      "source_seconds": 3799
+    },
+    {
+      "title": "身体可能有复杂模式，现有数据仍不够",
+      "source_seconds": 4094
+    },
+    {
+      "title": "媒体争夺的是情绪的优先权",
+      "source_seconds": 4260
+    },
+    {
+      "title": "艺术也能调动情绪，路线不只通向恐惧",
+      "source_seconds": 4448
+    },
+    {
+      "title": "先天与学习，并不是二选一",
+      "source_seconds": 4648
+    },
+    {
+      "title": "情绪依靠一群神经元与多条进出路线",
+      "source_seconds": 4830
+    },
+    {
+      "title": "高情商，未必是时时感知所有人的细节",
+      "source_seconds": 5110
+    },
+    {
+      "title": "调节也发生在人与人之间",
+      "source_seconds": 5255
+    },
+    {
+      "title": "自闭症研究提醒我们，社交会占用真实资源",
+      "source_seconds": 5456
+    },
+    {
+      "title": "眼神停在哪里，是差异，不是道德成绩",
+      "source_seconds": 5884
+    },
+    {
+      "title": "性格能改变多少，身体动作又说明什么",
+      "source_seconds": 6119
+    },
+    {
+      "title": "一段录像与一次面对面，并不是同一种社交",
+      "source_seconds": 6340
+    },
+    {
+      "title": "独处有时是在练习，不是大脑什么都没做",
+      "source_seconds": 6442
+    },
+    {
+      "title": "实验室会议前，先安静三到五分钟",
+      "source_seconds": 6685
+    },
+    {
+      "title": "从工作回家，也要给任务切换留位置",
+      "source_seconds": 6834
+    },
+    {
+      "title": "开始安静时更不安，不一定意味着练习失败",
+      "source_seconds": 7139
+    },
+    {
+      "title": "疾病使“剩下的时间”变得具体",
+      "source_seconds": 7328
+    }
+  ],
+  "updated": "2026-10-25T10:32:38Z"
+}
