@@ -1,0 +1,135 @@
+{
+  "id": "ep-c6ccfb8d2308",
+  "title_zh": "和 AI 一起变聪明：李飞飞谈视觉、创造力与不能交出去的主动权",
+  "title_en": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
+  "source_url": "https://www.hubermanlab.com/episode/using-ai-to-increase-your-intelligence-and-enrich-humanity-fei-fei-li",
+  "published": "2026-08-10T08:00:00Z",
+  "editor_note": "依据完整公开第三方机器转写作原创中文综合精读；时间仅为平台段落起点，未独立核对原音。医疗个案、技术展望、嘉宾观点与研究能力分别保留边界；疑似口误见正文。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Fei-Fei Li",
+      "role": "嘉宾 / 对谈者",
+      "bio": "李飞飞 · 计算机科学与视觉研究者，斯坦福以人为本人工智能研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "看见一个世界，才开始有东西值得行动",
+      "source_seconds": 249
+    },
+    {
+      "title": "神经网络受大脑启发，也早已走上不同的路",
+      "source_seconds": 468
+    },
+    {
+      "title": "ImageNet 的转向：算法之外，还缺少大量经验",
+      "source_seconds": 608
+    },
+    {
+      "title": "机器超过人的那次测试，究竟测了什么",
+      "source_seconds": 878
+    },
+    {
+      "title": "从图像到语言，关键配方没有凭空更换",
+      "source_seconds": 1301
+    },
+    {
+      "title": "看见一截猫尾巴，人和机器可能走了不同的路",
+      "source_seconds": 1404
+    },
+    {
+      "title": "能生成猫的动作，不等于知道猫的每一块肌肉",
+      "source_seconds": 1790
+    },
+    {
+      "title": "互联网容纳了很多人类表达，却没有容纳每个人的内心",
+      "source_seconds": 2068
+    },
+    {
+      "title": "创造力有不同层次，混合协作仍是一种猜想",
+      "source_seconds": 2486
+    },
+    {
+      "title": "让工具帮助表达，不等于把人的决定权交出去",
+      "source_seconds": 2734
+    },
+    {
+      "title": "不一定人人都要写代码，但人人都需要理解自己在用什么",
+      "source_seconds": 2946
+    },
+    {
+      "title": "科学发现的机会，在于把人的知识边界接起来",
+      "source_seconds": 3430
+    },
+    {
+      "title": "一个帮到自己的回答，不能直接变成普遍医疗证明",
+      "source_seconds": 3780
+    },
+    {
+      "title": "机器人能协助手术，数据不足时仍不能独自上场",
+      "source_seconds": 3880
+    },
+    {
+      "title": "直觉有时只是上下文，有时是尚未被捕获的经验",
+      "source_seconds": 4042
+    },
+    {
+      "title": "回答快慢可以被设定，紧迫感却不能因此被证实",
+      "source_seconds": 4547
+    },
+    {
+      "title": "一句安慰可以很合适，却不等于一个朋友的关心",
+      "source_seconds": 4653
+    },
+    {
+      "title": "做得到的事，仍要经过社会决定该不该做",
+      "source_seconds": 4854
+    },
+    {
+      "title": "不能让几位产业领袖替所有人定义未来",
+      "source_seconds": 5055
+    },
+    {
+      "title": "学习仍然需要努力，工具不能把主动性也代劳",
+      "source_seconds": 5254
+    },
+    {
+      "title": "提问的技能，比把答案复制下来更重要",
+      "source_seconds": 5492
+    },
+    {
+      "title": "从文字走向身体，目的应当是恢复人与世界的联系",
+      "source_seconds": 5702
+    },
+    {
+      "title": "机器人最值得先解决的，是那些真实而繁重的需要",
+      "source_seconds": 5871
+    },
+    {
+      "title": "技术怎样被介绍，也会改变谁有机会参与",
+      "source_seconds": 6134
+    },
+    {
+      "title": "把空间变成可生成的环境，也仍然离不开人提出方向",
+      "source_seconds": 6619
+    },
+    {
+      "title": "电影可以使用新工具，行业的损失却不能一句话带过",
+      "source_seconds": 6870
+    },
+    {
+      "title": "关心下一代，就必须先支持仍在教他们的人",
+      "source_seconds": 7204
+    },
+    {
+      "title": "来源与口述细节",
+      "source_seconds": null
+    }
+  ],
+  "updated": "2026-10-25T03:55:34Z"
+}

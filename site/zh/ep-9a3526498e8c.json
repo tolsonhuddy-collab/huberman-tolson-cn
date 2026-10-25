@@ -1,0 +1,155 @@
+{
+  "id": "ep-9a3526498e8c",
+  "title_zh": "多巴胺不是终点的奖赏：大脑怎样在等待中学习、决定与坚持",
+  "title_en": "How Dopamine & Serotonin Shape Decisions, Motivation & Learning | Dr. Read Montague",
+  "source_url": "https://www.hubermanlab.com/episode/how-dopamine-serotonin-shape-decisions-motivation-and-learning-read-montague",
+  "published": "2026-02-02T09:00:00Z",
+  "editor_note": "依据完整公开机器转写作原创中文精读；章节仅为第三方段落起点，未独立原音对齐。动物结果、人体测量、生活类比与未来设想分清归属；技术口误和未经界定的临床数字在正文标注，不作个人诊疗方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Read Montague",
+      "role": "嘉宾 / 对谈者",
+      "bio": "里德·蒙塔古 · 弗吉尼亚理工大学人类神经科学与计算神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "感到快乐，并不能告诉我们多巴胺做了什么",
+      "source_seconds": 253
+    },
+    {
+      "title": "雨还没下，预测已经开始教你学习",
+      "source_seconds": 422
+    },
+    {
+      "title": "为什么更早的线索，也会获得意义",
+      "source_seconds": 593
+    },
+    {
+      "title": "约会中的期待，常在结局之前一变再变",
+      "source_seconds": 987
+    },
+    {
+      "title": "“多巴胺一击”遗漏了持续前进的过程",
+      "source_seconds": 1684
+    },
+    {
+      "title": "帕金森病，让价值变化难以被清楚读出",
+      "source_seconds": 1909
+    },
+    {
+      "title": "能否专注，与是否需要探索并不是同一个问题",
+      "source_seconds": 2312
+    },
+    {
+      "title": "短视频会把人训练成什么，嘉宾没有一个现成答案",
+      "source_seconds": 2643
+    },
+    {
+      "title": "费力与放慢，可能是两件需要拆开的事",
+      "source_seconds": 2988
+    },
+    {
+      "title": "拒绝一个诱惑，也可能成为值得追求的事",
+      "source_seconds": 3487
+    },
+    {
+      "title": "血清素在一些任务中，帮助系统等待与看见不利变化",
+      "source_seconds": 3720
+    },
+    {
+      "title": "阻断再摄取，不代表所有位置的血清素都只会一起增多",
+      "source_seconds": 3958
+    },
+    {
+      "title": "饿到进入紧急状态时，信号的意义也会变",
+      "source_seconds": 4293
+    },
+    {
+      "title": "惩罚太强，学到的可能不再是那道题",
+      "source_seconds": 4489
+    },
+    {
+      "title": "平静的关系，也可能需要很久才能被相信",
+      "source_seconds": 5056
+    },
+    {
+      "title": "直接测量人体信号，先要找到合乎伦理的机会",
+      "source_seconds": 5429
+    },
+    {
+      "title": "鼻腔中的测量，让健康人也可能参与",
+      "source_seconds": 5614
+    },
+    {
+      "title": "一个人的睡眠与人生经历，不是通用的脑化学配方",
+      "source_seconds": 5792
+    },
+    {
+      "title": "长期目标，需要在失败与小进展之间继续走",
+      "source_seconds": 6053
+    },
+    {
+      "title": "思考可以控制一部分退缩，但不需要把痛苦当指标",
+      "source_seconds": 6789
+    },
+    {
+      "title": "呼吸的节律，与神经调质的变化相遇",
+      "source_seconds": 6974
+    },
+    {
+      "title": "一场分钱游戏，为什么也会牵动呼吸",
+      "source_seconds": 7179
+    },
+    {
+      "title": "“货币”的比喻有用，但不是一个分子包办全部",
+      "source_seconds": 7277
+    },
+    {
+      "title": "多巴胺改变时间知觉，却没有一句方向口诀",
+      "source_seconds": 7618
+    },
+    {
+      "title": "AI 可以帮助换一个角度提问，不代表答案自动可靠",
+      "source_seconds": 8010
+    },
+    {
+      "title": "算法的惊人成就，不应掩盖口述中的技术混合",
+      "source_seconds": 8194
+    },
+    {
+      "title": "想用实时反馈训练专注，先要证明读数意味着什么",
+      "source_seconds": 8333
+    },
+    {
+      "title": "对未来乐观，不等于眼下每个想法都已经成立",
+      "source_seconds": 8591
+    },
+    {
+      "title": "用一颗分子命名一种精神障碍，解释总是不够",
+      "source_seconds": 8793
+    },
+    {
+      "title": "何时坚持、何时退出，缺的不只是化学比例",
+      "source_seconds": 8898
+    },
+    {
+      "title": "药效、期待与不良反应，不能用一个未经界定的百分比概括",
+      "source_seconds": 9047
+    },
+    {
+      "title": "只做给自己看的事，脑中会怎样，仍值得去测",
+      "source_seconds": 9136
+    },
+    {
+      "title": "训练经历可以启发思考，未核的生理说法仍要留下问号",
+      "source_seconds": 9212
+    }
+  ],
+  "updated": "2026-10-25T04:16:41Z"
+}

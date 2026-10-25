@@ -61,6 +61,8 @@ python3 scripts/build_site.py --published --out dist
 6. 按既有 Sites 流程同步构建结果到主站，保持原网址和公开范围。备用站使用 GitHub Pages 子路径，页面与订阅入口保持相对链接。
 7. 核实两站正文及订阅地址，报告新增篇目、实际总数、Actions 和双站结果。
 
+按用户最新要求，不再制作、更新或发送 Library 阅读包；旧包保留。新增精读的交付以 `site/zh/` 入库、GitHub Pages Actions 成功与原 Sites 主站上线为准。
+
 `feed.xml`、`podcasts/huberman/feed.xml` 和 `tolson-rss.opml` 均由构建生成，不手工编辑。私有审稿记录和凭据不上传。此前对英文转写、音频、节目封面和人物照片的一概禁入限制已由用户撤销；这不要求批量上传，仍须按实际需要及适用权利处理。
 
 ## 本机文件
@@ -101,7 +103,7 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 ## 部署检查
 
-源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 105 篇中文精读。本地 `--private` 构建不是这条发布命令。
+源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 115 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
 2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。

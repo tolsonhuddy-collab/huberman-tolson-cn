@@ -786,9 +786,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_one_hundred_five_chinese_essays(self):
+    def test_repository_commits_one_hundred_fifteen_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 105 + [".md"] * 105)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 115 + [".md"] * 115)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -796,7 +796,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 105)
+        self.assertEqual(len(stems[".md"]), 115)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -842,6 +842,16 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-10bda8536ba0": "2026-09-14T08:00:00Z",
             "ep-623a28c789a8": "2026-07-20T08:00:00Z",
             "ep-2823b38717af": "2026-07-13T08:00:00Z",
+            "ep-937d06db3239": "2026-09-07T08:00:00Z",
+            "ep-c6ccfb8d2308": "2026-08-10T08:00:00Z",
+            "ep-b09fb0581523": "2026-08-03T08:00:00Z",
+            "ep-95f092e17bde": "2026-07-06T08:00:00Z",
+            "ep-d7694e4dc7cc": "2026-06-29T08:00:00Z",
+            "ep-5e65ae4c1d6a": "2026-06-22T08:00:00Z",
+            "ep-e90d4f92ba4a": "2026-04-13T08:00:00Z",
+            "ep-4933405f0f80": "2026-04-06T08:00:00Z",
+            "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
+            "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
         }
         for episode_id, published in dates.items():
             meta = json.loads((PROJECT / f"site/zh/{episode_id}.json").read_text())

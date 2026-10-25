@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "counts": {
-    "long_episode": 293,
+    "long_episode": 303,
     "essentials": 62,
     "ama": 19,
     "live_qa": 10
@@ -7757,6 +7757,226 @@
         "audio_verified": false,
         "provenance": "public_provider_paragraph_start_unverified_audio"
       }
+    },
+    {
+      "id": "ep-937d06db3239",
+      "title_en": "How Mitochondria Control Your Metabolism | Dr. Jared Rutter",
+      "source_file": "rutter.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 22656,
+      "source_sha256": "d528b3df1fc1748876001c86b3fd4d6ad5bf9a31b8b0b490f7da95c1f7e09d44",
+      "vtt_sha256": null,
+      "source_index_date": "2026-09-07",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/how-mitochondria-control-your-metabolism-jared-rutter",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7415,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-09-07T08:00:00Z"
+    },
+    {
+      "id": "ep-c6ccfb8d2308",
+      "title_en": "Using AI to Increase Your Intelligence & Enrich Humanity | Dr. Fei-Fei Li",
+      "source_file": "feifei.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 20382,
+      "source_sha256": "fc958a33d0bd33f79c2667cad6dc511e5a1c355d604e92273af292d91171a98c",
+      "vtt_sha256": null,
+      "source_index_date": "2026-08-10",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/using-ai-to-increase-your-intelligence-and-enrich-humanity-fei-fei-li",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 7658,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-08-10T08:00:00Z"
+    },
+    {
+      "id": "ep-b09fb0581523",
+      "title_en": "How Your Immune System Works & How to Improve It | Dr. Max Krummel",
+      "source_file": "krummel.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 31895,
+      "source_sha256": "e89a3550e0a9b181445c8ad3b9c6ec14b237f209a6675b1af0c53c371514b3c3",
+      "vtt_sha256": null,
+      "source_index_date": "2026-08-03",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/how-your-immune-system-works-and-how-to-improve-it-max-krummel",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 8831,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-08-03T08:00:00Z"
+    },
+    {
+      "id": "ep-95f092e17bde",
+      "title_en": "Raising a Dog & Mastering Calm Assertive Energy | Cesar Millan",
+      "source_file": "millan.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 31997,
+      "source_sha256": "98954b4f4c9037a413f7ae4fb7d43c5cb65cb0cda6651aa003456177d033662e",
+      "vtt_sha256": null,
+      "source_index_date": "2026-07-06",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/raising-a-dog-and-mastering-calm-assertive-energy-cesar-millan",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9461,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-07-06T08:00:00Z"
+    },
+    {
+      "id": "ep-d7694e4dc7cc",
+      "title_en": "Movement Practice to Strengthen Your Mind-Body Connection | Ido Portal",
+      "source_file": "portal.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 28486,
+      "source_sha256": "18e981e0d010b4f5ee532777f3c90c2a39dcee0d3d108b8cecef974228247aa7",
+      "vtt_sha256": null,
+      "source_index_date": "2026-06-29",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/movement-practice-to-strengthen-your-mind-body-connection-ido-portal",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 10775,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-06-29T08:00:00Z"
+    },
+    {
+      "id": "ep-5e65ae4c1d6a",
+      "title_en": "Science of Attraction, Compatibility & Romance | Dr. Paul Eastwick",
+      "source_file": "eastwick.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 31821,
+      "source_sha256": "90f1f9f8f93f8e73dece91f480bc8349a2dad1943f8b4943c007e33158b68270",
+      "vtt_sha256": null,
+      "source_index_date": "2026-06-22",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/science-of-attraction-compatibility-and-romance-dr-paul-eastwick",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 10200,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-06-22T08:00:00Z"
+    },
+    {
+      "id": "ep-e90d4f92ba4a",
+      "title_en": "How Women Can Improve Their Fertility & Hormone Health | Dr. Natalie Crawford",
+      "source_file": "crawford.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 31192,
+      "source_sha256": "73657036207249de33d848fcbfdd8f93d9bc217f4ee82dd98230b19f3b66237b",
+      "vtt_sha256": null,
+      "source_index_date": "2026-04-13",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/how-women-can-improve-their-fertility-and-hormone-health-natalie-crawford",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9336,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-04-13T08:00:00Z"
+    },
+    {
+      "id": "ep-4933405f0f80",
+      "title_en": "Cultivating Awe & Emotional Connection in Daily Life | Dr. Dacher Keltner",
+      "source_file": "keltner.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 25538,
+      "source_sha256": "5488b9304b3e7b93705cf26368f6ea79ae7c76bb799cd1dd7d5b0e42861fb4c3",
+      "vtt_sha256": null,
+      "source_index_date": "2026-04-06",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/cultivating-awe-and-emotional-connection-dr-dacher-keltner",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 8410,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-04-06T08:00:00Z"
+    },
+    {
+      "id": "ep-f1d7b06e8a45",
+      "title_en": "Unlearn Negative Thoughts & Behaviors Patterns | Dr. Alok Kanojia",
+      "source_file": "kanojia.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 35875,
+      "source_sha256": "381225cafaf4dd95fbaed20edb26d64e1fce99b37a1e472fa8a99edd830ff06e",
+      "vtt_sha256": null,
+      "source_index_date": "2026-03-02",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/unlearn-negative-thoughts-and-behaviors-patterns-alok-kanojia",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 11304,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-03-02T09:00:00Z"
+    },
+    {
+      "id": "ep-9a3526498e8c",
+      "title_en": "How Dopamine & Serotonin Shape Decisions, Motivation & Learning | Dr. Read Montague",
+      "source_file": "montague.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 28904,
+      "source_sha256": "c812d7ef0051a4b98dc82d674b9db1f97d6c3f00522636b547547818edbd3dfd",
+      "vtt_sha256": null,
+      "source_index_date": "2026-02-02",
+      "source_provider": "Podscripts public third-party automated transcript",
+      "source_url": "https://www.hubermanlab.com/episode/how-dopamine-serotonin-shape-decisions-motivation-and-learning-read-montague",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9660,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-02-02T09:00:00Z"
     }
   ]
 }
