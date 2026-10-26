@@ -4,6 +4,10 @@
 
 把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。目前站上已上线 135 篇中文精读。会持续更新。非官方项目。
 
+![Huberman Lab 中文精读站点界面示意](docs/screenshot-home.png)
+
+界面示意，篇数以站点实时数据为准。
+
 ## 访问地址
 
 - 主站：https://huberman-reading-001.tolsonhuddy.chatgpt.site
