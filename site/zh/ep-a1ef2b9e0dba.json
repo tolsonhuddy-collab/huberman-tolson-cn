@@ -1,0 +1,203 @@
+{
+  "id": "ep-a1ef2b9e0dba",
+  "title_zh": "让技术帮助大脑学习：波皮·克拉姆谈反馈、感知与不会替你完成的努力",
+  "title_en": "Enhance Your Learning Speed & Health Using Neuroscience Based Protocols | Dr. Poppy Crum",
+  "source_url": "https://www.hubermanlab.com/episode/enhance-learning-speed-neuroscience-poppy-crum",
+  "published": "2025-09-29T08:00:00Z",
+  "editor_note": "依据完整英文转写的原创中文精读；研究、课堂原型、个人经历与技术预测分别归属。游戏训练40/50小时口述差异、MIT写作EEG的任务样本边界、感官图谱/消费设备/声音筛查与动物例子均有限定。蟋蟀重复频率、ENG与部分人名转写疑误未静默补成确定结论。无原音逐秒校准，不构成产品、医疗或训练处方。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Poppy Crum",
+      "role": "嘉宾 / 对谈者",
+      "bio": "波皮·克拉姆 · 神经科学、感知与人机技术研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "我们使用技术时，技术也在训练我们",
+      "source_seconds": 204.159
+    },
+    {
+      "title": "教科书里的身体小人，不是每个人永远不变的地图",
+      "source_seconds": 285.199
+    },
+    {
+      "title": "城市的声音，会留下什么样的经验",
+      "source_seconds": 554.08
+    },
+    {
+      "title": "绝对音高，并不是永远唱得完美",
+      "source_seconds": 726.56
+    },
+    {
+      "title": "发短信，是旧有能力形成了新的合作方式",
+      "source_seconds": 936.639
+    },
+    {
+      "title": "手机断电，对有些人是联系暂时消失",
+      "source_seconds": 1268.08
+    },
+    {
+      "title": "几个字母，也可能唤起丰富的经验",
+      "source_seconds": 1430.08
+    },
+    {
+      "title": "即时问候与一封长信，不一定在做同一件事",
+      "source_seconds": 1745.6
+    },
+    {
+      "title": "看见同一个地球，人们可能想到不同的东西",
+      "source_seconds": 1985.2
+    },
+    {
+      "title": "一个学习工具，需要让行动和反馈接得上",
+      "source_seconds": 2115.92
+    },
+    {
+      "title": "动作游戏的研究，不能变成随意玩多久的处方",
+      "source_seconds": 2188.079
+    },
+    {
+      "title": "运动员需要的反馈，不只是练完以后的一张表",
+      "source_seconds": 2352.4
+    },
+    {
+      "title": "给女儿做游泳分析，她先保留了教练的位置",
+      "source_seconds": 2455.599
+    },
+    {
+      "title": "定制工具的起点，是先把想知道的东西说清楚",
+      "source_seconds": 2694.0
+    },
+    {
+      "title": "数字孪生，是为了取得洞察，不是复制一个你",
+      "source_seconds": 2743.359
+    },
+    {
+      "title": "用 AI 出题，仍然要由自己把答案想出来",
+      "source_seconds": 3053.68
+    },
+    {
+      "title": "省掉一个步骤，与保有一种能力，需要分别决定",
+      "source_seconds": 3207.92
+    },
+    {
+      "title": "一项写作脑电研究，不能回答所有 AI 学习问题",
+      "source_seconds": 3361.52
+    },
+    {
+      "title": "学习中的困难，不全都值得被保留下来",
+      "source_seconds": 3478.4
+    },
+    {
+      "title": "已有理解，会改变人怎样使用同一个工具",
+      "source_seconds": 3692.88
+    },
+    {
+      "title": "面包的味道，也包含它怎样来到你面前",
+      "source_seconds": 3850.0
+    },
+    {
+      "title": "一个聪明温控器，也可能不知道你正想做什么",
+      "source_seconds": 3978.88
+    },
+    {
+      "title": "睡眠设备的个人体验，不等于睡眠需要已经缩短",
+      "source_seconds": 4163.6
+    },
+    {
+      "title": "清醒时的“最佳状态”，可能还没有被好好定义",
+      "source_seconds": 4251.6
+    },
+    {
+      "title": "电影观众的呼吸，把身体状态带进了房间",
+      "source_seconds": 4696.88
+    },
+    {
+      "title": "瞳孔会变化，但不只因为注意力",
+      "source_seconds": 4775.199
+    },
+    {
+      "title": "不必把人包在传感器里，整合却不能凭空完成",
+      "source_seconds": 5160.96
+    },
+    {
+      "title": "耳机与腕部装置，可能成为状态反馈的入口",
+      "source_seconds": 5310.639
+    },
+    {
+      "title": "一个分数可以鼓励行动，也会压扁信息",
+      "source_seconds": 5540.639
+    },
+    {
+      "title": "僵尸逃生游戏，为什么会被学生做成健康练习",
+      "source_seconds": 5802.4
+    },
+    {
+      "title": "当组织使用 AI 代理，也要想几年后由谁理解系统",
+      "source_seconds": 5984.08
+    },
+    {
+      "title": "机场屏幕说明，重要的是数据怎样帮助行动",
+      "source_seconds": 6134.0
+    },
+    {
+      "title": "珊瑚缸的价值，在于问题出现前就看见变化",
+      "source_seconds": 6205.04
+    },
+    {
+      "title": "你可能已经被建模，问题是能否也为自己使用",
+      "source_seconds": 6438.719
+    },
+    {
+      "title": "发现盲点，有时从一段空调声开始",
+      "source_seconds": 6875.84
+    },
+    {
+      "title": "声音可能留下健康线索，不能拿一次停顿诊断",
+      "source_seconds": 6997.76
+    },
+    {
+      "title": "她怎样在两种音高标准之间长出新习惯",
+      "source_seconds": 7527.04
+    },
+    {
+      "title": "猫头鹰的棱镜实验，为什么使她着迷",
+      "source_seconds": 7607.119
+    },
+    {
+      "title": "目标重要，不代表把压力拉满就能立即改变",
+      "source_seconds": 7817.52
+    },
+    {
+      "title": "蝙蝠与蛾的交锋，是关于任务和速度的一个例子",
+      "source_seconds": 8076.639
+    },
+    {
+      "title": "换一种感觉想世界，也是在练习理解别人",
+      "source_seconds": 8383.28
+    },
+    {
+      "title": "她唱给蜘蛛听，是在观察另一种感受器",
+      "source_seconds": 8485.28
+    },
+    {
+      "title": "同一个信号，必须放回它所属的生物系统",
+      "source_seconds": 8807.28
+    },
+    {
+      "title": "绒猴的眼睛，随叫声中的情境而改变",
+      "source_seconds": 8846.319
+    },
+    {
+      "title": "自己选择要改变什么，也选择怎样保有判断",
+      "source_seconds": 9123.68
+    }
+  ],
+  "updated": "2026-10-26T08:13:50Z"
+}

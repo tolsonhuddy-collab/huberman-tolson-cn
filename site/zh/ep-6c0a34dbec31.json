@@ -1,0 +1,174 @@
+{
+  "id": "ep-6c0a34dbec31",
+  "title_zh": "皮质醇与一天的节律：从压力反应到睡眠和倦怠",
+  "title_en": "How to Control Your Cortisol & Overcome Burnout",
+  "source_url": "https://www.hubermanlab.com/episode/how-to-control-your-cortisol-overcome-burnout",
+  "published": "2025-08-04T08:00:00Z",
+  "editor_note": "完整节目稿的原创中文综合精读。醒前上升/CAR、快交感反应/HPA、类固醇分泌细胞、甘草酸转写、Addison与色素、胰岛素抵抗/代谢综合征等辨别注记保留。晨间越高越好、两种倦怠对应皮质醇、食物/补充剂剂量及全部收益均不作普遍处方；癌症预后关联非干预疗效。有限一手核验不等全部科学论断或现行指南核准。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 主讲者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "讨论皮质醇，首先要问发生在什么时候",
+      "source_seconds": 90.08
+    },
+    {
+      "title": "能量调动和即时警报，使用着不同的时间尺度",
+      "source_seconds": 216.239
+    },
+    {
+      "title": "它能影响脑，也会参与记忆与压力的相互作用",
+      "source_seconds": 315.12
+    },
+    {
+      "title": "一夜睡眠中，皮质醇并不始终保持同一个水平",
+      "source_seconds": 717.6
+    },
+    {
+      "title": "觉醒前的上升，与觉醒后的反应需要区分",
+      "source_seconds": 921.68
+    },
+    {
+      "title": "从下丘脑到肾上腺，信号还会反馈回来",
+      "source_seconds": 1089.36
+    },
+    {
+      "title": "车已经避开，身体为什么还在紧绷",
+      "source_seconds": 1538.32
+    },
+    {
+      "title": "生物钟把激素调节接到外部的明暗变化",
+      "source_seconds": 1728.399
+    },
+    {
+      "title": "晨间光线值得重视，不能追求无限放大峰值",
+      "source_seconds": 2059.919
+    },
+    {
+      "title": "从补水开始，是一项生活安排，不是一个激素测量",
+      "source_seconds": 2536.72
+    },
+    {
+      "title": "常喝咖啡的人，与偶尔摄入的人并不完全一样",
+      "source_seconds": 2621.68
+    },
+    {
+      "title": "延迟第一杯的建议，来自一种解释和大量个人反馈",
+      "source_seconds": 2756.4
+    },
+    {
+      "title": "熟悉的训练，与突然增加的新负荷会产生不同反应",
+      "source_seconds": 2970.16
+    },
+    {
+      "title": "在相近时段活动，可能帮助身体形成预期",
+      "source_seconds": 3253.04
+    },
+    {
+      "title": "冷刺激的提神感，不等于皮质醇一直维持同样反应",
+      "source_seconds": 3473.839
+    },
+    {
+      "title": "葡萄柚改变代谢，并不等于已经证明人人吃后更有活力",
+      "source_seconds": 3858.0
+    },
+    {
+      "title": "黑甘草的效力，也意味着不能把它当成普通提神零食",
+      "source_seconds": 4079.44
+    },
+    {
+      "title": "午后的光线，为何不一定带来清晨一样的感觉",
+      "source_seconds": 4335.199
+    },
+    {
+      "title": "夜间照明，需要同时看亮度、颜色与位置",
+      "source_seconds": 4470.4
+    },
+    {
+      "title": "晚上更容易被激怒，不能只凭这个感觉判定激素失调",
+      "source_seconds": 4833.199
+    },
+    {
+      "title": "呼吸的价值，在于当下有机会改变自己的反应",
+      "source_seconds": 4956.159
+    },
+    {
+      "title": "晚餐中的淀粉，和睡前不饿到难受之间存在现实取舍",
+      "source_seconds": 5222.159
+    },
+    {
+      "title": "改变碳水比例后的适应，不能只看最初几天",
+      "source_seconds": 5459.76
+    },
+    {
+      "title": "血糖高，并不等于细胞已经得到恰当的能量",
+      "source_seconds": 5611.28
+    },
+    {
+      "title": "能在什么时候训练，也属于决定的一部分",
+      "source_seconds": 5730.159
+    },
+    {
+      "title": "晚练之后的过渡，不必只剩“马上关机”一个要求",
+      "source_seconds": 5943.119
+    },
+    {
+      "title": "夜晚和次日清晨相连，却不能把缺觉当成需要再加压的信号",
+      "source_seconds": 6032.32
+    },
+    {
+      "title": "南非醉茄的数字，需要连制剂、研究与使用者一起读",
+      "source_seconds": 6272.8
+    },
+    {
+      "title": "芹菜素与镁的个人睡眠组合，不等于统一治疗标准",
+      "source_seconds": 6462.239
+    },
+    {
+      "title": "真正的内分泌疾病，不能用“肾上腺累坏了”概括",
+      "source_seconds": 6657.52
+    },
+    {
+      "title": "两种“倦怠模式”，首先是节目用来组织体验的方式",
+      "source_seconds": 6769.199
+    },
+    {
+      "title": "清晨醒来就焦虑时，他为什么先提出深度放松",
+      "source_seconds": 6982.96
+    },
+    {
+      "title": "先放松，再建立白天的线索，并不必然自相矛盾",
+      "source_seconds": 7162.96
+    },
+    {
+      "title": "早晨困、夜里绷，与自然的晚型作息不是同一件事",
+      "source_seconds": 7295.84
+    },
+    {
+      "title": "晚间的练习，应当连同研究实际测量的结果理解",
+      "source_seconds": 7388.639
+    },
+    {
+      "title": "随年龄变平的曲线，是研究观察，不是个人的年龄刻度",
+      "source_seconds": 7704.639
+    },
+    {
+      "title": "与癌症生存相关，不等于调整曲线已被证明能治疗癌症",
+      "source_seconds": 7753.04
+    },
+    {
+      "title": "海马与压力相互影响，提醒我们别只盯住一个数值",
+      "source_seconds": 7910.719
+    },
+    {
+      "title": "从最困扰自己的时段开始，而不是同时修理整个人",
+      "source_seconds": 8001.04
+    }
+  ],
+  "updated": "2026-10-26T09:17:44Z"
+}

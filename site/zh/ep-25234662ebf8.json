@@ -1,0 +1,175 @@
+{
+  "id": "ep-25234662ebf8",
+  "title_zh": "精力不是把油箱加满：从线粒体、压力到恢复，理解身体怎样分配能量",
+  "title_en": "Improve Energy & Longevity by Optimizing Mitochondria | Dr. Martin Picard",
+  "source_url": "https://www.hubermanlab.com/episode/improve-energy-longevity-by-optimizing-mitochondria-martin-picard",
+  "published": "2025-12-15T09:00:00Z",
+  "editor_note": "原创中文综合精读，区分原访谈模型、人体关联、动物/培养细胞实验及个人经验。GDF-15死亡比较与SS31特定批准状态有显式编注；不是治疗、饮食、断食、药剂或睡眠缩减指南。未逐秒回听原音，也未核实全部研究。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Martin Picard",
+      "role": "嘉宾 / 对谈者",
+      "bio": "马丁·皮卡德 · 线粒体与心理生物学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "有多少能量，与能做出什么改变，是两个问题",
+      "source_seconds": 278.639
+    },
+    {
+      "title": "活着的结构，还需要持续发生的过程",
+      "source_seconds": 534.56
+    },
+    {
+      "title": "吃进去的食物，为什么还要与呼吸相遇",
+      "source_seconds": 1336.96
+    },
+    {
+      "title": "ATP 之外，线粒体还在决定输出什么",
+      "source_seconds": 1410.559
+    },
+    {
+      "title": "同样的遗传材料，为什么能成为不同的线粒体",
+      "source_seconds": 1689.919
+    },
+    {
+      "title": "它们会分工、连接，也会更新",
+      "source_seconds": 2139.76
+    },
+    {
+      "title": "身体有一份预算，不能靠多吃变成无限大",
+      "source_seconds": 2733.44
+    },
+    {
+      "title": "生病时不想动，也不只是缺少意志力",
+      "source_seconds": 3001.76
+    },
+    {
+      "title": "一次呼吸体验，能说明信号有多迫切",
+      "source_seconds": 3387.2
+    },
+    {
+      "title": "肌肉里的好指标，不会自动复制到大脑",
+      "source_seconds": 3926.079
+    },
+    {
+      "title": "人生意义与脑组织之间，研究看到了什么",
+      "source_seconds": 4025.92
+    },
+    {
+      "title": "把主观体验带回研究，不等于放弃分子科学",
+      "source_seconds": 4376.96
+    },
+    {
+      "title": "代谢状态可以留下分子痕迹",
+      "source_seconds": 4747.92
+    },
+    {
+      "title": "发育的速度，不能直接拿来预测一个人的寿命",
+      "source_seconds": 5075.84
+    },
+    {
+      "title": "感觉衰老，有时涉及身体主动节省资源",
+      "source_seconds": 5421.28
+    },
+    {
+      "title": "运动后的不舒服，也可以是一条协调消息",
+      "source_seconds": 5715.04
+    },
+    {
+      "title": "把疲劳遮住，不等于把问题解决",
+      "source_seconds": 5798.159
+    },
+    {
+      "title": "GDF-15：缓解一个症状，仍要看整体结局",
+      "source_seconds": 5841.119
+    },
+    {
+      "title": "白发为什么能成为一种有趣的研究材料",
+      "source_seconds": 6478.08
+    },
+    {
+      "title": "两厘米的白色区间，怎样与生活经历对照",
+      "source_seconds": 6633.44
+    },
+    {
+      "title": "白色毛发里，某些线粒体蛋白反而更多",
+      "source_seconds": 6945.679
+    },
+    {
+      "title": "睡眠让什么慢下来，又让什么继续进行",
+      "source_seconds": 7325.76
+    },
+    {
+      "title": "冥想的节省模型，不是少睡两小时的承诺",
+      "source_seconds": 7454.56
+    },
+    {
+      "title": "压力有成本，但培养皿不是一个完整的人",
+      "source_seconds": 7710.88
+    },
+    {
+      "title": "平均有效，与对某个人有效，怎样同时认真对待",
+      "source_seconds": 7909.119
+    },
+    {
+      "title": "皮卡德自己的饮食选择，也有取舍",
+      "source_seconds": 8405.84
+    },
+    {
+      "title": "酒精的“预算”，主要是一种提问方式",
+      "source_seconds": 8530.64
+    },
+    {
+      "title": "运动的甜蜜点，得从恢复能力里寻找",
+      "source_seconds": 8786.24
+    },
+    {
+      "title": "适当阻力，是困难与恢复之间的一段过程",
+      "source_seconds": 8995.2
+    },
+    {
+      "title": "补充剂要先问：缺什么，准备改变哪种功能",
+      "source_seconds": 9383.68
+    },
+    {
+      "title": "亚甲蓝与灰色市场肽，不是同一种“保养品”",
+      "source_seconds": 9626.8
+    },
+    {
+      "title": "从太极到力量训练，共通点不等于同一套证据",
+      "source_seconds": 9812.24
+    },
+    {
+      "title": "问感受，也是在给关系里的信息留位置",
+      "source_seconds": 10322.8
+    },
+    {
+      "title": "多余的输入，为什么未必变成更多输出",
+      "source_seconds": 10591.04
+    },
+    {
+      "title": "能不能测出一个健康人的“线粒体分数”",
+      "source_seconds": 10864.24
+    },
+    {
+      "title": "简单习惯，也应保留具体的人",
+      "source_seconds": 10986.56
+    },
+    {
+      "title": "生育问题，不能从细胞实验一路跳到人口结论",
+      "source_seconds": 11244.319
+    },
+    {
+      "title": "特定磁场中的实验，不是在验证日常 Wi-Fi 的危险",
+      "source_seconds": 11429.76
+    }
+  ],
+  "updated": "2026-10-26T07:49:37Z"
+}

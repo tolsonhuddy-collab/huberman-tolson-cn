@@ -1,0 +1,175 @@
+{
+  "id": "ep-c3dfb8e05662",
+  "title_zh": "从多囊卵巢到乳腺癌：把女性症状、代谢与生育风险连起来",
+  "title_en": "Female Hormone Health, PCOS, Endometriosis, Fertility & Breast Cancer | Dr. Thaïs Aliabadi",
+  "source_url": "https://www.hubermanlab.com/episode/female-hormone-health-pcos-endometriosis-fertility-breast-cancer-thais-aliabadi",
+  "published": "2025-11-24T09:00:00Z",
+  "editor_note": "2025年原访谈的完整中文综合精读；原始TXT/VTT，非逐秒回听。强临床估计、未发表共存假说、商业产品关联与机制推测均归属嘉宾；AMH固定换算/自诊、内异症自身免疫分类、GnRH统一疗程及普遍筛查等不作临床共识。有限官方资料核对见正文定位注，未完整核查所有研究或现行医保法规。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Thaïs Aliabadi",
+      "role": "嘉宾 / 对谈者",
+      "bio": "泰丝·阿利亚巴迪 · 妇产科医生、外科医生"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先听见症状，再谈年龄与生育概率",
+      "source_seconds": 253.04
+    },
+    {
+      "title": "卵巢储备、卵子质量与怀孕，不是同一个数字",
+      "source_seconds": 326.16
+    },
+    {
+      "title": "PCOS的名字，为什么容易把人带错方向",
+      "source_seconds": 933.44
+    },
+    {
+      "title": "三类线索可以组合成四种不同面貌",
+      "source_seconds": 1778.799
+    },
+    {
+      "title": "青少年的诊断，不能照搬成年人的超声标准",
+      "source_seconds": 1376.32
+    },
+    {
+      "title": "正常排卵是一连串有时机的反馈",
+      "source_seconds": 2112.16
+    },
+    {
+      "title": "一个促排卵信号，为什么也可能参与排卵失常",
+      "source_seconds": 2250.48
+    },
+    {
+      "title": "胰岛素抵抗怎样把代谢与雄激素连在一起",
+      "source_seconds": 2508.319
+    },
+    {
+      "title": "遗传与环境相遇，不等于把责任推给压力",
+      "source_seconds": 2954.24
+    },
+    {
+      "title": "情绪和进食困难，既有身体背景，也有被误解的经历",
+      "source_seconds": 1188.88
+    },
+    {
+      "title": "避孕药可以有用，却不能回答所有代谢问题",
+      "source_seconds": 3801.44
+    },
+    {
+      "title": "治疗的起点，是把生活方式与具体代谢问题同时处理",
+      "source_seconds": 3890.88
+    },
+    {
+      "title": "补充剂的讨论里，有临床经验，也有商业关联",
+      "source_seconds": 4083.039
+    },
+    {
+      "title": "GLP-1让一些患者感到生活重新能动起来，但不是所有用途都已成立",
+      "source_seconds": 4263.04
+    },
+    {
+      "title": "想怀孕时，需要把排卵、年龄和其他不孕因素放在一起",
+      "source_seconds": 4754.88
+    },
+    {
+      "title": "冻卵讨论里的紧迫感，不能变成一个保证",
+      "source_seconds": 3368.96
+    },
+    {
+      "title": "内异症的核心，是组织出现的位置与持续的炎症",
+      "source_seconds": 5765.6
+    },
+    {
+      "title": "需要追问的痛，是已经改变生活安排的痛",
+      "source_seconds": 6024.88
+    },
+    {
+      "title": "反复被说“想太多”，会改变一个人怎样求助",
+      "source_seconds": 6284.8
+    },
+    {
+      "title": "内异症怎样形成，目前仍有多种解释",
+      "source_seconds": 6433.44
+    },
+    {
+      "title": "疼痛、粘连与生育困难，可以通过不同路径发生",
+      "source_seconds": 6644.56
+    },
+    {
+      "title": "影像没有看见，不代表疼痛不存在；分期也不等于痛的程度",
+      "source_seconds": 7235.92
+    },
+    {
+      "title": "激素抑制的目的，与是否需要避孕不是一回事",
+      "source_seconds": 8227.599
+    },
+    {
+      "title": "手术可以重要，却不是听完症状就直接走进手术室",
+      "source_seconds": 7350.8
+    },
+    {
+      "title": "降低雌激素能缓解症状，也会带来另一组代价",
+      "source_seconds": 8444.479
+    },
+    {
+      "title": "就诊者可以提出问题，不必夸大自己的痛",
+      "source_seconds": 7192.56
+    },
+    {
+      "title": "医疗制度怎样让有意愿的医生也没有时间",
+      "source_seconds": 7929.36
+    },
+    {
+      "title": "子宫肌瘤：大小之外，位置决定了很多事",
+      "source_seconds": 8999.76
+    },
+    {
+      "title": "不孕评估需要多个方向，不能把责任只放在女性身上",
+      "source_seconds": 9246.319
+    },
+    {
+      "title": "炎症、自身免疫与抗凝治疗，不能连成一句话",
+      "source_seconds": 9336.72
+    },
+    {
+      "title": "乳腺癌风险，不只是有没有家族史",
+      "source_seconds": 9474.72
+    },
+    {
+      "title": "筛查的年龄、方法与间隔，应由风险改变",
+      "source_seconds": 9585.28
+    },
+    {
+      "title": "她自己的37%，解释的是一个人的决定",
+      "source_seconds": 9891.52
+    },
+    {
+      "title": "产后与围绝经期，不应成为下一次把症状说成正常的理由",
+      "source_seconds": 8727.92
+    },
+    {
+      "title": "PMDD不是激素一定异常，而可能是对周期变化反应异常",
+      "source_seconds": 10414.16
+    },
+    {
+      "title": "内异症病史，会改变绝经后激素治疗的讨论",
+      "source_seconds": 10753.92
+    },
+    {
+      "title": "饮食和掉发的问答，也要放回长期背景",
+      "source_seconds": 10574.319
+    },
+    {
+      "title": "一次好的女性健康就诊，应让人带着解释离开",
+      "source_seconds": 10116.479
+    }
+  ],
+  "updated": "2026-10-26T07:58:26Z"
+}

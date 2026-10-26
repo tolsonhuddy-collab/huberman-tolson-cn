@@ -786,9 +786,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_one_hundred_thirty_five_chinese_essays(self):
+    def test_repository_commits_one_hundred_sixty_five_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 135 + [".md"] * 135)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 165 + [".md"] * 165)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -796,7 +796,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 135)
+        self.assertEqual(len(stems[".md"]), 165)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -852,6 +852,36 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-4933405f0f80": "2026-04-06T08:00:00Z",
             "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
             "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
+            "ep-c8132934ae2a": "2025-12-29T09:00:00Z",
+            "ep-25234662ebf8": "2025-12-15T09:00:00Z",
+            "ep-ce5fb6c20006": "2025-12-08T09:00:00Z",
+            "ep-c3dfb8e05662": "2025-11-24T09:00:00Z",
+            "ep-2439189db5fe": "2025-11-17T09:00:00Z",
+            "ep-70e7d23554dc": "2025-11-10T09:00:00Z",
+            "ep-fb628e7a4cd6": "2025-10-27T08:33:00Z",
+            "ep-ee7dd8290ee5": "2025-10-20T08:00:00Z",
+            "ep-a1ef2b9e0dba": "2025-09-29T08:00:00Z",
+            "ep-8fa56998b30c": "2025-09-22T08:00:00Z",
+            "ep-f0f8ef1ccebb": "2025-09-08T08:00:00Z",
+            "ep-c6dbd149f5d7": "2025-09-01T08:00:00Z",
+            "ep-6c0a34dbec31": "2025-08-04T08:00:00Z",
+            "ep-1278bde47f01": "2025-07-14T08:00:00Z",
+            "ep-57160644e7cf": "2025-06-30T08:00:00Z",
+            "ep-14aecc92ceba": "2025-06-23T08:00:00Z",
+            "ep-da74d87f9f47": "2025-06-16T08:00:00Z",
+            "ep-8957ecc50beb": "2025-06-02T08:00:00Z",
+            "ep-1a85f1b61f49": "2025-05-26T08:00:00Z",
+            "ep-415235192c11": "2025-05-05T08:00:00Z",
+            "ep-10d01a16d878": "2025-04-28T08:00:00Z",
+            "ep-171c301c0729": "2025-04-21T08:00:00Z",
+            "ep-6a025622e031": "2025-04-07T08:00:00Z",
+            "ep-0df8acb66c49": "2025-03-31T08:00:00Z",
+            "ep-07fedcba1443": "2025-03-17T08:00:00Z",
+            "ep-fe75d44b200b": "2025-03-10T08:00:00Z",
+            "ep-b920735d3d1e": "2025-03-03T09:00:00Z",
+            "ep-5ca36831bcf3": "2025-02-24T09:00:00Z",
+            "ep-9bdaeb076766": "2025-02-03T09:00:00Z",
+            "ep-c5a06bbcf965": "2025-01-27T09:00:00Z",
             "ep-615bf4370e1b": "2025-08-11T08:00:00Z",
             "ep-4f67bc84be50": "2025-10-13T08:00:00Z",
             "ep-7286c0b5fb3c": "2025-03-24T08:00:00Z",

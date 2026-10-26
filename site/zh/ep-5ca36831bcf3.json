@@ -1,0 +1,215 @@
+{
+  "id": "ep-5ca36831bcf3",
+  "title_zh": "免疫力不只在药瓶里：罗杰·塞赫尔特谈光照、感染与身体的恢复条件",
+  "title_en": "How to Enhance Your Immune System | Dr. Roger Seheult",
+  "source_url": "https://www.hubermanlab.com/episode/how-to-enhance-your-immune-system-dr-roger-seheult",
+  "published": "2025-02-24T09:00:00Z",
+  "editor_note": "完整英文转写的原创中文综合精读。太阳/人工光、细胞动物/人体、关联/因果、个案/试验、主持个人用量/医疗建议分别归属。CRP133%和视敏177%、紫外与黑色素瘤、疫苗抗原、N95类型、NAC感染子集、锌上限、LPS来源、尼古丁受体、霉菌分类等疑误显式说明；不把旧访谈变成预防感染、自行升温或用药方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Roger Seheult",
+      "role": "嘉宾",
+      "bio": "罗杰·塞赫尔特 · 肺病、重症与睡眠医学医生，MedCram医学教育者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "重症医生为什么先谈生活条件",
+      "source_seconds": 177.82999999999998
+    },
+    {
+      "title": "NEWSTART：把恢复看成一组条件",
+      "source_seconds": 251.799
+    },
+    {
+      "title": "日光既是时钟信号，也包含看不见的波段",
+      "source_seconds": 687.16
+    },
+    {
+      "title": "光能进入身体多深，不能只看一张红外照片",
+      "source_seconds": 841.47
+    },
+    {
+      "title": "线粒体的发动机比喻，解释了什么",
+      "source_seconds": 1033.039
+    },
+    {
+      "title": "两种褪黑素叙事：夜间信号与细胞内作用",
+      "source_seconds": 1129.2
+    },
+    {
+      "title": "树木与炎症：观察结果不能单独归给红外线",
+      "source_seconds": 1740.23
+    },
+    {
+      "title": "三分钟红光实验，测的是色对比敏感度",
+      "source_seconds": 1909.07
+    },
+    {
+      "title": "血糖实验不能直接变成减肥方法",
+      "source_seconds": 2008.48
+    },
+    {
+      "title": "户外生活与死亡率，不能为吸烟或晒伤开脱",
+      "source_seconds": 2167.56
+    },
+    {
+      "title": "季节性的线索，不等于太阳单独控制疫情",
+      "source_seconds": 2627.67
+    },
+    {
+      "title": "阳光病房的历史，需要放回当时的疾病与治疗",
+      "source_seconds": 3620.069
+    },
+    {
+      "title": "住院患者的红外试验，与户外建议不是同一个干预",
+      "source_seconds": 3066.76
+    },
+    {
+      "title": "有可能有效，也不意味着照得越久越好",
+      "source_seconds": 3351.51
+    },
+    {
+      "title": "一个白血病少年的故事，为什么仍只是个案",
+      "source_seconds": 4097.679
+    },
+    {
+      "title": "病房的窗户、谵妄与支付方式",
+      "source_seconds": 4636.84
+    },
+    {
+      "title": "主持人的照明设备，是个人实践而非标准方案",
+      "source_seconds": 4475.229
+    },
+    {
+      "title": "夜间的光，为什么可能不只是让人难入睡",
+      "source_seconds": 4963.75
+    },
+    {
+      "title": "把昼夜线索当工具，不让工具变成新焦虑",
+      "source_seconds": 5288.43
+    },
+    {
+      "title": "谈疫苗时，必须区分个人选择与公共建议",
+      "source_seconds": 5355.109
+    },
+    {
+      "title": "罕见风险不能省略，也不能推广到所有产品",
+      "source_seconds": 5773.4
+    },
+    {
+      "title": "N95 不是只过滤吸进去的空气",
+      "source_seconds": 5920.239
+    },
+    {
+      "title": "手、空气和水，各自解决不同问题",
+      "source_seconds": 6022.44
+    },
+    {
+      "title": "先天与适应性免疫，解释为什么症状不是敌人的全部",
+      "source_seconds": 6448.28
+    },
+    {
+      "title": "温度与干扰素：从细胞到人体还有距离",
+      "source_seconds": 6606.629
+    },
+    {
+      "title": "旧式水疗的故事，不是今天的感染处方",
+      "source_seconds": 6900.84
+    },
+    {
+      "title": "桑拿里的白细胞变化，不等于新增防护能力",
+      "source_seconds": 7304.679
+    },
+    {
+      "title": "NAC 首先是一种有特定医学用途的物质",
+      "source_seconds": 7874.199
+    },
+    {
+      "title": "从氧化应激到血栓，是他对新冠的机制解释",
+      "source_seconds": 8024.119
+    },
+    {
+      "title": "一项老年人 NAC 试验，结果不是少感染",
+      "source_seconds": 8496.399
+    },
+    {
+      "title": "两人的 NAC 用量不同，长期安全也没有在节目中解决",
+      "source_seconds": 8635.16
+    },
+    {
+      "title": "锌的四十毫克，是上限问题而非保健目标",
+      "source_seconds": 8736.75
+    },
+    {
+      "title": "发热和难受有防御成分，但不是必须硬扛",
+      "source_seconds": 8895.8
+    },
+    {
+      "title": "桉树气味、吞噬实验与热蒸汽是三件事",
+      "source_seconds": 8955.96
+    },
+    {
+      "title": "电子烟的危害，需要把事件原因讲准",
+      "source_seconds": 9174.56
+    },
+    {
+      "title": "尼古丁与乙酰胆碱，不是同一种体内信号",
+      "source_seconds": 9303.91
+    },
+    {
+      "title": "森林浴研究，看到的是指标而不是少得几次病",
+      "source_seconds": 9450.76
+    },
+    {
+      "title": "从蔬果得到启发，不等于高剂量补充同样有益",
+      "source_seconds": 9700.279
+    },
+    {
+      "title": "室内光谱改变，仍不能靠灯的名称判断健康",
+      "source_seconds": 10043.52
+    },
+    {
+      "title": "长新冠先要拆开原因，不能一概叫线粒体受损",
+      "source_seconds": 10373.429
+    },
+    {
+      "title": "一个患者改善的经历，没有测出新的线粒体",
+      "source_seconds": 10680.19
+    },
+    {
+      "title": "嗅觉改变，不能只归给嗅神经元被直接感染",
+      "source_seconds": 10886.2
+    },
+    {
+      "title": "霉菌相关疾病，不只有“感染了”一种情况",
+      "source_seconds": 11163.03
+    },
+    {
+      "title": "查霉菌问题，也要防止把所有不适装进同一标签",
+      "source_seconds": 11436.319
+    },
+    {
+      "title": "感激的练习，是关系经验而非免疫化验结果",
+      "source_seconds": 11612.52
+    },
+    {
+      "title": "宽恕的研究，不能变成要求受害者退让",
+      "source_seconds": 11661.87
+    },
+    {
+      "title": "临床中的信仰支持，需要先得到本人允许",
+      "source_seconds": 11823.0
+    },
+    {
+      "title": "做一个能提问的患者，不需要先成为自己的医生",
+      "source_seconds": 12017.399
+    }
+  ],
+  "updated": "2026-10-26T10:13:55Z"
+}

@@ -1,0 +1,191 @@
+{
+  "id": "ep-fe75d44b200b",
+  "title_zh": "专注不是更用力：理解 ADHD 的日程、身体节律与药物选择",
+  "title_en": "Improve Focus With Behavioral Tools & Medication for ADHD | Dr. John Kruse",
+  "source_url": "https://www.hubermanlab.com/episode/improve-focus-with-behavioral-tools-medication-for-adhd-john-kruse",
+  "published": "2025-03-10T08:00:00Z",
+  "editor_note": "原创中文精读，保留临床样本、机制假说与患者故事的层次。诊断、刺激药分类、起效、FDA器械用途及若干药品说明书只作有限核对；原寿命及20年精神病转归等口述题录不足留疑，不转成个人概率。本文不是完整治疗指南。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "John Kruse",
+      "role": "嘉宾 / 对谈者",
+      "bio": "约翰·克鲁斯 · 精神科医生，治疗儿童及成人 ADHD"
+    }
+  ],
+  "sections": [
+    {
+      "title": "不是偶尔分心，而是调节困难反复影响生活",
+      "source_seconds": 179.599
+    },
+    {
+      "title": "遗传影响很强，并不表示环境不重要",
+      "source_seconds": 407.96
+    },
+    {
+      "title": "在家工作为什么可能更难：要求增加，结构却消失了",
+      "source_seconds": 523.2
+    },
+    {
+      "title": "工作先要值得投入，不必把一条职业路线当作唯一成功",
+      "source_seconds": 952.0
+    },
+    {
+      "title": "被信息打断，与患上临床 ADHD，不能直接画等号",
+      "source_seconds": 1243.559
+    },
+    {
+      "title": "丢钥匙的笑话背后，还有教育、关系与安全",
+      "source_seconds": 1461.32
+    },
+    {
+      "title": "能够高度专注，为什么仍可能控制不了注意",
+      "source_seconds": 1776.96
+    },
+    {
+      "title": "寻找适合的场景，也要问是在一天中的什么时候",
+      "source_seconds": 1931.24
+    },
+    {
+      "title": "日程不是监工，而是替未来的自己留下照顾",
+      "source_seconds": 2143.76
+    },
+    {
+      "title": "忘了吃饭，不只是一份菜单的问题",
+      "source_seconds": 2335.24
+    },
+    {
+      "title": "睡眠的规律，不等于所有人都必须很早睡",
+      "source_seconds": 2576.359
+    },
+    {
+      "title": "白天用药后晚上睡好，不能倒推一种确定机制",
+      "source_seconds": 2717.68
+    },
+    {
+      "title": "让唤醒降下来，比命令自己立刻睡着更实际",
+      "source_seconds": 2929.4
+    },
+    {
+      "title": "一种呼吸练习有帮助，仍不等于能治疗夜间醒来",
+      "source_seconds": 3308.92
+    },
+    {
+      "title": "运动可能帮助注意，但没有在本期找到最佳配方",
+      "source_seconds": 3447.079
+    },
+    {
+      "title": "治疗与成瘾的关系，比“用了刺激药就会上瘾”复杂",
+      "source_seconds": 3560.92
+    },
+    {
+      "title": "神经递质的模型，可以帮助思考，却不能替人选药",
+      "source_seconds": 3753.96
+    },
+    {
+      "title": "同叫刺激药，作用方式与临床体验仍有差别",
+      "source_seconds": 3898.559
+    },
+    {
+      "title": "罕见的精神病性症状，也需要在治疗前说清楚",
+      "source_seconds": 4099.12
+    },
+    {
+      "title": "临床上最重要的信息，有时是患者不愿再提的过去",
+      "source_seconds": 4263.719
+    },
+    {
+      "title": "心脏风险不能只看平均值，也不能只看最吓人的个案",
+      "source_seconds": 4891.04
+    },
+    {
+      "title": "选药是一场共同决策，不能只按效力排队",
+      "source_seconds": 4753.32
+    },
+    {
+      "title": "大麻的讨论保留了少数人的经验，也保留证据的不足",
+      "source_seconds": 5356.679
+    },
+    {
+      "title": "尼古丁让人更警觉，不等于值得从零开始使用",
+      "source_seconds": 5737.239
+    },
+    {
+      "title": "咖啡因的困难，是“同样一杯”未必有同样剂量",
+      "source_seconds": 5884.28
+    },
+    {
+      "title": "能量饮料多加几种成分，不会自动成为更好的治疗",
+      "source_seconds": 6145.0
+    },
+    {
+      "title": "鱼油研究有分歧，不能把一克 EPA 搬成 ADHD 处方",
+      "source_seconds": 6263.88
+    },
+    {
+      "title": "肠道微生物组可能重要，但本期没有一套精准改造法",
+      "source_seconds": 6731.199
+    },
+    {
+      "title": "心理治疗需要适配执行困难，而不是再布置一次做不到的功课",
+      "source_seconds": 6827.76
+    },
+    {
+      "title": "一张清单和几个时间块，胜过十七张各自消失的清单",
+      "source_seconds": 6983.159
+    },
+    {
+      "title": "游戏里进步，与日常生活改善，是两道不同的问题",
+      "source_seconds": 7072.56
+    },
+    {
+      "title": "让分心变难一点，可以减少反复靠意志力守门",
+      "source_seconds": 7233.84
+    },
+    {
+      "title": "胍法辛不是“再多一点多巴胺”的同一种办法",
+      "source_seconds": 7368.32
+    },
+    {
+      "title": "递质很快变化，不表示全部临床收益立刻到齐",
+      "source_seconds": 7494.32
+    },
+    {
+      "title": "莫达非尼的清醒感，不能被讲成已确定的食欲素开关",
+      "source_seconds": 7860.8
+    },
+    {
+      "title": "清醒、认知增强与获批用途，需要分别看待",
+      "source_seconds": 8018.36
+    },
+    {
+      "title": "周末停药、暑假停药，并不是同一个研究问题",
+      "source_seconds": 8373.639
+    },
+    {
+      "title": "没有完全按时服药，不等于每一种情况都叫成瘾",
+      "source_seconds": 8593.88
+    },
+    {
+      "title": "即释与长效的区别，还包括一天如何结束",
+      "source_seconds": 8668.64
+    },
+    {
+      "title": "赖右苯丙胺的前药设计，不是没有滥用风险",
+      "source_seconds": 8798.479
+    },
+    {
+      "title": "“我通常不迟到”，还需要问清九点究竟指什么",
+      "source_seconds": 9027.96
+    },
+    {
+      "title": "身体时钟是一条重要线索，还不是全部 ADHD 的病因",
+      "source_seconds": 9188.319
+    }
+  ],
+  "updated": "2026-10-26T10:04:24Z"
+}

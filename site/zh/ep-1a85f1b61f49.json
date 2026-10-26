@@ -1,0 +1,183 @@
+{
+  "id": "ep-1a85f1b61f49",
+  "title_zh": "从潜水者的脾脏到基因选择：行为、环境与遗传怎样共同塑造人",
+  "title_en": "Behaviors That Alter Your Genes to Improve Your Health & Performance | Dr. Melissa Ilardo",
+  "source_url": "https://www.hubermanlab.com/episode/behaviors-that-alter-your-genes-to-improve-your-health-performance-dr-melissa-ilardo",
+  "published": "2025-05-26T08:00:00Z",
+  "editor_note": "原创中文综合精读。个体表达/训练适应/群体遗传选择/主动编辑分层；十三分钟为未测传闻，50%脾脏差异/海女单人40次心率例/孕期血压保护不扩成操作建议或疗效。荷兰饥荒年代、古人类父母身份、面部神经通路、遗传告知研究设计及智力遗传口述疑误保留有限来源注。蓝眼/UV、MHC择偶、突变多数致死、眼变平/认知诊断/CRISPR动机等不默修为定论。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Melissa Ilardo",
+      "role": "嘉宾 / 对谈者",
+      "bio": "梅利莎·伊拉尔多 · 人类遗传与适应研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "改变表达、改变能力与改变群体，不是同一件事",
+      "source_seconds": 163.2
+    },
+    {
+      "title": "眼睛颜色的故事，先提醒我们别把遗传想得过于简单",
+      "source_seconds": 322.16
+    },
+    {
+      "title": "饥荒留下的印记，不等于已经证明创伤会按同一路径遗传",
+      "source_seconds": 644.32
+    },
+    {
+      "title": "闻一件汗衫，可以告诉我们多少择偶信息",
+      "source_seconds": 776.639
+    },
+    {
+      "title": "近亲风险与“混得越远越好”，之间还隔着许多问题",
+      "source_seconds": 1067.12
+    },
+    {
+      "title": "高原上的优势，可能来自早已存在的一份遗传材料",
+      "source_seconds": 1166.72
+    },
+    {
+      "title": "演化不是登向最强者的梯子",
+      "source_seconds": 1382.4
+    },
+    {
+      "title": "巴瑶人的日常，不是为了比赛纪录而潜水",
+      "source_seconds": 1622.64
+    },
+    {
+      "title": "文化知识与身体适应，都不能取消屏息的危险",
+      "source_seconds": 1795.039
+    },
+    {
+      "title": "潜得好是否更容易留下后代，研究还没有数清",
+      "source_seconds": 2035.919
+    },
+    {
+      "title": "潜水反射，把有限氧气重新安排到重要地方",
+      "source_seconds": 2151.2
+    },
+    {
+      "title": "脾脏放出的，是储备，不是突然长出的新红细胞",
+      "source_seconds": 2296.16
+    },
+    {
+      "title": "神经通路与起源故事，需要把已知和猜想分开",
+      "source_seconds": 2349.76
+    },
+    {
+      "title": "怎样判断大脾脏是训练出来，还是与遗传有关",
+      "source_seconds": 2838.079
+    },
+    {
+      "title": "甲状腺、红细胞与小鼠实验，如何把线索接起来",
+      "source_seconds": 2955.839
+    },
+    {
+      "title": "能否把潜水者的发现，变成耐力或免疫优势",
+      "source_seconds": 3034.079
+    },
+    {
+      "title": "济州海女，把另一种长期生活带进了研究",
+      "source_seconds": 3339.28
+    },
+    {
+      "title": "海女的强健，不能单凭高龄故事解释为长寿效果",
+      "source_seconds": 3649.119
+    },
+    {
+      "title": "尊重、听力与海洋管理，也是这份工作的组成部分",
+      "source_seconds": 3705.52
+    },
+    {
+      "title": "饮食会参与选择，但不决定所有人应吃同一种东西",
+      "source_seconds": 3866.16
+    },
+    {
+      "title": "心率骤降的能力，为什么先被归入训练效应",
+      "source_seconds": 3928.96
+    },
+    {
+      "title": "遗传性的血压差异，提供的是孕期保护假说",
+      "source_seconds": 4046.48
+    },
+    {
+      "title": "睡眠呼吸暂停，是需要评估的问题，不是加入潜水群体就能解决",
+      "source_seconds": 4099.679
+    },
+    {
+      "title": "流产不应被讲成身体预先给生命作价值判决",
+      "source_seconds": 4212.96
+    },
+    {
+      "title": "看见外部特征，未必就看见内部器官的答案",
+      "source_seconds": 4308.32
+    },
+    {
+      "title": "莫肯儿童的水下视力，提出了训练与起点可以并存的问题",
+      "source_seconds": 4770.159
+    },
+    {
+      "title": "顶尖跑者的表现，不能只由出生地区解释",
+      "source_seconds": 4953.52
+    },
+    {
+      "title": "不同的认知特点，不应被改写成每个人都有隐藏超能力",
+      "source_seconds": 5106.04
+    },
+    {
+      "title": "要把创造力与基因联系起来，先得知道自己量了什么",
+      "source_seconds": 5436.48
+    },
+    {
+      "title": "练习会改变表现，也会占用本可给别的事情的时间",
+      "source_seconds": 5493.76
+    },
+    {
+      "title": "告诉一个人他有什么基因，可能本身就影响表现",
+      "source_seconds": 5628.239
+    },
+    {
+      "title": "反对遗传决定论，不等于否认智力有遗传成分",
+      "source_seconds": 5733.04
+    },
+    {
+      "title": "基因编辑，使“能够改变”变成另一个层级的问题",
+      "source_seconds": 5791.76
+    },
+    {
+      "title": "修正疾病与增强能力，中间并没有一条人人同意的线",
+      "source_seconds": 6017.92
+    },
+    {
+      "title": "胚胎检测、胚胎选择与编辑，不能被当成同一种服务",
+      "source_seconds": 6059.6
+    },
+    {
+      "title": "“我能知道”与“我应该决定”，是两个不同的问题",
+      "source_seconds": 6195.44
+    },
+    {
+      "title": "犬的选择让作用看起来直观，却不能变成人的育种标准",
+      "source_seconds": 6227.679
+    },
+    {
+      "title": "混合祖源的含义，取决于研究正在用哪一个尺度",
+      "source_seconds": 6343.28
+    },
+    {
+      "title": "生理上的惊人差别，并没有把人分成不同物种",
+      "source_seconds": 6412.639
+    },
+    {
+      "title": "从这两组潜水者身上，真正能带走怎样的理解",
+      "source_seconds": 6469.28
+    }
+  ],
+  "updated": "2026-10-26T09:42:15Z"
+}

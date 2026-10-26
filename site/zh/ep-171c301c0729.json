@@ -1,0 +1,207 @@
+{
+  "id": "ep-171c301c0729",
+  "title_zh": "戒掉之后，怎样重新生活：瑞安·索韦谈成瘾、痛苦耐受与恢复",
+  "title_en": "Tools for Overcoming Substance & Behavioral Addictions | Ryan Soave",
+  "source_url": "https://www.hubermanlab.com/episode/tools-for-overcoming-substance-behavioral-addictions-ryan-soave",
+  "published": "2025-04-21T08:00:00Z",
+  "editor_note": "完整英文转写的原创中文综合精读。医学稳定优先，30日停用不是危险戒断者的自测；机构个案、主持神经机制简化、个人实践、研究与药物探索分别归属。死亡数口径、PTSD标准、AA证据范围、色情与快克等同、休息与睡眠兑换、伊博格碱样本/风险等设定位编辑注，不把不确定口述变成统一医疗指导。未回听原音、未核实所有论文，不提供自行戒断或用药方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Ryan Soave",
+      "role": "嘉宾",
+      "bio": "瑞安·索韦 · 成瘾治疗与创伤恢复工作者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "那个让人轻松的办法，什么时候开始接管生活",
+      "source_seconds": 166.55
+    },
+    {
+      "title": "急性危机里，先让身体安全下来",
+      "source_seconds": 437.189
+    },
+    {
+      "title": "愿意配合，不一定等于已经触到问题",
+      "source_seconds": 544.87
+    },
+    {
+      "title": "小时候有效的生存办法，可能长大后仍在自动运行",
+      "source_seconds": 812.069
+    },
+    {
+      "title": "能停多久，只是观察的一部分",
+      "source_seconds": 1045.99
+    },
+    {
+      "title": "孩子看到的是眼前的快乐，父母还得看见机会成本",
+      "source_seconds": 1108.47
+    },
+    {
+      "title": "拿走游戏，有时也拿走了一个人的社交世界",
+      "source_seconds": 1342.47
+    },
+    {
+      "title": "当现实显得太淡，人会追逐记忆中的那种感觉",
+      "source_seconds": 1516.87
+    },
+    {
+      "title": "第一次感到“像自己”，未必是主动在逃避",
+      "source_seconds": 1891.11
+    },
+    {
+      "title": "把孩子当成全部，也可能把自己的稳定交给孩子",
+      "source_seconds": 2134.31
+    },
+    {
+      "title": "家庭角色，需要理解，也需要有机会退出",
+      "source_seconds": 2347.349
+    },
+    {
+      "title": "恢复的曲线，后半段应当通向生活",
+      "source_seconds": 3139.19
+    },
+    {
+      "title": "情绪天气图，先把自己所在的位置看清",
+      "source_seconds": 3342.309
+    },
+    {
+      "title": "五个栏目，比一句“今天我要更好”更具体",
+      "source_seconds": 3475.75
+    },
+    {
+      "title": "雨衣不会阻止下雨，却让人更快知道怎么办",
+      "source_seconds": 3587.99
+    },
+    {
+      "title": "好状态不会自动陪伴自己一整天",
+      "source_seconds": 3852.71
+    },
+    {
+      "title": "航向不能由海面是否平静来决定",
+      "source_seconds": 4385.83
+    },
+    {
+      "title": "提前练的工具，与当场用的工具",
+      "source_seconds": 4638.229
+    },
+    {
+      "title": "一条“晚点谈”，怎样带着整个过去闯进现在",
+      "source_seconds": 4876.31
+    },
+    {
+      "title": "把不适拆成片刻，也给自己留出返回的路",
+      "source_seconds": 5347.43
+    },
+    {
+      "title": "瑜伽休息术进入治疗，是从经验开始的",
+      "source_seconds": 5556.229
+    },
+    {
+      "title": "引导的声音，把注意从解释带回身体",
+      "source_seconds": 5706.229
+    },
+    {
+      "title": "重新掌舵，不等于控制每一个念头",
+      "source_seconds": 6030.55
+    },
+    {
+      "title": "熟悉的坏关系，也可能让新的选择显得可怕",
+      "source_seconds": 6337.669
+    },
+    {
+      "title": "长练习为了日常，小练习让日常记得它",
+      "source_seconds": 6416.709
+    },
+    {
+      "title": "酒精的困难，还在于它到处都像一种正常邀请",
+      "source_seconds": 6955.95
+    },
+    {
+      "title": "承认旧方法无效，才能寻找别的力量",
+      "source_seconds": 7145.91
+    },
+    {
+      "title": "互助有效的证据，不能随意扩展成万能保证",
+      "source_seconds": 7288.08
+    },
+    {
+      "title": "赌博使下一次行动，看起来还像一次补救",
+      "source_seconds": 7391.55
+    },
+    {
+      "title": "手机里的赌场，与被广告放大的例外",
+      "source_seconds": 7465.43
+    },
+    {
+      "title": "停酒之后，把同一份压力转移到别处",
+      "source_seconds": 7737.669
+    },
+    {
+      "title": "奖赏的解释有用，不能把休息换算成神经化学存款",
+      "source_seconds": 7946.069
+    },
+    {
+      "title": "兴奋剂的戒断不同，不等于只要想开就能过去",
+      "source_seconds": 8156.229
+    },
+    {
+      "title": "色情问题的核心，是当事人已失去自己想要的选择",
+      "source_seconds": 8397.19
+    },
+    {
+      "title": "把停止的规则说清，也把求助从羞耻里移出来",
+      "source_seconds": 8640.469
+    },
+    {
+      "title": "秘密、羞耻与孤立，可能互相养大",
+      "source_seconds": 8856.309
+    },
+    {
+      "title": "过程里的努力，可以成为奖励的一部分",
+      "source_seconds": 9103.27
+    },
+    {
+      "title": "工具应该带人走进生活，而不是一直准备明天",
+      "source_seconds": 9318.95
+    },
+    {
+      "title": "没有条件住进机构，仍可以从连接开始",
+      "source_seconds": 9442.55
+    },
+    {
+      "title": "助人，也可能使自己不再只剩酒吧那条路",
+      "source_seconds": 9703.27
+    },
+    {
+      "title": "伤口、应对与新伤，怎样形成循环",
+      "source_seconds": 10093.83
+    },
+    {
+      "title": "GLP-1 的问题，当时谈的是探索，不是处方",
+      "source_seconds": 10147.51
+    },
+    {
+      "title": "对强度的依赖，与糖、咖啡和工作的问题",
+      "source_seconds": 10283.99
+    },
+    {
+      "title": "伊博格碱的希望，必须与研究对象和风险一起读",
+      "source_seconds": 10542.309
+    },
+    {
+      "title": "看见屋顶，不等于已经造好了楼梯",
+      "source_seconds": 10772.309
+    },
+    {
+      "title": "陪伴的第一句话，不必是一场审判",
+      "source_seconds": 10836.71
+    }
+  ],
+  "updated": "2026-10-26T09:39:48Z"
+}
