@@ -51,13 +51,43 @@ python3 scripts/build_site.py --published --out dist
 
 `build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。节目封面和人物肖像不在 `site/zh/` 中，页面使用占位肖像，封面显示「节目封面待核实」。
 
+## Git 提交署名
+
+本项目的 Git author 与 committer 必须显式使用 `Tolson` 和当前账号已核实的 GitHub noreply 邮箱 `295500140+tolsonhuddy-collab@users.noreply.github.com`。禁止使用或自动回退到 Mac 账户中文全名。
+
+身份只在当前仓库设置，不改 Git global/system 配置或 GitHub 个人资料：
+
+```sh
+git config --local user.name "Tolson"
+git config --local user.email "295500140+tolsonhuddy-collab@users.noreply.github.com"
+```
+
+每次提交前必须核对有效的 author 与 committer，不能只检查配置文件。以下检查也能发现环境变量覆盖；失败时不输出错误身份，避免将私人信息写入日志：
+
+```sh
+python3 - <<'PY'
+import subprocess
+
+expected = "Tolson <295500140+tolsonhuddy-collab@users.noreply.github.com> "
+for role in ("AUTHOR", "COMMITTER"):
+    result = subprocess.run(
+        ["git", "var", f"GIT_{role}_IDENT"], capture_output=True, text=True
+    )
+    if result.returncode or not result.stdout.startswith(expected):
+        raise SystemExit(f"Git {role} identity mismatch; stop and fix repository-local settings.")
+print("Git author and committer identity verified.")
+PY
+```
+
+检查未通过时停止提交，修正本仓库的 local 配置后重新核验；若环境变量或命令参数仍覆盖身份，先处理覆盖，不得跳过检查。创建提交时不得再用其他身份覆盖已通过的核验。此规则只约束新提交，不授权 amend、历史重写或 force push。
+
 ## 每次发布的顺序
 
 1. 先 `git pull` 拉取 `main` 最新代码，保留已有修改。
 2. 每篇同时更新 `site/zh/{id}.md` 与同名 `.json`，沿用现有字段；素材按当前用户授权及适用的版权、隐私约束处理。
 3. 运行 `python3 scripts/build_site.py --published`，先解决报错。`--demo` 仅供测试。
 4. 核对 README.md、README.en.md 及站点「关于」的实际已发布篇数；英文说明同步维护在 README.en.md。不要改 README 的版权声明或历史记录。
-5. commit 后 push 到 `main`，确认 GitHub Actions 的「GitHub Pages」运行成功。
+5. 按上面的署名规则核验有效 author 与 committer，再 commit、push 到 `main`，确认 GitHub Actions 的「GitHub Pages」运行成功。
 6. 按既有 Sites 流程同步构建结果到主站，保持原网址和公开范围。备用站使用 GitHub Pages 子路径，页面与订阅入口保持相对链接。
 7. 核实两站正文及订阅地址，报告新增篇目、实际总数、Actions 和双站结果。
 
