@@ -15,7 +15,7 @@
 
 ## 订阅 / RSS
 
-- 全文 Feed（Atom，最近 20 篇）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+- 全文 Feed（Atom）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
 - Tolson-RSS（Huberman）：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
 - 订阅清单 OPML：https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
 
@@ -57,7 +57,7 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 
 ## Subscribe / RSS
 
-- Full-text Atom feed, latest 20 essays: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+- Full-text Atom feed: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
 - Tolson-RSS (Huberman): https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
 - OPML list: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
 

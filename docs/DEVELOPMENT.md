@@ -28,7 +28,7 @@ Examples: [神经系统如何工作，又如何被经验改变](https://huberman
 | Reading page | The desktop chapter list highlights with scrolling. The phone list collapses. Type size and background are stored on the device. Source notes at the end can be expanded. |
 | Sources | Verified episode links are at the end of the essay. An unverified video address is left blank, not invented. Chapter times come from the local subtitles. |
 | Local build | Python 3.10+ standard library. `--demo` is a fictional layout. `--published` builds the essays in `site/zh/`. English transcripts are not in Git. |
-| Feeds | Each build rewrites the full-text Atom feed (latest 20), `podcasts/huberman/feed.xml`, and `tolson-rss.opml`. |
+| Feeds | Each build rewrites the full-text Atom feed (every readable essay in that build), `podcasts/huberman/feed.xml`, and `tolson-rss.opml`. |
 
 ## Limits
 
