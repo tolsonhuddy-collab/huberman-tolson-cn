@@ -671,13 +671,15 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.write_json("private/metadata/ep-skip.json", {"id": "ep-skip", "title_zh": "跳过", "source_url": "https://example.org/skip",
             "sections": [{"title": "一", "source_seconds": None}]})
         manifest = self.private_build()
-        self.assertEqual(manifest["feed_entry_count"], 20)
+        readable_ids = [f"ep-{number:02d}" for number in range(20, -1, -1)]
+        self.assertEqual(manifest["feed_entry_count"], len(readable_ids))
         atom = "{http://www.w3.org/2005/Atom}"
         root_feed = ET.parse(self.root / "private/site/feed.xml").getroot()
         podcast_feed = ET.parse(self.root / "private/site/podcasts/huberman/feed.xml").getroot()
         opml = ET.parse(self.root / "private/site/tolson-rss.opml")
         entries = root_feed.findall(f"{atom}entry")
-        self.assertEqual(len(entries), 20)
+        self.assertEqual(len(entries), len(readable_ids))
+        self.assertEqual([entry.findtext(f"{atom}id").rsplit(":", 1)[-1] for entry in entries], readable_ids)
         self.assertEqual([entry.findtext(f"{atom}id") for entry in entries], [entry.findtext(f"{atom}id") for entry in podcast_feed.findall(f"{atom}entry")])
         newest = entries[0]
         self.assertEqual(newest.findtext(f"{atom}title"), "标题 & 二十 <未转义>")
@@ -711,11 +713,12 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         thumb = newest.find("{http://search.yahoo.com/mrss/}thumbnail")
         self.assertEqual((thumb.get("url"), thumb.get("width"), thumb.get("height")), ("https://huberman-reading-001.tolsonhuddy.chatgpt.site/og/ep-20.jpg", "1200", "630"))
         self.assertNotIn("不应出现在订阅", raw)
-        self.assertNotIn("前半正文 0。", raw)
+        self.assertIn("前半正文 0。", raw)
         essentials = next(entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-19"))
         self.assertEqual(essentials.find(f"{atom}category").get("label"), "Essentials")
-        undated = [entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-00")]
-        self.assertEqual(undated, [])
+        oldest = entries[-1]
+        self.assertTrue(oldest.findtext(f"{atom}id").endswith("ep-00"))
+        self.assertEqual(oldest.findtext(f"{atom}published"), "2000-01-02T00:00:00Z")
         bare = next(entry for entry in entries if entry.findtext(f"{atom}id").endswith("ep-01"))
         self.assertIsNone(next((link for link in bare.findall(f"{atom}link") if link.get("rel") == "related"), None))
         self.assertEqual(root_feed.find(f"{atom}link[@rel='self']").get("href"), "https://huberman-reading-001.tolsonhuddy.chatgpt.site/feed.xml")

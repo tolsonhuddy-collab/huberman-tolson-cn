@@ -21,7 +21,6 @@ from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 CANONICAL_ORIGIN = "https://huberman-reading-001.tolsonhuddy.chatgpt.site"
-FEED_LIMIT = 20
 RIGHTS_LINE = "非官方精读，未获授权，版权归原作者"
 ATOM = "http://www.w3.org/2005/Atom"
 MEDIA = "http://search.yahoo.com/mrss/"
@@ -814,7 +813,7 @@ def entry_html(meta: dict, fragment: dict, image_url: str) -> str:
 
 
 def select_feed_entries(root: Path, episodes: list[dict], progress: dict, metadata: dict, fragments: dict, *, published_mode: bool, private: bool) -> list[dict]:
-    """Latest readable essays by their real publish or update time."""
+    """Every readable essay in this build, newest first, by real publish or update time."""
     selected = []
     for index, ep in enumerate(episodes):
         episode_id = ep["id"]
@@ -832,7 +831,7 @@ def select_feed_entries(root: Path, episodes: list[dict], progress: dict, metada
         })
     selected.sort(key=lambda item: (item["updated"], item["published"], item["index"], item["id"]))
     selected.reverse()
-    return selected[:FEED_LIMIT]
+    return selected
 
 
 def write_xml(path: Path, element: ET.Element) -> None:

@@ -9,7 +9,7 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 
 ## Subscribe / RSS
 
-- Full-text Atom feed, latest 20 essays: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
+- Full-text Atom feed: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/feed.xml
 - Tolson-RSS (Huberman): https://tolsonhuddy-collab.github.io/huberman-tolson-cn/podcasts/huberman/feed.xml
 - OPML list: https://tolsonhuddy-collab.github.io/huberman-tolson-cn/tolson-rss.opml
 
