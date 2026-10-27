@@ -2,7 +2,7 @@
 
 **中文** | [English](#english)
 
-把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。目前站上已上线 165 篇中文精读。会持续更新。非官方项目。
+把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。目前站上已上线 175 篇中文精读。会持续更新。非官方项目。
 
 ![Huberman Lab 中文精读站点界面示意](docs/screenshot-home.png)
 
@@ -48,7 +48,7 @@ taopatric58@gmail.com
 
 ## English
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 165 published essays. Updated continuously. Unofficial.
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 175 published essays. Updated continuously. Unofficial.
 
 ## Where to read
 

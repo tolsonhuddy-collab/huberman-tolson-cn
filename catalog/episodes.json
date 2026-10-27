@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "counts": {
-    "long_episode": 318,
+    "long_episode": 319,
     "essentials": 62,
     "ama": 19,
     "live_qa": 10
@@ -8307,6 +8307,28 @@
         "provenance": "public_provider_paragraph_start_unverified_audio"
       },
       "published": "2026-02-09T09:00:00Z"
+    },
+    {
+      "id": "ep-1c1c621f2c05",
+      "title_en": "Unlocking Persistent Motivation & Extreme Resilience | Ross Edgley",
+      "source_file": "ross-edgley-20261026.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 32135,
+      "source_sha256": "f8fc932c8b410307d7cb2eb10cc0ac16d74f6ed47de6904a002de84f8bba2b12",
+      "vtt_sha256": null,
+      "source_index_date": "2026-10-26",
+      "source_provider": "Podscripts public third-party automated transcript; not official or audio-verified",
+      "source_url": "https://www.hubermanlab.com/episode/unlocking-persistent-motivation-and-extreme-resilience-ross-edgley",
+      "video_id": null,
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 9797,
+        "provenance": "public_provider_paragraph_start_unverified_audio"
+      },
+      "published": "2026-10-26T08:00:00Z"
     }
   ]
 }
