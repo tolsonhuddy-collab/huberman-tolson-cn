@@ -1,6 +1,6 @@
 # Huberman Lab Chinese Close Readings
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 175 published essays. Updated continuously. Unofficial.
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 200 published essays. Updated continuously. Unofficial.
 
 ## Where to read
 

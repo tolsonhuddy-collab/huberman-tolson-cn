@@ -1,0 +1,91 @@
+{
+  "id": "ep-b93daa0c3837",
+  "title_zh": "学会学习，不止靠记住知识：从大脑的试错到人工智能的启发",
+  "title_en": "How to Improve at Learning Using Neuroscience & AI | Dr. Terry Sejnowski",
+  "source_url": "https://www.hubermanlab.com/episode/dr-terry-sejnowski-how-to-improve-at-learning-using-neuroscience-ai",
+  "published": "2024-11-18T09:00:00Z",
+  "editor_note": "依据2024年完整英文转写作原创中文长文，删除广告及重复推广。算法与具体脑机制、观察与干预、动物与临床样本、个人体验与研究、AI假想方案与真实试验分层。氯胺酮一处转写与后文不一致，未回听前不改写成精神分裂症治疗；睡眠药的记忆数字、精神疾病和处方兴奋剂讨论不构成用药建议。额外原论文页面未获得有效摘要，未声称独立认证。VTT仅作导航，未独立校准原音。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Terry Sejnowski",
+      "role": "嘉宾 / 对谈者",
+      "bio": "特里·谢诺夫斯基 · 索尔克生物研究所计算神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "知道大脑有哪些零件，还不等于知道它怎样工作",
+      "source_seconds": 432.039
+    },
+    {
+      "title": "奖赏的作用，是让下一次选择带着上一次的经验",
+      "source_seconds": 638.56
+    },
+    {
+      "title": "看懂讲解，与自己做得出来，需要互相来回",
+      "source_seconds": 1182.44
+    },
+    {
+      "title": "新经验怎样进入旧知识，睡眠提供了一种线索",
+      "source_seconds": 1666.159
+    },
+    {
+      "title": "改变一个脑状态，未必只有想得到的那一个后果",
+      "source_seconds": 2229.48
+    },
+    {
+      "title": "成年以后，学得慢一些不等于没有办法学得更好",
+      "source_seconds": 2785.96
+    },
+    {
+      "title": "同一项技术，有人觉得顺手，有人却觉得特别累",
+      "source_seconds": 3429.64
+    },
+    {
+      "title": "线粒体提供能量，但活力不是一个单一开关",
+      "source_seconds": 4147.719
+    },
+    {
+      "title": "认知也有合适的速度，但“认知速度”还不是一个标准读数",
+      "source_seconds": 4484.32
+    },
+    {
+      "title": "AI的进步，来自改变做法，也来自扩大训练规模",
+      "source_seconds": 4946.4
+    },
+    {
+      "title": "让AI提出实验，与让它替世界做完实验，是两回事",
+      "source_seconds": 5952.08
+    },
+    {
+      "title": "精神疾病的解释不能只剩一种化学物质，也不能换成另一种单因论",
+      "source_seconds": 5714.96
+    },
+    {
+      "title": "帕金森病让人看见，动作快慢与主观感受可能并不同步",
+      "source_seconds": 6629.0
+    },
+    {
+      "title": "先说清“理解”是什么，才能讨论AI有没有理解",
+      "source_seconds": 7307.159
+    },
+    {
+      "title": "对话中的上下文，与人脑不停运转的内在活动",
+      "source_seconds": 7805.199
+    },
+    {
+      "title": "走神、睡眠和梦，并非同一种“没在学习”",
+      "source_seconds": 8100.36
+    },
+    {
+      "title": "自注意怎样在脑中实现，仍是一项等待实验的假说",
+      "source_seconds": 8612.76
+    }
+  ],
+  "updated": "2026-10-28T09:17:07Z"
+}
