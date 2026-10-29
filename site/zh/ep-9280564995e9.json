@@ -1,0 +1,94 @@
+{
+  "id": "ep-9280564995e9",
+  "title_zh": "皮肤不只是表面：从防晒、屏障到痤疮，读懂护肤措施的作用与边界",
+  "title_en": "How to Improve Skin Health & Appearance",
+  "source_url": "https://www.hubermanlab.com/episode/how-to-improve-skin-health-appearance",
+  "published": "2024-07-01T08:00:00Z",
+  "editor_note": "据2024年完整单人节目原创整理，按相邻主题重组；皮肤癌讨论适度前置，所以章节源时间不要求递增。原转写中的术语错误和医学疑误均保留说明，剂量不是个人处方。对维D、防晒、黑色素瘤、实验肽和痤疮处理仅有限核查机构页面或论文摘要，不声称更新全部临床结论。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主讲人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "皮肤是一套活的屏障，而不是一层包装",
+      "source_seconds": 440.68
+    },
+    {
+      "title": "没有晒红，不能证明皮肤没有受到紫外线影响",
+      "source_seconds": 762.6
+    },
+    {
+      "title": "皮肤癌有不同来源，黑色素瘤仍与紫外线密切相关",
+      "source_seconds": 2998.44
+    },
+    {
+      "title": "防晒争论里，检出吸收与证明伤害是两步",
+      "source_seconds": 2214.68
+    },
+    {
+      "title": "婴儿、配方与使用感，不能只靠“天然”两个字判断",
+      "source_seconds": 2512.359
+    },
+    {
+      "title": "维生素 D 的问题，不能用长波光或盲目大剂量解答",
+      "source_seconds": 1921.96
+    },
+    {
+      "title": "日晒与寿命的队列，为什么不能变成“避光像吸烟一样危险”",
+      "source_seconds": 3358.64
+    },
+    {
+      "title": "喝下胶原之后，皮肤改善不等于原料定向送达",
+      "source_seconds": 3931.52
+    },
+    {
+      "title": "“肽”是一大类物质，BPC-157 的证据不能从胰岛素借来",
+      "source_seconds": 4379.56
+    },
+    {
+      "title": "烟酰胺与透明质酸，要分清口服、外用和研究终点",
+      "source_seconds": 4927.08
+    },
+    {
+      "title": "维 A 类能影响细胞更新，因此也有必须尊重的限制",
+      "source_seconds": 5202.52
+    },
+    {
+      "title": "红光设备的分钟数，不能脱离波长、能量与研究条件",
+      "source_seconds": 5606.52
+    },
+    {
+      "title": "营养讨论的重点，是整体搭配而不是一张神奇食物表",
+      "source_seconds": 6079.4
+    },
+    {
+      "title": "肠道、睡眠与压力，参与皮肤状态但不包办全部病因",
+      "source_seconds": 6736.76
+    },
+    {
+      "title": "痤疮是毛囊、皮脂、角化和炎症的交会",
+      "source_seconds": 7145.96
+    },
+    {
+      "title": "乳清、牛奶与痘痘，观察关联比预设答案有用",
+      "source_seconds": 7496.44
+    },
+    {
+      "title": "温和清洁、别挤痘，与自行抹激素是三件事",
+      "source_seconds": 7674.76
+    },
+    {
+      "title": "玫瑰痤疮的发红，不是情绪软弱或喝酒的证明",
+      "source_seconds": 8018.04
+    },
+    {
+      "title": "银屑病把免疫问题带回了这层可见的器官",
+      "source_seconds": 8472.28
+    }
+  ],
+  "updated": "2026-10-29T07:39:27Z"
+}

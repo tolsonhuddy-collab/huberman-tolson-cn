@@ -1,0 +1,95 @@
+{
+  "id": "ep-4f0a86d606b8",
+  "title_zh": "饥饿怎样预测下一口，减重药又改变了什么",
+  "title_en": "The Science of Hunger & Medications to Combat Obesity | Dr. Zachary Knight",
+  "source_url": "https://www.hubermanlab.com/episode/dr-zachary-knight-the-science-of-hunger-medications-to-combat-obesity",
+  "published": "2024-06-17T08:00:00Z",
+  "editor_note": "依据2024年完整机器转写原创编写，区分小鼠回路、人类遗传与临床结果。减重后食欲方向矛盾、药名与试验剂型疑误明示；临床补核仅实际摘要及官方机构资料，非当前用药指南。章节为原VTT cue起点，未逐秒回听或原音校准。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Zachary Knight",
+      "role": "嘉宾 / 对谈者",
+      "bio": "扎卡里·奈特 · 加州大学旧金山分校生理学研究者，研究饥饿、口渴与体温稳态"
+    }
+  ],
+  "sections": [
+    {
+      "title": "一顿饭与几个月的体重，运行在不同的时间里",
+      "source_seconds": 506.919
+    },
+    {
+      "title": "两种胖小鼠，揭示了脂肪怎样给脑发消息",
+      "source_seconds": 794.12
+    },
+    {
+      "title": "还没吃第一口，饥饿回路已经开始更新",
+      "source_seconds": 1529.12
+    },
+    {
+      "title": "体重高度遗传，与环境让人变重并不矛盾",
+      "source_seconds": 2251.76
+    },
+    {
+      "title": "超加工食物的问题，不只在于好不好吃",
+      "source_seconds": 2829.4
+    },
+    {
+      "title": "热量、蛋白质和盐，不是同一层面的需求",
+      "source_seconds": 3628.2
+    },
+    {
+      "title": "减掉体重以后，身体为什么更想把它找回来",
+      "source_seconds": 3894.079
+    },
+    {
+      "title": "从口服糖到一种肠道激素，药物先为糖尿病而来",
+      "source_seconds": 4285.4
+    },
+    {
+      "title": "长效分子怎样改变一餐，也改变长期体重",
+      "source_seconds": 4598.4
+    },
+    {
+      "title": "食物提高一点 GLP-1，不等于复制长效药",
+      "source_seconds": 5118.76
+    },
+    {
+      "title": "脑干的饱足信号，与恶心不是一回事",
+      "source_seconds": 4862.12
+    },
+    {
+      "title": "多靶点的未来，先是一组等待比较的试验",
+      "source_seconds": 5434.48
+    },
+    {
+      "title": "多巴胺让人想得到，不等于每一口都好吃",
+      "source_seconds": 6116.52
+    },
+    {
+      "title": "为什么连补水，也需要从经验中学习",
+      "source_seconds": 6528.32
+    },
+    {
+      "title": "盐、水和热量，怎样在身体里彼此协调",
+      "source_seconds": 6912.04
+    },
+    {
+      "title": "水刚入口便解渴，血液却还没有来得及改变",
+      "source_seconds": 7240.36
+    },
+    {
+      "title": "期待会改变体验，仍不能让脑替人绕过身体",
+      "source_seconds": 7553.88
+    },
+    {
+      "title": "胃肠还会再核一次：喝下去的不一定很快离开胃",
+      "source_seconds": 7953.079
+    }
+  ],
+  "updated": "2026-10-29T07:52:14Z"
+}
