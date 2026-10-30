@@ -1,0 +1,133 @@
+{
+  "id": "ep-e8d4aea7810c",
+  "title_zh": "把睡眠从用力中解放出来：规律、温度与睡眠干预的边界",
+  "title_en": "GUEST SERIES | Dr. Matt Walker: Protocols to Improve Your Sleep",
+  "source_url": "https://www.hubermanlab.com/episode/guest-series-dr-matthew-walker-protocols-to-improve-your-sleep",
+  "published": "2024-04-10T08:00:00Z",
+  "editor_note": "原创中文精读。区分睡眠卫生与失眠治疗、皮肤与核心温度、单项血糖终点与睡眠整体功能；保留CBD不确定性、设备重复研究及处方药风险。有限论文摘要/官方安全信息核对不等完整医学更新或音频回听。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Matthew Walker",
+      "role": "嘉宾 / 对谈者",
+      "bio": "马修·沃克 · 睡眠研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "睡得好，不只取决于昨晚睡了几个小时",
+      "source_seconds": 61.44,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "用稳定的起床时间，给身体一个可以预测的日程",
+      "source_seconds": 445.28,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "早晨需要光，夜里需要真正变暗",
+      "source_seconds": 497.319,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "皮质醇的时间分布，比“高还是低”更有信息",
+      "source_seconds": 1003.279,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "凉爽的房间，与温暖的手脚可以同时成立",
+      "source_seconds": 1134.919,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "久醒时离开床，是为了重新建立床与睡眠的联系",
+      "source_seconds": 1200.84,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "让注意力有处可去，而不是命令自己停止思考",
+      "source_seconds": 1805.36,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "酒精带来的昏沉，不能直接等同于恢复性的睡眠",
+      "source_seconds": 1388.52,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "晚餐与睡眠之间，没有适合所有人的同一条分界线",
+      "source_seconds": 2402.4,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "咖啡的影响，不会在“不觉得兴奋”时自动归零",
+      "source_seconds": 2967.88,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "个体差异可以解释差别，却不能替睡眠质量作保证",
+      "source_seconds": 3580.119,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "THC、CBD 与“更快睡着”背后的不同问题",
+      "source_seconds": 3755.52,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "一夜睡差后，急于补偿可能改变下一夜",
+      "source_seconds": 4584.48,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "缩短卧床窗口，是有监督的治疗，不是让所有人少睡",
+      "source_seconds": 5062.239,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "从熟悉的散步，到拿走钟表：减少夜间的自我检查",
+      "source_seconds": 5586.0,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "等待手机响起，也可能让睡着的大脑保持戒备",
+      "source_seconds": 5947.239,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "电刺激研究有希望，重复结果与闭环时机同样重要",
+      "source_seconds": 6149.56,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "温控实验说明了什么，又没有说明什么",
+      "source_seconds": 6657.36,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "声音是否助眠，要问它怎样进入了正在睡觉的大脑",
+      "source_seconds": 7477.559,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "缓慢摇动的研究，从体验走向可检验的机制",
+      "source_seconds": 8013.159,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "多一点某阶段，不自动等于整个人都更健康",
+      "source_seconds": 8328.04,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "REM、处方药与补剂，不能只挑自己想增加的那一段",
+      "source_seconds": 8657.359,
+      "timestamp_provenance": "local_vtt_unverified"
+    }
+  ],
+  "updated": "2026-10-30T11:23:25Z"
+}

@@ -1,0 +1,123 @@
+{
+  "id": "ep-ec7938012fae",
+  "title_zh": "睡得好不只看时长：理解睡眠结构、个体节律与清醒的质量",
+  "title_en": "GUEST SERIES | Dr. Matt Walker: The Biology of Sleep & Your Unique Sleep Needs",
+  "source_url": "https://www.hubermanlab.com/episode/guest-series-dr-matthew-walker-the-biology-of-sleep-your-unique-sleep-needs",
+  "published": "2024-04-03T08:00:00Z",
+  "editor_note": "完整英文TXT原创综合编写并复读；研究者观点、机制假说、动物资料、观察关联与临床结局分别保留。对分期、NK细胞、调时钟、血液转录组、规律性研究作有限一手摘要/相关段补核；不声称读完所有论文或核实所有科学断言。未逐秒回听。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Matthew Walker",
+      "role": "嘉宾",
+      "bio": "马修·沃克 · 加州大学伯克利分校神经科学与心理学睡眠研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "一夜睡眠有结构，不能只挑一种“好睡眠”",
+      "source_seconds": 402.199,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "九十分钟是平均描述，不是闹钟密码",
+      "source_seconds": 702.32,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "醒来还有睡意，与长时间躺着等睡，是两回事",
+      "source_seconds": 887.6,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "研究者怎样知道，一个人进入了哪种睡眠",
+      "source_seconds": 1220.84,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "深睡参与身体调节，机制还不等于治疗承诺",
+      "source_seconds": 1689.6,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "入睡时的一下抽动，还不是一条确定的因果链",
+      "source_seconds": 2260.04,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "REM 的反差：脑很活跃，身体却不去演梦",
+      "source_seconds": 2566.599,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "温度和睡姿，要分清身体规律与临床证据",
+      "source_seconds": 3049.72,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "哈欠与午后低谷，都比“我没睡够”更复杂",
+      "source_seconds": 3489.24,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "激素与血糖的实验，不能直接翻译成“老了十岁”",
+      "source_seconds": 4414.239,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "免疫研究里，下降“到”多少与下降“了”多少不能混淆",
+      "source_seconds": 4609.679,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "调时钟与基因表达的发现，怎样避免说过头",
+      "source_seconds": 4763.239,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "一晚差觉不是灾难，睡眠也不该只靠恐惧来争取",
+      "source_seconds": 5147.6,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "食欲、情绪和面容，给出的是不同层面的线索",
+      "source_seconds": 5622.44,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "数量与质量：在床八小时，不等于睡了八小时",
+      "source_seconds": 6654.599,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "规律性重要，但观察到的死亡关联不是个人保证",
+      "source_seconds": 7013.32,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "时型不是勤奋排名，时机也不只是钟表整齐",
+      "source_seconds": 7409.199,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "怎样知道仍然缺睡：看持续功能，不只看一次犯困",
+      "source_seconds": 8474.439,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "两股力量：时钟决定时机，睡压反映此前醒了多久",
+      "source_seconds": 9291.56,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "生长激素与皮质醇，也服从时序而非好坏标签",
+      "source_seconds": 9977.04,
+      "timestamp_provenance": "local_vtt_unverified"
+    }
+  ],
+  "updated": "2026-10-30T11:35:23Z"
+}

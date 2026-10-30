@@ -1,0 +1,113 @@
+{
+  "id": "ep-9bb8d2fb0842",
+  "title_zh": "睡得分几段，不如先问睡得怎样：小睡、咖啡因与一天的清醒节律",
+  "title_en": "GUEST SERIES | Dr. Matt Walker: How to Structure Your Sleep, Use Naps & Time Caffeine",
+  "source_url": "https://www.hubermanlab.com/episode/guest-series-dr-matt-walker-how-to-structure-your-sleep-use-naps-time-caffeine",
+  "published": "2024-04-17T08:00:00Z",
+  "editor_note": "原创中文精读。保留REM发育/神经发育状况非因果、NSDR局部睡眠待验证、咖啡因延后假说、老年午睡反向因果。对分段睡眠论文、午睡时长、NASA指标、日本五条件与全叠加、AAA分档和起效/达峰的节目疑误作定位说明，不将旧对谈作个体治疗或驾驶安全保证。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Matthew Walker",
+      "role": "嘉宾 / 对谈者",
+      "bio": "马修·沃克 · 睡眠研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "一天睡几次，和一夜经历几种睡眠，是两件事",
+      "source_seconds": 348.319,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "婴儿的大量REM，与成长中不断改写的睡眠结构",
+      "source_seconds": 936.12,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "午后犯困，不必全怪午饭；时型也没有统一答案",
+      "source_seconds": 1256.84,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "历史上的“第一觉、第二觉”，不能被简单肯定或否定",
+      "source_seconds": 2050.919,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "躺下为什么更容易困，体温解释到哪里为止",
+      "source_seconds": 2318.4,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "小睡可以帮助学习和情绪，但收益有自己的实验条件",
+      "source_seconds": 2531.599,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "同一场午睡，也可能拿走晚上需要的困意",
+      "source_seconds": 2804.28,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "想恢复警觉，短睡与长睡不是同一笔交易",
+      "source_seconds": 3197.599,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "不擅长午睡的人，不需要把午睡练成任务",
+      "source_seconds": 3647.92,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "NSDR与局部睡眠：一条有趣、尚待检验的机制线索",
+      "source_seconds": 3840.44,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "航空中的战略午睡，重点是预防风险，不是证明万能增效",
+      "source_seconds": 4060.92,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "老年人午睡与健康风险，为什么先要问因果方向",
+      "source_seconds": 4854.48,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "咖啡因像占了座位，困意并没有因此消失",
+      "source_seconds": 5371.96,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "“咖啡午睡”有逻辑，但起效、达峰与醒来不是同一时钟",
+      "source_seconds": 5566.6,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "起床后一定等90分钟再喝咖啡吗",
+      "source_seconds": 6189.159,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "咖啡的健康关联，与咖啡因的睡眠代价要分开",
+      "source_seconds": 6577.92,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "冷水、亮光与小睡，试验做过的组合没有想象中多",
+      "source_seconds": 7062.88,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "成人极端多相睡眠，不能只计算多出了多少清醒时间",
+      "source_seconds": 7501.119,
+      "timestamp_provenance": "local_vtt_unverified"
+    }
+  ],
+  "updated": "2026-10-30T11:16:54Z"
+}
