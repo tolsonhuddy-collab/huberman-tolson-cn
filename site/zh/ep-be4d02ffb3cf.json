@@ -1,0 +1,133 @@
+{
+  "id": "ep-be4d02ffb3cf",
+  "title_zh": "从细胞地图到日常眼镜：陈·扎克伯格夫妇谈科学工具、连接与人工智能",
+  "title_en": "Curing All Human Diseases & the Future of Health & Technology | Mark Zuckerberg & Dr. Priscilla Chan",
+  "source_url": "https://www.hubermanlab.com/episode/mark-zuckerberg-dr-priscilla-chan-curing-all-human-diseases-future-of-health-technology",
+  "published": "2023-10-23T08:00:00Z",
+  "editor_note": "原创中文精读，2023年计划和平台方自述保留归属；细胞图谱/模型输出不当临床成果，囊性纤维化、炎症死亡比例、跌倒单因、近视逆转和VR无眩晕泛化等原稿过强处留定位注。眼科仅限NEI/AAO官方说明核对，非全面更新医学或产品事实。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Priscilla Chan",
+      "role": "嘉宾 / 前半场对谈者",
+      "bio": "普莉希拉·陈 · 医师、CZI共同创办者"
+    },
+    {
+      "name": "Mark Zuckerberg",
+      "role": "嘉宾 / 对谈者",
+      "bio": "马克·扎克伯格 · Meta创办者、CZI共同创办者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "治愈、预防或管理疾病，是世纪尺度的目标",
+      "source_seconds": 426.92,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "慈善的不同之处，要落实成研究者可以使用的东西",
+      "source_seconds": 473.64,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "从基因变化到疾病，中间还有许多没有看见的环节",
+      "source_seconds": 1145.8,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "有了细胞图谱，仍然不能宣布目录已经齐全",
+      "source_seconds": 1448.2,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "热图把不同器官连起来，也把问题交还给实验",
+      "source_seconds": 1537.67,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "虚拟细胞，是模型需要接受检验的愿景",
+      "source_seconds": 1833.63,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "生成很多可能，不等于已经做完很多实验",
+      "source_seconds": 1885.87,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "芝加哥的路线，是在组织里面放进更细的测量",
+      "source_seconds": 2708.6,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "纽约的路线，是让细胞成为报告者",
+      "source_seconds": 2877.61,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "罕见病患者组织，把经验变成可以合作的材料",
+      "source_seconds": 3322.49,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "两种乐观，一种面对技术，一种面对具体的人",
+      "source_seconds": 3742.01,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "社交媒体的好坏，要拆到使用方式与具体人",
+      "source_seconds": 4206.95,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "推荐系统需要理解的，不只是下一次点击",
+      "source_seconds": 4549.76,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "工具存在之后，还要让人知道何时可以用",
+      "source_seconds": 4931.87,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "混合现实追求在场感，但一次体验不是安全试验",
+      "source_seconds": 5462.58,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "给整个身体的计算，仍然面对跟踪与阻力",
+      "source_seconds": 5940.28,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "学习的门槛可以下降，迁移效果仍要另问",
+      "source_seconds": 6280.893,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "当时的智能眼镜，与完整增强现实还隔着许多工程",
+      "source_seconds": 6652.715,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "录制提示灯，与他人的同意，是两个问题",
+      "source_seconds": 7057.51,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "摄像头看见外面，不等于设备知道眼睛在看哪里",
+      "source_seconds": 7444.41,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "AI 化身可以延长服务，也必须说清谁在说话",
+      "source_seconds": 7665.67,
+      "timestamp_provenance": "local_vtt_unverified"
+    }
+  ],
+  "updated": "2026-10-30T18:41:08Z"
+}

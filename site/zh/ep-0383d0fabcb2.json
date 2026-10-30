@@ -1,0 +1,133 @@
+{
+  "id": "ep-0383d0fabcb2",
+  "title_zh": "二甲双胍与信念效应：读懂一篇论文，也读懂它没有证明什么",
+  "title_en": "Journal Club With Dr. Peter Attia | Metformin for Longevity & the Power of Belief Effects",
+  "source_url": "https://www.hubermanlab.com/episode/journal-club-with-dr-peter-attia-metformin-for-longevity-and-the-power-of-belief-effects",
+  "published": "2023-09-11T08:00:00Z",
+  "editor_note": "2023首次联合Journal Club原创精读；STR与HR、KM与Cox、删失及p值口述混用作明确编辑澄清。二甲双胍观察结果非健康者延寿或药致死；个人降糖/禁食非处方，动物雌二醇非男性激素目标。尼古丁预印本与2024正式版区分，20人三次非60人，脑信号非成绩/多巴胺直接测量，信念不替代药效/副作用评估。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 论文讨论者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Peter Attia",
+      "role": "嘉宾 / 论文讨论者",
+      "bio": "彼得·阿提亚 · 医生、作者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "二甲双胍改变燃料处理，不是让吃进去的糖消失",
+      "source_seconds": 862.74,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "胰岛素抵抗是一条连锁变化，不只是一个血糖数字",
+      "source_seconds": 1201.5,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "治病有效与延缓衰老，需要回答不同的问题",
+      "source_seconds": 1713.24,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "2014年的惊喜结果，先要辨认它使用的统计量",
+      "source_seconds": 787.68,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "随访何时停止，会改变留下来的那群人",
+      "source_seconds": 1871.94,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "丹麦研究同时比较普通匹配者与不一致双胞胎",
+      "source_seconds": 2475.9,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "先读表一，看看两组究竟哪里不同",
+      "source_seconds": 2503.68,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "“每千人年”是在累计观察时间，不是在分配寿命",
+      "source_seconds": 2872.8,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "生存曲线与置信区间，不能只凭图形下判断",
+      "source_seconds": 3093.66,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "读危险比时，先看参照组，再看调整了什么",
+      "source_seconds": 3745.92,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "数据更大，不会自动让混杂变小",
+      "source_seconds": 3481.98,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "新研究没有发现超越无糖尿病对照，不等于药物使人死亡",
+      "source_seconds": 4154.4,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "动物长寿实验提供线索，也有品系、剂量与性别边界",
+      "source_seconds": 4409.699,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "阿提亚停药的理由，包含个人训练中的代价",
+      "source_seconds": 4589.1,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "小檗碱与其他降糖药，不能靠同一个绰号互相替代",
+      "source_seconds": 4668.239,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "短期禁食有没有延寿，需要能够衡量的终点",
+      "source_seconds": 5295.48,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "读论文时，把问题、方法、发现与结论分别写下来",
+      "source_seconds": 5611.199,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "信念效应值得研究，却不等于心态包办生理结果",
+      "source_seconds": 5912.4,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "尼古丁作用于受体，不是大脑自己制造尼古丁",
+      "source_seconds": 6401.88,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "同样的实际剂量，配上低、中、高三种告知",
+      "source_seconds": 7081.8,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "脑信号出现梯度，不代表成绩、奖赏与药效都同比增加",
+      "source_seconds": 7613.28,
+      "timestamp_provenance": "local_vtt_unverified"
+    },
+    {
+      "title": "把临床想象留作待检验的问题，也认真对待不良反应",
+      "source_seconds": 7379.58,
+      "timestamp_provenance": "local_vtt_unverified"
+    }
+  ],
+  "updated": "2026-10-30T18:55:07Z"
+}

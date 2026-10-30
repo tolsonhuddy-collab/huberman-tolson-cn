@@ -789,9 +789,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_two_hundred_thirty_chinese_essays(self):
+    def test_repository_commits_two_hundred_fifty_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 230 + [".md"] * 230)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 250 + [".md"] * 250)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -799,7 +799,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 230)
+        self.assertEqual(len(stems[".md"]), 250)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -855,6 +855,26 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-4933405f0f80": "2026-04-06T08:00:00Z",
             "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
             "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
+            "ep-d54e8baf9adb": "2024-02-05T09:00:00Z",
+            "ep-1a42f3290026": "2024-01-22T09:00:00Z",
+            "ep-845bb0c607e0": "2024-01-15T09:00:00Z",
+            "ep-073f298b1901": "2024-01-08T09:00:00Z",
+            "ep-567f2ce95d72": "2024-01-01T09:00:00Z",
+            "ep-786e15085096": "2023-12-25T09:00:00Z",
+            "ep-c2f993b109d4": "2023-12-11T09:00:00Z",
+            "ep-33e66a2ca68b": "2023-12-04T09:00:00Z",
+            "ep-6f03c85f0bdf": "2023-11-27T09:00:00Z",
+            "ep-9815b702187b": "2023-11-13T09:00:00Z",
+            "ep-ec045612ab99": "2023-11-06T09:00:00Z",
+            "ep-7aac3873675f": "2023-10-30T08:00:00Z",
+            "ep-be4d02ffb3cf": "2023-10-23T08:00:00Z",
+            "ep-194671570e35": "2023-10-16T08:00:00Z",
+            "ep-05b5a52a5da0": "2023-10-02T08:00:00Z",
+            "ep-1a0eb2d06b43": "2023-09-27T08:00:00Z",
+            "ep-8cf739cd45a0": "2023-09-25T08:00:00Z",
+            "ep-89728f69ea5b": "2023-09-20T08:00:00Z",
+            "ep-dbfcb81c9266": "2023-09-13T08:00:00Z",
+            "ep-0383d0fabcb2": "2023-09-11T08:00:00Z",
             "ep-ff408f4a91b5": "2024-05-01T08:00:00Z",
             "ep-963cf10a118c": "2024-04-22T08:00:00Z",
             "ep-9bb8d2fb0842": "2024-04-17T08:00:00Z",

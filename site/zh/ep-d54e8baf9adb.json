@@ -1,0 +1,118 @@
+{
+  "id": "ep-d54e8baf9adb",
+  "title_zh": "社交怎样进入大脑：凯·泰谈杏仁核、孤独与关系中的位置",
+  "title_en": "The Biology of Social Interactions and Emotions | Dr. Kay Tye",
+  "source_url": "https://www.hubermanlab.com/episode/dr-kay-tye-the-biology-of-social-interactions-and-emotions",
+  "published": "2024-02-05T09:00:00Z",
+  "editor_note": "依据用户提供完整TXT/VTT作中文综合精读。动物结果、在研模型、个人经验分别归属；保留社交稳态/迷幻药未知机制。章节时间为本地VTT实际cue起点，未回听校准原音。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Kay Tye",
+      "role": "嘉宾",
+      "bio": "凯·泰 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "杏仁核分配的，是事情对我们的意义",
+      "source_seconds": 492.919,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "新奇先获得注意，意义再由学习建立",
+      "source_seconds": 842.399,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同一个脑区，通向不同的行为道路",
+      "source_seconds": 1093.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体的需要，会重新排列奖励和危险",
+      "source_seconds": 1218.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "信息过量时，控制输入也是一种选择",
+      "source_seconds": 1539.279,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "负面反馈仍可能提供难得的信息",
+      "source_seconds": 2308.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "孤独研究从一个意外的对照组开始",
+      "source_seconds": 2705.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "促使靠近的信号，也可能令人不舒服",
+      "source_seconds": 3008.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "短期隔离和长期隔离，为什么可能得到相反结果",
+      "source_seconds": 3374.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "适应独处，不等于健康代价已经消失",
+      "source_seconds": 3539.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "社交的质量，无法只用接触次数计算",
+      "source_seconds": 3910.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同步、对象和投入，改变一次联系的分量",
+      "source_seconds": 3974.039,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "被排除在外，与独自一人是两个实验问题",
+      "source_seconds": 4578.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "共情还取决于，我们把对方看成谁",
+      "source_seconds": 4885.239,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "丰裕是资源条件，也是一种经验形成的预期",
+      "source_seconds": 5638.199,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "社会等级的研究，必须把身份与位置分开",
+      "source_seconds": 5954.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一场竞争的结果，可能早在行动前已有线索",
+      "source_seconds": 6441.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "迷幻药的机制研究，先把体验变成可检验的问题",
+      "source_seconds": 6966.719,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把整个生活带进科学，也把权力问题带回实验室",
+      "source_seconds": 7658.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-10-30T17:56:18Z"
+}
