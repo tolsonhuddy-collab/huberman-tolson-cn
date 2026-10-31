@@ -1,0 +1,153 @@
+{
+  "id": "ep-937713fcdae3",
+  "title_zh": "脑机接口首先要恢复什么：麦克杜格尔谈神经外科、Neuralink与人的控制能力",
+  "title_en": "Neuralink & Technologies to Enhance Human Brains | Dr. Matthew MacDougall",
+  "source_url": "https://www.hubermanlab.com/episode/dr-matthew-macdougall-neuralink-and-technologies-to-enhance-human-brains",
+  "published": "2023-04-17T08:00:00Z",
+  "editor_note": "完整TXT/VTT上的原创中文综合精读；公司安全、福利及未来能力均归属2023年嘉宾陈述，非独立临床验证。药理与统计疑误显式区分。时间锚为本地真实cue，未回听校准。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Matthew MacDougall",
+      "role": "嘉宾",
+      "bio": "马修·麦克杜格尔 · 神经外科医生、Neuralink首席神经外科医生（访谈时身份）"
+    }
+  ],
+  "sections": [
+    {
+      "title": "神经外科看见的脑，是功能会单独失效的整体",
+      "source_seconds": 528.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "更小的入口，改变的是手术代价的计算",
+      "source_seconds": 744.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "额叶像过滤器，但不是冲动的唯一开关",
+      "source_seconds": 916.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "缺觉会影响控制，却不能当成一次可逆额叶损伤",
+      "source_seconds": 1070.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "电极与药物，能接触的空间范围并不一样",
+      "source_seconds": 1219.679,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "第一个目标是控制电脑，并非接通瘫痪的四肢",
+      "source_seconds": 1498.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "机器人承担的是，人手难以完成的细线放置",
+      "source_seconds": 1647.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "为什么先选运动皮层，而不是情绪与睡眠",
+      "source_seconds": 1830.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "不带快乐的笑，提醒我们行为与体验可以分离",
+      "source_seconds": 2114.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "解码不是把脑信号原样搬到机器里",
+      "source_seconds": 2418.079,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "愿意自己植入，是态度，不是安全证据",
+      "source_seconds": 2739.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "手中的RFID，和脑内接口是两类装置",
+      "source_seconds": 2812.619,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "蓝牙的射频，与电离辐射不能混在一起",
+      "source_seconds": 3107.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从脑到脊髓的桥，是另一项必须建立的系统",
+      "source_seconds": 3514.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "工程公司的起跑线，来自长期基础研究",
+      "source_seconds": 3612.299,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脑内发短信，不等于偷听一切内心独白",
+      "source_seconds": 3893.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "感觉替代不必从颅骨里面开始",
+      "source_seconds": 4140.719,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "比特率是一个尺度，却不是生活价值的总分",
+      "source_seconds": 4164.299,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "使用者和解码器，会同时学会对方",
+      "source_seconds": 4573.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "游戏在这里，是可测量的训练环境",
+      "source_seconds": 4801.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动物福利的公司陈述，需要和独立审查分开",
+      "source_seconds": 5396.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "猪回答安全问题，猴子回答部分功能问题",
+      "source_seconds": 5552.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "颅骨的薄弱处，不等于头盔没有价值",
+      "source_seconds": 5731.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "酒精与脑影像，不能把每周和每天混成一个数字",
+      "source_seconds": 6006.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "可塑性的希望，要同时问年龄、物种与任务",
+      "source_seconds": 6378.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "远景可以很大，眼前仍要逐项证明",
+      "source_seconds": 6715.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-10-31T13:48:12Z"
+}

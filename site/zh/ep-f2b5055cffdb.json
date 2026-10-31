@@ -1,0 +1,153 @@
+{
+  "id": "ep-f2b5055cffdb",
+  "title_zh": "头发为什么变细、脱落又难以长回：从毛囊周期理解生发治疗",
+  "title_en": "The Science of Healthy Hair, Hair Loss and How to Regrow Hair",
+  "source_url": "https://www.hubermanlab.com/episode/the-science-of-healthy-hair-hair-loss-and-how-to-regrow-hair",
+  "published": "2023-04-10T08:00:00Z",
+  "editor_note": "依据完整 TXT/VTT 作原创中文精读，2023 年节目并非现行通用治疗指南。标明毛囊休止、遗传和剂量换算疑误，并补核原始试验及 FDA/EMA 2025 安全信息。RSS 时长 1:59:45 与本地 VTT 2:04:43.88 不一致；不猜偏移，时间仅本地 VTT 导航，未独立回听原音。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "在比较生发产品之前，先明确自己要保住什么",
+      "source_seconds": 32.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "露出头皮的发丝，只是毛囊系统的产物",
+      "source_seconds": 916.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生长期有多长，决定了头发能长到多长",
+      "source_seconds": 1627.17,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "休止并不等于毛囊干细胞全部死亡",
+      "source_seconds": 1939.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血流提供生长条件，却不能解释所有脱发",
+      "source_seconds": 2237.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "米诺地尔让人看见，保发与增发都可能需要持续治疗",
+      "source_seconds": 2285.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "外用与口服的区别，不只是包装形式",
+      "source_seconds": 2382.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "他达拉非的血流逻辑，还没有成为生发效果的证明",
+      "source_seconds": 2842.53,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "PRP 与干细胞注射不是同一个概念",
+      "source_seconds": 2961.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "微针利用的是受控损伤，不是损伤越多越好",
+      "source_seconds": 3163.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "联合治疗的研究，不等于已经证明“死区复活”",
+      "source_seconds": 3519.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肉毒毒素这一支，主要还是假说与有限观察",
+      "source_seconds": 3702.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生长信号像开关网络，不是一条越推越好的油门",
+      "source_seconds": 3998.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "DHT 解释了重要一部分，也不是遗传的全部",
+      "source_seconds": 4170.59,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同一种雄激素，为何与胡须和头发有不同关系",
+      "source_seconds": 4470.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡因的体外结果，不能直接变成洗发水保证",
+      "source_seconds": 4560.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠与生长激素，不应被合成一条抗衰生发处方",
+      "source_seconds": 4866.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胰岛素敏感性与铁，要靠具体检查而不是猜测补足",
+      "source_seconds": 5013.03,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "锯棕榈和草本组合，困难在于疗效归因",
+      "source_seconds": 5309.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "酮康唑改善头皮环境，不等于人人需要更强洗发水",
+      "source_seconds": 5602.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生物素不是角蛋白，也不是普遍缺少的生发原料",
+      "source_seconds": 5857.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "非那雄胺的价值，来自抑制一条具体通路",
+      "source_seconds": 5941.77,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "剂量反应会变平，不代表原稿的极低剂量数字正确",
+      "source_seconds": 6172.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "外用非那雄胺的含量，不能直接换算为血中剂量",
+      "source_seconds": 6330.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "等待毛发变化，不意味着忍受严重副作用",
+      "source_seconds": 6493.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "度他雄胺抑制得更强，仍要比较实际收益和代价",
+      "source_seconds": 6975.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "联合方案需要可解释，而不是把所有产品叠满",
+      "source_seconds": 7133.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-10-31T13:54:12Z"
+}

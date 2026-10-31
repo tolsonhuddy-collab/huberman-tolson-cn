@@ -1,0 +1,123 @@
+{
+  "id": "ep-d7345348f8f4",
+  "title_zh": "氯胺酮怎样改变抑郁治疗：快速缓解、神经可塑性与不能跳过的风险",
+  "title_en": "Ketamine: Benefits and Risks for Depression, PTSD & Neuroplasticity",
+  "source_url": "https://www.hubermanlab.com/episode/ketamine-benefits-and-risks-for-depression-ptsd-and-neuroplasticity",
+  "published": "2023-08-07T08:00:00Z",
+  "editor_note": "依据用户提供完整TXT/VTT作原创中文综合精读；原节目为2023年。强迫游泳/HNK与TrkB机制/给药换算与R-S排序疑误已定位并限定，研究剂量不作自用指南。章节为本地真实VTT起点，未独立回听原音。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "从麻醉药到抗抑郁研究，改变的是使用情境",
+      "source_seconds": 314.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "单胺假说提出了线索，却不是抑郁症的全部解释",
+      "source_seconds": 574.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动物游得更久，究竟告诉了研究者什么",
+      "source_seconds": 935.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "七名患者的小试验，打开了一种新的时间线",
+      "source_seconds": 1407.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "快速缓解和持久缓解，是两项不同的成绩",
+      "source_seconds": 1548.269,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NMDA 受体为什么会出现在学习的讨论里",
+      "source_seconds": 2164.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学会一件事，并不需要永远保持最费力的状态",
+      "source_seconds": 2292.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大脑的工作，也依赖及时踩下刹车",
+      "source_seconds": 2553.109,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "阻断一部分信号，可能释放另一部分活动",
+      "source_seconds": 2808.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "BDNF 把活动变化和细胞改变连接起来",
+      "source_seconds": 3373.789,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "结合 TrkB，不等于药物变成了生长因子",
+      "source_seconds": 3592.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "阿片系统提出了另一种解释，也提出了新的争议",
+      "source_seconds": 3869.309,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "用纳曲酮作比较，体验与症状变化被拆开了",
+      "source_seconds": 4142.309,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "重要的主观经历，未必是唯一的治疗原因",
+      "source_seconds": 4310.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "症状缓解以后，生活会再次进入反馈回路",
+      "source_seconds": 4477.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "缰核和奖赏回路，为变化提供了一张中间地图",
+      "source_seconds": 4659.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "前额叶的参与，并不意味着每个人都学会了正确选择",
+      "source_seconds": 4860.149,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "解离的第三人称感觉，不能拿来衡量治疗深度",
+      "source_seconds": 5057.629,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "给药途径改变暴露，不能靠一个百分比自行换算",
+      "source_seconds": 5182.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "K-hole 指向危险边界，不是值得追求的终点",
+      "source_seconds": 5349.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "R、S 与“微剂量”，仍然需要各自的研究回答",
+      "source_seconds": 5632.149,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-10-31T13:28:32Z"
+}

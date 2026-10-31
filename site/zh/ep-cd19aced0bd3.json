@@ -1,0 +1,143 @@
+{
+  "id": "ep-cd19aced0bd3",
+  "title_zh": "新东西怎样穿过旧世界：马克·安德森谈创新、风险与人工智能",
+  "title_en": "How Risk Taking, Innovation & Artificial Intelligence Transform Human Experience | Marc Andreessen",
+  "source_url": "https://www.hubermanlab.com/episode/marc-andreessen-how-risk-taking-innovation-and-artificial-intelligence-transform-human-experience",
+  "published": "2023-09-04T08:00:00Z",
+  "editor_note": "依据用户提供完整TXT/VTT作原创中文综合精读。人物、制度及技术预测均保留2023年发言归属；医疗问答研究的模型和样本误差据原论文明确注记。章节为真实本地VTT cue起点，未音频回听校准。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Marc Andreessen",
+      "role": "嘉宾",
+      "bio": "马克·安德森 · 软件工程师与投资人"
+    }
+  ],
+  "sections": [
+    {
+      "title": "开放只是开始，创造还需要把事情做完",
+      "source_seconds": 468.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "不容易被说服，与伤害别人是两回事",
+      "source_seconds": 550.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "有潜能，不代表必须选择这种生活",
+      "source_seconds": 629.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "找到同路人，同时防备圈子里的同一种想法",
+      "source_seconds": 986.809,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "追问细节，比表演出来的气势更有用",
+      "source_seconds": 1202.979,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "在脑中走过迷宫，也要接受地图会失效",
+      "source_seconds": 1586.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过程为何可能比一次胜利更能支撑人",
+      "source_seconds": 1833.46,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "亲密关系没有一种成功者通用的配方",
+      "source_seconds": 2174.179,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冒险可以集中在工作里，不必扩散到所有地方",
+      "source_seconds": 2519.699,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大众、机构与能让别人失去职位的人",
+      "source_seconds": 2882.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "信任下降，不能只用一个新平台解释",
+      "source_seconds": 3269.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "改革、替代与大学这个不完美的类比",
+      "source_seconds": 4244.059,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "不要把希望中的钟摆，当成一定回来的钟摆",
+      "source_seconds": 5084.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "人工智能改变的是处理问题的方式",
+      "source_seconds": 5328.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "数据越多，真实性的问题也越突出",
+      "source_seconds": 5803.42,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "签名能帮助确认来源，却不能替人判断真假",
+      "source_seconds": 6170.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一项医疗问答研究，不能证明机器已经会看病",
+      "source_seconds": 6568.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "随身助手越贴近人，退出和自主就越重要",
+      "source_seconds": 6818.429,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "讨论新技术，要把不做的代价也放进来",
+      "source_seconds": 7245.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "核能争论展示了机会成本，也展示了叙事简化",
+      "source_seconds": 7331.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "风险可以认真面对，也可能被用来排除竞争",
+      "source_seconds": 8090.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "道德恐慌的故事，不能替每项技术免除审查",
+      "source_seconds": 9148.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "世界可能被改变，前提是手上确实有东西",
+      "source_seconds": 9575.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小团队的速度，以及大组织怎样保护自己的野鸭",
+      "source_seconds": 10026.299,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-10-31T13:27:09Z"
+}
