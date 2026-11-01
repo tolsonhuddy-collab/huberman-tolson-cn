@@ -1,0 +1,143 @@
+{
+  "id": "ep-f4db44031a67",
+  "title_zh": "安迪·加尔平：营养与补剂怎样服务训练，而不遮住身体的信号",
+  "title_en": "GUEST SERIES | Dr. Andy Galpin: Optimal Nutrition & Supplementation for Fitness",
+  "source_url": "https://hubermanlab.com/dr-andy-galpin-optimal-nutrition-and-supplementation-for-fitness",
+  "published": "2023-02-22T09:00:00Z",
+  "editor_note": "根据2023年2月22日完整英文TXT与本地VTT作原创中文综合。原节目身份、首发日期和封面经本轮官方RSS及页面核实；时间仅作字幕定位，未回听原音或验证时间偏移。原稿算术、褪黑素倍数、皮质醇与失眠表述疑点在正文显注；本期观点不是当前医疗指南或自服补剂方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·胡伯曼，神经科学研究者；本期提问并分享个人使用经验。"
+    },
+    {
+      "name": "Andy Galpin",
+      "role": "嘉宾",
+      "bio": "安迪·加尔平，运动生理学研究者；本期关于训练、营养与补充剂的受访者。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先问身体缺什么，再问瓶子里有什么",
+      "source_seconds": 25.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌酸首先是能量储备，不是让人兴奋的开关",
+      "source_seconds": 325.759,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大脑研究值得关注，也必须保留“不治疗”的界线",
+      "source_seconds": 377.199,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补水的两端都会出问题",
+      "source_seconds": 1254.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一个过量饮水个案说明了什么",
+      "source_seconds": 1658.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "日常水量只是起点，运动损失要另算",
+      "source_seconds": 2154.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡的液体与咖啡因要分开看",
+      "source_seconds": 2412.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "汗量、汗里的盐和散热不是一回事",
+      "source_seconds": 2585.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动中的平均公式，需要被身体和环境修正",
+      "source_seconds": 2994.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "食物、口渴与夜间起床，把公式拉回生活",
+      "source_seconds": 3652.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "只有当燃料成为限制，训练中补糖才有意义",
+      "source_seconds": 4369.679,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "空腹能不能练，与空腹是不是更好，是两个问题",
+      "source_seconds": 4613.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡因有表现收益，也有把表现推坏的剂量",
+      "source_seconds": 5138.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "甜菜根、瓜氨酸与专注补剂，证据不能打包",
+      "source_seconds": 5504.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "红景天的讨论，不等于“皮质醇越低越好”",
+      "source_seconds": 5747.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "单方与第三方检测，解决的是可解释性和质量问题",
+      "source_seconds": 6001.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "短期缓解可以有用，长期目标仍是减少依赖",
+      "source_seconds": 6546.679,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "缓冲疲劳和改变菌群，都需要问清证据对象",
+      "source_seconds": 7171.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠需要查环境，也需要查病理",
+      "source_seconds": 7364.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "不让睡眠分数反过来控制睡眠",
+      "source_seconds": 8072.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恢复与适应之间，隔着一个疲劳问题",
+      "source_seconds": 8524.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "炎症不是敌人，抗炎也不是一个统一按钮",
+      "source_seconds": 8806.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增殖、重塑与营养缺口，不应合成一张补剂处方",
+      "source_seconds": 9036.319,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "训练窗口是真实生理现象，却不是三十分钟倒计时",
+      "source_seconds": 9984.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:25:35Z"
+}

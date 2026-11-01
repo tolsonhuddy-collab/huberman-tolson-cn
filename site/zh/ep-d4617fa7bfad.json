@@ -1,0 +1,148 @@
+{
+  "id": "ep-d4617fa7bfad",
+  "title_zh": "头痛为什么不能一概而论：从疼痛通路到饮食、补剂与治疗证据",
+  "title_en": "How to Stop Headaches Using Science-Based Approaches",
+  "source_url": "https://hubermanlab.com/how-to-stop-headaches-using-science-based-approaches",
+  "published": "2023-02-06T09:00:00Z",
+  "editor_note": "原创中文精读。正文显注先兆定义、阿司匹林/对乙酰氨基酚、肉毒毒素适应证、儿童TBI肌酸pilot、饮食RCT平行设计及HIT-6未显著、红灯外推、薄荷不同配方、动物针灸机制与辣椒病例转归。所有研究剂量仅作条件识别，不提供自服/注射方案，2023访谈不作为2026临床指南。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 主讲人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先弄清疼痛的模式，再讨论怎样干预",
+      "source_seconds": 15.719,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "疼痛可以来自脑外，感觉仍由神经系统形成",
+      "source_seconds": 569.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "炎症是一种信号，也可能把局部问题扩大",
+      "source_seconds": 1004.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "感觉、运动与调节，让止痛有不止一个入口",
+      "source_seconds": 1452.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "紧张型头痛，常与睡眠和头颈状态纠缠",
+      "source_seconds": 1912.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "偏头痛是一组反复发生的神经系统症状",
+      "source_seconds": 2083.379,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“预感要发作”与先兆，需要分清",
+      "source_seconds": 2273.46,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "丛集性头痛，往往带着一侧眼鼻的变化",
+      "source_seconds": 2598.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "月经相关头痛，关键不只是一个“低”字",
+      "source_seconds": 2866.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "头部受伤后的头痛，不以有没有昏倒划界",
+      "source_seconds": 3218.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠与生活规律，是支持恢复的背景",
+      "source_seconds": 3554.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌酸为什么进入脑损伤研究",
+      "source_seconds": 3759.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌酸结果最容易丢失的，是受试者和指标",
+      "source_seconds": 4097.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "Omega-3与Omega-6，不是好油和坏油的简单对立",
+      "source_seconds": 4497.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一万多人的调查，告诉我们的是关联",
+      "source_seconds": 4688.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "饮食随机试验，改善了哪些结果",
+      "source_seconds": 4938.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“每天一克EPA就有效”，还不能作为通用阈值",
+      "source_seconds": 5168.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "畏光可以加重疼痛，红灯建议却不能照搬",
+      "source_seconds": 5737.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "普通止痛药的边界，也需要准确表达",
+      "source_seconds": 6290.58,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肉毒毒素的机制，不等于紧张型头痛通用疗法",
+      "source_seconds": 6410.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "薄荷油实验，配方不同，结果也不同",
+      "source_seconds": 6754.619,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "清凉感为什么可能改变痛觉",
+      "source_seconds": 7158.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "针灸的临床结果，与动物机制要分层阅读",
+      "source_seconds": 7304.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡因既能缓解，也能成为问题的一环",
+      "source_seconds": 7732.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "姜黄素的配方与剂量，不能从香料名直接推出",
+      "source_seconds": 8006.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "雷击样头痛是警报，不是一种可在家判断的血管状态",
+      "source_seconds": 8365.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:15:41Z"
+}

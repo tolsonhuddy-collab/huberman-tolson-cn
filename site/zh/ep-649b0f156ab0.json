@@ -1,0 +1,173 @@
+{
+  "id": "ep-649b0f156ab0",
+  "title_zh": "把训练排进真实生活：Andy Galpin谈目标、周期与一周课表",
+  "title_en": "GUEST SERIES | Dr. Andy Galpin: Optimize Your Training Program for Fitness & Longevity",
+  "source_url": "https://hubermanlab.com/dr-andy-galpin-optimize-your-training-program-for-fitness-and-longevity",
+  "published": "2023-02-08T09:00:00Z",
+  "editor_note": "原创中文精读，依据完整英文转写。十步设计与季度/每周模板均保留教练经验归属和个人条件；百分比增长/减量口播算例、A/B/C估计人群、睡眠和患病训练、身体活动统计口径均显注。2023对谈不替代当前个体训练或医学评估。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Andy Galpin",
+      "role": "嘉宾 / 对谈者",
+      "bio": "安迪·加尔平 · 运动生理学与体能训练研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "计划的价值，首先是让人坚持和逐步进步",
+      "source_seconds": 13.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把愿望写成能判断进度的目标",
+      "source_seconds": 822.838,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一年目标，可以倒推成不同形状的季度",
+      "source_seconds": 1197.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多个目标能共存，冲突常从疲劳开始",
+      "source_seconds": 1724.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "三种常见需求，仍要各自找到可测的代理指标",
+      "source_seconds": 2226.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "找出真正挡住目标的“防守者”",
+      "source_seconds": 2890.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "四个象限分十点，不允许凭空多出容量",
+      "source_seconds": 3106.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "用一两个具体行动，把分配变成现实",
+      "source_seconds": 3473.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "先填生活日历，再决定能练几天",
+      "source_seconds": 3938.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动作要看一整周的平衡和可进阶性",
+      "source_seconds": 4237.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "先学会控制，再把速度与疲劳加进去",
+      "source_seconds": 4422.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把最重要的事，放在最可靠的位置",
+      "source_seconds": 4702.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最难坚持的日子，未必安排最难的课",
+      "source_seconds": 5081.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "夜间训练与睡眠，要看实际反应和降调过程",
+      "source_seconds": 5460.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "渐进负荷，算的是整周，不是每堂都多一点",
+      "source_seconds": 5785.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "减量周是主动调节，不能只等生病才休息",
+      "source_seconds": 6034.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "次数、组数和休息，都要服务于同一种适应",
+      "source_seconds": 6100.092,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "年度模板的意义，是轮换重点而不丢掉基础",
+      "source_seconds": 6581.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "第一季偏重增肌，热量盈余也应有分寸",
+      "source_seconds": 6851.29,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "第二季偏重减脂，保留力量并引入新鲜感",
+      "source_seconds": 6950.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "第三季练高心率输出，同时维持已有力量",
+      "source_seconds": 7014.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "第四季转向较长耐力，并给年度评估留位置",
+      "source_seconds": 7081.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡差、生病和恢复，不能只问“今天练不练”",
+      "source_seconds": 8792.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "只有三天时，把互相兼容的任务放在一起",
+      "source_seconds": 9246.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "正式训练之外，还需要日常身体活动",
+      "source_seconds": 9471.97,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "四天模板前半周：力量之后，不再重复同样疲劳",
+      "source_seconds": 9649.17,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "四天模板后半周：肌耐力与有氧各有任务",
+      "source_seconds": 9748.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增加到六天，需要的不是把每节都练得更狠",
+      "source_seconds": 10274.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "自我调节有规则，持续改动则应重写计划",
+      "source_seconds": 10467.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "训练为了生活，也应给难得的体验留余地",
+      "source_seconds": 10823.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:15:41Z"
+}

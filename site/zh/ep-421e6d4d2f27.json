@@ -1,0 +1,148 @@
+{
+  "id": "ep-421e6d4d2f27",
+  "title_zh": "把进食放回一天的节律：萨钦·潘达谈限时进食、代谢与真实生活",
+  "title_en": "Intermittent Fasting to Improve Health, Cognition & Longevity | Dr. Satchin Panda",
+  "source_url": "https://hubermanlab.com/dr-satchin-panda-intermittent-fasting-to-improve-health-cognition-and-longevity/",
+  "published": "2023-03-13T08:00:00Z",
+  "editor_note": "按2023年完整对谈原创编写，删除广告、应用推介、筹资和无效重复。限时喂养小鼠寿命与人体减重不混同；明确雄性夜行动物、8h对照原10h、RED-S、儿童十二小时口述的证据边界。消防员155口述与论文137样本分开，并限定总体VLDL颗粒大小及高风险子组结果；islet误识为eyelid作定位说明。长禁食、二甲双胍、雷帕霉素和小檗碱不写成自服或停药指南。本篇不是2026年医疗指南。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 神经科学研究者",
+      "bio": "安德鲁·休伯曼 · 主持人，斯坦福大学神经科学研究者"
+    },
+    {
+      "name": "Satchin Panda",
+      "role": "嘉宾 / 昼夜节律研究者",
+      "bio": "萨钦·潘达 · 索尔克研究所昼夜节律与代谢研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先把几种“禁食”分开",
+      "source_seconds": 498.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "食物也是身体用来对时的信号",
+      "source_seconds": 968.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "消化系统会提前准备，也有自己的夜晚",
+      "source_seconds": 1404.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "停止咀嚼，不等于已经进入某个代谢开关",
+      "source_seconds": 1556.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "老的热量限制实验，可能同时限制了时间",
+      "source_seconds": 2045.279,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "体重相近的小鼠，寿命仍然可以不同",
+      "source_seconds": 2430.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“没有额外减重”，回答的是哪一个比较",
+      "source_seconds": 2687.579,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "窗口压得很短，可能吃不够需要的能量",
+      "source_seconds": 2910.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "十二小时的价值，也可能来自简单和可维持",
+      "source_seconds": 3225.839,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一杯不含热量的咖啡，也可能影响空腹体验",
+      "source_seconds": 3842.579,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "晚上留下来的时间，人们还需要生活",
+      "source_seconds": 4639.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“我是夜猫子”，里面可能有可改变的环境",
+      "source_seconds": 4894.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "光的敏感度不同，同样的灯未必有同样的影响",
+      "source_seconds": 5442.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "轮班问题不只属于拿夜班工资的人",
+      "source_seconds": 5806.139,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学校和工作的时间表，也会改变健康选择",
+      "source_seconds": 6460.679,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "消防员试验首先要证明，他们做得到",
+      "source_seconds": 6743.239,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "消防员的结果，需要区分总体和高风险子组",
+      "source_seconds": 7263.119,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "能在接警间隙睡觉，和整夜不能睡仍有区别",
+      "source_seconds": 7516.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "人们记得三餐，身体却可能遇见七次食物",
+      "source_seconds": 8033.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "儿童的十二小时，不能变成儿童减重处方",
+      "source_seconds": 8356.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "偶尔不吃一餐，和每天规律是两种问题",
+      "source_seconds": 8536.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "连续几天禁食的门诊经验，不是居家挑战",
+      "source_seconds": 8722.979,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血糖不是越平、越低就越健康",
+      "source_seconds": 8938.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把空腹信号做成药，仍然绕不开时间和条件",
+      "source_seconds": 9124.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一次降糖不适的经历，让问题回到具体的人",
+      "source_seconds": 9451.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:03:48Z"
+}

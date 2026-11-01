@@ -1,0 +1,158 @@
+{
+  "id": "ep-ac68ede826b3",
+  "title_zh": "喝多少水，怎样看水质：从身体的水盐平衡到特殊水的证据",
+  "title_en": "How to Optimize Your Water Quality & Intake for Health",
+  "source_url": "https://hubermanlab.com/how-to-optimize-your-water-quality-and-intake-for-health",
+  "published": "2023-03-06T09:00:00Z",
+  "editor_note": "原创中文精读，依据完整注册英文TXT。开头士兵冷暴露论文已于2024年撤稿，正文前置说明，相关数字仅为2023历史转述。饮水估算不作为个体处方；共价/氢键、冷淋浴时长、ADH器官归属、2%口径、氟研究外推及富氢水与pH混同均显注。有限核查官方资料及已访问原论文/摘要，未据访问受阻页面声称全文验证。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 讲述者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "一杯水里，其实有三个不同的问题",
+      "source_seconds": 15.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷暴露插曲：士兵研究说明了什么",
+      "source_seconds": 361.755,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "水分子的形状，解释了它为什么会相互吸引",
+      "source_seconds": 1167.375,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冰能浮起来，水滴也能留在玻璃上",
+      "source_seconds": 1361.399,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“第四相”是研究话题，饮用收益是另一回事",
+      "source_seconds": 1701.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "盐能溶解，油会成滴：细胞利用的是这些差异",
+      "source_seconds": 2278.035,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "穿过细胞膜，水有慢路，也有专用通道",
+      "source_seconds": 2563.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "水的pH，与身体的酸碱平衡不能互换",
+      "source_seconds": 2991.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "氧化还原机制，不能直接变成“多喝就抗衰老”",
+      "source_seconds": 3443.085,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脱水影响表现，判断它却不靠一个小窍门",
+      "source_seconds": 3758.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "前十小时约2.4升，是主持人的基线框架",
+      "source_seconds": 4117.605,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动补水公式，先弄清单位和重复计算",
+      "source_seconds": 4349.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热环境、电解质和咖啡，需要分别处理",
+      "source_seconds": 4541.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "水分状况怎样进入大脑的警觉系统",
+      "source_seconds": 4806.795,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肾脏一直在工作，抗利尿激素帮助它调水",
+      "source_seconds": 5066.535,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想减少夜间起床，先看白天有没有喝够",
+      "source_seconds": 5205.915,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "自来水的风险，必须回到具体水源和浓度",
+      "source_seconds": 5375.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "氟与甲状腺：病例对照不是统一危险阈值",
+      "source_seconds": 5732.535,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "选过滤设备，要问它具体能去掉什么",
+      "source_seconds": 5907.045,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "静置和沉淀，不能承诺让化学污染水安全",
+      "source_seconds": 6258.434,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "硬水中的钙镁，关联研究仍不能变成处方",
+      "source_seconds": 6493.53,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "烧开解决什么，与喝冷还是喝温无关",
+      "source_seconds": 6835.335,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "蒸馏水和反渗透，先看处理过程再谈健康",
+      "source_seconds": 7044.615,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "富氢、低氘、碱性，是不同的化学问题",
+      "source_seconds": 7236.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "四周富氢水试验，改善的是哪些指标",
+      "source_seconds": 7554.195,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "主持人的产氢片体验，还不是比较试验",
+      "source_seconds": 7873.755,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "结构水回到结尾，仍缺少饮用的临床证明",
+      "source_seconds": 8044.865,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最后一段落到水龙头：源头、管路与维护",
+      "source_seconds": 8225.195,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:06:07Z"
+}

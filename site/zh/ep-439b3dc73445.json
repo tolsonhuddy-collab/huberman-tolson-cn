@@ -1,0 +1,158 @@
+{
+  "id": "ep-439b3dc73445",
+  "title_zh": "安迪·加尔平：耐力的四种练法，与“燃脂”最容易弄错的事",
+  "title_en": "GUEST SERIES | Dr. Andy Galpin: How to Build Physical Endurance & Lose Fat ",
+  "source_url": "https://hubermanlab.com/dr-andy-galpin-how-to-build-physical-endurance-and-lose-fat",
+  "published": "2023-02-01T09:00:00Z",
+  "editor_note": "根据2023年2月1日完整英文TXT与本地VTT作原创中文精读。官方原始RSS身份、首发日期和封面已由本轮核实；字幕定位未回听原音或验证偏移。原稿双键/饱和定义、pH方向、RER/RQ和代谢区室/计量的简化及疑误在正文标明；研究量和教练经验不是医疗诊断或个人训练处方。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·胡伯曼，神经科学研究者；本期提问并分享个人使用经验。"
+    },
+    {
+      "name": "Andy Galpin",
+      "role": "嘉宾",
+      "bio": "安迪·加尔平，运动生理学研究者；本期关于训练、营养与补充剂的受访者。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "耐力的问题，先拆成供能与疲劳管理",
+      "source_seconds": 163.31900000000002,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "二十秒的运动片段，研究意义不在于卡秒",
+      "source_seconds": 543.079,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最快的改进，有时来自少漏掉一点效率",
+      "source_seconds": 277.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脂肪离开身体的路线，不是一项呼吸减肥术",
+      "source_seconds": 1471.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一堂课用了多少脂肪，不等于最终少了多少体脂",
+      "source_seconds": 2409.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "心率下降的适应，不能拿最大心率来打分",
+      "source_seconds": 2564.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "呼吸交换比是一扇窗，不是体脂的实时秤",
+      "source_seconds": 3034.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "糖原和体脂互相配合，却不会把脂肪变成肌肉",
+      "source_seconds": 4200.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "后燃效应和新增肌肉，别承担它们做不到的减脂任务",
+      "source_seconds": 4637.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "空腹与先练哪一种，都没有单独的减脂魔法",
+      "source_seconds": 2992.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "代谢灵活性，不能凭一顿饭或一项化验诊断",
+      "source_seconds": 4855.239,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "练会使用一种燃料，不等于必须多吃一种燃料",
+      "source_seconds": 5468.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "能量系统的快慢，要从细胞里的位置理解",
+      "source_seconds": 5853.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "乳酸是可利用的中间物，不是疲劳的唯一罪魁",
+      "source_seconds": 6263.719,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "时间长短是提示，不能只凭秒表认领一种系统",
+      "source_seconds": 6873.719,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脂肪氧化和糖氧化相遇，蛋白质则主要是结构材料",
+      "source_seconds": 8042.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "局部肌耐力，先明确是哪块肌肉在什么动作里失败",
+      "source_seconds": 9053.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动作、负荷、组数与进步，要围着目标组织",
+      "source_seconds": 9570.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "无氧能力的名字，不表示有氧可以缺席",
+      "source_seconds": 9941.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "呼吸四档是教练语言，不能代替生理测量",
+      "source_seconds": 10342.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "高强度动作要熟悉，技术成本不能太高",
+      "source_seconds": 10781.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "间歇的质量，会被过多轮数和过短休息吃掉",
+      "source_seconds": 11070.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“甘蔗”练习与递进，把比较条件留住",
+      "source_seconds": 11530.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最大有氧输出，练的是几分钟内能够持续的高工作率",
+      "source_seconds": 11804.239,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "长时耐力可以换形式，呼吸肌与姿势却不能忽略",
+      "source_seconds": 12157.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把一周拼起来，先分清主目标与恢复成本",
+      "source_seconds": 12564.389,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "半马示例，把心肺之外的组织承受力放回来",
+      "source_seconds": 13130.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:27:14Z"
+}

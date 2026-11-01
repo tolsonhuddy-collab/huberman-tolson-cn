@@ -1,0 +1,163 @@
+{
+  "id": "ep-93aef72ab010",
+  "title_zh": "恢复不是越快越好：安迪·加尔平谈酸痛、训练适应与身体的压力余量",
+  "title_en": "GUEST SERIES | Dr. Andy Galpin: Maximize Recovery to Achieve Fitness & Performance Goals",
+  "source_url": "https://hubermanlab.com/guest-series-dr-andy-galpin-maximize-recovery-to-achieve-fitness-and-performance-goals",
+  "published": "2023-02-15T09:00:00Z",
+  "editor_note": "依据用户提供的完整英文TXT与同批VTT原创综合。节目身份、原RSS首发日期与封面依据本轮登记；章节采用真实VTT cue.start并核对文字语义，未回听或逐秒校准音轨。原稿肌梭/神经递质、激素单位/比例、呼吸试验、冬泳时长、Fry试验与检测范围等疑点均在对应正文处说明；必要核查只涉及实际可读的官方资料/原论文结果或摘要，不声称全盘更新2023观点。无广告、订阅口播或自行用药/极端冷热操作方案。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼，神经科学研究者；本期采访者。"
+    },
+    {
+      "name": "Andy Galpin",
+      "role": "嘉宾",
+      "bio": "安迪·加尔平，运动生理学家；本文区分其2023年研究解释与教练实践。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "01 训练提出问题，恢复才让能力改变",
+      "source_seconds": 25.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "02 酸痛并不是肌肉损伤的直接读数",
+      "source_seconds": 256.479,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "03 肿胀、肌梭与痛觉：机制解释要保留假说身份",
+      "source_seconds": 693.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "04 轻活动为什么可能让人舒服，乳酸为何不是答案",
+      "source_seconds": 888.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "05 看起来不好的急性变化，可能属于适应过程",
+      "source_seconds": 1363.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "06 今天舒服一点，与几个月后更强的取舍",
+      "source_seconds": 1929.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "07 四种状态，差别在退步持续多久以及恢复后得到什么",
+      "source_seconds": 2451.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "08 先看看计划是否写错，而不是寻找更强的恢复手段",
+      "source_seconds": 2771.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "09 给训练一个结束：音乐与下调呼吸",
+      "source_seconds": 3205.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "10 呼吸研究支持了什么，没有支持什么",
+      "source_seconds": 3394.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "11 压缩衣：可能有帮助，但不是越紧越好",
+      "source_seconds": 3881.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "12 按摩、气压靴与轻活动，主要先改变感受",
+      "source_seconds": 4109.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "13 冷水浸泡：减少酸痛可能伴随适应代价",
+      "source_seconds": 4166.159,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "14 热与冷热交替：舒服的经验不是通用阈值",
+      "source_seconds": 4390.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "15 不需要把所有工具叠到同一次恢复里",
+      "source_seconds": 4905.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "16 用三类证据看压力，别让一个分数独自裁决",
+      "source_seconds": 5071.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "17 极端深蹲实验，看见了什么适应失败",
+      "source_seconds": 5494.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "18 “肾上腺疲劳”与激素比例，不能充当快捷诊断",
+      "source_seconds": 6419.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "19 皮质醇有自己的日程，不必一天到晚压低",
+      "source_seconds": 6644.639,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "20 HRV是节律的细微变化，不是人人可比的成绩",
+      "source_seconds": 7522.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "21 先确认数据，再分清一天与一段时间",
+      "source_seconds": 7920.079,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "22 急性状态切换，可以有用，也会失效",
+      "source_seconds": 8111.159,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "23 手机、镜子与录像，最终要帮助人认识自己的动作",
+      "source_seconds": 8702.279,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "24 连续多日失衡时，回到睡眠、生活与训练本身",
+      "source_seconds": 8940.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "25 恢复能力像球道，也需要适度拓宽",
+      "source_seconds": 9163.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "26 一个主观指标，加一个客观指标，往往已经够用",
+      "source_seconds": 9759.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "27 隐藏压力与性欲：需要线索，不需要一键增睾",
+      "source_seconds": 10059.399,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "28 握力、纵跳与灰区：把测量变成可执行的判断",
+      "source_seconds": 10807.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-01T11:19:24Z"
+}
