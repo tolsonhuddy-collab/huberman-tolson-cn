@@ -1,0 +1,150 @@
+{
+  "id": "ep-d5fadb514ced",
+  "title_zh": "酒精的短暂愉悦与长期代价：从醉意、宿醉到依赖和健康风险",
+  "title_en": "What Alcohol Does to Your Body, Brain & Health",
+  "source_url": "https://www.hubermanlab.com/episode/what-alcohol-does-to-your-body-brain-health",
+  "published": "2022-08-22T08:00:00Z",
+  "editor_note": "本文原创综合2022年节目。标准杯与英国单位、乙醇和乙醛、ADH与ALDH、影像关联及癌风险单位等疑误原位显注；宿醉冷水/电解质/发酵食物等未经充分验证的推想不改写为自助方案。重度或身体依赖者骤停可能危险，应先获得医疗评估。并非2026年统一临床指南、用药或戒断流程。",
+  "source_intro": "节目身份、首发日期、原页面与封面来自官方RSS及节目页面。精读依据原始本地英文TXT与VTT；章节使用实际非空字幕起点并逐项核对邻文语义。未回听原音，VTT末端比当前官方RSS时长多284.782秒（约4分45秒），原因未知，未假定广告偏移或逐秒校准。",
+  "dek": "把短暂放松与长期代价分开：辨清标准杯、乙醇与乙醛、脑影像关联、宿醉假说，以及耐受、危险戒断和癌症风险的研究边界。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 主讲人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "研究里的一杯，未必是餐桌上的一杯",
+      "source_seconds": 55.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脑影像关联，不等于看见神经元死亡",
+      "source_seconds": 270.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "乙醇、乙醛、乙酸，是不同的分子",
+      "source_seconds": 835.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“空热量”并不是热量不算数",
+      "source_seconds": 1062.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "醉意不能只归给乙醛",
+      "source_seconds": 1104.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "放开了的行为，未必是更好的判断",
+      "source_seconds": 1317.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "重复饮酒与习惯回路，不能共用一个恢复时限",
+      "source_seconds": 1482.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "食物可以影响吸收，不能把醉意倒带",
+      "source_seconds": 1730.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "情绪的先升后降，不是一张递质刻度表",
+      "source_seconds": 1821.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "断片不等于昏睡",
+      "source_seconds": 2178.15,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "压力系统的变化，可能延续到不饮酒的时候",
+      "source_seconds": 2311.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "遗传不是命运，红脸也不是“酒量练习”",
+      "source_seconds": 2767.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "越早开始的关联，值得关注但不是宿命",
+      "source_seconds": 2999.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肠、肝与脑，形成相互影响的网络",
+      "source_seconds": 3276.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "发酵食物研究，并没有验证“抵消饮酒”",
+      "source_seconds": 3651.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "宿醉是一组症状，睡得过去不等于睡得好",
+      "source_seconds": 3867.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "头痛与止痛药，不能混成同一种风险",
+      "source_seconds": 4131.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷水带来清醒感，不等于治愈宿醉",
+      "source_seconds": 4330.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "水、电解质与酒类成分，都不是解酒保证",
+      "source_seconds": 4654.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "耐受增强，可能意味着获得的愉悦反而减少",
+      "source_seconds": 5149.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恢复需要支持，重度戒断不能独自硬扛",
+      "source_seconds": 5598.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "红酒与白藜芦醇，不能互相替健康背书",
+      "source_seconds": 5627.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "癌症风险，要把每天、相对与绝对说完整",
+      "source_seconds": 5851.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "香烟换算与维生素，不能变成抵消公式",
+      "source_seconds": 6165.51,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "孕期没有某一种“安全的酒”",
+      "source_seconds": 6422.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "激素效应，也要分清急性与长期",
+      "source_seconds": 6658.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:41:46Z"
+}

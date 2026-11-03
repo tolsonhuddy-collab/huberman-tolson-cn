@@ -1,0 +1,145 @@
+{
+  "id": "ep-74d5535e8425",
+  "title_zh": "情绪怎样改变行为：从小鼠攻击与交配回路看大脑状态",
+  "title_en": "The Biology of Aggression, Mating, & Arousal | Dr. David Anderson",
+  "source_url": "https://www.hubermanlab.com/episode/dr-david-anderson-the-biology-of-aggression-mating-and-arousal",
+  "published": "2022-09-12T08:00:00Z",
+  "editor_note": "原创中文精读，保留果蝇与小鼠实验、成像与操控、人体相关与临床效果的区别。MPOA成像被误解为刺激的现场纠正完整保留；P物质人体研究样本和检测材料、迷走神经方向及荧光报告含义在正文标明。人类性偏好与伤害、不同意行为分开，不作激素或精神药物方案。",
+  "source_intro": "官方完整期于2022-09-12T08:00:00Z首发，按官方RSS及节目页核实。正文依据用户提供的完整英文转录，章节采用随附字幕的实际时间作定位；未独立回听原音。字幕终点比RSS音频时长晚266.51秒，原因未知，未假定广告偏移或完成音频校准。",
+  "dek": "从情绪的持久与泛化，到小鼠攻击、交配和隔离研究，理解观察、因果操作、主观感觉与人体临床证据的不同范围。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "David Anderson",
+      "role": "来宾",
+      "bio": "戴维·安德森 · 加州理工学院生物学研究者（节目介绍）"
+    }
+  ],
+  "sections": [
+    {
+      "title": "情绪是内在状态，感觉是可以报告的一部分",
+      "source_seconds": 530.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "状态会持续，也会从一个情境带到另一个情境",
+      "source_seconds": 699.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多巴胺不能把唤醒一键变成愉快",
+      "source_seconds": 934.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "攻击是一类行为，未必来自同一种情绪",
+      "source_seconds": 1161.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "电刺激失败之后，精确到细胞的工具改变了问题",
+      "source_seconds": 1340.58,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "有些进攻能成为奖赏，不等于愤怒都令人愉快",
+      "source_seconds": 1504.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恐惧与进攻相邻，可能与优先级有关",
+      "source_seconds": 1773.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“压力桶”解释不了所有攻击驱动",
+      "source_seconds": 2238.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "下丘脑像天线，也像广播中心",
+      "source_seconds": 2840.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "雄鼠的雌激素受体，打破了简单的激素标签",
+      "source_seconds": 2998.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "母鼠的转变，像两群细胞之间的跷跷板",
+      "source_seconds": 3182.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "交配与攻击会互相制约，也可能共同参与",
+      "source_seconds": 3738.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "谈到人类性偏好，不能把类比当诊断",
+      "source_seconds": 3919.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "看见神经元活动，不等于已经能操控每个动作",
+      "source_seconds": 4320.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "温度与行为的联系，尚不是一套干预方法",
+      "source_seconds": 4371.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同样是骑跨，要连同声音和前后文一起看",
+      "source_seconds": 4601.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "雌鼠能做相似动作，功能仍可能未知",
+      "source_seconds": 4870.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "中脑导水管周围灰质，像连接多条线路的交换台",
+      "source_seconds": 5170.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从果蝇到小鼠，神经肽提供了另一条线索",
+      "source_seconds": 5465.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "两周隔离的鼠实验，不等于孤独者的命运",
+      "source_seconds": 5632.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一种受体拮抗剂，为何被研究者重新提起",
+      "source_seconds": 5724.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "人类证据要核对样本，也要防止给孤独贴上暴力标签",
+      "source_seconds": 5902.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体感觉图，画出的是报告而非体温",
+      "source_seconds": 6270.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脑与身体双向交流，方向术语也要分清",
+      "source_seconds": 6518.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:39:40Z"
+}

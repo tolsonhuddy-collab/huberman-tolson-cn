@@ -1,0 +1,155 @@
+{
+  "id": "ep-8080fb5eb21b",
+  "title_zh": "诺兰·威廉姆斯：重排抑郁回路，怎样分清体验、药物与治疗",
+  "title_en": "Psychedelics & Neurostimulation for Brain Rewiring | Dr. Nolan Williams",
+  "source_url": "https://www.hubermanlab.com/episode/dr-nolan-williams-psychedelics-and-neurostimulation-for-brain-rewiring",
+  "published": "2022-10-10T08:00:00Z",
+  "editor_note": "依据完整英文转写作原创中文综合精读；2022年的研究、招募和设备信息按当时时点理解，不构成当前医疗指南、自助用药、停药或刺激方案。临床研究、机制假说与个案体验分开；关键疑误及必要原研究/官方核查见正文。",
+  "source_intro": "本篇依据用户提供的完整英文TXT（161200字符）与原生英文VTT编辑，节目身份、原始首发日期和官方链接由官方播客资料核对。26节定位均取真实非空VTT cue.start并核对邻文，仅供导航；未独立回听原音。VTT末端10133.205秒，比官方RSS时长9796秒长337.205秒，原因未明，不假定广告偏移。01:18:04.340至01:18:09.510有真实5.17秒字幕间隔，前后在现有文字中语义可衔接，未见明确实质缺段证据；未凭此断言只是暂停或绝无漏词。原始英文未改，广告和重复开场/订阅口播未收入正文。针对部分临床数字、MDMA认知研究人群、CBD和刺激风险作了原研究或官方有限核对，不能代表已核实访谈全部断言；出版方撤稿原页访问403，相关细节未冒称核清。",
+  "dek": "从脑心连接和信念的灵活性，到氯胺酮、迷幻药与加速磁刺激：把快速改善放回研究设计、证据边界和专业治疗。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者，本期提问并分享个人观察。"
+    },
+    {
+      "name": "Nolan Williams",
+      "role": "嘉宾 / 对谈者",
+      "bio": "诺兰·威廉姆斯 · 精神科与神经科医生，访谈时研究脑刺激及情绪障碍；文中研究与临床观察按其发言归属。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "同一个抑郁诊断，里面可能有不同的困难",
+      "source_seconds": 607.193,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "越需要急救，为什么有时反而越缺少工具",
+      "source_seconds": 818.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "用磁刺激进入网络，心脏提供了什么线索",
+      "source_seconds": 949.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "心率变慢，并不等于抑郁正在被治好",
+      "source_seconds": 1725.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "左右前额叶的差别，不能只靠外观来判断",
+      "source_seconds": 1137.69,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "行为方法能帮多少，也取决于疾病把人推到了哪里",
+      "source_seconds": 1539.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "前额叶不是一个总开关，里面也有不同的工作分区",
+      "source_seconds": 2052.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "改变一个信念，为什么有时需要先恢复处理它的能力",
+      "source_seconds": 2535.863,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "谁先活动、谁来调节，是一个值得追问的时间问题",
+      "source_seconds": 2640.84,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冲突、强迫与解离，既有关联也不能混成一种症状",
+      "source_seconds": 2984.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "氯胺酮实验，怎样把主观体验与抗抑郁效果拆开",
+      "source_seconds": 3378.563,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "体验很重要，不代表药理作用可以从解释里消失",
+      "source_seconds": 3626.46,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血清素假说受质疑，不等于抗抑郁药突然失效",
+      "source_seconds": 3927.99,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "能够再次改善，本身也会改变人对复发的理解",
+      "source_seconds": 4241.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "创伤记忆为什么会留下，又怎样可能被重新理解",
+      "source_seconds": 4546.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "临床试验里的改善，必须连同治疗场景一起读",
+      "source_seconds": 4891.35,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "没测出明显认知差异，不能翻译成绝对无害",
+      "source_seconds": 5123.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "裸盖菇素改变的，可能不只是感觉有多强",
+      "source_seconds": 5450.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“放下控制”在治疗中有含义，也有保护条件",
+      "source_seconds": 5820.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "伊博格碱的生活回顾，首先是尚待解释的体验",
+      "source_seconds": 6400.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "特种部队研究的希望，与心脏风险必须同时保留",
+      "source_seconds": 6670.853,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "死藤水的文化使用，不能直接证明儿童和囚犯治疗安全",
+      "source_seconds": 7348.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "THC与CBD要分开，成年也不是一张安全通行证",
+      "source_seconds": 7750.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "相对伤害排名，回答不了某个人该不该用药",
+      "source_seconds": 8106.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "剥夺睡眠的抗抑郁现象，不是家庭熬夜方案",
+      "source_seconds": 8604.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "加速磁刺激，把位置、剂量和时间一起当作治疗",
+      "source_seconds": 8992.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:30:45Z"
+}

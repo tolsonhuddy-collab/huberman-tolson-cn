@@ -1,0 +1,150 @@
+{
+  "id": "ep-71bfbc25c9a4",
+  "title_zh": "埃里希·贾维斯：从鸟鸣与舞蹈，重新理解我们怎样说话",
+  "title_en": "The Neuroscience of Speech, Language & Music | Dr. Erich Jarvis",
+  "source_url": "https://www.hubermanlab.com/episode/dr-erich-jarvis-the-neuroscience-of-speech-language-and-music",
+  "published": "2022-08-29T08:00:00Z",
+  "editor_note": "依据完整英文转写作原创中文综合精读。研究结果、Jarvis的机制与演化假说、两人的艺术和写作体验分开。关于节拍同步、参考基因组和口吃的必要核查在正文显注；动物发现不直接转换成人类诊断或治疗。",
+  "source_intro": "本篇依据用户提供的完整英文TXT（106598字符）与原生英文VTT编辑，节目身份、原始首发日期和官方链接由官方播客资料核对。25节均取真实非空VTT cue.start，并核对邻文语义；时间仅作导航，未独立回听原音。VTT末端6857.896秒，官方RSS时长6605.0秒，差252.896秒的原因未明，不推定为广告偏移。原始英文未改，广告、重复预告与订阅口播未收入正文。原职业选择比较句前后不一致，未擅自对调职业；部分ASR词形与基因组/物种强断言有显式限注。仅核已实际访问的两项原研究摘要及图注、NIDCD口吃资料，不声称核实了所有机制；2022研究计划与未来技术展望不冒充当前全部实现。",
+  "dek": "听懂、模仿、默读、写作与舞动怎样相连？循着贾维斯的动物研究和个人经历，分清神经机制、演化假说与基因组工作的边界。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者；本期提问、分享语言与写作经验。"
+    },
+    {
+      "name": "Erich Jarvis",
+      "role": "嘉宾 / 对谈者",
+      "bio": "埃里希·贾维斯 · 神经生物学研究者，访谈时任洛克菲勒大学教授；研究发声学习、脑回路与比较基因组。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "说话和语言的边界，未必正好对应脑里的边界",
+      "source_seconds": 565.59,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "听得懂，并不等于能用声音模仿出来",
+      "source_seconds": 632.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "手势为何总跟着嘴走，运动通路提供一个解释方向",
+      "source_seconds": 836.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "哭叫与学会一个新词，控制层次有什么不同",
+      "source_seconds": 1020.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "关于祖先何时会说话，基因给出线索而非录音",
+      "source_seconds": 1252.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鸟类为何能成为模型，关键在成组出现的相似性",
+      "source_seconds": 1363.59,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "基因怎样参与发声，答案不只是多开一个开关",
+      "source_seconds": 2014.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鸟儿偏爱自己的老师，也不等于学不会别人的歌",
+      "source_seconds": 1685.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "关键期是在稳定系统，也不把成人的学习彻底关掉",
+      "source_seconds": 2209.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "混合语言与切换手势，有些问题仍然没有答案",
+      "source_seconds": 1819.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一句话在说什么，与它带着什么情绪，可以同时发生",
+      "source_seconds": 2625.145,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从歌唱家庭走向舞蹈，再走进科学实验室",
+      "source_seconds": 2899.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鹦鹉的舞步提出了好问题，却不能排除其他动物",
+      "source_seconds": 3118.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "舞蹈与说话之间，可能共享怎样的运动基础",
+      "source_seconds": 3195.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "感到共振与找到基因关联，都还需要解释这一步",
+      "source_seconds": 3576.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "表情、姿势和声音可以协调，也能学着分开",
+      "source_seconds": 3960.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "默读和写作，为何会牵动没有发出声音的言语",
+      "source_seconds": 4389.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "手写与打字的节奏不同，个人偏好还不是普遍优势",
+      "source_seconds": 4608.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鸟的口吃模型，能提供线索却不能替人作治疗承诺",
+      "source_seconds": 4913.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "接上别人的句尾，与短信中的简写，都有多种解释",
+      "source_seconds": 5073.15,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从言语解码走向辅助沟通，与随时读心相隔很远",
+      "source_seconds": 5666.01,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动帮助思考，在这里首先是两个人的生活经验",
+      "source_seconds": 5942.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "比较许多基因组，是为了分辨声音之外的差别",
+      "source_seconds": 6116.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“完整基因组”也有边界，错误组装会误导功能解释",
+      "source_seconds": 6238.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把遗传信息保存下来，也不让相似性抹去差异",
+      "source_seconds": 6419.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:38:13Z"
+}

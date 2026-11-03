@@ -1,0 +1,145 @@
+{
+  "id": "ep-fc64b125a761",
+  "title_zh": "埃迪·张：语言怎样进入大脑，又怎样从大脑回到世界",
+  "title_en": "The Science of Learning & Speaking Languages | Dr. Eddie Chang",
+  "source_url": "https://www.hubermanlab.com/episode/dr-eddie-chang-the-science-of-learning-and-speaking-languages",
+  "published": "2022-10-24T08:00:00Z",
+  "editor_note": "依据2022年完整访谈原创整理，保留动物与人体、单人临床研究和未来愿景的区别，不作为2026年个体医疗指南。原稿三次发作的癫痫定义、成人生酮可自行尝试、dad闭唇及DNA碱基对的口述疑误原位说明。白噪声不直接外推婴儿夜用危害，药物未控者仅部分适合手术；不提供停药、脑刺激或植入操作方案。",
+  "source_intro": "依据完整本地英文TXT与配套VTT整理，未回听原音。章节为实际VTT cue起点并对照邻文，仅作定位；原音与字幕未独立校准。VTT末端9261.739秒、官方RSS时长9010秒，相差251.739秒，原因未确认，未按广告或统一偏移解释。有限事实核查仅采用文中所链正式定义、原研究与专业机构资料；没有声称核实每项历史轶事或后来临床进展。",
+  "dek": "从声音与关键期、清醒手术中的语言地图，到阅读、口吃和最初50词的语言神经假体，理解大脑怎样把意图变成可交流的表达。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者、Huberman Lab主持人。"
+    },
+    {
+      "name": "Eddie Chang",
+      "role": "来宾",
+      "bio": "埃迪·张（论文署名Edward F. Chang）· 神经外科医生，研究言语、运动与脑机接口；职务背景按2022年节目介绍。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "听觉关键期，需要有结构的声音才能成熟",
+      "source_seconds": 520.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "幼鼠的白噪声结果，不能直接替婴儿回答问题",
+      "source_seconds": 790.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "清醒脑手术，把语言地图变成具体的保护边界",
+      "source_seconds": 1175.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "焦虑可以有神经基础，个案也不能替所有焦虑作诊断",
+      "source_seconds": 1465.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "药物难以控制的人，只是一部分可能从手术受益",
+      "source_seconds": 1825.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生酮饮食在癫痫里的意义，是特定治疗而非通用饮食答案",
+      "source_seconds": 1981.17,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "癫痫发作的表现，远不止全身抽搐",
+      "source_seconds": 2211.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "两个经典语言区，为什么解释不了所有患者",
+      "source_seconds": 2483.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "语言偏在一侧，不代表另一侧没有可用的基础",
+      "source_seconds": 3207.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "双语共享网络，也保留不同的声音序列经验",
+      "source_seconds": 3544.77,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "声音进入耳朵，还没有自动成为语言",
+      "source_seconds": 3814.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "说话，是呼吸被喉、舌、下颌和嘴唇精细塑形",
+      "source_seconds": 4377.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "语音的地图，按特征组织，不按字母表排队",
+      "source_seconds": 4804.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学语言越早越有优势，也必须继续在生活中使用",
+      "source_seconds": 5048.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "阅读借用旧网络，阅读困难也不只是眼睛的问题",
+      "source_seconds": 5334.51,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "读什么会影响表达，不等于语言只准有一种样子",
+      "source_seconds": 5697.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "外国语口音不会凭空带来新语言，记忆也不只存在一个地方",
+      "source_seconds": 5882.01,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "潘乔仍有思想，受损的是把它传出去的通道",
+      "source_seconds": 6496.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "语言神经假体，先验证“尝试说话”还能不能被解码",
+      "source_seconds": 6924.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "五十个词与语言模型，怎样让错误较多的信号变成句子",
+      "source_seconds": 7175.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从恢复沟通到增强认知，中间还有技术与伦理的距离",
+      "source_seconds": 7586.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "沟通还需要脸，而数字化身当时仍是研发方向",
+      "source_seconds": 7828.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "口吃会受焦虑影响，却不等于由焦虑造成",
+      "source_seconds": 8285.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "专注手术的人，也需要让身体与注意有恢复的空间",
+      "source_seconds": 8615.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:29:36Z"
+}

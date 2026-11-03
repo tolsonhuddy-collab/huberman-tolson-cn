@@ -1,0 +1,140 @@
+{
+  "id": "ep-610ea511900a",
+  "title_zh": "尼古丁：短暂清醒、反复渴求，与戒烟真正要处理的事",
+  "title_en": "Nicotine’s Effects on the Brain & Body & How to Quit Smoking or Vaping",
+  "source_url": "https://www.hubermanlab.com/episode/nicotines-effects-on-the-brain-and-body-and-how-to-quit-smoking-or-vaping",
+  "published": "2022-09-19T08:00:00Z",
+  "editor_note": "依据2022年节目原创整理，非2026年个人戒烟或用药指南。原位区分一氧化碳与二氧化碳、烟雾化学物分类、蓝斑核递质及小鼠POMC受体亚型。短期认知研究不作健康人启用尼古丁的理由；催眠跨研究数字、应用程序及按周轮换替代制剂的推论保留限制。不提供处方药启动、调量、停药或危险刺激操作。",
+  "source_intro": "依据完整本地英文TXT与配套VTT整理，未回听原音。章节使用实际VTT cue起点并核对邻文，仅作定位，未与原音独立校准。VTT末端6814.536秒、官方RSS时长6534秒，相差280.536秒，原因未确认，未假定为广告或统一偏移。事实核查限于文中所链官方资料及原研究实际显示部分，不声称通读全部论文或核实每项口述统计。",
+  "dek": "从受体、注意与食欲，到电子烟的快速强化、戒断与医疗支持，分清短期药效、长期风险，以及不能由机制故事代替的戒烟证据。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者、Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "专注的“箭头”，先把方向、精力和动机分开",
+      "source_seconds": 279.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "诺奖学者嚼口香糖的故事，解释不了长期健康收益",
+      "source_seconds": 1001.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "植物为什么有尼古丁，人体为什么又有相应受体",
+      "source_seconds": 1218.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "到达大脑的快慢，是药效之外的另一条主线",
+      "source_seconds": 1459.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多巴胺让行为值得再做一次，也让线索逐渐有了力量",
+      "source_seconds": 1680.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "乙酰胆碱像聚光灯，蓝斑核却不能因此被写成胆碱能来源",
+      "source_seconds": 1931.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "警觉、注意与认知收益，需要分别提出问题",
+      "source_seconds": 2302.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抑制食欲的POMC通路，原稿混淆了受体亚型",
+      "source_seconds": 2542.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "戒烟后的食欲变化，为什么会变成继续吸烟的理由",
+      "source_seconds": 2705.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大脑觉得清醒时，心血管系统也正在承受作用",
+      "source_seconds": 2911.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“警觉而放松”是状态描述，不是工作和运动的通用工具",
+      "source_seconds": 3109.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "年龄与递送方式都重要，二十五岁不是安全分界线",
+      "source_seconds": 3392.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "烟雾的七千种化学物，不能写成七千种已证致癌物",
+      "source_seconds": 3572.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "群体的寿命与癌症风险，不能变成个人的扣分公式",
+      "source_seconds": 3773.58,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一次注意改善，与长期脑血管健康并不矛盾",
+      "source_seconds": 3949.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "戒断不是一句“不够自律”，而是身体与习惯都在要回应",
+      "source_seconds": 4379.514,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "电子烟与“快克”的类比，只能说明快速强化的一个侧面",
+      "source_seconds": 4516.77,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "奖赏系统会适应，但示意曲线不是永久损伤的判决书",
+      "source_seconds": 5002.023,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "催眠的研究结果，需要连着研究对象和随访时间读",
+      "source_seconds": 5209.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "行为、口腔动作和社交奖励，也属于戒烟问题",
+      "source_seconds": 5423.01,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "安非他酮是处方药，不能从访谈里拿走一个自行服用排程",
+      "source_seconds": 5573.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "尼古丁替代治疗的目的，是减轻戒断，不是制造随机奖励",
+      "source_seconds": 5799.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "稳态的比喻，帮助理解难受为什么会在熟悉时刻出现",
+      "source_seconds": 6113.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "熬过第一周之后，还要让新的生活方式有地方落脚",
+      "source_seconds": 6487.05,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T12:52:23Z"
+}
