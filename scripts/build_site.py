@@ -257,7 +257,10 @@ def source_marker(source: str | None, seconds: object, provenance: str | None = 
             query = [(k, v) for k, v in parse_qsl(parts.query, keep_blank_values=True) if k not in {"t", "start"}]
             target = urlunsplit((parts.scheme, parts.netloc, parts.path, urlencode(query + [("t", str(sec))]), parts.fragment))
             return f'<a href="{escape(target, quote=True)}" target="_blank" rel="noopener noreferrer" aria-label="回听原节目 {stamp}">{stamp} <span>↗</span></a>'
-    note = "第三方转写段落定位，未独立核对原音" if provenance == "public_provider_paragraph_start_unverified_audio" else "本地 VTT 定位，未独立核对原音"
+    if provenance == "user_provided_transcript_paragraph_start_unverified_audio":
+        note = "用户提供的转录段落定位，未独立核对原音"
+    else:
+        note = "第三方转写段落定位，未独立核对原音" if provenance == "public_provider_paragraph_start_unverified_audio" else "本地 VTT 定位，未独立核对原音"
     return f'<span class="chapter-time" title="{note}">{stamp}</span>'
 
 

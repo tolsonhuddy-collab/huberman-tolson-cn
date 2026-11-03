@@ -111,6 +111,10 @@ PY
 
 `source_url` 或章节时间未知时填 `null`。不要编造视频 id、首发日期或时间戳。metadata 里的章节标题必须与 Markdown 的 H2 完全一致，否则私有构建停止。
 
+## 中文人名维护
+
+Andrew Huberman 的中文称呼统一为“休伯曼”，首次出现可并列英文名。当前发布稿以 `site/zh/` 为准；修改正文或人物简介时同步核对标题、目录、关于、页面和全文订阅，并从源构建。不要对“伯曼”做模糊替换，也不要改其他人物、英文名、URL、文件名或原文引文。原始转录、历史审稿快照与私有日志保留，不用历史私稿覆盖当前公稿。测试会拦截当前公开展示文字中的非标准译名。
+
 ## 审稿状态
 
 只允许这些状态：`pending`、`drafting`、`draft_complete`、`needs_revision`、`reviewed`。
@@ -135,7 +139,7 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 ## 部署检查
 
-源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 290 篇中文精读。本地 `--private` 构建不是这条发布命令。
+源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 292 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
 2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。

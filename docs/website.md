@@ -42,7 +42,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 本地预览地址是 `http://127.0.0.1:8001`。私有输出必须在项目的 `private/` 下，不能覆盖文章、元信息、交接包、来源映射、分块或审阅目录。构建器只替换带有自身构建标记的既有输出目录，错误输入不会替换上一份有效页面。不要将项目根目录作为 HTTP 服务目录。
 
-构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 290 篇中文精读不是同一份清单。`--published` 构建仓库 `site/zh/` 里的这 290 篇。部署步骤见 [PIPELINE.md](PIPELINE.md)。
+构建结果为普通 HTML、CSS、JavaScript 和本地图片，采用相对路径。构建器本身不部署、不购买或绑定域名。代码以 MIT 许可，仅限代码。中文精读与原始转写不在该许可内。`--private` 是本地工作台，和已上线 292 篇中文精读不是同一份清单。`--published` 构建仓库 `site/zh/` 里的这 292 篇。部署步骤见 [PIPELINE.md](PIPELINE.md)。
 
 每次构建还会重写 `feed.xml`、`podcasts/huberman/feed.xml`、`tolson-rss.opml` 和 `og/{id}.jpg`，并用标准库确认这些 XML 可以解析。`feed.xml` 是 Atom，收录本次构建中全部可读精读的全文（`content type="html"`），含稳定 id、标题、页面链接、published、updated、类别、已核验时的原节目链接，以及一张 1200×630 的文字卡片（`media:thumbnail`、`enclosure`，正文顶部 `<img>`）。日期来自 `site/zh` 元数据里的节目首发时间 `published`；没有这项时用该稿的 Git 提交时间，不用目录索引日期，也不用 1970。早于 2000 年的日期会让构建失败。卡片是浅灰底、黑字、青色底栏的 1200×630 文字图，含中文标题、目录序号、发布日期、嘉宾（若有）和「Huberman Lab 中文精读 · 非官方」。不用节目封面、人物照片或官方标志。首页和正文的 `<head>` 用相对地址自动发现 Atom。Feed、OPML 和 `og:image` 使用本次构建的 `--base-url`，默认是主站 https://huberman-reading-001.tolsonhuddy.chatgpt.site 。
 
@@ -97,7 +97,7 @@ python3 -m http.server 8001 --bind 127.0.0.1 --directory private/site
 
 节目封面与人物头像分别管理。封面必须先核对官方完整期页面、实际图片 URL、尺寸和画面题字，记录证据后才能将 `cover.verified` 设为 `true`。构建器只复制 `private/` 内已有的 JPG、PNG 或 WebP，输出为相对路径 `covers/{id}.*`；未验证封面保留“节目封面待核实”文字，不拿通用头像或 Essentials 短版替代。首页精选还要求文章状态为 `reviewed`，`homepage_featured` 仅在符合条件者中优先排序。演示构建不读取或复制任何私有节目封面。
 
-官方节目身份与原音对齐是两项证据。已核实的官方节目页面可直接填入 `source_url`，此时文章提供来源链接，章节仍显示带“未独立核对原音”提示的转写时间。目录 `timeline.provenance` 或章节 `timestamp_provenance` 为 `public_provider_paragraph_start_unverified_audio` 时，提示明确写为第三方转写段落起点，不冒称本地 VTT。只有明确提供已核实的 YouTube URL 时才生成视频时间链接；这本身不证明原音与字幕偏移已经校准。
+官方节目身份与原音对齐是两项证据。已核实的官方节目页面可直接填入 `source_url`，此时文章提供来源链接，章节仍显示带“未独立核对原音”提示的转写时间。目录 `timeline.provenance` 或章节 `timestamp_provenance` 为 `public_provider_paragraph_start_unverified_audio` 时，提示明确写为第三方转写段落起点，不冒称本地 VTT。 用户上传的带时间转录使用 `user_provided_transcript_paragraph_start_unverified_audio`，提示为“用户提供的转录段落定位，未独立核对原音”；不将其称为 VTT 或第三方转录。只有明确提供已核实的 YouTube URL 时才生成视频时间链接；这本身不证明原音与字幕偏移已经校准。
 
 ## 托管交接与发布范围
 

@@ -789,9 +789,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_two_hundred_ninety_chinese_essays(self):
+    def test_repository_commits_two_hundred_ninety_two_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 290 + [".md"] * 290)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 292 + [".md"] * 292)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -799,7 +799,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 290)
+        self.assertEqual(len(stems[".md"]), 292)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -824,6 +824,11 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         html = site.reading_fragment(ep, meta, md)["article"]
         self.assertIn("第三方转写段落定位，未独立核对原音", html)
         self.assertNotIn("本地 VTT", html)
+        ep["timeline"]["provenance"] = "user_provided_transcript_paragraph_start_unverified_audio"
+        uploaded = site.reading_fragment(ep, meta, md)["article"]
+        self.assertIn("用户提供的转录段落定位，未独立核对原音", uploaded)
+        self.assertNotIn("本地 VTT", uploaded)
+        self.assertNotIn("第三方转写", uploaded)
         ep["timeline"]["provenance"] = "local_vtt_unverified"
         self.assertIn("本地 VTT 定位", site.reading_fragment(ep, meta, md)["article"])
 
@@ -855,6 +860,8 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-4933405f0f80": "2026-04-06T08:00:00Z",
             "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
             "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
+            "ep-9886b6d24099": "2026-07-27T08:00:00Z",
+            "ep-13f9eb410af8": "2026-11-02T09:00:00Z",
             "ep-4af18b8da139": "2023-01-30T09:00:00Z",
             "ep-febed2076dce": "2023-01-25T09:00:00Z",
             "ep-99054b917540": "2023-01-23T09:00:00Z",

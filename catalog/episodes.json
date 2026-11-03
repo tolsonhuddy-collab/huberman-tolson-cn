@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "counts": {
-    "long_episode": 319,
+    "long_episode": 321,
     "essentials": 62,
     "ama": 19,
     "live_qa": 10
@@ -8329,6 +8329,50 @@
         "provenance": "public_provider_paragraph_start_unverified_audio"
       },
       "published": "2026-10-26T08:00:00Z"
+    },
+    {
+      "id": "ep-13f9eb410af8",
+      "title_en": "Access the Sublime & Live Your Best Life | Robert Greene",
+      "source_file": "Access the Sublime & Live Your Best Life - Robert Greene user transcript.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 23936,
+      "source_sha256": "330d2fa85fc8bc328b4cd86b0b7b42941036f44cdc87c686e83a7e83a013975d",
+      "vtt_sha256": null,
+      "source_index_date": "2026-11-02",
+      "source_provider": "User-provided complete timed transcript in RTF; no audio verification",
+      "source_url": "https://www.hubermanlab.com/episode/access-the-sublime-and-live-your-best-life-robert-greene",
+      "video_id": "y-fRFiTrrg4",
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 8292,
+        "provenance": "user_provided_transcript_paragraph_start_unverified_audio"
+      },
+      "published": "2026-11-02T09:00:00Z"
+    },
+    {
+      "id": "ep-9886b6d24099",
+      "title_en": "Your Top Health Questions Answered",
+      "source_file": "Your Top Health Questions Answered user transcript.txt",
+      "kind": "long_episode",
+      "guest_series": false,
+      "word_count": 20120,
+      "source_sha256": "c79ec66b9952be8603449bc3b3607becf6e89a4f563b6fdcecace559469d6b22",
+      "vtt_sha256": null,
+      "source_index_date": "2026-07-27",
+      "source_provider": "User-provided complete timed transcript in RTF; no audio verification",
+      "source_url": "https://www.hubermanlab.com/episode/your-top-health-questions-answered",
+      "video_id": "ssP31IenzYA",
+      "explicit_excerpt": false,
+      "timeline": {
+        "start_seconds": 0,
+        "end_seconds": null,
+        "last_paragraph_start_seconds": 6238,
+        "provenance": "user_provided_transcript_paragraph_start_unverified_audio"
+      },
+      "published": "2026-07-27T08:00:00Z"
     }
   ]
 }
