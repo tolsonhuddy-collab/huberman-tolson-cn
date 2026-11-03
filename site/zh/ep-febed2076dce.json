@@ -1,0 +1,173 @@
+{
+  "id": "ep-febed2076dce",
+  "title_zh": "安迪·盖尔平：怎样分别训练力量、爆发力与肌肉体积",
+  "title_en": "GUEST SERIES | Dr. Andy Galpin: Optimal Protocols to Build Strength & Grow Muscles",
+  "source_url": "https://hubermanlab.com/dr-andy-galpin-optimal-protocols-to-build-strength-and-grow-muscles",
+  "published": "2023-01-25T09:00:00Z",
+  "editor_note": "依据2023年完整访谈转写原创综合；训练框架、百分比和组次为节目讨论范围，不能脱离训练史、目标和恢复条件成为统一处方。高龄研究力量与体积、衰退速度、血压/屏息、激素受体、AST/ALT等疑点在相关正文说明，必要核查引用原始研究或官方资料；不把旧节目当作当前医疗指南。广告、促销、寒暄和无意义重复已删除。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼 Andrew Huberman",
+      "role": "主持人",
+      "bio": "神经科学研究者，Huberman Lab 主持人。"
+    },
+    {
+      "name": "安迪·盖尔平 Andy Galpin",
+      "role": "嘉宾",
+      "bio": "本期录制时为加州州立大学富勒顿分校运动学教授、运动表现研究者与教练。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "训练的目标，也包括独立生活的能力",
+      "source_seconds": 265.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "起步晚，仍然可以获得适应",
+      "source_seconds": 453.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "力量是表现，肌肥大是尺寸",
+      "source_seconds": 1108.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌肉、肌腱与骨骼，以不同速度回应负荷",
+      "source_seconds": 1389.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "变强，可以发生在肌纤维变大之前",
+      "source_seconds": 2042.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增肌涉及原料、信号和持续的蛋白更新",
+      "source_seconds": 2623.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌肉记忆的解释，也会被新研究改写",
+      "source_seconds": 3444.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "计划先满足少数原则，再选择具体方法",
+      "source_seconds": 3926.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "三到五框架，提供一个容易记住的起点",
+      "source_seconds": 4451.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热身到能工作，也要保留工作的能力",
+      "source_seconds": 5273.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "节奏是调节工具，快速始终需要受控",
+      "source_seconds": 5888.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "呼吸与支撑，不能简化成整组屏息",
+      "source_seconds": 6298.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "当天的负荷，要和当天的能力相配",
+      "source_seconds": 6857.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "力竭与高频率，都需要看整份计划",
+      "source_seconds": 7411.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "力量与功率训练，把质量排在前面",
+      "source_seconds": 8074.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "高级方法，改变的是刺激和成本",
+      "source_seconds": 9254.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增肌需要充分刺激，不需要先把肌肉毁掉",
+      "source_seconds": 10324.319,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同一个动作，在不同人身上未必练到同样部位",
+      "source_seconds": 10685.479,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "弱项可以优先，强项也不必完全消失",
+      "source_seconds": 11191.319,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每周组数，先作为可调整的范围",
+      "source_seconds": 11555.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "次数范围很宽，努力程度仍要到位",
+      "source_seconds": 12441.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "休息长短，要和负荷、工作量一起看",
+      "source_seconds": 12755.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "频率的价值，还包括应对生活打断",
+      "source_seconds": 13150.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "连续的适应，让不同目标可以有交集",
+      "source_seconds": 13908.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恢复监测，需要看趋势和症状的性质",
+      "source_seconds": 14204.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "有氧训练与增肌，可以共同安排",
+      "source_seconds": 14510.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肩后侧与颈部，优先考虑位置和稳定",
+      "source_seconds": 15128.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷水恢复，要区分当下感觉与长期适应",
+      "source_seconds": 15756.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "蛋白与碳水，先看总任务再安排时机",
+      "source_seconds": 16032.84,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌酸的讨论，以证据较多的用途为中心",
+      "source_seconds": 16585.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-03T04:25:30Z"
+}
