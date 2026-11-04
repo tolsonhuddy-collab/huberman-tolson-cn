@@ -1,0 +1,165 @@
+{
+  "id": "ep-5e9414199f34",
+  "title_zh": "活得更久，也保有行动的能力：彼得·阿蒂亚谈运动、激素与终身风险",
+  "title_en": "Exercise, Nutrition, Hormones for Vitality & Longevity | Dr. Peter Attia",
+  "source_url": "https://www.hubermanlab.com/episode/dr-peter-attia-exercise-nutrition-hormones-for-vitality-and-longevity",
+  "published": "2022-08-15T08:00:00Z",
+  "editor_note": "依据2022年访谈原创编译；删去广告与重复口播。药物、激素及补充剂段落保留个体适用和证据限制，WHI与膳食胆固醇绝对表述在正文就地注释；不作为现行临床指南。",
+  "source_intro": "节目首发时间采用官方RSS记录2022-08-15T08:00:00Z，官方完整期身份已核对。中文依据本地英文TXT/VTT；章节使用真实字幕cue起点，仅作本地定位，未回听原音。VTT末端10199.991秒与RSS时长9930秒有269.991秒差异，原因未明，未归因广告。",
+  "dek": "从最后十年的生活倒推今天的身体储备，分清检查、运动与药物各自能够回答的问题。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "彼得·阿蒂亚（Peter Attia）",
+      "role": "来宾",
+      "bio": "医生，关注寿命、健康寿命及长期疾病风险；本篇转述其2022年访谈观点。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "血液检查之前，先问想改善什么",
+      "source_seconds": 504.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一次遗传风险筛查，与反复抽血是两回事",
+      "source_seconds": 864.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "DEXA最有用的部分，可能不是体脂率",
+      "source_seconds": 961.29,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "骨骼需要负荷，年轻与年老的任务不同",
+      "source_seconds": 1358.91,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从生命最后十年，倒推今天的训练",
+      "source_seconds": 1978.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "风险增加四成，不是少活四成",
+      "source_seconds": 2424.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "心肺与力量，需要具体的功能目标",
+      "source_seconds": 2603.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动与大脑：多条路径，不是一颗替代药",
+      "source_seconds": 2959.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "尼古丁的专注感，与防痴呆证据之间",
+      "source_seconds": 3376.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "专注力也取决于一个不断打断人的环境",
+      "source_seconds": 3663.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "女性激素随周期改变，数字必须带着时间和单位",
+      "source_seconds": 3952.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "WHI究竟研究了谁，不能只凭印象概括",
+      "source_seconds": 4356.51,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "相对风险要配绝对风险，较小也不等于不存在",
+      "source_seconds": 4677.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "给药途径、子宫保护与耐受性",
+      "source_seconds": 4862.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "女性睾酮的资料有限，男性也不能只盯总量",
+      "source_seconds": 5090.73,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "SHBG解释了一部分差异，也制造了优化的诱惑",
+      "source_seconds": 5416.59,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睾酮治疗的目标，必须连同雌二醇一起讨论",
+      "source_seconds": 5669.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "克罗米芬与去甲胆固醇：一个诊所如何处理未证实的疑虑",
+      "source_seconds": 5835.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "hCG、草药与“天然”背后的证据差异",
+      "source_seconds": 6441.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生育、恢复与身体外观，不能被一个睾酮数字替代",
+      "source_seconds": 6878.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胆固醇与饱和脂肪，首先是不同的分子",
+      "source_seconds": 7473.42,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脂蛋白是运载工具，LDL胆固醇是所载的货物",
+      "source_seconds": 7876.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "ApoB与终身暴露：一个非常积极的预防目标",
+      "source_seconds": 8083.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "降脂药的共同方向，与不同的作用位置",
+      "source_seconds": 8343.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "十年风险之外，还有一个不能自动解决的社会问题",
+      "source_seconds": 8749.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肩损伤、注射与康复：感觉改善不等于结构修复",
+      "source_seconds": 8967.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "代谢组学能找到运动的部分信号，却难以复制一种生活能力",
+      "source_seconds": 9463.53,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "GLP-1药物的兴奋点，和2022年仍未解决的问题",
+      "source_seconds": 9731.99,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T02:36:48Z"
+}

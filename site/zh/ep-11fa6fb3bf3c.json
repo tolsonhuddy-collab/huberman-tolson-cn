@@ -1,0 +1,145 @@
+{
+  "id": "ep-11fa6fb3bf3c",
+  "title_zh": "舌头喜欢甜，大脑为何还想要糖：查尔斯·祖克谈味觉与肠脑回路",
+  "title_en": "The Biology of Taste Perception & Sugar Craving | Dr. Charles Zuker",
+  "source_url": "https://www.hubermanlab.com/episode/dr-charles-zuker-the-biology-of-taste-perception-and-sugar-craving",
+  "published": "2022-07-18T08:00:00Z",
+  "editor_note": "原创中文精读。味觉身份与效价、动物操纵与人的外推分开；保留否定结果、学习反例与未来研究的不确定性。原研究窄核只支持小鼠机制，未将甜味剂争论与少糖个人经验转成人用疗效。",
+  "source_intro": "官方身份与2022-07-18T08:00:00Z日期按冻结登记。完整本地TXT/VTT来源；全部时间为真实VTT cue起点，未独立回听原音。RSS/VTT尾差309.344秒原因未知。3309.723→3316.051秒真实间隔前后推理连续，原音内容与漏句可能无法确认。",
+  "dek": "从味觉受体、甜苦效价到没有甜味仍会形成的糖偏好，理解喜欢与想要为何能够分离。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Charles Zuker",
+      "role": "嘉宾 / 对谈者",
+      "bio": "查尔斯·祖克 · 哥伦比亚大学神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "检测到一颗糖，还没有解释甜是什么",
+      "source_seconds": 549.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "我们都叫黄色，经验却未必相同",
+      "source_seconds": 717.081,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "选择味觉，是为了问得出也答得了",
+      "source_seconds": 1246.35,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "五种基本味与一整套行为程序",
+      "source_seconds": 1679.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "风味比味道多，脂肪与金属味仍有问题",
+      "source_seconds": 1729.103,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "舌头不是五块互不相通的地图",
+      "source_seconds": 2068.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "烫伤恢复，与细胞更新不是同一时钟",
+      "source_seconds": 2408.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一种味有身份，也有价值",
+      "source_seconds": 2647.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从口腔一路追到皮层",
+      "source_seconds": 2781.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "水也能引发苦的反应，怎样知道不是反射",
+      "source_seconds": 2976.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "杏仁核让身份与效价可以分离",
+      "source_seconds": 3169.736,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一次坏牡蛎，为什么能改变很久的偏好",
+      "source_seconds": 3376.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡、啤酒与气味的学习史",
+      "source_seconds": 4016.25,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "气味与味道在哪里成为同一口食物",
+      "source_seconds": 4381.659,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脱敏与内部状态，让线路不只是电线",
+      "source_seconds": 4737.658,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "唾液的问题给出一个否定答案",
+      "source_seconds": 5192.941,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脑与身体之间，是一条双向交通线",
+      "source_seconds": 5488.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "迷走神经不是一个“放松开关”",
+      "source_seconds": 5782.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "没有甜受体的小鼠，仍能学会选择糖",
+      "source_seconds": 6277.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肠道识别的是营养到达，而非口腔的甜",
+      "source_seconds": 6598.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "甜味剂能骗过舌头，不代表满足了每一条线路",
+      "source_seconds": 6738.789,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "慢一些建立偏好，曾经可能很有用",
+      "source_seconds": 7314.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同样热量，不等于同样的进食经验",
+      "source_seconds": 7567.914,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "吃饭仍是一场有情境的感觉经验",
+      "source_seconds": 7846.05,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T02:33:18Z"
+}

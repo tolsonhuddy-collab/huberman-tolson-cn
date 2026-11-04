@@ -1,0 +1,140 @@
+{
+  "id": "ep-72f2a377b0e1",
+  "title_zh": "让目标看起来更近：艾米莉·巴尔塞蒂斯谈视觉、动机与行动",
+  "title_en": "Tools for Setting & Achieving Goals | Dr. Emily Balcetis",
+  "source_url": "https://www.hubermanlab.com/episode/dr-emily-balcetis-tools-for-setting-and-achieving-goals",
+  "published": "2022-08-01T08:00:00Z",
+  "editor_note": "本篇为2022年访谈的中文综合精读，实验结果、机制推想和个人经验分别归属。收缩压术语疑误已在正文注明；菲尔普斯故事不采用原口述金牌顺序，官方页面进一步访问失败，未补猜。非临床治疗或运动处方。",
+  "source_intro": "节目身份、首发时间及封面采用本轮登记的官方/RSS核验结果；依据本地完整TXT与VTT编写。章节定位取真实VTT cue起点，未经原音回听。RSS时长5612秒，VTT末端5893.44秒，尾差281.44秒原因未知，不归因于广告或推测整体偏移。",
+  "dek": "把注意放到前方一个目标，可能同时改变距离体验与实际投入；愿景、障碍计划和进度记录则回答目标追求的不同难题。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "艾米莉·巴尔塞蒂斯（Emily Balcetis）",
+      "role": "嘉宾",
+      "bio": "纽约大学心理学教授，研究视觉、动机与目标追求。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "为什么越想坚持，维持坚持本身越累",
+      "source_seconds": 558.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从精英短跑者那里发现的反直觉线索",
+      "source_seconds": 802.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一项负重行走实验，分别测出了什么",
+      "source_seconds": 1196.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "长跑者为什么会在赛程中切换策略",
+      "source_seconds": 1357.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "聚光灯是一种注意方式，不是全程瞪住终点",
+      "source_seconds": 1539.42,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "目标越近，为什么越愿意投入",
+      "source_seconds": 1723.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "因果实验比高手经验多回答了一步",
+      "source_seconds": 1965.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "愿景板能帮人决定要什么，却未必让人开始",
+      "source_seconds": 2184.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把理想未来接到具体的下一步",
+      "source_seconds": 2522.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "提前想障碍，是给资源不足时准备备用路线",
+      "source_seconds": 2567.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "菲尔普斯的故事，重点是事先练过的应对",
+      "source_seconds": 2648.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "为什么我们很少怀疑自己看到的世界",
+      "source_seconds": 3086.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小目标的大小，要与能力和难度一起调整",
+      "source_seconds": 3295.98,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "注意范围与时间体验，是值得检验的机制问题",
+      "source_seconds": 3455.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体越疲惫，路也可能显得越远",
+      "source_seconds": 3567.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "糖与代糖实验改变的是距离判断",
+      "source_seconds": 3650.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咖啡因与帽衫的设想，证据走到哪里",
+      "source_seconds": 3954.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从运动迁移到学习，要重新确定观察对象",
+      "source_seconds": 4213.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一首鼓曲：有截止日期，却感觉一直没进步",
+      "source_seconds": 4337.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "即时记录，修正一个偏向失败的月度回忆",
+      "source_seconds": 4710.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一秒影像能唤起意义，不能替代能力测量",
+      "source_seconds": 4923.81,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抑郁与焦虑中的注意循环，不能据此声称治愈",
+      "source_seconds": 5215.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "主动选择看什么，会改变脑内处理，却没有优化公式",
+      "source_seconds": 5530.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T02:32:22Z"
+}

@@ -1,0 +1,145 @@
+{
+  "id": "ep-20ef86a02150",
+  "title_zh": "热暴露怎样改变身体：从体温反馈、桑拿研究到激素数字的边界",
+  "title_en": "The Science & Health Benefits of Deliberate Heat Exposure",
+  "source_url": "https://www.hubermanlab.com/episode/the-science-and-health-benefits-of-deliberate-heat-exposure",
+  "published": "2022-04-25T08:00:00Z",
+  "editor_note": "原创中文精读。桑拿心血管与精神病性障碍数据为观察性关联；短时激素峰值不作健康获益。2018队列、2021冷却与1986内分泌研究口述差异明确留注。过热、反复冷热、空腹与局部热不整理为极端居家流程。",
+  "source_intro": "官方身份与2022-04-25T08:00:00Z日期按冻结登记。完整本地TXT/VTT；时间为真实VTT cue起点，未独立回听原音。RSS/VTT尾差262.414秒原因未知。原研究仅按实际可见范围窄核；Wiley仅摘要，Cell全文403、PubMed曾429，未猜补方法或绕过限制。",
+  "dek": "从核心体温与神经反馈读懂热应激，区分桑拿队列、短时激素峰值、机制实验和真正健康结局。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 讲述者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    }
+  ],
+  "sections": [
+    {
+      "title": "热不是一个温度，而是一段身体过程",
+      "source_seconds": 15.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "皮肤与核心，给脑提供不同的信息",
+      "source_seconds": 572.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从皮肤到视前区，感觉与行动接在一起",
+      "source_seconds": 1117.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想离开过热环境，也是一种保护信息",
+      "source_seconds": 1454.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "心血管研究令人感兴趣，但首先是队列研究",
+      "source_seconds": 1615.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "温度、频率与风险比，不能直接变成疗效处方",
+      "source_seconds": 1722.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "不同加热方式，不能只用温度数字互换",
+      "source_seconds": 2053.713,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热负荷有循环反应，却不能代替运动的一切",
+      "source_seconds": 2326.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "皮质醇下降，发生在怎样的人与实验中",
+      "source_seconds": 2466.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "皮质醇有节律，低一些不总是更好",
+      "source_seconds": 2517.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热休克蛋白，是维护机制而非延寿按钮",
+      "source_seconds": 2713.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "FOXO3把话题带到修复，也带到推论的距离",
+      "source_seconds": 2912.65,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每周十一与五十七分钟，不是已经测出的最低门槛",
+      "source_seconds": 3149.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生长激素会波动，峰值并不是最终健康结果",
+      "source_seconds": 3291.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "十六倍所对应的1986年研究，口述有关键不符",
+      "source_seconds": 3480.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "适应使反应改变，不等于应该追求更大的冲击",
+      "source_seconds": 3670.103,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "晚些加热为何可能与入睡相容",
+      "source_seconds": 4097.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动、进食与激素刺激，不是简单相加",
+      "source_seconds": 4331.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补水要承认差异，不能把口述比例变成任务",
+      "source_seconds": 4581.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "强啡肽的故事，不能概括成越难受越快乐",
+      "source_seconds": 4629.98,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "精神病性障碍风险的相关性，不是预防疗效",
+      "source_seconds": 5147.585,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "手掌和脚底参与散热，但热射病需要紧急处理",
+      "source_seconds": 5323.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "发热与环境过热，不能合成一种自助治疗",
+      "source_seconds": 5631.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "局部加热与脂肪研究，仍在研究情境里",
+      "source_seconds": 5732.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "UCP1与应激适应，揭示机制也限制结论",
+      "source_seconds": 6113.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T02:50:22Z"
+}

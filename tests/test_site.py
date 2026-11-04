@@ -789,9 +789,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_three_hundred_chinese_essays(self):
+    def test_repository_commits_three_hundred_ten_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 300 + [".md"] * 300)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 310 + [".md"] * 310)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -799,7 +799,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 300)
+        self.assertEqual(len(stems[".md"]), 310)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -860,6 +860,16 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-4933405f0f80": "2026-04-06T08:00:00Z",
             "ep-f1d7b06e8a45": "2026-03-02T09:00:00Z",
             "ep-9a3526498e8c": "2026-02-02T09:00:00Z",
+            "ep-20ef86a02150": "2022-04-25T08:00:00Z",
+            "ep-6add29747eed": "2022-05-02T08:00:00Z",
+            "ep-f0efe678db99": "2022-06-06T08:00:00Z",
+            "ep-fb41d70f5225": "2022-06-20T08:00:00Z",
+            "ep-f8859e32b2d6": "2022-07-04T08:00:00Z",
+            "ep-4cdbcadf770c": "2022-07-11T08:00:00Z",
+            "ep-11fa6fb3bf3c": "2022-07-18T08:00:00Z",
+            "ep-72f2a377b0e1": "2022-08-01T08:00:00Z",
+            "ep-f626bf9dc4eb": "2022-08-08T08:00:00Z",
+            "ep-5e9414199f34": "2022-08-15T08:00:00Z",
             "ep-d5fadb514ced": "2022-08-22T08:00:00Z",
             "ep-71bfbc25c9a4": "2022-08-29T08:00:00Z",
             "ep-74d5535e8425": "2022-09-12T08:00:00Z",
