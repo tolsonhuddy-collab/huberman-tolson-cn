@@ -1,12 +1,12 @@
 # Huberman Lab Chinese Close Readings
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 320 published essays. Updated continuously. Unofficial.
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 350 published essays. Updated continuously. Unofficial.
 
 ## Coverage
 
 Coverage is not limited to long interviews. Full episodes, standalone Q&As, and other substantive programmes are eligible; duplicate material, promotions, and trailers are excluded. Essentials must be checked against their original episodes. An AMA excerpt is labelled with its actual scope and is never presented as a full episode. Usable complete source material, independent full-text review, and revision checks remain required.
 
-The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. All 320 published essays currently cover long episodes; the other 92 records are catalog entries awaiting production.
+The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. The 350 published essays comprise 321 long episodes, 19 AMAs (3 publicly released full episodes and 16 public excerpts, not the complete member editions), and 10 released live Q&As, not entire event lectures. The remaining 62 Essentials stay in the catalog: 61 are verified recuts, and 1 has no confirmed independent increment. Catalog, official-feed, and essay counts have different meanings.
 
 ## Where to read
 

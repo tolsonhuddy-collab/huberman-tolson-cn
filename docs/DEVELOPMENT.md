@@ -17,7 +17,7 @@ Coverage and deduplication rules are in [PIPELINE](PIPELINE.md#收录范围与�
 Examples: [神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html), [好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html).
 
 1. **Catalog.** The repository lists 412 episode records: 321 long episodes (including 16 Guest Series), 62 Essentials, 19 AMAs, and 10 live Q&As. Filter by Chinese title, English title, person, and kind, or show only essays that exist or entries still waiting.
-2. **Chinese essays.** Long essays that follow the episode structure, one page each. The published count is in the [README](../README.md). Other entries are catalog only.
+2. **Chinese essays.** Long essays that follow the episode structure, one page each. The published count is in the [README](../README.md). The 350 published essays include 321 long programmes, 19 AMAs (16 public excerpts), and 10 released event Q&As. The 62 Essentials are catalog-only: 61 recuts and 1 unconfirmed increment.
 3. **Static reading pages.** A chapter list on the right on desktop, collapsible on phones. Type size 16–24px, light or dark background, and reading progress on the page. Editing and source notes at the end are collapsed by default.
 
 ## Capabilities
@@ -35,7 +35,7 @@ Examples: [神经系统如何工作，又如何被经验改变](https://huberman
 ## Limits
 
 - A clone can run the tests, `--demo`, and `--published`. Published Chinese essays are in `site/zh/`. English transcripts, episode covers, portraits, and hosting credentials are outside Git. `--private` needs a local `private/` directory.
-- `prepare` splits subtitles for long episodes only. Essentials, AMAs, and live Q&As are catalog entries for now, not permanently excluded. 16 AMAs are marked as excerpts. Before producing another kind, support its matching bookkeeping and acceptance rules; do not relabel it as a long episode.
+- `prepare` supports all four kinds, using `--batch` to isolate fresh chunks/maps without overwriting evidence. Non-long metadata must declare source_scope and source_scope_note, with scope-specific substantial-prose and independent-review gates. Public AMA excerpts are never complete member episodes; released event Q&As are not entire lectures. See PIPELINE for the exact contract.
 - Index dates in the catalog are not independently verified and are not episode publish dates. Chapter times come from the local subtitles and are not a claim of second-by-second alignment with the audio.
 - A push to `main` updates the GitHub Pages backup. The primary site still follows its existing hosting process. The live site is the authority for how many essays are online. The current count is in the [README](../README.md).
 

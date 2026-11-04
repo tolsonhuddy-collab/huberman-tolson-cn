@@ -1,0 +1,77 @@
+{
+  "id": "ep-4f59e3500a64",
+  "title_zh": "AMA14：晚间光照、训练安排与健康检测，如何判断自己需要什么",
+  "title_en": "AMA #14: 2023 Philanthropy, Evening Routine, Light Therapy, Health Metrics & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-14-2023-philanthropy-evening-routine-light-therapy-health-metrics-more",
+  "published": "2023-12-31T20:45:00Z",
+  "editor_note": "公开全长原创精读。普通红灯、光生物调节与晨间明亮光分开；aMCC因果说法、MRI普筛与眼压诊断就地纠边。转写含混补剂名与30–120 Minutes不静默补全。未原音回听。",
+  "source_intro": "RSS首发2023-12-31T20:45:00Z。TXT71669字符连续全文；VTT末3912.24秒、RSS3910秒，差-2.24秒未原音核准。原机器字幕滚动重复和词名误识保留审计，章节仅实际本地cue定位。",
+  "dek": "从aMCC与晚间照明，到一周训练、夜醒、力量目标和全身MRI：理解个人做法、实验条件与检测取舍。",
+  "source_scope": "full_episode",
+  "source_scope_note": "本次公开发行的AMA14完整问答，包含养狗、左右力量不均与儿童发展末题，不补写未来节目的内容。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "迎接困难的感觉，可以帮助理解 aMCC，却不能证明“越难受越长脑”",
+      "source_seconds": 428.919,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "晚间照明先降低进入眼睛的光，不必先购买设备",
+      "source_seconds": 754.079,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "红光视网膜实验，与冬天起床后的明亮光照，解决的是不同问题",
+      "source_seconds": 1288.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一周三类有氧和三次抗阻，是他的“随时能用身体”安排",
+      "source_seconds": 1728.679,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "主观感觉与客观指标要互相补充，眼压也不是青光眼的全部",
+      "source_seconds": 2117.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "夜里醒来，放松练习可以尝试，补剂名称不清就不能照方抓药",
+      "source_seconds": 2401.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想增加力量而不明显增肌，不能只靠一个次数区间保证",
+      "source_seconds": 2802.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "全身 MRI 发现更多东西，不等于净获益一定更多",
+      "source_seconds": 3058.599,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "养狗的问题，先落在能否承担照护责任",
+      "source_seconds": 3315.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "左右力量不均，先用可控制的单侧动作找出差别",
+      "source_seconds": 3379.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "儿童发展最后仍是一个开放的研究与教育问题",
+      "source_seconds": 3655.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:27:57Z"
+}

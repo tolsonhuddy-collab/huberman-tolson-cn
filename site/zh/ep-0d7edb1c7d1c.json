@@ -1,0 +1,52 @@
+{
+  "id": "ep-0d7edb1c7d1c",
+  "title_zh": "氟化物、防龋与暴露剂量：AMA #15 公开节选",
+  "title_en": "AMA #15: Fluoride Benefits/Risks & Vagus Nerve Stimulation",
+  "source_url": "https://www.hubermanlab.com/episode/ama-15-fluoride-benefits-risks-vagus-nerve-stimulation",
+  "published": "2024-02-01T01:20:00Z",
+  "editor_note": "原创中文精读；0.7mg/L归美公共卫生署防龋目标，非个人中毒阈值。早期未成洞脱矿与已成龋洞、局部使用与吞入、高暴露/体外与常规饮水均分开；1945历史、后续NTP及滤水/煮沸就地核注，不补会员迷走神经问题。",
+  "source_intro": "首发日期采用官方RSS 2024-02-01T01:20:00Z。正文依据所提供公开节选的本地TXT全文，这里只整理公开节选，不是会员版完整节目。VTT章节为实际非空cue起点，未回听原音；RSS时长1742.0秒，VTT末端1741.32秒，端点差异不用于推算广告或自动校时。",
+  "dek": "这里只整理公开节选，不是会员版完整节目。分清氟化物的防龋用途、浓度与总摄入，以及再矿化、神经风险和过滤设备的证据边界。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "这里只整理公开节选，不是会员版完整节目。本材料实际回答饮水氟化物、防龋、暴露剂量、风险讨论和个人过滤/口腔经历；题名中的迷走神经刺激未在公开材料展开。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "从问题的预设中退一步",
+      "source_seconds": 106.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "牙齿的脱矿与再矿化，不是已经形成的洞会自然长回",
+      "source_seconds": 336.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每升多少毫克，与一个人摄入多少，是两种量",
+      "source_seconds": 768.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "甲状腺与神经风险，不能从培养皿直接推到每杯水",
+      "source_seconds": 947.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过滤是他的选择，设备能力需要另行核实",
+      "source_seconds": 1021.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "童年经历与口腔护理，不能替代个体诊疗",
+      "source_seconds": 1248.81,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:17:21Z"
+}

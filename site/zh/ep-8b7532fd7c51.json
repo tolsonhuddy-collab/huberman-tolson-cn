@@ -1,0 +1,62 @@
+{
+  "id": "ep-8b7532fd7c51",
+  "title_zh": "追踪器显示深睡偏少，应该怎样理解和改善？｜AMA #2公开节选",
+  "title_en": "AMA #2: Improve Sleep, Reduce Sugar Cravings, Optimal Protein Intake, Stretching Frequency & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-2-improve-sleep-reduce-sugar-cravings-optimal-protein-intake-stretching-frequency-more",
+  "published": "2022-12-08T09:00:00Z",
+  "editor_note": "保留主持建议归属；纠正运动研究并未增加SWS时长、孕妇肌醇试验仅PSQI、深睡REM相等非目标、六小时非多数成人充足。不给睡眠组合处方或自行停药建议。",
+  "source_intro": "官方RSS首发2022-12-08T09:00:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1829.239秒，RSS时长1830.0秒，差0.761秒，未声称原音逐秒对齐。",
+  "dek": "深睡分钟、慢波稳定性、问卷体验与设备估计不同；两项原研究不能替所有生活方案或补充剂背书。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅涵盖AMA #2公开的深睡测量、改善与比例问题，非完整版；糖渴望、蛋白质、拉伸等其余会员问答未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "深睡与REM分布不同，不是各自承包一种修复",
+      "source_seconds": 87.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "消费级设备能看趋势，不能把比例直接当诊断",
+      "source_seconds": 341.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "能帮助入睡，不等于改善整夜睡眠",
+      "source_seconds": 457.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡前少吃与不饿到失眠，需要一起考虑",
+      "source_seconds": 600.99,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动研究改善了慢波特征，没有证明深睡分钟数增加",
+      "source_seconds": 773.01,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "主持人的“睡眠组合”，不能当成已验证配方",
+      "source_seconds": 1019.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "孕妇肌醇试验，测的是问卷睡眠质量",
+      "source_seconds": 1173.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "总量与日间功能，比追求两个比例相等更重要",
+      "source_seconds": 1384.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:10:30Z"
+}

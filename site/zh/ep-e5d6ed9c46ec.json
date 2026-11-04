@@ -1,0 +1,47 @@
+{
+  "id": "ep-e5d6ed9c46ec",
+  "title_zh": "冬季为何更易感冒：AMA #13 公开节选",
+  "title_en": "AMA #13: Winter Months & Sickness, Wim Hof Breathing & Stressors",
+  "source_url": "https://www.hubermanlab.com/episode/ama-13-winter-months-sickness-wim-hof-breathing-stressors",
+  "published": "2023-11-30T13:00:00Z",
+  "editor_note": "原创中文精读，仅写冬季感染公开回答；咳嗽不等同准确传染期、无症状亦可传播；儿童口呼吸观察非鼻呼吸防感染试验；加湿与发热就地临床限定，不补Wim Hof/冷暴露预告为疗法。",
+  "source_intro": "首发日期采用官方RSS 2023-11-30T13:00:00Z。正文依据所提供公开节选的本地TXT全文，这里只整理公开节选，不是会员版完整节目。VTT章节为实际非空cue起点，未回听原音；RSS时长1457.0秒，VTT末端1454.97秒，端点差异不用于推算广告或自动校时。",
+  "dek": "这里只整理公开节选，不是会员版完整节目。读懂冬季室内接触、空气干燥和鼻呼吸讨论，并分清观察研究、传播判断与发热处置的边界。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "这里只整理公开节选，不是会员版完整节目。实际回答冬季感冒/流感、室内接触、干燥与鼻腔屏障及发热的讨论；Wim Hof相关呼吸和冷暴露只是下一问转场，未提供答案或操作。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "“冬天”包含几种同时改变的条件",
+      "source_seconds": 106.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "距离、症状与传播风险，需要分开判断",
+      "source_seconds": 347.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "干燥与鼻腔屏障，加湿也有适用条件",
+      "source_seconds": 477.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鼻呼吸的儿童研究，不能当作预防感染的训练试验",
+      "source_seconds": 916.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "保暖、发热与下一问的预告，不是治疗教程",
+      "source_seconds": 1017.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:20:10Z"
+}

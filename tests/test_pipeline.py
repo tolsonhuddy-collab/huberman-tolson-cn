@@ -53,6 +53,112 @@ class PipelineTests(unittest.TestCase):
             p.record("test", "reviewed", "skip steps")
         self.assertEqual(p.progress()["episodes"]["test"]["status"], "pending")
 
+    def nonlong_draft(self, kind="ama", excerpt=True):
+        item = {"id": "test", "kind": kind, "title_en": "Released source", "explicit_excerpt": excerpt, "word_count": 4000}
+        scope = "public_excerpt" if kind == "ama" and excerpt else {"ama": "full_episode", "live_qa": "released_qa", "essentials": "independent_essentials"}[kind]
+        p.write_json(self.root / "catalog/episodes.json", {"episodes": [item]})
+        meta = {"id": "test", "title_zh": "本次提供话题（公开节选）", "source_scope": scope,
+                "source_scope_note": "仅覆盖本次公开来源实际提供的问答与解释，不包含未提供的会员话题或整场演讲。"}
+        meta_path = self.root / "private/metadata/test.json"
+        p.write_json(meta_path, meta)
+        count = 6 if scope in {"full_episode", "released_qa"} else 3
+        article = self.root / "private/articles/test.md"
+        article.parent.mkdir(parents=True, exist_ok=True)
+        article.write_text("# 本次来源精读\n" + "".join(f"## 话题{i}\n\n" + "文" * 810 + "\n\n" for i in range(count)))
+        checks = {k: True for k in ["source_read_in_full", "beginning", "middle", "end", "speaker_attribution", "uncertainty_preserved", "ad_removed", *p.SCOPE_CHECKS]}
+        author = {"episode_id": "test", "author": "writer", "checks": checks, "coverage": [{}] * count,
+                  "article_sha256": p.sha(article), "metadata_sha256": p.sha(meta_path)}
+        independent = {"review_kind": "independent_editorial_review", "reviewer": "editor", "verdict": "pass", "source_read_in_full": True,
+                       "checks": {k: True for k in ["beginning", "middle", "end", "speaker_attribution", "uncertainty_preserved", "examples_retained", "natural_prose", *p.SCOPE_CHECKS]},
+                       "article_sha256": p.sha(article), "metadata_sha256": p.sha(meta_path)}
+        p.write_json(self.root / "private/reviews/test.author-review.json", author)
+        p.write_json(self.root / "private/reviews/test.independent-review.json", independent)
+        return item, meta, author, independent
+
+    def test_nonlong_short_drafts_have_scoped_thresholds_and_keep_review_gates(self):
+        for kind, excerpt, sections in [("ama", True, 3), ("ama", False, 6), ("live_qa", False, 6), ("essentials", False, 3)]:
+            with self.subTest(kind=kind, excerpt=excerpt):
+                item, meta, _, _ = self.nonlong_draft(kind, excerpt)
+                p.write_json(self.root / "private/progress.json", {"episodes": {"test": {"status": "pending", "history": []}}})
+                self.assertLess(p.article_metrics("test")["chinese_characters"], 8000)
+                self.assertEqual(p.quality_requirements(item, meta)["chinese_characters"], 2400)
+                self.assertEqual(p.quality_requirements(item, meta)["sections"], sections)
+                self.assertEqual(p.quality_requirements(item, meta)["coverage"], sections)
+                p.record("test", "drafting", "read available source")
+                p.record("test", "draft_complete", "author covered actual scope")
+                p.record("test", "reviewed", "different editor checked source")
+                state = p.status()
+                self.assertEqual(state["states"], {})
+                self.assertEqual(state["all_states"], {"reviewed": 1})
+                self.assertEqual(state["by_kind"][kind]["states"], {"reviewed": 1})
+
+    def test_nonlong_cannot_skip_scope_checks_or_reuse_edited_scope_review(self):
+        _, meta, author, independent = self.nonlong_draft()
+        p.record("test", "drafting", "start")
+        author["checks"]["unprovided_topics_not_invented"] = False
+        p.write_json(self.root / "private/reviews/test.author-review.json", author)
+        with self.assertRaisesRegex(ValueError, "author source-scope"):
+            p.record("test", "draft_complete", "missing scope check")
+        author["checks"]["unprovided_topics_not_invented"] = True
+        p.write_json(self.root / "private/reviews/test.author-review.json", author)
+        p.record("test", "draft_complete", "author checked")
+        independent["checks"]["source_scope_correct"] = False
+        p.write_json(self.root / "private/reviews/test.independent-review.json", independent)
+        with self.assertRaisesRegex(ValueError, "independent source-scope"):
+            p.record("test", "reviewed", "missing independent check")
+        independent["checks"]["source_scope_correct"] = True
+        independent["reviewer"] = "writer"
+        p.write_json(self.root / "private/reviews/test.independent-review.json", independent)
+        with self.assertRaisesRegex(ValueError, "different independent"):
+            p.record("test", "reviewed", "same author")
+        meta["source_scope_note"] += "新增范围说明。"
+        p.write_json(self.root / "private/metadata/test.json", meta)
+        self.assertEqual(p.status()["active"][0]["status"], "needs_revision")
+        with self.assertRaisesRegex(ValueError, "changed since author"):
+            p.record("test", "reviewed", "stale scope review")
+        author["metadata_sha256"] = p.sha(self.root / "private/metadata/test.json")
+        p.write_json(self.root / "private/reviews/test.author-review.json", author)
+        independent["reviewer"] = "editor"
+        p.write_json(self.root / "private/reviews/test.independent-review.json", independent)
+        with self.assertRaisesRegex(ValueError, "metadata changed since independent"):
+            p.record("test", "reviewed", "old independent metadata hash")
+
+    def test_nonlong_edited_article_cannot_reuse_independent_pass(self):
+        _, _, author, _ = self.nonlong_draft()
+        p.record("test", "drafting", "start")
+        p.record("test", "draft_complete", "author checked")
+        article = self.root / "private/articles/test.md"
+        article.write_text(article.read_text() + "修改正文。")
+        author["article_sha256"] = p.sha(article)
+        p.write_json(self.root / "private/reviews/test.author-review.json", author)
+        with self.assertRaisesRegex(ValueError, "changed since independent"):
+            p.record("test", "reviewed", "old independent hash")
+        (self.root / "private/reviews/test.independent-review.json").unlink()
+        with self.assertRaises(FileNotFoundError):
+            p.record("test", "reviewed", "missing independent record")
+
+    def test_scope_mismatch_missing_note_and_unscoped_excerpt_title_are_rejected(self):
+        item, meta, _, _ = self.nonlong_draft()
+        for change in [{"source_scope": "full_episode"}, {"source_scope_note": " "}, {"title_zh": "未提供话题的整期标题"}, {"id": "wrong"}]:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                p.validate_source_scope(item, {**meta, **change})
+        with self.assertRaises(ValueError):
+            p.validate_source_scope(item, {k: v for k, v in meta.items() if k != "source_scope"})
+
+    def test_long_thresholds_are_not_reduced_by_short_source_metadata(self):
+        item = {"id": "test", "kind": "long_episode", "word_count": 500}
+        self.assertEqual(p.quality_requirements(item, {"source_scope": "public_excerpt"}), {"chinese_characters": 8000, "sections": 8, "coverage": 8})
+        article = self.root / "private/articles/test.md"
+        article.parent.mkdir(parents=True)
+        article.write_text("# 短壳\n" + "".join("## 话题\n" + "文" * 500 for _ in range(8)))
+        p.record("test", "drafting", "start")
+        with self.assertRaisesRegex(ValueError, "finished draft"):
+            p.record("test", "draft_complete", "below unchanged long floor")
+        excerpt = {"id": "short", "kind": "ama", "explicit_excerpt": True, "word_count": 1}
+        meta = {"id": "short", "title_zh": "公开节选，非完整版", "source_scope": "public_excerpt", "source_scope_note": "仅涵盖提供来源。"}
+        self.assertEqual(p.quality_requirements(excerpt, meta)["chinese_characters"], 1600)
+        self.assertEqual(p.quality_requirements({**excerpt, "word_count": 20000}, meta)["chinese_characters"], 6000)
+
     def test_vtt_chunks_keep_every_cue_once(self):
         source = self.root / "input/txt"
         vtt_dir = source.parent / "vtt"
@@ -70,6 +176,31 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(covered, [1, 2, 3])
         self.assertEqual(before, (txt.read_bytes(), vtt.read_bytes()))
         self.assertEqual(p.progress()["episodes"]["test"]["status"], "pending")
+
+    def test_prepare_all_kinds_isolates_batches_and_never_overwrites_prior_evidence(self):
+        source = self.root / "input/txt"
+        source.mkdir(parents=True)
+        (source.parent / "vtt").mkdir()
+        txt, vtt = source / "Test.txt", source.parent / "vtt/Test.vtt"
+        txt.write_text("one two")
+        vtt.write_text("WEBVTT\n\n00:00:00.000 --> 00:00:01.000\none two\n")
+        p.write_json(self.root / "private/local-config.json", {"source_dir": str(source)})
+        items = [{"id": kind, "kind": kind, "source_file": "Test.txt", "source_sha256": p.sha(txt), "vtt_sha256": p.sha(vtt)} for kind in p.KINDS.values()]
+        p.write_json(self.root / "catalog/episodes.json", {"episodes": items})
+        for item in items:
+            with self.subTest(kind=item["kind"]):
+                first = p.prepare(item["id"])
+                map_path = self.root / first["source_map_file"]
+                original = map_path.read_bytes()
+                with self.assertRaisesRegex(ValueError, "already exist"):
+                    p.prepare(item["id"])
+                isolated = p.prepare(item["id"], batch="production370-20261104")
+                self.assertIn("production370-20261104/", isolated["source_map_file"])
+                self.assertEqual(map_path.read_bytes(), original)
+                self.assertEqual(isolated["cue_count"], 1)
+        for bad in ["../escape", "two/parts", ".", "", "Batch"]:
+            with self.subTest(batch=bad), self.assertRaisesRegex(ValueError, "safe lowercase slug"):
+                p.prepare(items[0]["id"], batch=bad)
 
     def test_source_paths_cannot_escape_or_follow_symlink(self):
         with self.assertRaises(ValueError):

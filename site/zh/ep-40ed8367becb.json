@@ -1,0 +1,57 @@
+{
+  "id": "ep-40ed8367becb",
+  "title_zh": "冷水会让人生病吗？分清感染、应激与免疫指标｜AMA #7公开节选",
+  "title_en": "AMA #7: Cold Exposure, Maximizing REM Sleep & My Next Scientific Studies",
+  "source_url": "https://www.hubermanlab.com/episode/ama-7-cold-exposure-maximizing-rem-sleep-my-next-scientific-studies",
+  "published": "2023-05-31T12:00:00Z",
+  "editor_note": "根据2023年实际公开问答原创精读。保留统计趋势、实验对象和模型边界；LPS不是活菌感染，冷水与组合训练不能混作同一效果。不提供过度换气或冷水挑战步骤，不把时长、热水和鼻呼吸写成安全或抗感染保证。",
+  "source_intro": "官方RSS首发2023-05-31T12:00:00Z。节目地址经官方sitemap核定，身份与封面采用已核来源记录。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1338.16秒与RSS1340秒差1.84秒，未声称原音逐秒对齐。",
+  "dek": "冷休克、感染风险和免疫指标是不同问题；研究中的炎症变化也不能替代真实感染结局。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅涵盖AMA #7公开提供的冷暴露与感冒、患病时是否继续及免疫研究讨论，非完整版；快速眼动睡眠优化与后续研究计划未提供，不属于本篇覆盖。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "冷暴露不会凭空制造病毒，安全性却不能只问感冒",
+      "source_seconds": 105.78999999999999,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷而干的空气，与冷水不是同一种暴露",
+      "source_seconds": 251.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "已经生病时，研究中的“免疫变化”不是继续挑战的理由",
+      "source_seconds": 429.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "十四摄氏度、一小时，是研究条件而非练习目标",
+      "source_seconds": 574.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同一种应激信号，可能产生不同方向的结果",
+      "source_seconds": 765.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "内毒素实验说明了炎症调节，没有证明人能抵御感染",
+      "source_seconds": 859.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恢复温暖、允许休息，比追求“免疫刺激”更贴近原问题",
+      "source_seconds": 1014.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:24:01Z"
+}

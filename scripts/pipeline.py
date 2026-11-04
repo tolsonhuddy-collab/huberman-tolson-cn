@@ -15,6 +15,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 KINDS = {"常规长节目/Guest Series 候选": "long_episode", "Essentials 精编": "essentials", "AMA": "ama", "现场问答": "live_qa"}
+SCOPE_CHECKS = ("source_scope_correct", "independent_content_verified", "unprovided_topics_not_invented")
 PILOT = {
     "How Your Nervous System Works & Changes.txt": "001-nervous-system",
     "Master Your Sleep & Be More Alert When Awake.txt": "002-master-sleep",
@@ -174,10 +175,17 @@ def check_sources():
     return result
 
 
-def prepare(episode_id, max_words=1200):
+def prepare(episode_id, max_words=1200, batch=None):
     item = episode(episode_id)
-    if item["kind"] != "long_episode":
-        raise ValueError("only long-episode candidates enter the current production queue")
+    if item["kind"] not in KINDS.values():
+        raise ValueError("unknown episode kind")
+    if batch is not None and (not isinstance(batch, str) or not re.fullmatch(r"[a-z0-9][a-z0-9-]{0,79}", batch)):
+        raise ValueError("batch must be a safe lowercase slug")
+    subpath = Path(batch) / episode_id if batch else Path(episode_id)
+    folder = ROOT / "private/chunks" / subpath
+    map_path = ROOT / "private/source-maps" / subpath.with_suffix(".json")
+    if folder.exists() or map_path.exists():
+        raise ValueError("source map or chunks already exist; preserve them and choose a new batch")
     source = Path(read_json(ROOT / "private/local-config.json")["source_dir"])
     vtt = safe_source(source.parent / "vtt", Path(item["source_file"]).with_suffix(".vtt").name)
     if sha(vtt) != item["vtt_sha256"] or sha(safe_source(source, item["source_file"])) != item["source_sha256"]:
@@ -193,7 +201,6 @@ def prepare(episode_id, max_words=1200):
         size += n
     if current:
         chunks.append(current)
-    folder = ROOT / "private/chunks" / episode_id
     folder.mkdir(parents=True, exist_ok=True)
     metadata = []
     for index, group in enumerate(chunks, 1):
@@ -201,8 +208,8 @@ def prepare(episode_id, max_words=1200):
         text = "\n".join(f"[{x['start']:.3f}–{x['end']:.3f}] {x['text']}" for x in group)
         (folder / name).write_text(text + "\n", encoding="utf-8")
         metadata.append({"file": name, "first_cue": group[0]["cue"], "last_cue": group[-1]["cue"], "start": group[0]["start"], "end": group[-1]["end"]})
-    result = {"episode_id": episode_id, "source_sha256": item["source_sha256"], "vtt_sha256": item["vtt_sha256"], "cue_count": len(cues), "chunks": metadata, "status": "input_prepared_only"}
-    write_json(ROOT / "private/source-maps" / (episode_id + ".json"), result)
+    result = {"episode_id": episode_id, "source_sha256": item["source_sha256"], "vtt_sha256": item["vtt_sha256"], "cue_count": len(cues), "chunks": metadata, "status": "input_prepared_only", "source_map_file": str(map_path.relative_to(ROOT)), "chunks_directory": str(folder.relative_to(ROOT))}
+    write_json(map_path, result)
     return result
 
 
@@ -214,16 +221,56 @@ def article_metrics(episode_id):
     return {"exists": True, "chinese_characters": len(re.findall(r"[\u4e00-\u9fff]", text)), "sections": len(re.findall(r"^## ", text, re.M)), "sha256": sha(path)}
 
 
+def validate_source_scope(item, metadata):
+    """Keep this small intake contract aligned with build_site.validate_source_scope."""
+    if item.get("kind") == "long_episode":
+        return
+    if not isinstance(metadata, dict) or metadata.get("id") != item.get("id"):
+        raise ValueError("non-long metadata ID mismatch")
+    expected = {"ama": "public_excerpt" if item.get("explicit_excerpt") else "full_episode", "live_qa": "released_qa", "essentials": "independent_essentials"}.get(item.get("kind"))
+    if expected is None or metadata.get("source_scope") != expected:
+        raise ValueError("source_scope does not match episode kind/excerpt")
+    note = metadata.get("source_scope_note")
+    if not isinstance(note, str) or not note.strip():
+        raise ValueError("source_scope_note must describe the actual available source")
+    if expected == "public_excerpt":
+        title = metadata.get("title_zh")
+        if not isinstance(title, str) or "公开节选" not in title:
+            raise ValueError("Public excerpt title must include 公开节选")
+
+
+def quality_requirements(item, metadata=None):
+    if item["kind"] == "long_episode":
+        return {"chinese_characters": 8000, "sections": 8, "coverage": 8}
+    validate_source_scope(item, metadata or {})
+    words = item.get("word_count")
+    if isinstance(words, bool) or not isinstance(words, int) or words <= 0:
+        raise ValueError("non-long quality profile needs a positive catalog word_count")
+    sections = 6 if metadata["source_scope"] in {"full_episode", "released_qa"} else 3
+    return {"chinese_characters": max(1600, min(6000, (words * 3 + 4) // 5)), "sections": sections, "coverage": sections}
+
+
 def validate_review(episode_id, state):
+    item = episode(episode_id)
+    nonlong = item["kind"] != "long_episode"
+    meta_path = ROOT / "private/metadata" / (episode_id + ".json")
+    metadata = read_json(meta_path) if nonlong else None
+    requirements = quality_requirements(item, metadata)
     metrics = article_metrics(episode_id)
-    if not metrics["exists"] or metrics["chinese_characters"] < 8000 or metrics["sections"] < 8:
+    if not metrics["exists"] or metrics["chinese_characters"] < requirements["chinese_characters"] or metrics["sections"] < requirements["sections"]:
         raise ValueError("finished draft must exist with substantial prose; length alone never certifies completeness")
     review = read_json(ROOT / "private/reviews" / (episode_id + ".author-review.json"))
     required = ("source_read_in_full", "beginning", "middle", "end", "speaker_attribution", "uncertainty_preserved", "ad_removed")
     if review.get("episode_id") != episode_id or not all(review.get("checks", {}).get(k) is True for k in required):
         raise ValueError("missing author coverage checks")
-    if len(review.get("coverage", [])) < 8:
+    if len(review.get("coverage", [])) < requirements["coverage"]:
         raise ValueError("source-to-article coverage map missing")
+    if nonlong:
+        if not all(review.get("checks", {}).get(k) is True for k in SCOPE_CHECKS):
+            raise ValueError("missing author source-scope checks")
+        if review.get("article_sha256") != metrics["sha256"] or review.get("metadata_sha256") != sha(meta_path):
+            raise ValueError("article or metadata changed since author scope review")
+        metrics.update(metadata_sha256=sha(meta_path), source_scope=metadata["source_scope"], quality_requirements=requirements)
     if state == "reviewed":
         independent = read_json(ROOT / "private/reviews" / (episode_id + ".independent-review.json"))
         if independent.get("review_kind") != "independent_editorial_review" or independent.get("verdict") != "pass":
@@ -233,13 +280,20 @@ def validate_review(episode_id, state):
             raise ValueError("independent source coverage checks are incomplete")
         if independent.get("article_sha256") != metrics["sha256"]:
             raise ValueError("article changed since independent review")
+        if nonlong:
+            if not all(independent.get("checks", {}).get(k) is True for k in SCOPE_CHECKS):
+                raise ValueError("missing independent source-scope checks")
+            if not review.get("author") or not independent.get("reviewer") or independent["reviewer"] == review["author"]:
+                raise ValueError("source-scope review needs a different independent reviewer")
+            if independent.get("metadata_sha256") != metrics["metadata_sha256"]:
+                raise ValueError("metadata changed since independent review")
     return metrics
 
 
 def record(episode_id, state, note):
     item = episode(episode_id)
-    if item["kind"] != "long_episode":
-        raise ValueError("other categories are catalogued, not in the current production scope")
+    if item["kind"] not in KINDS.values():
+        raise ValueError("unknown episode kind")
     p = progress()
     row = p["episodes"].setdefault(episode_id, {"status": "pending", "history": []})
     old = row["status"]
@@ -258,18 +312,26 @@ def status():
     p = progress()["episodes"]
     items = catalog()["episodes"]
     long = [i for i in items if i["kind"] == "long_episode"]
-    counts, active = collections.Counter(), []
-    for item in long:
+    counts, all_counts, active = collections.Counter(), collections.Counter(), []
+    by_kind = {kind: {"candidates": sum(i["kind"] == kind for i in items), "states": collections.Counter()} for kind in KINDS.values()}
+    for item in items:
         row = p.get(item["id"], {})
         recorded = row.get("status", "pending")
         metrics = article_metrics(item["id"]) if recorded != "pending" else None
         expected = row.get("metrics", {}).get("sha256")
         stale = recorded in {"draft_complete", "reviewed"} and expected is not None and metrics.get("sha256") != expected
+        if recorded in {"draft_complete", "reviewed"} and item["kind"] != "long_episode":
+            meta_path = ROOT / "private/metadata" / (item["id"] + ".json")
+            expected_meta = row.get("metrics", {}).get("metadata_sha256")
+            stale = stale or expected_meta is None or not meta_path.is_file() or sha(meta_path) != expected_meta
         effective = "needs_revision" if stale else recorded
-        counts[effective] += 1
+        if item["kind"] == "long_episode":
+            counts[effective] += 1
+        all_counts[effective] += 1
+        by_kind[item["kind"]]["states"][effective] += 1
         if recorded != "pending":
             active.append({"id": item["id"], "title": item["title_en"], "status": effective, "recorded_status": recorded, "verification_stale": stale, "metrics": metrics})
-    return {"long_episode_candidates": len(long), "states": dict(counts), "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "active": active}
+    return {"long_episode_candidates": len(long), "states": dict(counts), "other_categories": dict(collections.Counter(i["kind"] for i in items if i["kind"] != "long_episode")), "by_kind": {k: {**v, "states": dict(v["states"])} for k, v in by_kind.items()}, "all_states": dict(all_counts), "active": active}
 
 
 def public_path(name):
@@ -319,6 +381,7 @@ def main():
     prepare_p = sub.add_parser("prepare")
     prepare_p.add_argument("--id", required=True)
     prepare_p.add_argument("--max-words", type=int, default=1200)
+    prepare_p.add_argument("--batch", help="Safe isolated batch slug; existing maps/chunks are never overwritten")
     rec = sub.add_parser("record")
     rec.add_argument("--id", required=True)
     rec.add_argument("--state", choices=sorted(STATES), required=True)
@@ -332,7 +395,7 @@ def main():
     elif args.command == "prepare":
         if args.max_words < 100:
             raise ValueError("max-words must be >=100")
-        result = prepare(args.id, args.max_words)
+        result = prepare(args.id, args.max_words, args.batch)
     elif args.command == "record":
         result = record(args.id, args.state, args.note)
     elif args.command == "audit-git":

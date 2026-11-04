@@ -1,0 +1,192 @@
+{
+  "id": "ep-e553004d8669",
+  "title_zh": "衰老可以被改写到哪一步：辛克莱的机制、实验与延寿设想",
+  "title_en": "The Biology of Slowing & Reversing Aging | Dr. David Sinclair",
+  "source_url": "https://www.hubermanlab.com/episode/dr-david-sinclair-the-biology-of-slowing-and-reversing-aging",
+  "published": "2021-12-27T09:00:00Z",
+  "editor_note": "完整长访谈原创精读，删广告和购买引导，保留检测平台及来宾商业相关自述。动物实验、未发表资料、个人用法与人体结局分开；疾病定义、80%推断、喂食试验、白藜芦醇隔日比较、二甲双胍运动适应、HbA1c/铁/血脂、OSK与机场扫描疑误就地辨析。本篇不作为禁食、补剂或处方药的个人方案。",
+  "source_intro": "首发按官方RSS2021-12-27T09:00:00Z（原始-0000即UTC）。官方页将嘉宾名置前、RSS置后，为同一原节目；身份与封面沿用本批核实登记。实际完整读取本地TXT128400字符，并核33个章节本地VTT cue邻文。时间仅导航，未原音回听或独立音画校准。VTT末端7839.756秒，比RSS7556秒长283.756秒，原因未明，不按广告推定偏移。",
+  "dek": "从表观遗传的信息比喻，到营养感应、白藜芦醇、NMN与眼部重编程，逐层理解辛克莱截至2021年的研究主张与尚未跨过的人体证据边界。",
+  "source_scope": "full_episode",
+  "source_scope_note": "依据本期公开发行的完整长访谈文本，覆盖实际前中后讨论；不补写节目之外的内容。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "戴维·辛克莱（David Sinclair）",
+      "role": "来宾",
+      "bio": "2021年节目介绍为哈佛医学院遗传学教授，研究衰老生物学；本文转述当年观点、实验与个人经验。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "为什么把多种疾病放回“年龄”这个共同背景",
+      "source_seconds": 513.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "DNA像曲库，表观遗传决定怎样播放",
+      "source_seconds": 712.15,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "甲基化需要放对位置，并不是越少越年轻",
+      "source_seconds": 883.97,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一只衰老时钟，测到的是什么",
+      "source_seconds": 1100.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“八成由表观遗传决定”，不能理解成八成都能自己控制",
+      "source_seconds": 1422.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生长、体型与寿命之间，存在复杂取舍",
+      "source_seconds": 1287.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "营养感应系统，在判断资源是否充足",
+      "source_seconds": 1436.246,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小鼠的喂食研究，不能直接换成人类窗口",
+      "source_seconds": 1699.701,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "自噬是持续维护，不是等到断食某一天才突然开始",
+      "source_seconds": 2035.09,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "mTOR与肌肉，不是只能保留其中一个",
+      "source_seconds": 2230.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "白藜芦醇的“隔日”结果，同时改变了喂食",
+      "source_seconds": 2595.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "白藜芦醇如何起作用，本身就经历过争议",
+      "source_seconds": 3029.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "二甲双胍的观察关联，不是健康人的延寿试验",
+      "source_seconds": 2694.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "与运动合用，不能只用“肌肉少长5%”带过",
+      "source_seconds": 2756.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小檗碱不能只被叫作“便宜版二甲双胍”",
+      "source_seconds": 2870.126,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NAD是代谢参与者，“燃料”只是一个比喻",
+      "source_seconds": 3532.545,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NMN、NR和维生素B3，各自还需要比较",
+      "source_seconds": 3595.983,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "2021年的NMN人体证据，测到的是有限的代谢终点",
+      "source_seconds": 3998.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "昼夜节律、甜味与“破斋”的边界",
+      "source_seconds": 4156.14,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "铁过量值得研究，低铁却不是长寿目标",
+      "source_seconds": 4324.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血液趋势有价值，不能只为把分数调绿",
+      "source_seconds": 4506.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胆固醇：内源合成、饮食和清除要分别看",
+      "source_seconds": 4862.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "植物的应激分子，提出了一种跨物种假说",
+      "source_seconds": 5260.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抗氧化剂的故事，为什么没有简单兑现",
+      "source_seconds": 5383.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动的目标，还包括保住身体功能",
+      "source_seconds": 5669.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小鼠生育力恢复，不等于女性卵子储备被重建",
+      "source_seconds": 5830.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "眼部重编程：一次明确的动物实验",
+      "source_seconds": 6108.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "更早发现疾病，不等于一次检测就能排除所有问题",
+      "source_seconds": 6306.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷热刺激，是假说和个人选择",
+      "source_seconds": 6385.81,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脂肪、炎症与下丘脑，怎样连成全身问题",
+      "source_seconds": 6490.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "亚甲蓝与甲基化，不是名字相近就有关系",
+      "source_seconds": 6747.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "辐射风险，需要先认清机器是什么",
+      "source_seconds": 6977.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "直接向公众讲研究，也需要公开证据与利益关系",
+      "source_seconds": 7178.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:20:10Z"
+}

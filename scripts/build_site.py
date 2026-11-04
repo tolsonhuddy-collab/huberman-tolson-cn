@@ -29,6 +29,7 @@ BRAND = "Huberman Lab 中文精读"
 # Tolson-RSS keeps one Atom file per podcast. This site currently has Huberman essays only.
 PODCASTS = ({"slug": "huberman", "title": "Huberman Lab 中文精读"},)
 KINDS = {"long_episode": "长节目", "essentials": "Essentials", "ama": "AMA", "live_qa": "现场问答"}
+SOURCE_SCOPES = {"public_excerpt": "AMA 公开节选 · 非完整版", "released_qa": "公开发行问答段 · 非整场演讲", "full_episode": "完整 AMA 节目", "independent_essentials": "Essentials 独立内容精读"}
 STATUSES = {"pending": "尚未开始", "drafting": "正在编写", "draft_complete": "完整初稿 · 待审核", "reviewed": "已审核", "needs_revision": "待修订"}
 READY = {"draft_complete", "reviewed"}
 ID = re.compile(r"[a-z0-9][a-z0-9-]{0,79}\Z")
@@ -218,10 +219,13 @@ def read_private(root: Path) -> tuple[list[dict], dict, dict, dict]:
                 raise ValueError(f"Metadata ID mismatch: {episode_id}")
             metadata[episode_id] = meta
         if state.get("status") in READY and md_path.is_file():
+            validate_source_scope(ep, metadata.get(episode_id, {}))
             md_bytes = md_path.read_bytes()
             metrics = state.get("metrics")
             recorded_sha = metrics.get("sha256") if isinstance(metrics, dict) else None
-            if recorded_sha is not None and recorded_sha != hashlib.sha256(md_bytes).hexdigest():
+            metadata_sha = metrics.get("metadata_sha256") if isinstance(metrics, dict) else None
+            scope_stale = ep["kind"] != "long_episode" and (metadata_sha is None or not meta_path.is_file() or metadata_sha != hashlib.sha256(meta_path.read_bytes()).hexdigest())
+            if scope_stale or (recorded_sha is not None and recorded_sha != hashlib.sha256(md_bytes).hexdigest()):
                 # A recorded review applies to one exact file version. Downgrade
                 # this build's state only; the source progress file stays read-only.
                 progress[episode_id] = {**state, "status": "needs_revision"}
@@ -308,8 +312,40 @@ def display_section_title(title: str, number: int) -> str:
     return chinese[1].strip() if chinese else title
 
 
+def validate_source_scope(ep: dict, meta: dict) -> str:
+    """New non-long essays must state exactly which released source they cover."""
+    if ep.get("kind") == "long_episode":
+        return ""
+    if not isinstance(meta, dict) or meta.get("id") != ep.get("id"):
+        raise ValueError("non-long metadata ID mismatch")
+    kind, scope = ep.get("kind"), meta.get("source_scope")
+    expected = {"ama": "public_excerpt" if ep.get("explicit_excerpt") else "full_episode", "live_qa": "released_qa", "essentials": "independent_essentials"}.get(kind)
+    if expected is None or scope != expected:
+        raise ValueError(f"source_scope does not match episode kind/excerpt: {ep.get('id', '')}")
+    note = meta.get("source_scope_note")
+    if not isinstance(note, str) or not note.strip():
+        raise ValueError("source_scope_note must describe the actual available source")
+    if scope == "public_excerpt":
+        title = meta.get("title_zh")
+        if not isinstance(title, str) or "公开节选" not in title:
+            raise ValueError("Public excerpt title must include 公开节选")
+    return SOURCE_SCOPES[scope] + "。" + note.strip()
+
+
+def video_reference(meta: dict) -> str:
+    """Link a verified replay separately from uncalibrated source time labels."""
+    value = meta.get("official_video_url")
+    if value is None:
+        return ""
+    target = safe_url(value)
+    if target is None:
+        raise ValueError("official_video_url must be a safe source URL")
+    return f'<p><a href="{escape(target, quote=True)}" target="_blank" rel="noopener noreferrer">官方视频（时间定位未独立校准）</a></p>'
+
+
 def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
     """Reader-facing essay HTML. Standalone timestamp lines stay out of the body."""
+    scope_notice = validate_source_scope(ep, meta)
     title, intro, sections = parse_article(md)
     section_meta = meta.get("sections", [])
     if section_meta and (not isinstance(section_meta, list) or any(not isinstance(s, dict) for s in section_meta) or [s.get("title") for s in section_meta] != [t for t, _ in sections]):
@@ -319,6 +355,9 @@ def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
     if not isinstance(source_intro, str):
         raise ValueError("source_intro must be text")
     article, source_details = [], [blocks(source_intro)] if source_intro else []
+    replay = video_reference(meta)
+    if replay:
+        source_details.append(replay)
     for number, (section_title, body) in enumerate(sections, 1):
         sec = section_meta[number - 1].get("source_seconds") if section_meta else None
         timing_provenance = section_meta[number - 1].get("timestamp_provenance") if section_meta else None
@@ -333,6 +372,7 @@ def reading_fragment(ep: dict, meta: dict, md: str) -> dict:
     return {
         "article": "\n".join(article), "source_details": source_details, "source": source, "count": count,
         "title_zh": str(meta.get("title_zh") or title or ep["title_en"]), "sections": sections,
+        "scope_notice": scope_notice,
     }
 
 
@@ -340,6 +380,8 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
     fragment = fragment or reading_fragment(ep, meta, md)
     title_zh, source, sections = fragment["title_zh"], fragment["source"], fragment["sections"]
     count = fragment["count"]
+    scope_notice = validate_source_scope(ep, meta)
+    scope_meta = f'<span>{escape(SOURCE_SCOPES[meta["source_scope"]])}</span>' if scope_notice else ""
     source_note = "独立整理的非官方中文精读。原始英文转写仅用于编校核对，未随本站发布。正文与素材不属于 MIT 代码许可。"
     if not private:
         source_note = "本页为原创虚构版式演示，不对应真实节目；没有使用节目转写、翻译全文或真人肖像。"
@@ -353,12 +395,12 @@ def render_article(root: Path, staging: Path, ep: dict, state: dict, meta: dict,
         "edition": "非官方阅读项目" if private else "虚构版式演示",
         "feed_href": "../feed.xml",
         "status_notice": "" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>',
-        "episode_meta": f'<span>{KINDS[ep["kind"]]}</span>' + ("" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>') + f'<span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
+        "episode_meta": f'<span>{KINDS[ep["kind"]]}</span>' + scope_meta + ("" if state.get("status") == "reviewed" else f'<span>{escape(STATUSES[state.get("status", "pending")])}</span>') + f'<span>约 {count:,} 字 · 阅读 {max(1, math.ceil(count / 450))} 分钟</span>',
         "toc": "".join(f'<a href="#section-{i}"><span>{i:02}</span>{escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "mobile_toc": "".join(f'<a href="#section-{i}">{i:02} {escape(display_section_title(t, i))}</a>' for i, (t, _) in enumerate(sections, 1)),
         "speakers": speakers_html(root, staging, ep["id"], meta.get("hosts", []), private), "article": fragment["article"],
         "editor_note": escape(str(meta.get("editor_note") or "依据本地英文稿件整理，待逐段核验。").replace("当前为私有编辑稿，内容公开授权待确认。", "中文精读为非官方独立编辑作品，不构成医疗建议。")),
-        "reading_note": "依据英文原稿编译，编辑与来源说明见文末。" if private else "原创虚构版式演示，人物与正文均为占位内容。",
+        "reading_note": escape(scope_notice) if scope_notice else ("依据英文原稿编译，编辑与来源说明见文末。" if private else "原创虚构版式演示，人物与正文均为占位内容。"),
         "source_details": "\n".join(fragment["source_details"]),
         "source_note": escape(source_note),
         "source_tab": f'<a class="source-tab" href="{escape(source, quote=True)}" target="_blank" rel="noopener noreferrer">原节目 ↗</a>' if source else "",
@@ -416,7 +458,10 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         badges = f'<span>{KINDS[ep["kind"]]}</span>'
         if ep.get("guest_series"):
             badges += '<span>Guest Series</span>'
-        if ep.get("explicit_excerpt"):
+        if readable and ep["kind"] != "long_episode":
+            validate_source_scope(ep, meta)
+            badges += '<span class="excerpt-badge">' + escape(SOURCE_SCOPES[meta["source_scope"]]) + '</span>'
+        elif ep.get("explicit_excerpt"):
             badges += '<span class="excerpt-badge">仅节选</span>'
         english = f'<p class="card-english" lang="en">{escape(ep["title_en"])}</p>' if title != ep["title_en"] else ""
         portrait = "portrait-placeholder.svg"
@@ -766,7 +811,8 @@ def render_og_card(path: Path, title: str, number: int, meta: dict | None = None
     meta = meta or {}
     image = Image.new("RGB", (1200, 630), "#f4f5f6")
     draw = ImageDraw.Draw(image)
-    chip = _draw_chip(draw, (72, 48), "中文精读", load_font("sans-bold", 26), "#dfddd6", "#302f2c")
+    scope_chip = {"public_excerpt": "AMA 公开节选", "released_qa": "现场问答", "full_episode": "完整节目", "independent_essentials": "Essentials 精读"}.get(meta.get("source_scope"), "中文精读")
+    chip = _draw_chip(draw, (72, 48), scope_chip, load_font("sans-bold", 26), "#dfddd6", "#302f2c")
     date = card_date(meta)
     if date:
         date_font = load_font("sans", 28)
@@ -806,6 +852,11 @@ def render_og_card(path: Path, title: str, number: int, meta: dict | None = None
 def entry_html(meta: dict, fragment: dict, image_url: str) -> str:
     alt = fragment["title_zh"]
     parts = [f'<img src="{escape(image_url, quote=True)}" alt="{escape(alt, quote=True)}">', f"<p>{escape(RIGHTS_LINE)}</p>"]
+    if fragment.get("scope_notice"):
+        parts.append("<p>" + escape(fragment["scope_notice"]) + "</p>")
+    replay = video_reference(meta)
+    if replay:
+        parts.append(replay)
     dek = meta.get("dek")
     if isinstance(dek, str) and dek.strip():
         parts.append("<p>" + escape(dek.strip()) + "</p>")
@@ -950,6 +1001,7 @@ def read_published(root: Path) -> tuple[list[dict], dict, dict, dict]:
         meta = json.loads(meta_path.read_text(encoding="utf-8"))
         if not isinstance(meta, dict) or meta.get("id") != episode_id:
             raise ValueError(f"Metadata ID mismatch: {episode_id}")
+        validate_source_scope(by_id[episode_id], meta)
         metadata[episode_id] = meta
         articles[episode_id] = md_path.read_text(encoding="utf-8")
         progress[episode_id] = {"status": "reviewed"}

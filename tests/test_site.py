@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import tempfile
 import unittest
+from unittest.mock import patch
 from urllib.parse import urljoin, urlsplit
 from xml.etree import ElementTree as ET
 
@@ -101,6 +102,86 @@ class SiteTests(unittest.TestCase):
         self.assertIn("完整初稿 · 待审核", draft)
         self.assertIn("完整初稿 · 待审核", index)
         self.assertEqual(before, progress_path.read_bytes())
+
+    def test_legacy_long_article_html_bytes_are_unchanged(self):
+        self.inputs()
+        episodes, progress, metadata, articles = site.read_private(self.root)
+        episode = episodes[0]
+        html = site.render_article(self.root, self.root / "private/staging", episode, progress[episode["id"]], metadata[episode["id"]], articles[episode["id"]], True, og_image="https://example.org/og/episode-a.jpg")
+        self.assertEqual(hashlib.sha256(html.encode()).hexdigest(), "a271f0be420bda2d59ff5cae48c79ad3b1ea73eecd2a2241f8fccfbe6812e675")
+
+    def scoped_published_inputs(self, kind="ama", excerpt=True):
+        episode = {"id": "scoped-essay", "kind": kind, "title_en": "Official released source", "explicit_excerpt": excerpt}
+        scope = "public_excerpt" if kind == "ama" and excerpt else {"ama": "full_episode", "live_qa": "released_qa", "essentials": "independent_essentials"}[kind]
+        self.write_json("catalog/episodes.json", {"episodes": [episode]})
+        (self.root / "site/zh").mkdir(parents=True, exist_ok=True)
+        (self.root / "site/zh/scoped-essay.md").write_text("# 本次提供话题\n\n## 机制\n\n来源解释。\n\n## 条件\n\n研究限制。\n\n## 例子\n\n来源例子。\n")
+        meta = {"id": episode["id"], "title_zh": "本次提供话题（公开节选）" if scope == "public_excerpt" else "本次提供话题",
+                "source_scope": scope, "source_scope_note": "仅涵盖本次公开来源实际提供的三个话题，不含未提供的会员部分或现场完整演讲。",
+                "source_url": "https://example.org/released-source", "published": "2023-08-30T08:00:00Z"}
+        self.write_json("site/zh/scoped-essay.json", meta)
+        return episode, meta
+
+    def test_scoped_excerpt_is_visible_before_body_in_catalog_and_both_full_feeds(self):
+        episode, meta = self.scoped_published_inputs()
+        with patch.object(site, "_draw_chip", wraps=site._draw_chip) as draw_chip:
+            manifest = site.build_site(self.root, Path("dist"), published=True)
+        self.assertEqual(draw_chip.call_args.args[2], "AMA 公开节选")
+        self.assertEqual(manifest["article_count"], manifest["feed_entry_count"])
+        page = (self.root / "dist/episodes/scoped-essay.html").read_text()
+        visible = page[:page.index('<article id="reading"')]
+        notice = site.validate_source_scope(episode, meta)
+        self.assertIn(notice, visible)
+        self.assertIn("AMA 公开节选 · 非完整版", (self.root / "dist/index.html").read_text())
+        self.assertNotIn("已审核", page)
+        self.assertNotIn("已校读", page)
+        for rel in ["feed.xml", "podcasts/huberman/feed.xml"]:
+            entry = ET.parse(self.root / "dist" / rel).getroot().find("{http://www.w3.org/2005/Atom}entry")
+            content = entry.find("{http://www.w3.org/2005/Atom}content").text
+            self.assertIn(notice, content)
+            self.assertIn("来源解释。", content)
+            self.assertIn("研究限制。", content)
+            self.assertIn("来源例子。", content)
+            self.assertEqual(entry.find("{http://www.w3.org/2005/Atom}category").get("term"), "ama")
+
+    def test_full_episode_card_chip_is_neutral_and_legacy_card_chip_is_unchanged(self):
+        for meta, label in [({"source_scope": "full_episode"}, "完整节目"), ({}, "中文精读")]:
+            with self.subTest(meta=meta), patch.object(site, "_draw_chip", wraps=site._draw_chip) as draw_chip:
+                site.render_og_card(self.root / "card.jpg", "完整长节目标题", 1, meta)
+                self.assertEqual(draw_chip.call_args.args[2], label)
+
+    def test_nonlong_scope_missing_or_mismatched_cannot_replace_good_published_build(self):
+        _, meta = self.scoped_published_inputs()
+        site.build_site(self.root, Path("dist"), published=True)
+        before = (self.root / "dist/episodes/scoped-essay.html").read_bytes()
+        changes = [{"source_scope": "full_episode"}, {"source_scope_note": " "}, {"title_zh": "会员整期标题"}, {"source_scope": None}]
+        for change in changes:
+            with self.subTest(change=change):
+                self.write_json("site/zh/scoped-essay.json", {**meta, **change})
+                with self.assertRaises(ValueError):
+                    site.build_site(self.root, Path("dist"), published=True)
+                self.assertEqual((self.root / "dist/episodes/scoped-essay.html").read_bytes(), before)
+        for kind, excerpt in [("ama", False), ("live_qa", False), ("essentials", False)]:
+            episode, valid = self.scoped_published_inputs(kind, excerpt)
+            self.assertTrue(site.validate_source_scope(episode, valid))
+            with self.assertRaises(ValueError):
+                site.validate_source_scope(episode, {**valid, "source_scope": "public_excerpt"})
+
+    def test_private_nonlong_scope_edit_invalidates_the_recorded_review(self):
+        episode, meta = self.scoped_published_inputs()
+        article = (self.root / "site/zh/scoped-essay.md").read_bytes()
+        (self.root / "private/articles/scoped-essay.md").write_bytes(article)
+        self.write_json("private/metadata/scoped-essay.json", meta)
+        metadata_path = self.root / "private/metadata/scoped-essay.json"
+        self.write_json("private/progress.json", {"episodes": {episode["id"]: {"status": "reviewed", "metrics": {
+            "sha256": hashlib.sha256(article).hexdigest(), "metadata_sha256": hashlib.sha256(metadata_path.read_bytes()).hexdigest()}}}})
+        self.private_build()
+        self.assertTrue((self.root / "private/site/episodes/scoped-essay.html").is_file())
+        meta["source_scope_note"] += "改动了已审的来源范围。"
+        self.write_json("private/metadata/scoped-essay.json", meta)
+        _, progress, _, articles = site.read_private(self.root)
+        self.assertEqual(progress[episode["id"]]["status"], "needs_revision")
+        self.assertNotIn(episode["id"], articles)
 
     def test_unknown_source_has_no_fabricated_video_link(self):
         self.inputs(None, "javascript:alert(1)")
@@ -666,7 +747,12 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
                 {"title": f"前半 {number}", "source_seconds": None}, {"title": f"后半 {number}", "source_seconds": None}]}
             if dek:
                 meta["dek"] = dek
+            if number == 19:
+                meta.update(source_scope="independent_essentials", source_scope_note="独立内容测试来源；仅验证本次已提供的精编节目。")
             self.write_json(f"private/metadata/{episode_id}.json", meta)
+            if number == 19:
+                progress["episodes"][episode_id]["metrics"] = {"sha256": hashlib.sha256((self.root / f"private/articles/{episode_id}.md").read_bytes()).hexdigest(), "metadata_sha256": hashlib.sha256((self.root / f"private/metadata/{episode_id}.json").read_bytes()).hexdigest()}
+        self.write_json("private/progress.json", progress)
         (self.root / "private/articles/ep-skip.md").write_text("# 跳过\n\n## 一\n\n不应出现在订阅。\n", encoding="utf-8")
         self.write_json("private/metadata/ep-skip.json", {"id": "ep-skip", "title_zh": "跳过", "source_url": "https://example.org/skip",
             "sections": [{"title": "一", "source_seconds": None}]})
@@ -789,9 +875,9 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../style.css"), pages + "style.css")
         self.assertEqual(urljoin(pages + "episodes/essay-one.html", "../feed.xml"), pages + "feed.xml")
 
-    def test_repository_commits_three_hundred_twenty_chinese_essays(self):
+    def test_repository_commits_three_hundred_fifty_chinese_essays(self):
         files = [path for path in (PROJECT / "site/zh").iterdir() if path.is_file()]
-        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 320 + [".md"] * 320)
+        self.assertEqual(sorted(path.suffix for path in files), [".json"] * 350 + [".md"] * 350)
         stems = {}
         for path in files:
             stems.setdefault(path.suffix, set()).add(path.stem)
@@ -799,7 +885,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertEqual(stems[".md"], stems[".json"])
         catalog = json.loads((PROJECT / "catalog/episodes.json").read_text(encoding="utf-8"))
         ids = {episode["id"] for episode in catalog["episodes"]}
-        self.assertEqual(len(stems[".md"]), 320)
+        self.assertEqual(len(stems[".md"]), 350)
         self.assertTrue(stems[".md"] <= ids)
         for path in files:
             if path.suffix != ".json":
@@ -814,7 +900,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             self.assertGreaterEqual(published, site.DATE_FLOOR)
 
     def test_public_provider_paragraph_times_do_not_claim_vtt(self):
-        ep = {"id": "provider-essay", "title_en": "Example", "timeline": {
+        ep = {"id": "provider-essay", "title_en": "Example", "kind": "long_episode", "timeline": {
             "provenance": "public_provider_paragraph_start_unverified_audio",
         }}
         meta = {"source_url": "https://www.hubermanlab.com/episode/example", "sections": [
@@ -870,6 +956,36 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
             "ep-3b4dc4f60782": "2022-04-04T08:00:00Z",
             "ep-7c336f78df2b": "2022-04-11T08:00:00Z",
             "ep-dd43875884ec": "2022-04-18T08:00:00Z",
+            "ep-51adf945726a": "2022-11-02T15:15:00Z",
+            "ep-8b7532fd7c51": "2022-12-08T09:00:00Z",
+            "ep-ea29a39ffb4e": "2023-01-13T09:00:00Z",
+            "ep-42461d80e7a4": "2023-02-24T13:00:00Z",
+            "ep-547b399322ab": "2023-03-24T12:00:00Z",
+            "ep-9949e84e8f8d": "2023-04-27T12:00:00Z",
+            "ep-40ed8367becb": "2023-05-31T12:00:00Z",
+            "ep-4ef2aa96534e": "2023-06-23T17:00:00Z",
+            "ep-965505fdc094": "2023-07-28T12:00:00Z",
+            "ep-f1b0d962377c": "2023-08-30T12:00:00Z",
+            "ep-bb33cb5b518e": "2023-09-29T12:00:00Z",
+            "ep-0d68ff59fd34": "2023-10-31T18:08:58Z",
+            "ep-e5d6ed9c46ec": "2023-11-30T13:00:00Z",
+            "ep-0d7edb1c7d1c": "2024-02-01T01:20:00Z",
+            "ep-6c97a9e5bb9f": "2024-04-30T20:00:00Z",
+            "ep-90b782f3e81c": "2025-04-25T17:15:00Z",
+            "ep-749017ff6567": "2022-08-17T08:00:00Z",
+            "ep-97be316c99ee": "2022-08-31T08:00:00Z",
+            "ep-8dbe64af4384": "2022-11-09T09:00:00Z",
+            "ep-8b7858a72316": "2022-12-14T14:51:00Z",
+            "ep-107c04433756": "2023-11-15T09:00:00Z",
+            "ep-a62e1751b9f9": "2023-12-13T09:00:00Z",
+            "ep-d5b3bc7da3b0": "2024-03-22T08:00:00Z",
+            "ep-f55916ec8089": "2024-04-19T08:00:00Z",
+            "ep-29718cc75ce3": "2024-05-17T08:00:00Z",
+            "ep-1538bcc0be1a": "2024-06-07T08:00:00Z",
+            "ep-4f59e3500a64": "2023-12-31T20:45:00Z",
+            "ep-af0502259910": "2024-02-29T23:00:00Z",
+            "ep-1a25542e6390": "2024-08-02T08:00:00Z",
+            "ep-e553004d8669": "2021-12-27T09:00:00Z",
             "ep-20ef86a02150": "2022-04-25T08:00:00Z",
             "ep-6add29747eed": "2022-05-02T08:00:00Z",
             "ep-f0efe678db99": "2022-06-06T08:00:00Z",
@@ -1092,6 +1208,7 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         (self.root / "site/zh/essay-git.md").write_text("# 只有提交时间\n\n导语。\n\n## 第一章\n\n正文来自提交。\n", encoding="utf-8")
         self.write_json("site/zh/essay-git.json", {
             "id": "essay-git", "title_zh": "只有提交时间",
+            "source_scope": "full_episode", "source_scope_note": "本合成样例覆盖其完整 AMA 来源，仅用于验证原有 Git 日期后备路径。",
             "source_url": "https://www.hubermanlab.com/episode/example",
             "sections": [{"title": "第一章", "source_seconds": None}],
         })
@@ -1147,6 +1264,22 @@ assert.equal(nodes['result-count'].textContent,'显示 1 / 2 期');
         self.assertTrue(all(not line.startswith(tuple("，。、：；")) for line in lines))
         fitted, wrapped, _size = site.fit_title(title, "sans-bold", 1056, 86, 48)
         self.assertGreaterEqual(fitted.getlength(wrapped[-1]), fitted.getlength("变") * 2)
+
+
+    def test_official_replay_is_visible_in_sources_and_feed_without_fake_time_alignment(self):
+        url = "https://www.youtube.com/embed/-e9ErUozQo4"
+        ep = {"id": "event-replay", "title_en": "Released Q&A", "kind": "live_qa"}
+        meta = {"id": ep["id"], "source_scope": "released_qa", "source_scope_note": "仅发行问答，不包含整场演讲。", "official_video_url": url}
+        fragment = site.reading_fragment(ep, meta, "# 现场问答\n\n## 问题\n\n中文解释。\n")
+        reference = site.video_reference(meta)
+        self.assertIn(f'href="{url}"', reference)
+        self.assertIn("时间定位未独立校准", reference)
+        self.assertNotIn("?t=", reference)
+        self.assertIn(reference, "".join(fragment["source_details"]))
+        self.assertIn(reference, site.entry_html(meta, fragment, "https://example.test/card.jpg"))
+        self.assertEqual(site.video_reference({}), "")
+        with self.assertRaisesRegex(ValueError, "safe source URL"):
+            site.video_reference({"official_video_url": "javascript:alert(1)"})
 
 
 if __name__ == "__main__":

@@ -1,0 +1,108 @@
+{
+  "id": "ep-749017ff6567",
+  "title_zh": "怎样学习、恢复与保持好奇：休伯曼西雅图现场问答精读",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at the Moore Theatre in Seattle",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2022-08-17T08:00:00Z",
+  "editor_note": "根据公开发行问答独立整理，未含整场演讲。封面为演出身份，其活动日期不等于RSS上架时间2022-08-17T08:00:00Z；官方视频链接仅确认节目身份，不带时间参数，也未回听校准。90min减睡、学后冰咖啡、80%兴奋剂说法和药物适应证就地限定；呼吸研究现场待审与2023发表分开。",
+  "source_intro": "首发日期采用官方RSS 2022-08-17T08:00:00Z。正文依据公开发行问答录音的本地TXT全文，不是整场演讲，未提供此前的讲座。封面活动日期不是录音上架日。VTT章节为实际非空cue起点，未回听原音；RSS时长3364.0秒，VTT末端3362.885秒，端点差异不用于推算广告或自动校时。",
+  "dek": "公开发行问答，非整场演讲。沿着西雅图听众的具体问题，读懂休息、学习、失败和科学训练，并分清睡眠周期、学后刺激与ADHD用药讨论的证据条件。",
+  "source_scope": "released_qa",
+  "source_scope_note": "本文只整理公开发行的西雅图现场问答录音，不是整场演讲，未包含此前讲座。实际涵盖NSDR/光照睡眠、学习记忆与创造性、社交媒体、补充剂、科研训练与传播、成年学习、读论文和ADHD等问题；末尾节目计划只作当时预告，不补新答案。",
+  "official_video_url": "https://www.youtube.com/embed/2Ds1m5gflCI",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "最常用的实践：光照与非睡眠深度休息",
+      "source_seconds": 136.267,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "醒来动力不足，不能按九十分钟倍数削减睡眠",
+      "source_seconds": 366.757,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "书籍、诗歌与“没有见过面的导师”",
+      "source_seconds": 522.637,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "对心理治疗前景的期待，与临床现实的距离",
+      "source_seconds": 729.217,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "高水平表现之后，他看重的是创造性",
+      "source_seconds": 1048.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "记忆不是越兴奋越好，学后刺激有特定研究条件",
+      "source_seconds": 1351.897,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "社交媒体的“多巴胺池”，是一种比喻",
+      "source_seconds": 1494.127,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "上台、失败与团队：他怎样面对不确定性",
+      "source_seconds": 1665.127,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补充剂清单之前，先看饮食与实际需要",
+      "source_seconds": 2018.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "研究生怎样休息，是安排工作的问题",
+      "source_seconds": 2193.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "当时待发表的呼吸试验，后来实际报告了什么",
+      "source_seconds": 2323.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多巴胺能改变学习方向，也可能强化不想要的东西",
+      "source_seconds": 2423.317,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "做科学、做传播，先问别人能获得什么",
+      "source_seconds": 2592.877,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "六十六岁可以学习，神经发生却不是全部答案",
+      "source_seconds": 2807.047,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "读论文的四个问题，与讲给别人听",
+      "source_seconds": 2880.517,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "ADHD：药物时点须个体评估，专注训练不保证停药",
+      "source_seconds": 3013.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最后一问，是节目计划，不是已经完成的治疗展示",
+      "source_seconds": 3178.687,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:23:11Z"
+}

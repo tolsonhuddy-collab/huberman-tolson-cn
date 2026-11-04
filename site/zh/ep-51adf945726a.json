@@ -1,0 +1,62 @@
+{
+  "id": "ep-51adf945726a",
+  "title_zh": "九十分钟专注工作块，怎样理解节律与学习窗口？｜AMA #1公开节选",
+  "title_en": "AMA #1: Leveraging Ultradian Cycles, How to Protect Your Brain, Seed Oils Examined and More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-1-leveraging-ultradian-cycles-how-to-protect-your-brain-seed-oils-examined-and-more",
+  "published": "2022-11-02T15:15:00Z",
+  "editor_note": "保留一至两块/最多三/特殊四块、周末书与技能学习实例；区分主观状态与皮质醇脉冲测量，额外早起是假想非已证相位表；充分睡眠优先，不宣称NSDR成人神经发生。",
+  "source_intro": "官方RSS首发2022-11-02T15:15:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1496.086秒，RSS时长1496.0秒，差-0.086秒，未声称原音逐秒对齐。",
+  "dek": "主持人的九十分钟安排包含热身、走神和恢复；细胞节律研究并未确立人人每天只有两次学习机会。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅涵盖AMA #1公开的超昼夜节律、专注工作块与恢复一问，非完整版；脑保护与种子油等会员问题未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "一天一至两块，是主持人的常用安排",
+      "source_seconds": 102.46000000000001,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "经常练习专注，不等于不能休假",
+      "source_seconds": 259.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“超昼夜”指短于一天，并非所有节律都是九十分钟",
+      "source_seconds": 358.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "皮质醇脉冲与突触研究，尚不能给出每日两窗处方",
+      "source_seconds": 504.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "九十分钟里留出进入状态的时间",
+      "source_seconds": 668.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增加一块的早起例子，不能变成精确相位表",
+      "source_seconds": 859.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学习与巩固相互联系，改变并非只在睡眠中发生",
+      "source_seconds": 1042.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "技能学习与日常事务，不需要按同一种强度计算",
+      "source_seconds": 1140.335,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:56:16Z"
+}

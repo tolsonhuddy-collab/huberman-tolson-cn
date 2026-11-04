@@ -1,0 +1,57 @@
+{
+  "id": "ep-547b399322ab",
+  "title_zh": "摆脱反复想法，先分清注意循环与痛苦叙事｜AMA #5公开节选",
+  "title_en": "AMA #5: Intrusive Thoughts, CGMs, Behavioral Change, Naps & NSDR",
+  "source_url": "https://www.hubermanlab.com/episode/ama-5-intrusive-thoughts-cgms-behavioral-change-naps-nsdr",
+  "published": "2023-03-24T12:00:00Z",
+  "editor_note": "纠正仪式暂时安心不能排除强迫症；不把三十天框架、最坏场景书写或REM睡眠当成普适治疗。不代诊断，不建议自行停药/戒断。",
+  "source_intro": "官方RSS首发2023-03-24T12:00:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1404.84秒，RSS时长1406.0秒，差1.16秒，未声称原音逐秒对齐。",
+  "dek": "注意转移与梳理痛苦经验是两种思路；强迫症定义、三十天重置和自行书写的边界需要分清。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅覆盖AMA #5公开的侵入性想法、叙事与处理思路一问，非完整版；CGM、小睡与NSDR未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "强迫症不能靠“做完是否安心”自行排除",
+      "source_seconds": 113.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "三十天停用框架，不能直接套给思想",
+      "source_seconds": 346.65,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想法会自发出现，也会受到外界组织",
+      "source_seconds": 438.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "只是循环的内容，可以尝试把注意放回活动",
+      "source_seconds": 672.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "痛苦叙事需要理解，不能一概诊断为创伤",
+      "source_seconds": 778.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "敲木头的故事，是个人经历而非自做暴露手册",
+      "source_seconds": 1010.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠支持恢复，不能承担消除所有情绪的保证",
+      "source_seconds": 1136.73,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:37:21Z"
+}

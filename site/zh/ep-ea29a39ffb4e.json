@@ -1,0 +1,67 @@
+{
+  "id": "ep-ea29a39ffb4e",
+  "title_zh": "“适应原”能缓冲压力吗？从定义到南非醉茄研究｜AMA #3公开节选",
+  "title_en": "AMA #3: Adaptogens, Fasting & Fertility, Bluetooth/EMF Risks, Cognitive Load Limits & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-3-adaptogens-fasting-fertility-bluetooth-emf-risks-cognitive-load-limits-more",
+  "published": "2023-01-13T09:00:00Z",
+  "editor_note": "纠正2012RCT电话随访与测量日、60天时程；剂量仅研究归属，时点/停用周期为主持建议。保留赞助关联，不把低含量保证安全；不提供照太阳或错误字幕呼吸操作。",
+  "source_intro": "官方RSS首发2023-01-13T09:00:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1917.63秒，RSS时长1921.0秒，差3.37秒，未声称原音逐秒对齐。",
+  "dek": "南非醉茄试验、真菌产品与放松行为的证据不同，压力恢复也不是把皮质醇降到零。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅涵盖AMA #3公开的适应原、压力反应与饮食/补充剂/行为一问，非完整版；禁食、生育、蓝牙电磁场与认知负荷题未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先说明节目怎样使用“适应原”这个词",
+      "source_seconds": 87.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "饮食建议的重点，是先满足日常需要",
+      "source_seconds": 330.987,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补充剂不是维生素的同义词，也不是处方药",
+      "source_seconds": 453.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "南非醉茄试验的测量日，需要纠正",
+      "source_seconds": 717.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "服用时间和停用周期，是主持人的推论",
+      "source_seconds": 836.903,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "猴头菇与白桦茸，不能借用另一种植物的证据",
+      "source_seconds": 997.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一次只改一个变量，也不能把自试变成临床验证",
+      "source_seconds": 1075.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "日内节律不是把神经递质分成昼夜两班",
+      "source_seconds": 1321.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "放松练习的体验，与皮质醇测量要分开",
+      "source_seconds": 1486.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:46:37Z"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ep-90b782f3e81c",
+  "title_zh": "乳清、胶原与骨汤怎样选：AMA #19 公开节选",
+  "title_en": "AMA #19: Collagen vs. Whey Protein, Creatine, Smelling Salts, Stimulants & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-19-collagen-vs-whey-protein-creatine-smelling-salts-stimulants",
+  "published": "2025-04-25T17:15:00Z",
+  "editor_note": "原创中文精读，仅覆盖公开实际回答。胶原15克/约两周保留讲者归属，另核原RCT不同条件；每磅1克的分母变化、个人摄入和乳清痤疮机制及月经周期假说均就地限定，不作为营养或皮肤处方。",
+  "source_intro": "首发日期采用官方RSS 2025-04-25T17:15:00Z。正文依据所提供公开节选的本地TXT全文，这里只整理公开节选，不是会员版完整节目。VTT章节为实际非空cue起点，未回听原音；RSS时长1096.0秒，VTT末端1095.19秒，端点差异不用于推算广告或自动校时。",
+  "dek": "这里只整理公开节选，不是会员版完整节目。围绕公开回答，分清乳清、胶原与骨汤在肌肉和皮肤目标上的证据，并读懂全天蛋白质与痤疮观察的边界。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "本公开节选实际回答骨汤、胶原蛋白与乳清的比较，包含肌肉蛋白合成、全天摄入、皮肤研究及痤疮观察；这里只整理公开节选，不是会员版完整节目，未包含题名所列肌酸、嗅盐、兴奋剂等其余问题。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先说清目标：肌肉需要的蛋白，不能只看包装上的克数",
+      "source_seconds": 228.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胶原对皮肤的有限证据，不能直接替所有骨汤背书",
+      "source_seconds": 431.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "先算全天饮食，再决定是否需要蛋白粉",
+      "source_seconds": 608.862,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "为什么他又谈到乳清与痤疮",
+      "source_seconds": 861.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "个人观察可以提供线索，不能替代诊断",
+      "source_seconds": 986.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:01:21Z"
+}

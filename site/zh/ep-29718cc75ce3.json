@@ -1,0 +1,73 @@
+{
+  "id": "ep-29718cc75ce3",
+  "title_zh": "悉尼 ICC 现场问答：休息、信念与精神治疗，怎样理解可塑性",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at the ICC Sydney Theatre",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2024-05-17T08:00:00Z",
+  "editor_note": "仅本次公开问答原创精读，非整场演讲。封面印的是演出日期，published采用RSS公开发行日期，两者不是同一个日期。纠正氯胺酮≠PCP、裸盖菇素≠血清素和NMDA语境；MDMA不再符合PTSD诊断与严格缓解分开，含混克/毫克不作剂量。未原音回听。",
+  "source_intro": "RSS首发2024-05-17T08:00:00Z。TXT50082字符连续全文；VTT末3080.139秒、RSS3078秒，差-2.139秒未原音核准。官方events来源另附真实视频链接，机器VTT仅导航，不声称原音/视频逐秒对齐。",
+  "dek": "午睡、信念与学习恢复，继而讨论迷幻药研究的对象、机制和终点，最后回到肠脑轴、作息和ADHD。",
+  "source_scope": "released_qa",
+  "source_scope_note": "本次公开发行的悉尼ICC Theater观众问答；仅公开问答，非整场演讲，不补写前置lecture。",
+  "official_video_url": "https://www.youtube.com/embed/yOoVz9E9kfQ",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "午睡是否合适，先看它有没有妨碍夜间睡眠",
+      "source_seconds": 232.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "信念能影响脑反应，不代表“相信有效”就能治好任何问题",
+      "source_seconds": 397.319,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "长期紧绷时，放松技能与减少持续负荷要一起考虑",
+      "source_seconds": 693.279,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学习需要挑战和恢复，85% 不是每份琴谱都通用的比例",
+      "source_seconds": 937.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "迷幻药研究的条件，不能从个人体验中省略",
+      "source_seconds": 1214.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "MDMA 的 PTSD 研究，必须分清“不再符合诊断”与严格缓解",
+      "source_seconds": 1595.159,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "氯胺酮不等于 PCP，鲜明的回忆也不等于准确的历史",
+      "source_seconds": 1811.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肠脑轴确实值得研究，一天好转的皮疹仍只是个人经历",
+      "source_seconds": 2090.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同样睡八小时，时机与规律仍可能改变感受",
+      "source_seconds": 2443.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "ADHD 的专注困难，需要支持，而不是更苛刻的即时要求",
+      "source_seconds": 2570.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:50:57Z"
+}

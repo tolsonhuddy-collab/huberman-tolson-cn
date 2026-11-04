@@ -1,0 +1,77 @@
+{
+  "id": "ep-1a25542e6390",
+  "title_zh": "把健康工具放回具体问题：皮肤、冷水、睡眠与学习的八组问答",
+  "title_en": "AMA #18: Cold Therapy Advice, Skin Health Tips, Motivation, Learning Strategies & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-18-cold-therapy-advice-skin-health-tips-motivation-learning-strategies-more",
+  "published": "2024-08-02T08:00:00Z",
+  "editor_note": "2024年完整公开问答原创精读。就地分清口服/外用类维A酸、吸收与临床伤害；冷水桑拿为个人偏好；NSDR像REM为待检验假说；补剂、写作赌注与成瘾求助保留安全边界。",
+  "source_intro": "RSS首发2024-08-02T08:00:00Z。本地TXT60446字符连续全文，VTT末3401.77秒、RSS3403秒，差1.23秒未原音核准。章节为实际非空cue起点，仅本地VTT定位。",
+  "dek": "从77岁皮肤变薄到课堂学习与成瘾求助：按具体问题理解工具的目标、条件与不确定性。",
+  "source_scope": "full_episode",
+  "source_scope_note": "本次公开发行的AMA18完整八组问答，不补写未提供的其他会员内容。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "皮肤变薄，先看保护屏障，再谈改善外观",
+      "source_seconds": 222.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胶原、红光与医疗程序，证据和目标需要逐项分开",
+      "source_seconds": 494.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷水温度没有统一答案，主观不适也不是安全仪表",
+      "source_seconds": 885.99,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "启动新习惯，可以先把承诺缩成可完成的一段工作",
+      "source_seconds": 1277.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想增加REM，先给睡眠机会，别把分期分数当诊断",
+      "source_seconds": 1623.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NSDR像不像REM，在这次节目中仍然是待检验假说",
+      "source_seconds": 1789.31,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "学校要提高学习能力，不能只把信息送得更多更快",
+      "source_seconds": 1973.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "微间隙、运动与日程，各自解决学习链条的一部分",
+      "source_seconds": 2193.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "Shilajit的激素数字，不足以组成一周自试方案",
+      "source_seconds": 2461.01,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "写作需要紧迫感，也需要容许谨慎和正常身体需要",
+      "source_seconds": 2871.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "成瘾恢复需要支持，互助与医疗各有作用",
+      "source_seconds": 3092.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:10:00Z"
+}

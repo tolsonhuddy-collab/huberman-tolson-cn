@@ -1,0 +1,73 @@
+{
+  "id": "ep-f55916ec8089",
+  "title_zh": "悉尼歌剧院现场问答：时间感、时差与寻找热爱",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at the Sydney Opera House",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2024-04-19T08:00:00Z",
+  "editor_note": "仅本次公开问答原创精读，非整场演讲。封面印的是演出日期，published采用RSS公开发行日期，两者不是同一个日期。时间帧率是解释比喻，体温低谷仅粗估；MDMA观察与宗教故事非无神经毒性证明，热/冷不是越久越好。未原音回听。",
+  "source_intro": "RSS首发2024-04-19T08:00:00Z。TXT51878字符连续全文；VTT末3175秒、RSS3173秒，差-2秒未原音核准。官方events来源另附真实视频链接，本地滚动机器字幕仅导航，不声明与原音/视频逐秒对齐。",
+  "dek": "压力心态与aMCC、时间感和时差，再到治疗体验、温热睡眠、习惯化、抖腿专注与十七岁寻找热爱。",
+  "source_scope": "released_qa",
+  "source_scope_note": "本次公开发行的悉尼歌剧院观众问答；仅公开问答，非整场演讲，不补写前置lecture。",
+  "official_video_url": "https://www.youtube.com/embed/GA89kjVY6Ik",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "压力心态可以改变应对方式，不能取消压力的现实伤害",
+      "source_seconds": 171.879,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "aMCC 的“迎向挑战”，是研究线索而非吃苦剂量表",
+      "source_seconds": 325.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "时间感像可变的镜头，但大脑并非只有一个“帧率旋钮”",
+      "source_seconds": 603.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "时差看的是身体时间，不能只看目的地钟面",
+      "source_seconds": 1102.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "裸盖菇素与可塑性，不能由“体验深刻”直接跳到疗效",
+      "source_seconds": 1605.559,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "MDMA 的观察研究与宗教群体故事，都不能证明无神经毒性",
+      "source_seconds": 1955.919,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡前温热之后散热，是机制线索，不是越热越久越好",
+      "source_seconds": 2174.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "重复压力有时使人习惯，有时却累积成更大负担",
+      "source_seconds": 2376.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抖腿帮助专注的体验，不足以诊断，也不必一律压制",
+      "source_seconds": 2529.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "十七岁寻找热爱，可以从真实兴趣出发，而不是立即选定终身身份",
+      "source_seconds": 2821.119,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:05:52Z"
+}

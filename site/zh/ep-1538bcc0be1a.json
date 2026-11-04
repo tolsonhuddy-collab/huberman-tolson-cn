@@ -1,0 +1,73 @@
+{
+  "id": "ep-1538bcc0be1a",
+  "title_zh": "布里斯班现场问答：从专注与恢复，到给孩子安全感",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at the Brisbane Convention & Exhibition Centre",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2024-06-07T08:00:00Z",
+  "editor_note": "仅本次公开问答原创精读，非整场演讲。封面印的是演出日期，published采用RSS公开发行日期，两者不是同一个日期。纠正ADHD药物分类，尼古丁故事非防痴呆，TRT无年龄开关/HCG不保证生育，呼吸与水中屏息危险分开。未原音回听。",
+  "source_intro": "RSS首发2024-06-07T08:00:00Z。TXT52201字符连续全文；VTT末3190.249秒、RSS3188秒，差-2.249秒未原音核准。source_url为官方events，另附官方真实视频链接；本地机器VTT只导航，不声明已与该视频或原音对齐。",
+  "dek": "尼古丁与ADHD、过去短睡与倦怠、忙碌生活与睾酮，再到呼吸、儿童见光和育儿：十道现场问题的具体条件。",
+  "source_scope": "released_qa",
+  "source_scope_note": "本次公开发行的布里斯班观众问答；仅公开问答，非整场演讲，不补写前置lecture。",
+  "official_video_url": "https://www.youtube.com/embed/-e9ErUozQo4",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "尼古丁的短时专注效应，不能变成开始使用的理由",
+      "source_seconds": 230.439,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "ADHD 的治疗选择，不必在“药物”与“行为”之间站队",
+      "source_seconds": 466.08,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过去十五年睡得少，今天仍值得改善，但不能保证损害全部逆转",
+      "source_seconds": 768.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "倦怠不是肾上腺用光，恢复也不只是再找一件兴奋的事",
+      "source_seconds": 1138.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每天吃什么：他的杂食习惯，与尚待检验的食欲解释",
+      "source_seconds": 1334.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "忙碌生活里，把光照、活动与休息做成可进入的小段",
+      "source_seconds": 1712.039,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睾酮治疗的入口是明确问题，不是到了某个年龄",
+      "source_seconds": 1990.799,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "呼吸方法先看节奏与目标，水中屏息风险必须单独记住",
+      "source_seconds": 2284.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "儿童晨间户外活动，要与睡眠和防护一起考虑",
+      "source_seconds": 2506.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "相信孩子的感受，可以与明确的边界同时成立",
+      "source_seconds": 2599.319,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:56:16Z"
+}

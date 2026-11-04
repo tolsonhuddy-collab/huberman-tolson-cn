@@ -1,0 +1,73 @@
+{
+  "id": "ep-d5b3bc7da3b0",
+  "title_zh": "墨尔本现场问答：认知老化、休息与手机习惯，还有哪些问题值得研究",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at Plenary in Melbourne",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2024-03-22T08:00:00Z",
+  "editor_note": "仅公开问答，非整场演讲。封面印的是演出日期，published采用RSS公开发行日期，两者不是同一个日期。年龄变化不等同痴呆，药物与高压氧不是预防清单，aMCC不能证明癌症生存由斗志决定，催眠戒烟普遍优效与创伤没有规范治疗的说法已就地纠边。未原音回听。",
+  "source_intro": "RSS首发2024-03-22T08:00:00Z。TXT55090字符连续全文；VTT末3507.519秒、RSS3505秒，差-2.519秒未原音核准。官方events来源另附真实视频链接，本地滚动机器字幕仅导航，不声明与原音/视频逐秒对齐。",
+  "dek": "从五十岁脑健康、意志力和轮班，读到NSDR、自我催眠与刷手机；最后把观众的研究愿望与已证实治疗分清。",
+  "source_scope": "released_qa",
+  "source_scope_note": "本次公开发行的墨尔本Plenary观众问答；仅公开问答，非整场演讲，不补写未提供的前置lecture。",
+  "official_video_url": "https://www.youtube.com/embed/ttNxNbqNQK4",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "五十岁前后照顾大脑，先分清一般变化与痴呆",
+      "source_seconds": 169.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增加递质的设想，不等于已经有了防痴呆药物清单",
+      "source_seconds": 401.84000000000003,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "意志力与 aMCC 的研究，不能成为要求癌症患者“战斗”的理由",
+      "source_seconds": 906.199,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "轮班者需要可执行的睡眠和照明安排，工作安全优先",
+      "source_seconds": 1361.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NSDR 与冥想可以有不同目标，却不必分成互斥的盒子",
+      "source_seconds": 1764.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "自我催眠的临床应用，不等于戒烟胜过几乎所有方法",
+      "source_seconds": 2101.359,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "减少无意识刷屏，可以先改变入口，也要听懂年轻人的处境",
+      "source_seconds": 2253.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“梦想临床试验”变成观众征题，兴趣不是研究结果",
+      "source_seconds": 2539.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "创伤已有规范治疗，未来研究应在现有基础上继续",
+      "source_seconds": 2794.079,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "遗传、不同部位菌群和女性激素，都需要更具体的问题",
+      "source_seconds": 3164.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:19:37Z"
+}

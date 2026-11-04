@@ -1,0 +1,52 @@
+{
+  "id": "ep-42461d80e7a4",
+  "title_zh": "动机忽高忽低时，怎样安排可持续的投入？｜AMA #4公开节选",
+  "title_en": "AMA #4: Maintain Motivation, Improve REM Sleep, Set Goals, Manage Anxiety & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-4-maintain-motivation-improve-rem-sleep-set-goals-manage-anxiety-more",
+  "published": "2023-02-24T13:00:00Z",
+  "editor_note": "保留波浪池及工作量经验归属；纠正2011药理试验被说成NSDR，急性多巴胺释放不等于补满储备；不鼓励停处方药或用补充剂自疗。",
+  "source_intro": "官方RSS首发2023-02-24T13:00:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端1391.84秒，RSS时长1393.0秒，差1.16秒，未声称原音逐秒对齐。",
+  "dek": "把可持续投入与高峰兴奋分开，也把多巴胺比喻与研究实际测到的结果分开。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅覆盖AMA #4公开的长期动机高低变化一问，非完整版；其他REM睡眠、目标与焦虑问答未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先辨认波动，不把每次低落都叫作懒惰",
+      "source_seconds": 87.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多巴胺与追求有关，但“水池”仍是比喻",
+      "source_seconds": 219.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠是基础，休息练习不能替代整夜恢复",
+      "source_seconds": 457.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "两项原研究，没有证明“十分钟补满动机”",
+      "source_seconds": 502.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "刺激叠加值得觉察，但不是所有乐趣都会耗尽大脑",
+      "source_seconds": 795.933,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每天能重复的工作量，比某一天的极限更有参考价值",
+      "source_seconds": 1060.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:52:57Z"
+}

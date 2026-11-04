@@ -1,0 +1,103 @@
+{
+  "id": "ep-8dbe64af4384",
+  "title_zh": "洛杉矶现场问答：专注、信心、创伤治疗与追随兴趣的线索",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at The Wiltern in Los Angeles",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2022-11-09T09:00:00Z",
+  "editor_note": "封面日期是演出日，本文published为官方RSS录音上架日，两者不同。仅公开发行洛杉矶问答，未补整场演讲。ADHD成人冥想外推/酪氨酸、清醒开颅麻醉、冷水安全与血浆多巴胺、EMDR/舌苔菌群/掌部降温/费曼年代/绑架故事/药物统一缓解率/桑拿激素边界就地辨析。保留滑板、动物、鱼店与梦想等实质例子，不把高风险做法转执行指南。",
+  "source_intro": "官方RSS GUID 3dea0d76-5f83-11ed-a80a-db5914f8adde，首发2022-11-09T09:00:00Z。实际完整读TXT60592字符/10822英文词，核16章真实VTT语义邻文；未原音回听或视频校准，时间仅本地导航。VTT末端3801.45秒，RSS3817秒，差15.55秒原因未明；最大间隔7.162秒在开场音乐至首题，未观察到实质答段缺失，不推定广告偏移。",
+  "dek": "十五组现场内容，从ADHD、感知练习与冷水，到EMDR、掌部降温、滑板、费曼、童年鱼店与追梦，保留原解释及研究边界。",
+  "source_scope": "released_qa",
+  "source_scope_note": "公开发行的现场问答录音，不包含整场演讲。",
+  "official_video_url": "https://www.youtube.com/embed/TO0WUTq5zYI",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "ADHD不等于完全不能专心，治疗也不由一个多巴胺阈值决定",
+      "source_seconds": 143.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "所谓“时空转换”，首先是一项仍在收集数据的感知练习",
+      "source_seconds": 365.338,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "给十五岁学生的建议，是先认识自己的反应",
+      "source_seconds": 715.623,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷水里的恐慌，不能被解释成必须跨过去的一堵墙",
+      "source_seconds": 882.677,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血浆多巴胺的实验结果，不是短冰浴的抗抑郁证明",
+      "source_seconds": 1041.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "信心可以从较小的行动建立，多巴胺却不是唯一的奖励系统",
+      "source_seconds": 1123.702,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "EMDR的临床价值，与对眼动机制的解释要分开",
+      "source_seconds": 1443.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肠脑轴与舌头观察，不能把推测接成一条确定病因链",
+      "source_seconds": 1686.783,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "掌部降温有特定研究条件，普通冰瓶不能直接保证表现翻倍",
+      "source_seconds": 2089.69,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "滑板教他的，不只是不怕摔倒",
+      "source_seconds": 2250.917,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "费曼的故事，落点是观察规律而不只背名字",
+      "source_seconds": 2344.65,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "马的叹息与Costello：观察气质，不凭一个动作诊断",
+      "source_seconds": 2531.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动机不只靠硬撑，受害者的反应也不能被当成训练技巧",
+      "source_seconds": 2840.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "童年鱼店给了他一个线索，却没有替他写好职业答案",
+      "source_seconds": 3048.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "致幻剂的希望，要留在具体试验与专业支持之内",
+      "source_seconds": 3431.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "桑拿后的食欲变化，他明确说只能推测",
+      "source_seconds": 3667.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:19:36Z"
+}

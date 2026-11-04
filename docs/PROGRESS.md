@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已发布 320 篇中文精读，目录 412 条；本轮恰好新增 10 篇。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
+已发布 350 篇中文精读，目录 412 条；本轮请求新增 50 篇，来源与独立性核查支持 30 篇，实际新增 30 篇；尚缺 20 份独立完整来源。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
 
 ## 历史交付快照（2026-10-20）
 

@@ -1,0 +1,62 @@
+{
+  "id": "ep-4ef2aa96534e",
+  "title_zh": "每天喝咖啡，是提升表现还是恢复常态？｜AMA #8公开节选",
+  "title_en": "AMA #8: Balancing Caffeine, Decision Fatigue & Social Isolation",
+  "source_url": "https://www.hubermanlab.com/episode/ama-8-balancing-caffeine-decision-fatigue-social-isolation",
+  "published": "2023-06-23T17:00:00Z",
+  "editor_note": "依据2023年公开问答原创中文精读，删除会员推广与重复口播。节目概括、个人体验和经验流程保留归属，固定等待窗口与加量方案不写成普适处方；未提供会员内容不补写。",
+  "source_intro": "官方RSS首发2023-06-23T17:00:00Z。官方原RSS链接为premium入口，实际节目canonical URL由根任务依据官方sitemap恢复；身份与封面采用本批已核记录。本地公开段TXT/VTT全文读至EOF，未回听音频；VTT1518.92秒、RSS1520秒，差1.08秒，不等于逐秒原音对齐。",
+  "dek": "分清当下刺激、惯常状态与戒断后的低谷，也看清睡眠、剂量和个人反应的代价。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "本篇仅覆盖AMA #8公开段实际提供的每日咖啡因净收益问题，包括睡眠、耐受、停用反应、年轻人与减量讨论。非完整版；会员整期标题所列决策疲劳、社交孤立未提供，不属于本篇覆盖范围。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先看睡眠和焦虑，再谈每日摄入的收益",
+      "source_seconds": 146.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "能入睡，不代表咖啡因没有影响睡眠",
+      "source_seconds": 183.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "腺苷受体解释了清醒感，也解释不了全部疲劳",
+      "source_seconds": 307.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把戒断后的低谷，当成比较基线会发生什么",
+      "source_seconds": 404.17,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“一杯”不是固定剂量，毫克数比容器更有用",
+      "source_seconds": 530.98,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "关于年轻人的建议，是谨慎立场而非十四岁的硬分界",
+      "source_seconds": 774.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "提问者面对的，是不良影响与停用反应交叠",
+      "source_seconds": 1052.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "偶尔加量的刺激，不应自动变成新的日常量",
+      "source_seconds": 1263.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:27:57Z"
+}

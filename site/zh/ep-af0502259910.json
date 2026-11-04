@@ -1,0 +1,77 @@
+{
+  "id": "ep-af0502259910",
+  "title_zh": "AMA16：旅行、睡眠与身体恢复，怎样把工具放回具体问题",
+  "title_en": "AMA #16: Sleep, Vertigo, TBI, OCD, Tips for Travelers, Gut-Brain Axis & More",
+  "source_url": "https://www.hubermanlab.com/episode/ama-16-sleep-vertigo-tbi-ocd-tips-for-travelers-gut-brain-axis-more",
+  "published": "2024-02-29T23:00:00Z",
+  "editor_note": "公开全长原创精读。口述医疗判断与实际官方依据分开：纠正耳石结构、失眠定义与处方EPA适应证；高压氧、床位倾斜、肌酸和广泛激素筛查不升格为治疗处方。未原音回听。",
+  "source_intro": "RSS首发2024-02-29T23:00:00Z。TXT59701字符连续全文；VTT末3404.11秒、RSS3408秒，差3.89秒未原音核准。章节采用实际非空cue起点，仅本地VTT定位。",
+  "dek": "用旅行和具体症状理解恢复：睡眠、眩晕、脑损伤与强迫症，以及鱼油、激素和口腔护理的证据边界。",
+  "source_scope": "full_episode",
+  "source_scope_note": "本次公开发行的AMA16完整问答，含后半运动后疲劳一题，不补写未提供会员内容。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "旅行时先守住少数支点，再允许日程变化",
+      "source_seconds": 154.31,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡五六小时够不够，要同时看质量、规律和白天功能",
+      "source_seconds": 431.15,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "眩晕体现的是多路感觉整合，不能只靠旋转感自诊",
+      "source_seconds": 791.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过去伤害不能重来，脑损伤恢复也不宜押在单一补剂上",
+      "source_seconds": 1243.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "强迫症的治疗，要改变缓解焦虑的循环",
+      "source_seconds": 1618.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "三小时时差，关键是光照落在生物钟的哪一侧",
+      "source_seconds": 1845.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "鱼油总量、EPA 含量和处方适应证是三件事",
+      "source_seconds": 2105.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "激素检测应回答临床问题，而不是收集更多数字",
+      "source_seconds": 2417.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动后总想休息，先检查训练是否挤占了全天能力",
+      "source_seconds": 2769.69,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肠脑轴的生活建议，需要保留卫生与感染边界",
+      "source_seconds": 2985.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "舌头清洁应温和，不能借痴呆担忧升级成过度护理",
+      "source_seconds": 3128.4,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:37:21Z"
+}

@@ -8,9 +8,9 @@
 
 收录范围不限于长访谈。完整节目、独立问答和其他有实质内容的节目均可评估；重复内容、推广与预告不制作。Essentials 须先与原节目去重，AMA 节选明确标注实际覆盖范围，不称为完整一期。制作仍要求可用的完整来源、独立全文审核和修订复验。
 
-当前目录为 412 条：`long_episode` 321（含 Guest Series 16）、`essentials` 62、`ama` 19、`live_qa` 10；16 条 AMA 的 `explicit_excerpt` 为真。本次已发布 320 篇均为长节目，尚有 1 期长节目及 91 条其他类型未制作。目录数量不代表已发布数量，也不是官方节目总量。
+当前目录为 412 条：`long_episode` 321（含 Guest Series 16）、`essentials` 62、`ama` 19、`live_qa` 10；16 条 AMA 的 `explicit_excerpt` 为真。已发布 350 篇：长节目 321、AMA 19（公开全长 3、公开节选 16）、现场问答 10；其余 62 条 Essentials 为目录项，61 条重剪跳过、1 条独立增量未确认。目录数量不代表已发布数量，也不是官方节目总量。
 
-现有 `prepare`、`record` 和长文长度门槛只实现了长节目生产。其他类型实际制作前应为其来源范围、节选标记与质量门槛实现并测试兼容路径；不能把类型强改为长节目，也不能为短来源填字数。旧 370 份 TXT/VTT 是原始输入批次，后来补充的目录不能靠重新 ingest 旧批次覆盖。
+`prepare`、`record` 与构建器现已支持四种类别。新非长节目必须在元数据声明 `source_scope` 和 `source_scope_note`：`public_excerpt`（公开 AMA 节选）、`full_episode`（公开全长 AMA）、`released_qa`（已发行现场问答段，非整场演讲）、`independent_essentials`（确证有独立增量的 Essentials）。范围必须与目录类别和 `explicit_excerpt` 一致，不能把类型改成长节目，也不能为短来源填字数。旧 370 份 TXT/VTT 是原始输入批次，后来补充的目录不能靠重新 ingest 旧批次覆盖。
 
 ## 命令
 
@@ -43,11 +43,11 @@ python3 scripts/build_site.py --published --out dist
 
 `check-sources` 按上次 `ingest` 写下的 `private/local-config.json`，复核全部 TXT 与 VTT 是否仍在、哈希是否一致。报告写到 `private/reports/source-integrity.json`。有缺失或改动时命令失败。
 
-`prepare --id` 只接受长节目。它把 VTT cue 按词数切到 `private/chunks/{id}/`，并写 `private/source-maps/{id}.json`。默认每块最多 1200 个英文词，`--max-words` 不能小于 100。返回状态是 `input_prepared_only`。切块完成不等于稿件完成。活动批次不得直接重跑覆盖旧 source map 或旧来源日志；在新的批次目录生成隔离映射并记录其路径与哈希，保留旧映射和审稿证据。
+`prepare --id` 接受四种目录类别；使用 `--batch <安全批次名>` 在新命名空间保存切块和 source map。已有目录或映射会被拒绝覆盖。它把 VTT cue 按词数切到 `private/chunks/{id}/`，并写 `private/source-maps/{id}.json`。默认每块最多 1200 个英文词，`--max-words` 不能小于 100。返回状态是 `input_prepared_only`。切块完成不等于稿件完成。活动批次不得直接重跑覆盖旧 source map 或旧来源日志；在新的批次目录生成隔离映射并记录其路径与哈希，保留旧映射和审稿证据。
 
-`record` 只接受长节目。`--note` 必填。它把状态写入 `private/progress.json`，并追加历史。
+`record` 接受四种目录类别，并检查其匹配的范围及质量门槛。`--note` 必填。它把状态写入 `private/progress.json`，并追加历史。
 
-`status` 只打印长节目各状态的数量。若 `draft_complete` 或 `reviewed` 记录过正文 SHA-256，而当前 Markdown 已变，这一条在输出里显示为 `needs_revision`。`status` 不改文件。
+`status` 保留长节目 `states` 兼容字段，并提供所有类别的 `by_kind` 与 `all_states`。若 `draft_complete` 或 `reviewed` 记录过正文 SHA-256，而当前 Markdown 已变，这一条在输出里显示为 `needs_revision`。`status` 不改文件。
 
 `audit-git` 检查已跟踪路径是否落在允许的代码、文档、目录和模板范围内，并拒绝符号链接。它不阅读正文质量。
 
@@ -135,9 +135,9 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 从 `drafting` 可以直接记 `needs_revision`。不能从 `pending` 跳到 `draft_complete` 或 `reviewed`。
 
-记 `draft_complete` 或 `reviewed` 时，正文须已存在，且基本汉字不少于 8000、H2 不少于 8。同时要有作者自查：全文读过，前、中、后都覆盖，发言人、不确定性和广告删除都标成完成，并有至少 8 条覆盖映射。这些数字只拦截空壳，不能代替对照原文。
+长节目记 `draft_complete` 或 `reviewed` 时，仍须至少 8000 汉字、8 个 H2 和 8 条覆盖映射。非长节目最低汉字数为 `max(1600, min(6000, ceil(catalog.word_count × 0.6)))`；公开全长 AMA 与现场问答至少 6 节/6 条映射，公开节选及独立 Essentials 至少 3 节/3 条映射。篇幅按实际公开材料的信息量决定；这些数字只拦截空壳，不能替代完整阅读与独立审核，也不能据此扩写未提供内容。作者全文阅读、前中后、归属、不确定性及广告删除等自查仍必需。新非长节目另核 `source_scope_correct`、`independent_content_verified`、`unprovided_topics_not_invented`，作者及独审都需实际完成；正文与元数据哈希均绑定审核。
 
-记 `reviewed` 还要有独立审稿文件：`review_kind` 为 `independent_editorial_review`，`verdict` 为 `pass`，规定的覆盖项为真，且 `article_sha256` 等于当前 Markdown。`record` 会把当时的正文 SHA-256 写入进度。之后若改了正文，私有构建把该篇显示为「待修订」并去掉文章链接，不改写 `progress.json`。要再次标为已审，须重新审稿再 `record`。
+记 `reviewed` 还要有独立审稿文件：`review_kind` 为 `independent_editorial_review`，`verdict` 为 `pass`，规定的覆盖项为真，且 `article_sha256` 等于当前 Markdown。`record` 会把当时的正文 SHA-256 写入进度。之后若改了正文或新非长节目的范围元数据，私有构建把该篇显示为「待修订」并去掉文章链接，不改写 `progress.json`。要再次标为已审，须重新审稿再 `record`。
 
 写法要求见 [EDITORIAL.md](EDITORIAL.md)。页面验收见 [SITE_ACCEPTANCE.md](SITE_ACCEPTANCE.md)。
 
@@ -147,7 +147,7 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 ## 部署检查
 
-源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 320 篇中文精读。本地 `--private` 构建不是这条发布命令。
+源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 350 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
 2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。

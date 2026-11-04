@@ -1,0 +1,83 @@
+{
+  "id": "ep-97be316c99ee",
+  "title_zh": "波特兰现场问答：脑损伤、压力工具与支持我们的关系",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at the Newmark Theatre in Portland",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2022-08-31T08:00:00Z",
+  "editor_note": "封面标注2022年5月18日为波特兰演出日，published采用官方RSS上架日2022年8月31日；官方events的2024-01-01占位日期不采用。仅精读发行问答段，非整场演讲。完整TXT已读并核对VTT/map实际章节邻文，未回听原音；时间用于本地字幕导航，官方视频链接未经音视频同步校准。高压氧、EPA、氟哌啶醇、冷水、呼吸与高温内容保留讲者归属并就地标明适用条件和证据边界，不转为个人治疗方案。",
+  "source_intro": "官方RSS上架2022-08-31T08:00:00Z，原RSS演出链接现统一至官方events；events核定该波特兰问答的独立视频链接，2024-01-01占位uploadDate未采用。封面演出日2022-05-18，与RSS发行日不同。本地发行问答TXT全文已读至EOF，并核对VTT/map章节邻文；未回听音频或校准视频，VTT末端3090.573秒，RSS时长3090.0秒，末端差-0.573秒不等于逐秒对齐证明。",
+  "dek": "十二个现场问题，从脑损伤与应激工具谈到友谊；逐项区分机制线索、临床结果与主持人的经验。",
+  "source_scope": "released_qa",
+  "source_scope_note": "涵盖官方发行的波特兰现场问答全部十二个实际问题，包括脑损伤、习惯与奖励、晨光、轮班、社交媒体、研究进展、Wim Hof方法、红光、冷浴频率、滑板、困难行动及恐惧与哀伤；这是发行的问答段，不包含整场演讲，不补写提及但未提供的演讲内容。",
+  "official_video_url": "https://www.youtube.com/embed/3_auLYOilb8",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "脑损伤之后：先避免再受伤，再判断干预证据",
+      "source_seconds": 137.077,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想减少某种行为，未必要把多巴胺“关掉”",
+      "source_seconds": 484.177,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每天只有十分钟，他为何先谈晨间自然光",
+      "source_seconds": 831.397,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "轮班者问补充剂，回答先回到时间线索",
+      "source_seconds": 1072.657,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "社交媒体有两种影响：观看的形式，与观看的内容",
+      "source_seconds": 1269.037,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最兴奋的研究，最需要分清动物结果与人体用途",
+      "source_seconds": 1511.197,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "Wim Hof方法：主动进入应激，不等于应激越强越好",
+      "source_seconds": 1716.367,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "红光的眼部实验，没有回答所有线粒体疾病问题",
+      "source_seconds": 2228.587,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冰浴也可能变成不断加码的追逐",
+      "source_seconds": 2439.503,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "滑板提供的，是一个没有正规队伍也能加入的群体",
+      "source_seconds": 2671.897,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "做困难事情时，他从羞耻驱动转向记得谁支持自己",
+      "source_seconds": 2770.02,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "他最害怕的事，与失去之后仍在的感情",
+      "source_seconds": 2906.227,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T09:29:30Z"
+}

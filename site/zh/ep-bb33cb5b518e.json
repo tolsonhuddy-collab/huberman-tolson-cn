@@ -1,0 +1,57 @@
+{
+  "id": "ep-bb33cb5b518e",
+  "title_zh": "从一件事切换到下一件事：AMA #11 公开节选",
+  "title_en": "AMA #11: Improve Task Switching & Productivity and Reduce Brain Fog",
+  "source_url": "https://www.hubermanlab.com/episode/ama-11-improve-task-switching-productivity-and-brain-fog",
+  "published": "2023-09-29T12:00:00Z",
+  "editor_note": "原创中文精读；时间数字是讲者情境建议，不是统一实验证实阈值；ADHD不靠瞬间专注判断，视觉练习的迁移疗效未获本段对照验证，保留驾驶/机械禁做。",
+  "source_intro": "首发日期采用官方RSS 2023-09-29T12:00:00Z。正文依据所提供公开节选的本地TXT全文，这里只整理公开节选，不是会员版完整节目。VTT章节为实际非空cue起点，未回听原音；RSS时长2076.0秒，VTT末端2074.7秒，端点差异不用于推算广告或自动校时。",
+  "dek": "这里只整理公开节选，不是会员版完整节目。从课堂规则到手机插入的新任务，理解切换时的过渡，并分清个人视觉练习与实验已经证明的结果。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "这里只整理公开节选，不是会员版完整节目。实际回答任务切换、过渡间隔、手机额外输入、关键任务清单及个人视觉知觉练习；没有另答脑雾问题，也非完整生产力综述。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "任务切换，是把当前规则换成另一套规则",
+      "source_seconds": 106.47999999999999,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "进入专注需要时间，不能用瞬间投入检验自己",
+      "source_seconds": 582.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过渡间隔多长，先看上一件事投入多深",
+      "source_seconds": 886.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "别把手机变成插在中间的第三件事",
+      "source_seconds": 1037.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每天三件关键事，是他的清单经验",
+      "source_seconds": 1249.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "近处、远处与身体感觉之间的视觉练习",
+      "source_seconds": 1419.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "时间“切片”是解释类比，效果仍需单独验证",
+      "source_seconds": 1680.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:40:38Z"
+}

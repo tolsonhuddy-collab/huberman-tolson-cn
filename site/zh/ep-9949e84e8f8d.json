@@ -1,0 +1,67 @@
+{
+  "id": "ep-9949e84e8f8d",
+  "title_zh": "视力变差时，远眺、眼球训练与补充剂各能做什么？｜AMA #6公开节选",
+  "title_en": "AMA #6: Eye Health, Why We Yawn & Increasing Motivation",
+  "source_url": "https://www.hubermanlab.com/episode/ama-6-eye-health-why-we-yawn-increasing-motivation",
+  "published": "2023-04-27T12:00:00Z",
+  "editor_note": "区分儿童预防、成人屈光、老视、集合功能与黄斑病变；不将棱镜经历或早期红光试验转成摘镜、减度数或家用照眼处方。",
+  "source_intro": "官方RSS首发2023-04-27T12:00:00Z；官方sitemap核定地址与已核封面。本地公开段TXT/VTT全文已读至EOF，未回听音频；VTT末端2172.38秒，RSS时长2173.0秒，差0.62秒，未声称原音逐秒对齐。",
+  "dek": "看近看远、户外活动、训练、营养和红光针对不同环节，不能混成逆转视力下降的通用方案。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "仅覆盖AMA #6公开的眼健康一问，非完整版；打哈欠与提升动机未提供。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "近距离工作很多，先看一天里有没有距离变化",
+      "source_seconds": 113.28999999999999,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "眼球长度与焦点，解释了近视的一部分",
+      "source_seconds": 301.158,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "户外时间与儿童近视，是另一个问题",
+      "source_seconds": 621.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "平滑追踪练习，训练的是一种眼动任务",
+      "source_seconds": 982.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "近远练习与集合能力，不是摘镜许可",
+      "source_seconds": 1120.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "营养先回答够不够，而不是越补越清楚",
+      "source_seconds": 1260.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "黄斑变性研究，不能变成通用护眼配方",
+      "source_seconds": 1439.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "眼镜与棱镜的个人经历，不能替代处方评估",
+      "source_seconds": 1698.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "红光研究看到了特定变化，还没有给出家用照眼处方",
+      "source_seconds": 1807.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:50:57Z"
+}

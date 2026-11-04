@@ -1,0 +1,73 @@
+{
+  "id": "ep-107c04433756",
+  "title_zh": "多伦多现场问答：自我理解、冬季光照与学习之外的空白",
+  "title_en": "LIVE EVENT Q&A: Dr. Andrew Huberman at Meridian Hall in Toronto",
+  "source_url": "https://www.hubermanlab.com/events",
+  "published": "2023-11-15T09:00:00Z",
+  "editor_note": "封面日期是演出日，本文published为官方RSS录音上架日，两者不同。仅依据本场多伦多公开问答，未补写未提供演讲。梦/镜子与关系驱力归临床框架，季节抑郁非单一褪黑素原因；个人灯板非临床光疗，药理/法律历史/儿童音乐迁移与比目鱼肌急性研究条件就地辨析。最后感知练习完整保留为个人实践与解释，不当经证治疗。",
+  "source_intro": "官方RSS GUID 8727533c-8272-11ee-a90f-dfda139cf5ca，首发2023-11-15T09:00:00Z。完整实际读取TXT38178字符/6729英文词；10章VTT语义邻文实际读过。原音未回听、字幕未独立音画校准，不把本地时间当官方视频对齐。VTT末端2333.91秒，RSS2347秒，相差13.09秒原因未明；最大间隔14.81秒在开场与首问之间，未观察到实质问题缺段，不推定广告偏移。",
+  "dek": "七组现场提问，从孔蒂系列的来由到情绪韧性、灵感、季节变化、神经可塑性、久坐与晨间感知练习，逐一保留解释与证据限制。",
+  "source_scope": "released_qa",
+  "source_scope_note": "公开发行的现场问答录音，不包含整场演讲。",
+  "official_video_url": "https://www.youtube.com/embed/eC9fiJBdMG0",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "为什么做一套“心理体能”访谈",
+      "source_seconds": 161.925,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "梦与镜子：可以作为反思入口，不能当作解码技术",
+      "source_seconds": 277.15,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "情绪弹起来之前，准备发生在别的时候",
+      "source_seconds": 486.932,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "灵感需要材料，也需要不再摄取材料的时候",
+      "source_seconds": 766.212,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "季节变化确实进入身体，但抑郁没有一个单独的开关",
+      "source_seconds": 996.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "画图灯板不是已经验证的季节性抑郁疗程",
+      "source_seconds": 1280.165,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "神经可塑性：改变的窗口，还要有改变的方向",
+      "source_seconds": 1364.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "音乐的价值，不必靠“终身改善所有学习”来证明",
+      "source_seconds": 1620.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "久坐办公：研究的是一种特定肌肉活动",
+      "source_seconds": 1726.768,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最后那项“时空转换”，是他的感知练习与个人解释",
+      "source_seconds": 1982.03,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:42:50Z"
+}

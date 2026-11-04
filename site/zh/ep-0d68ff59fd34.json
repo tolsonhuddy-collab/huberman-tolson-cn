@@ -1,0 +1,52 @@
+{
+  "id": "ep-0d68ff59fd34",
+  "title_zh": "长寿补充剂的证据与个人选择：AMA #12 公开节选",
+  "title_en": "AMA #12: Thoughts on Longevity Supplements (Resveratrol, NR, NMN, Etc.) & How to Improve Memory",
+  "source_url": "https://www.hubermanlab.com/episode/ama-12-thoughts-on-longevity-supplements-how-to-improve-memory",
+  "published": "2023-10-31T18:08:58Z",
+  "editor_note": "原创中文精读；药物和补充剂只保留讲者当时取舍，不构成处方。葡萄籽/白藜芦醇、NAD注射批准表述与西罗莫司适应证就地核注；美国NMN争议不写成全球禁令或现行监管结论。",
+  "source_intro": "首发日期采用官方RSS 2023-10-31T18:08:58Z。正文依据所提供公开节选的本地TXT全文，这里只整理公开节选，不是会员版完整节目。VTT章节为实际非空cue起点，未回听原音；RSS时长1747.0秒，VTT末端1746.2秒，端点差异不用于推算广告或自动校时。",
+  "dek": "这里只整理公开节选，不是会员版完整节目。分清葡萄籽、NR/NMN与NAD输注的个人体验、分子指标与延寿证据，并理解处方药讨论的临床边界。",
+  "source_scope": "public_excerpt",
+  "source_scope_note": "这里只整理公开节选，不是会员版完整节目。实际回答长寿补充剂、NAD相关途径和二甲双胍/雷帕霉素的个人取舍；未提供原标题里的改善记忆问题。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "白藜芦醇的长寿故事，与葡萄籽的不同用途",
+      "source_seconds": 106.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NR、NMN与NAD：机制不能替人回答寿命问题",
+      "source_seconds": 376.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "NAD输注的强烈体验，并不是疗效验证",
+      "source_seconds": 791.843,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "他为什么没有选择二甲双胍和小檗碱",
+      "source_seconds": 1133.51,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "雷帕霉素：动物研究与处方适应证要分开",
+      "source_seconds": 1280.19,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "生活基础与补充剂的先后次序",
+      "source_seconds": 1429.07,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T08:44:39Z"
+}
