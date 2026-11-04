@@ -2,11 +2,17 @@
 
 **中文** | [English](#english)
 
-把 [Huberman Lab](https://www.hubermanlab.com/) 的长访谈整理成中文长文。目前站上已上线 310 篇中文精读。会持续更新。非官方项目。
+把 [Huberman Lab](https://www.hubermanlab.com/) 的节目内容整理成中文精读。目前站上已上线 320 篇中文精读。会持续更新。非官方项目。
 
 ![Huberman Lab 中文精读站点界面示意](docs/screenshot-home.png)
 
 界面示意，篇数以站点实时数据为准。
+
+## 收录范围
+
+收录范围不限于长访谈。完整节目、独立问答和其他有实质内容的节目均可评估；重复内容、推广与预告不制作。Essentials 须先与原节目去重，AMA 节选明确标注实际覆盖范围，不称为完整一期。制作仍要求可用的完整来源、独立全文审核和修订复验。
+
+当前目录 412 条：长节目 321、Essentials 62、AMA 19、现场问答 10。已发布 320 篇均来自长节目；其余 92 条为待整理目录，并不等于已制作。
 
 ## 访问地址
 
@@ -48,7 +54,13 @@ taopatric58@gmail.com
 
 ## English
 
-A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 310 published essays. Updated continuously. Unofficial.
+A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab.com/) podcast. The public site has 320 published essays. Updated continuously. Unofficial.
+
+## Coverage
+
+Coverage is not limited to long interviews. Full episodes, standalone Q&As, and other substantive programmes are eligible; duplicate material, promotions, and trailers are excluded. Essentials must be checked against their original episodes. An AMA excerpt is labelled with its actual scope and is never presented as a full episode. Usable complete source material, independent full-text review, and revision checks remain required.
+
+The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. All 320 published essays currently cover long episodes; the other 92 records are catalog entries awaiting production.
 
 ## Where to read
 

@@ -1,0 +1,130 @@
+{
+  "id": "ep-a39c9a50f0d6",
+  "title_zh": "盐、水与表现：从口渴回路到电解质争议",
+  "title_en": "Using Salt to Optimize Mental & Physical Performance",
+  "source_url": "https://www.hubermanlab.com/episode/using-salt-to-optimize-mental-and-physical-performance",
+  "published": "2022-03-14T08:00:00Z",
+  "editor_note": "依据2022年节目完整本地来源原创中文精读，保留糖感知研究前段及水盐主线，删除广告与推广。钠/食盐、茶匙换算、OVLT、醛固酮与高低钠术语疑误就地说明；区分观察研究、动物机制、特定临床用途和个人建议，不作加盐或补剂处方。",
+  "source_intro": "官方RSS首发2022-03-14T08:00:00Z，身份与封面采用本批冻结记录。中文依据用户提供完整本地TXT/VTT，作者实际读至EOF；全部章节取实际非空cue起点，未回听原音。本地VTT末端7432.367秒与RSS7177秒相差255.367秒，原因未明，未归因广告。",
+  "dek": "从肠道与味觉到肾脏和神经放电，理解钠的必要性、补水条件与争议研究的边界。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "舌头尝到甜，肠道还在辨认糖",
+      "source_seconds": 179.81,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小鼠偏好糖的实验，不能替所有甜味剂作答",
+      "source_seconds": 306.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "每一处数字，先问是钠还是食盐",
+      "source_seconds": 964.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大脑怎样知道体液变浓了",
+      "source_seconds": 1299.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "两种口渴，面对的是不同问题",
+      "source_seconds": 1490.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抗利尿激素让肾脏先留住水",
+      "source_seconds": 1688.84,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肾脏不是一个简单的排水孔",
+      "source_seconds": 2044.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "血压要维持，升得过高仍然有害",
+      "source_seconds": 2755.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "细胞内的钠，不能直接当作血钠读数",
+      "source_seconds": 2827.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一条J形曲线，提出问题却不能开出处方",
+      "source_seconds": 3096.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "站起来头晕，先分清是否属于医疗情境",
+      "source_seconds": 3442.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "出汗会改写需求，环境和汗液浓度同样重要",
+      "source_seconds": 3910.81,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动饮水公式，只能是带条件的起点",
+      "source_seconds": 3946.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体的调节有节律，不是每餐即时结清",
+      "source_seconds": 4266.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "盐的历史价值，与今天选择哪种盐不同",
+      "source_seconds": 4439.67,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "压力会牵动盐食欲，不能把焦虑统称为缺盐",
+      "source_seconds": 4636.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "镁和钾也重要，但补剂形式不是效果保证",
+      "source_seconds": 5061.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "低碳水、禁食和咖啡，会改变背景而非取消边界",
+      "source_seconds": 5279.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "书作者给出的高钠量，是一种意见而非本稿目标",
+      "source_seconds": 5565.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "咸和甜一起出现时，味觉未必能估计摄入量",
+      "source_seconds": 5824.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "神经需要钠的梯度，不是需要越来越多钠",
+      "source_seconds": 6435.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "过量饮水的危险，不能靠猜测再加一把盐",
+      "source_seconds": 6793.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:09:03Z"
+}

@@ -1,0 +1,105 @@
+{
+  "id": "ep-eedf6643a888",
+  "title_zh": "心态怎样参与健康：阿莉娅·克拉姆谈食物、运动、压力与治疗",
+  "title_en": "Science of Mindsets for Health & Performance | Dr. Alia Crum",
+  "source_url": "https://www.hubermanlab.com/episode/dr-alia-crum-science-of-mindsets-for-health-performance",
+  "published": "2022-01-24T08:05:00Z",
+  "editor_note": "2022年访谈原创精读，删赞助推广。实际奶昔380千卡、620/140标签与口述约300区分；DHA误识就地校为DHEA体系/原论文DHEAS。观察性死亡关联不作因果，OIT限定受监督治疗的非危及生命症状，不建议丢弃药品风险说明。",
+  "source_intro": "官方RSS首发2022-01-24T08:05:00Z（原-0000为UTC，保留08:05）。依据本批本地TXT/VTT，章节为非空真实cue起点，未原音对齐。VTT末端6059.921秒、RSS5729秒，差330.921秒未明，不归因广告。官方身份与封面采用冻结登记。",
+  "dek": "同样的行为和治疗，理解方式怎样影响体验与部分生理反应；从奶昔、清洁工到压力和花生脱敏，逐一分清证据与边界。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "阿莉娅·克拉姆（Alia Crum）",
+      "role": "来宾",
+      "bio": "斯坦福大学心理学研究者、身心实验室创办者；受过临床心理学训练，本期自述当时不再接诊。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "心态是一组默认假设，帮我们简化复杂现实",
+      "source_seconds": 539.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "奶昔没有变，变化的是标签和短时激素反应",
+      "source_seconds": 905.893,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "满足感可以与健康饮食并存，却不能改写营养成分",
+      "source_seconds": 1201.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "安慰剂组的改善，不全都等于信念的作用",
+      "source_seconds": 1575.493,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "酒店清洁工作，是劳累，也可能是身体活动",
+      "source_seconds": 1734.849,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "总觉得不够，可能遮住已经发生的努力",
+      "source_seconds": 2122.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠评分也会进入解释，但不能代替真正的睡眠",
+      "source_seconds": 2552.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "压力的本质复杂，不能只由伤害来定义",
+      "source_seconds": 2797.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "九分钟视频实验，改变的是一个具体情境中的反应",
+      "source_seconds": 3010.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "海豹训练与激素结果，分别能回答什么",
+      "source_seconds": 3278.84,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "承认、欢迎、使用：三步把注意带回在乎的事",
+      "source_seconds": 4085.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "文化怎样教会我们，健康食品等于少一点快乐",
+      "source_seconds": 4320.28,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "花生脱敏中的症状解释，有严格的医疗边界",
+      "source_seconds": 4829.21,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "医疗解释要具体，也要保留获得风险信息的权利",
+      "source_seconds": 5047.35,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "元心态，是观察自己的框架，而非强迫自己积极",
+      "source_seconds": 5227.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "研究者的个人经历，提供问题，也需要实验检验",
+      "source_seconds": 5622.41,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:03:22Z"
+}

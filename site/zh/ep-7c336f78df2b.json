@@ -1,0 +1,135 @@
+{
+  "id": "ep-7c336f78df2b",
+  "title_zh": "激素优化先从生活与诊断开始：凯尔·吉列特谈健康、性激素与治疗边界",
+  "title_en": "How to Optimize Your Hormones for Health & Vitality | Dr. Kyle Gillett",
+  "source_url": "https://www.hubermanlab.com/episode/how-to-optimize-your-hormones-for-health-and-vitality",
+  "published": "2022-04-11T08:00:00Z",
+  "editor_note": "依据2022年访谈原创精读，保留讲者经验与推测归属；IGF-1半衰期、GABA、CAG、PCOS诊断、饮酒、B6与肉碱、肽类适应证等疑误就地说明。不是现行医疗指南或自用药物/补剂方案。",
+  "source_intro": "日期依据官方RSS 2022-04-11T08:00:00Z；身份及封面由本批官方页面核验。完整本地TXT已读；章节取真实非空VTT cue起点但未回听原音。VTT末端10760.594秒、RSS时长10470.0秒，差290.594秒原因未明，不归因广告。",
+  "dek": "从症状与生活方式，完整理解睾酮、女性激素、避孕、生育和实验性产品讨论中的证据与风险。",
+  "hosts": [
+    {
+      "name": "Andrew Huberman",
+      "role": "主持人 / 对谈者",
+      "bio": "安德鲁·休伯曼 · 神经科学研究者"
+    },
+    {
+      "name": "Kyle Gillett",
+      "role": "嘉宾 / 医生",
+      "bio": "凯尔·吉列特 · 节目介绍为家庭医学与肥胖医学双专科认证医生；身份描述依据2022年节目"
+    }
+  ],
+  "sections": [
+    {
+      "title": "从症状和人生背景开始，而不是先找一种补充剂",
+      "source_seconds": 504.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "六个支点：可持续的饮食、运动、睡眠与压力管理",
+      "source_seconds": 895.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "饮食没有一张适合所有人的激素菜单",
+      "source_seconds": 1048.99,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "进食窗口、生长激素与“数值越高越好”的误区",
+      "source_seconds": 1499.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠、绝经与睾酮：症状之间会相互放大",
+      "source_seconds": 1766.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "总睾酮、游离睾酮、DHT与受体敏感性",
+      "source_seconds": 2109.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "头发、5α还原酶抑制剂与个人试用的局限",
+      "source_seconds": 2560.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多囊卵巢综合征：诊断标准和胰岛素抵抗要分开",
+      "source_seconds": 3498.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "避孕方式会改变激素环境，但不能预测一个人的爱情",
+      "source_seconds": 3842.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大麻、酒精与助眠产品：不要用一个通路抵消整体风险",
+      "source_seconds": 4234.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "前列腺、排尿与盆底：不要把所有问题都叫激素不足",
+      "source_seconds": 4585.53,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "PDE5抑制剂与睾酮治疗：适应证、血压和监测都重要",
+      "source_seconds": 5174.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "雌激素不是男性需要尽量压低的指标",
+      "source_seconds": 5713.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "东革阿里与Fadogia：个人收益不能替代人体安全证据",
+      "source_seconds": 6424.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "黄体生成素、hCG与生育：先判断问题出在哪里",
+      "source_seconds": 6895.55,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "泌乳素与多巴胺：不是把一个升高、另一个压低",
+      "source_seconds": 7459.313,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "活性B6、其他维生素与左旋肉碱：生化名词不等于安全承诺",
+      "source_seconds": 7846.7,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "关系、育儿与身体节律：双向影响，不是操纵伴侣的工具",
+      "source_seconds": 8393.48,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷热、阴囊温度与生育：拒绝从机制跳到危险操作",
+      "source_seconds": 8948.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肽类产品：一个名称相似的家族，可能有完全不同的风险",
+      "source_seconds": 9158.97,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "黑皮质素相关药物：治疗性欲、色素和罕见肥胖不能混为一谈",
+      "source_seconds": 9921.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体、心理与意义，以及咖啡因的最后一个提醒",
+      "source_seconds": 10103.46,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:06:10Z"
+}

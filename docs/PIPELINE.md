@@ -4,6 +4,14 @@
 
 脚本只做目录导入、字幕分块、状态登记、源文件核对和静态 HTML 构建。不调用模型，不翻译，不删广告，也不判定科学对错。进行中的正文写在本机 `private/`，不进入 Git。已发布的中文精读在 `site/zh/`。
 
+## 收录范围与类型
+
+收录范围不限于长访谈。完整节目、独立问答和其他有实质内容的节目均可评估；重复内容、推广与预告不制作。Essentials 须先与原节目去重，AMA 节选明确标注实际覆盖范围，不称为完整一期。制作仍要求可用的完整来源、独立全文审核和修订复验。
+
+当前目录为 412 条：`long_episode` 321（含 Guest Series 16）、`essentials` 62、`ama` 19、`live_qa` 10；16 条 AMA 的 `explicit_excerpt` 为真。本次已发布 320 篇均为长节目，尚有 1 期长节目及 91 条其他类型未制作。目录数量不代表已发布数量，也不是官方节目总量。
+
+现有 `prepare`、`record` 和长文长度门槛只实现了长节目生产。其他类型实际制作前应为其来源范围、节选标记与质量门槛实现并测试兼容路径；不能把类型强改为长节目，也不能为短来源填字数。旧 370 份 TXT/VTT 是原始输入批次，后来补充的目录不能靠重新 ingest 旧批次覆盖。
+
 ## 命令
 
 下面的输入路径是示例，换成自己的资料目录。`inputs/` 被 Git 忽略。TXT 目录与同级的 `vtt/` 放在一起：`--source-dir inputs/final/txt` 时，字幕在 `inputs/final/vtt/`，文件名与 TXT 相同、扩展名为 `.vtt`。
@@ -35,7 +43,7 @@ python3 scripts/build_site.py --published --out dist
 
 `check-sources` 按上次 `ingest` 写下的 `private/local-config.json`，复核全部 TXT 与 VTT 是否仍在、哈希是否一致。报告写到 `private/reports/source-integrity.json`。有缺失或改动时命令失败。
 
-`prepare --id` 只接受长节目。它把 VTT cue 按词数切到 `private/chunks/{id}/`，并写 `private/source-maps/{id}.json`。默认每块最多 1200 个英文词，`--max-words` 不能小于 100。返回状态是 `input_prepared_only`。切块完成不等于稿件完成。
+`prepare --id` 只接受长节目。它把 VTT cue 按词数切到 `private/chunks/{id}/`，并写 `private/source-maps/{id}.json`。默认每块最多 1200 个英文词，`--max-words` 不能小于 100。返回状态是 `input_prepared_only`。切块完成不等于稿件完成。活动批次不得直接重跑覆盖旧 source map 或旧来源日志；在新的批次目录生成隔离映射并记录其路径与哈希，保留旧映射和审稿证据。
 
 `record` 只接受长节目。`--note` 必填。它把状态写入 `private/progress.json`，并追加历史。
 
@@ -139,7 +147,7 @@ reviewed → needs_revision → drafting 或 draft_complete
 
 ## 部署检查
 
-源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 310 篇中文精读。本地 `--private` 构建不是这条发布命令。
+源码推送不会更新网页。线上站点目前是 [huberman-reading-001.tolsonhuddy.chatgpt.site](https://huberman-reading-001.tolsonhuddy.chatgpt.site)，已上线 320 篇中文精读。本地 `--private` 构建不是这条发布命令。
 
 1. 跑测试，构建这次要发布的输出，并记下篇数。
 2. 只上传构建结果里的 `index.html`、`feed.xml`、`tolson-rss.opml`、`podcasts/`、`episodes/`、CSS、JS，以及这次准备发布的 `covers/`、`portraits/`。保持相对路径。不要上传仓库根目录、原始字幕、审稿记录或隐藏配置。

@@ -1,0 +1,125 @@
+{
+  "id": "ep-3b4dc4f60782",
+  "title_zh": "冷暴露怎样影响清醒、代谢与运动：把研究条件和安全边界一起读懂",
+  "title_en": "Using Deliberate Cold Exposure for Health and Performance",
+  "source_url": "https://www.hubermanlab.com/episode/using-deliberate-cold-exposure-for-health-and-performance",
+  "published": "2022-04-04T08:00:00Z",
+  "editor_note": "依据2022年独讲原创精读。血浆与脑内多巴胺、每周11分钟、Selye奖项、咖啡因PET、恢复综述及掌部冷却研究的过度外推均就地说明。热射病需急救；不提供极冷浸泡、刻意失温或生殖器贴冰操作。",
+  "source_intro": "首发日期依官方RSS 2022-04-04T08:00:00Z；节目及封面由本批官方核验。全文依据本地TXT；章节均为实际非空VTT cue起点且已看邻文，未回听原音。VTT末端8104.2秒、RSS时长7776.0秒，差328.2秒原因未明，不归因广告。",
+  "dek": "完整梳理冷刺激、血浆儿茶酚胺、棕脂产热、运动恢复与掌部散热，并还原关键研究条件和安全边界。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先分清目标：冷刺激与主动降温是两件不同的事",
+      "source_seconds": 16.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "开场的十五分钟慢跑研究：先唤醒，再学习",
+      "source_seconds": 271.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "体温自有昼夜节律，皮肤凉不等于核心体温低",
+      "source_seconds": 979.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷毛巾与热射病：节目里的恒温器推论不能用来延误急救",
+      "source_seconds": 1127.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "有意接受刺激：控制感为什么进入压力讨论",
+      "source_seconds": 1814.97,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "浸泡、淋浴与冷空气：温度相同，不代表冷负荷相同",
+      "source_seconds": 2097.88,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“跨墙”是他的心理练习模型，不是耐寒安全测试",
+      "source_seconds": 2445.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "在压力中思考：呼吸、心算与拳击下棋的类比",
+      "source_seconds": 3071.49,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "静止与移动改变传热，不能只看水温",
+      "source_seconds": 3329.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一小时浸水研究：先把温度、时间和血液测量说完整",
+      "source_seconds": 3820.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "多巴胺、情绪与戒瘾个案：可能机制不能取代治疗证据",
+      "source_seconds": 4081.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "皮质醇没有升高，不足以宣布某种压力必然有益",
+      "source_seconds": 4308.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冬泳者研究与每周十一分钟：这是观察到的习惯，不是有效阈值",
+      "source_seconds": 4417.26,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "白色、米色与棕色脂肪：产热机制和减脂效果要分开",
+      "source_seconds": 4689.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "空腹与咖啡因的叠加：提出了假说，还没有测过整套流程",
+      "source_seconds": 5088.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "以冷结束、自然回温与发抖：不应成为硬撑失温的理由",
+      "source_seconds": 5361.3,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "增肌与赛后恢复可能需要不同安排，四小时不是已证实的分界线",
+      "source_seconds": 5786.29,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "五十二项研究的恢复分析：爆发力、力量与酸痛不是同一结果",
+      "source_seconds": 6041.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "炎症与掌部散热：理解机制，也要看原实验到底做了什么",
+      "source_seconds": 6460.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "掌部冷却提高的是哪些表现：训练总量不能冒充首组能力",
+      "source_seconds": 6843.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "局部降温、睾酮与睡眠：最后几步推论仍需保留问号",
+      "source_seconds": 7414.34,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:20:02Z"
+}

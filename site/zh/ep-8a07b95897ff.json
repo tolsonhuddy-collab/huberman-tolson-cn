@@ -1,0 +1,170 @@
+{
+  "id": "ep-8a07b95897ff",
+  "title_zh": "力量、肌肉与耐力怎样一起练：安迪·盖尔平的训练变量课",
+  "title_en": "How to Build Strength, Muscle Size & Endurance | Dr. Andy Galpin",
+  "source_url": "https://www.hubermanlab.com/episode/dr-andy-galpin-how-to-build-strength-muscle-size-and-endurance",
+  "published": "2022-03-28T08:00:00Z",
+  "editor_note": "依据2022年长访谈原创中文精读，删除广告与重复口播；保留训练水平、恢复、能量与医学条件。字幕单位、快肌疲劳性、化学比喻等疑点就地注释；不作普适训练或医疗处方。",
+  "source_intro": "官方RSS首发2022-03-28T08:00:00Z，身份与封面采用本批冻结核实记录。中文依据用户提供完整本地TXT/VTT，实际读至EOF。章节为真实本地cue起点，未回听原音；VTT末端12685.123秒与RSS12347秒相差338.123秒，原因未明，未归因广告。",
+  "dek": "从动作、负荷与休息到补水和睡眠，分清训练刺激、恢复工具与各自的证据边界。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "安迪·盖尔平（Andy Galpin）",
+      "role": "来宾",
+      "bio": "运动生理学研究者；2022年访谈介绍其当时任加州州立大学富勒顿分校运动机能学教授，并参与运动员训练。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先分清想获得哪一种适应",
+      "source_seconds": 592.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动作名称不能替代训练变量",
+      "source_seconds": 957.59,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "在可控的幅度里，让推、拉与髋铰链都有位置",
+      "source_seconds": 1684.74,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "最大力量需要高力输出，而不只是累",
+      "source_seconds": 2030.333,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热身、长休息与超级组，各有要保护的东西",
+      "source_seconds": 2236.38,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "力量增长不等于肌肉变大，恢复也不能只看酸痛",
+      "source_seconds": 2730.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌肥大先算一周的有效组，再安排频率",
+      "source_seconds": 3415.22,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "五次到三十次，都可能是增肌训练",
+      "source_seconds": 3569.706,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "接近力竭与被迫失败，不是同一种要求",
+      "source_seconds": 3890.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“三至五”框架，怎样区分力量与功率",
+      "source_seconds": 4151.87,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动作意图与“念动一致”，证据还在发展",
+      "source_seconds": 4347.64,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "触觉反馈、核心控制与离心练习",
+      "source_seconds": 4809.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "动作中的呼吸，与训练后的降速",
+      "source_seconds": 5282.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "耐力训练先看承受多少次落地",
+      "source_seconds": 5890.53,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "并行训练的干扰，取决于练多少、怎样练和吃多少",
+      "source_seconds": 6255.178,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "日常移动之外，为什么还要有较高强度",
+      "source_seconds": 6714.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "同样的最大摄氧量，也可能卡在不同部位",
+      "source_seconds": 7064.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "数分钟的持续吃力，是另一种耐力刺激",
+      "source_seconds": 7510.73,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "肌耐力支持姿势，疼痛却不能只靠姿势解释",
+      "source_seconds": 7693.18,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补水要防不足，也要防过量",
+      "source_seconds": 8266.6,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "食物、水和汗液，让补钠需求因人而异",
+      "source_seconds": 8533.62,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“盖尔平方程”的单位，必须先讲清",
+      "source_seconds": 9007.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷水放在训练后，先问当前想恢复还是想适应",
+      "source_seconds": 9429.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "热暴露的合理机制，不等于确定增肌幅度",
+      "source_seconds": 9794.676,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "冷暴露后的HRV与主观振奋，要分开看",
+      "source_seconds": 10229.16,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恢复监测先找“刹车”，不必人人追一堆设备",
+      "source_seconds": 10562.46,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "碳酸氢钠的缓冲作用，不是把疲劳归罪于乳酸",
+      "source_seconds": 11033.05,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "β丙氨酸与肌酸，强证据也有具体终点",
+      "source_seconds": 11855.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡眠为什么差，需要超越一个分数",
+      "source_seconds": 12032.72,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:02:35Z"
+}

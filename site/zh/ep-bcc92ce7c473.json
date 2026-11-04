@@ -1,0 +1,105 @@
+{
+  "id": "ep-bcc92ce7c473",
+  "title_zh": "技能怎样练得更快：重复、误差、休息与心理演练",
+  "title_en": "How to Learn Skills Faster",
+  "source_url": "https://www.hubermanlab.com/episode/how-to-learn-skills-faster",
+  "published": "2021-05-17T08:00:00Z",
+  "editor_note": "2021年节目原创精读，删除赞助促销。误差作用保留动物/任务边界；慢练百分比、眼动活动范围为节目解释和演示而非确证方案；心理力量53%限真实小指外展组；Alpha-GPC原会议摘要14%为峰值力非功率，不提供补剂处方。",
+  "source_intro": "官方RSS首发2021-05-17T08:00:00Z（-0000为UTC）。据本批本地TXT/VTT连续全文与实际cue邻文写作，未回听原音。VTT末端6733.48秒、RSS6301秒，相差432.48秒原因未明，不假定广告偏移。官方身份、封面采用冻结登记。",
+  "dek": "从动作反馈到练后巩固，理解重复为何有效，以及慢练、节拍器和心理演练各自的条件。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "先分清目标：表现、恢复与技能学习并不相同",
+      "source_seconds": 518.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "看反馈何时到达，才知道怎样安排重复",
+      "source_seconds": 987.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "感觉、动作与本体感觉，必须在同一次练习中接上",
+      "source_seconds": 1130.94,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "时间只是容器，尝试次数才让学习有机会发生",
+      "source_seconds": 1629.84,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "啮齿动物的胜负实验，解释的是特定行为机制",
+      "source_seconds": 2037.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "错误能调动注意，不能把错误越多写成学习越好",
+      "source_seconds": 2364.58,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "教练给方向，练习者仍需要一段亲自校正的时间",
+      "source_seconds": 2766.92,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "练完暂时不做别的，为巩固留出低干扰的间隔",
+      "source_seconds": 2910.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "下一次练习，才看得见上一次留下了什么",
+      "source_seconds": 3238.35,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "钢琴反馈实验，支持减少干扰，不支持随便关注什么",
+      "source_seconds": 3504.37,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "超慢动作有用途，但慢下来会改变你正在练的东西",
+      "source_seconds": 4031.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "节拍器提供外部约束，速度只应略超当前能力",
+      "source_seconds": 4266.31,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "小脑整合身体与视觉信息，眼动演示仍是有限证据",
+      "source_seconds": 4783.43,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "心理演练能贡献力量变化，先把实验数字放回原位",
+      "source_seconds": 5309.57,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "想象的是动作命令，真实动作还会带回身体的回答",
+      "source_seconds": 5569.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "补剂段需要单独判断，峰值力不是功率，更不是学得更快",
+      "source_seconds": 6038.31,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一堂课怎样收束，要按任务安排，不必硬凑九十分钟",
+      "source_seconds": 6426.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:11:06Z"
+}

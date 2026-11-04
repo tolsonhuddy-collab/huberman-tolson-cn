@@ -1,0 +1,185 @@
+{
+  "id": "ep-35b37c0bf008",
+  "title_zh": "睡眠如何发生，又为何难以强求：与马修·沃克重读一整夜",
+  "title_en": "The Science & Practice of Perfecting Your Sleep | Dr. Matt Walker",
+  "source_url": "https://www.hubermanlab.com/episode/dr-matthew-walker-the-science-and-practice-of-perfecting-your-sleep",
+  "published": "2021-08-02T08:00:00Z",
+  "editor_note": "依据2021年长访谈原创精读，保留完整核心机制和反例，删广告推广。旧分期、生长激素、REM死亡关联、褪黑素统计、NASA人群、性活动OR与日记研究在对应段落辨析。补剂和大麻不提供个人剂量方案，CBT-I与缺觉后的行为建议保留临床语境；不是现行个人诊疗指南。",
+  "source_intro": "首发采用官方RSS记录2021-08-02T08:00:00Z（原始-0000为UTC），不取2025索引日期。官方节目身份和封面沿用本批冻结登记。已实际阅读本地TXT全部178053字符，并检查全部章节的VTT cue邻文；未原音回听或独立音画对齐。VTT末端11161.04秒比RSS时长10889秒长272.04秒，原因未明，不推定广告偏移。",
+  "dek": "从一夜前后半段的结构，到光、咖啡因、酒精、补剂与午睡，读懂睡眠压力和时钟如何相遇，也减少围绕完美睡眠的焦虑。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "马修·沃克（Matthew Walker）",
+      "role": "来宾",
+      "bio": "2021年节目介绍为加州大学伯克利分校神经科学与心理学教授，研究睡眠；本篇保留当年访谈与证据背景。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "睡着以后，发生的是状态转换",
+      "source_seconds": 414.84000000000003,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "快速眼动睡眠：脑很活跃，身体却受到抑制",
+      "source_seconds": 620.61,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "慢波睡眠：许多神经元开始一起起落",
+      "source_seconds": 1156.45,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一夜的前后半段，并不是同一段录像重播",
+      "source_seconds": 1309.11,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "熬到凌晨才睡，身体会怎样重新分配",
+      "source_seconds": 1453.12,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "哪个阶段更重要，要先问测量什么结果",
+      "source_seconds": 1677.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "夜里醒来，不自动等于一夜失败",
+      "source_seconds": 2007.83,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把睡眠切碎，不能凭空降低成人的需要",
+      "source_seconds": 2413.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "白天的光，参与决定夜里的时间",
+      "source_seconds": 2583.47,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "腺苷让睡意累积，咖啡因暂时挡住了信号",
+      "source_seconds": 3092.23,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "喝完仍能入睡，不代表咖啡因完全没有影响",
+      "source_seconds": 3490.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "酒精能让人困，却可能把后半夜打碎",
+      "source_seconds": 4133.66,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "REM与死亡风险的数字，不能拿来预测个人寿命",
+      "source_seconds": 4658.05,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "大麻中的THC：较快入睡之外，还有耐受与反跳",
+      "source_seconds": 5132.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "CBD的机制想象，走在了临床结论前面",
+      "source_seconds": 5452.51,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "褪黑素首先传达“夜晚到了”",
+      "source_seconds": 5771.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“只多睡3.9分钟”混淆了研究的终点",
+      "source_seconds": 6176.29,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体散热与睡眠相连，冷得越多却不等于越好",
+      "source_seconds": 6394.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "标签上的褪黑素，与实际吃到的未必一样",
+      "source_seconds": 6765.52,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "镁与缬草：有生理作用，不等于补了就助眠",
+      "source_seconds": 6874.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "酸樱桃的84分钟，来自很小的一项试验",
+      "source_seconds": 7277.501,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "猕猴桃的人体结果，与小鼠机制不能拼成一条定论",
+      "source_seconds": 7861.13,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "芹菜素与自我实验，不能替代失眠治疗",
+      "source_seconds": 7544.89,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "神经递质需要有时序，并非越多越容易睡",
+      "source_seconds": 8098.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "午睡研究有效，不等于醒来立刻就能上场",
+      "source_seconds": 8377.0,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "午睡拿走了一部分睡眠压力，要看夜里付出什么代价",
+      "source_seconds": 8604.76,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "“睡太多会不会有害”，先分清卧床、睡眠和疾病",
+      "source_seconds": 8898.95,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "亲密、性活动与睡眠，方向不止一条",
+      "source_seconds": 9538.93,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一夜没睡好之后，“什么也别补”有特定语境",
+      "source_seconds": 10147.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "睡前放慢，是一个下降过程",
+      "source_seconds": 10312.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "把念头放到纸上，研究条件不能省略",
+      "source_seconds": 10404.5,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "让时钟退到背景，给睡眠留一点余地",
+      "source_seconds": 10657.71,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T06:11:29Z"
+}

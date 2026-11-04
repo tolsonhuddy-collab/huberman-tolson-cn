@@ -1,0 +1,105 @@
+{
+  "id": "ep-905d691a83c8",
+  "title_zh": "催眠如何改变体验：大卫·斯皮格尔谈注意、疼痛与重新获得控制",
+  "title_en": "Using Hypnosis to Enhance Mental & Physical Health & Performance | Dr. David Spiegel",
+  "source_url": "https://www.hubermanlab.com/episode/dr-david-spiegel-using-hypnosis-to-enhance-mental-and-physical-health-and-performance",
+  "published": "2022-02-21T09:00:00Z",
+  "editor_note": "依据2022年访谈原创精读，删广告和重复口播。实验、临床个案、来宾解释与主持人体验分开；保留ADHD、EMDR、GABA及药物适应证等疑点，镇痛不等于治疗病因，癌痛改善不等于延长生存。医学外查限实际公开摘要。",
+  "source_intro": "官方RSS首发2022-02-21T09:00:00Z（原-0000为UTC）。依据本批本地TXT/VTT，真实cue起点仅作定位，未原音对齐。VTT末端6758.55秒，RSS6416秒，差342.55秒未明，不归因广告；官方身份与封面沿用本批冻结登记。",
+  "dek": "从脑网络与随机试验到恐惧、疼痛和悲伤，理解临床催眠怎样帮助一部分人改变体验，以及它不能替代什么。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    },
+    {
+      "name": "大卫·斯皮格尔（David Spiegel）",
+      "role": "来宾",
+      "bio": "精神科医生与研究者；本期时任斯坦福大学精神医学与行为科学系副主任、压力与健康中心主任。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "注意变得很窄，体验却可能更鲜明",
+      "source_seconds": 558.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从一名哮喘患者，到舞台催眠的危险",
+      "source_seconds": 688.78,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "脑网络的改变，与“直接控制身体”的限度",
+      "source_seconds": 1262.77,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "压力与失眠，先松开身体反应的回路",
+      "source_seconds": 1737.42,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "恐惧如何被回避维持，又怎样增加新的联想",
+      "source_seconds": 2010.2,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "创伤治疗中的解离，与可靠记忆不是一回事",
+      "source_seconds": 2432.1,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "临床诊断在前，催眠镇痛是辅助治疗",
+      "source_seconds": 3059.85,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "强迫、迷信与习惯，不能用同一个标签解释",
+      "source_seconds": 3421.33,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "催眠易感性相对稳定，眼球测试只是一个线索",
+      "source_seconds": 3745.893,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "EMDR的疗效问题，与眼动机制问题要分开",
+      "source_seconds": 4552.39,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "接近痛苦的前提，是能够掌握接近的方式",
+      "source_seconds": 4941.44,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体信号要听，也要判断它意味着什么",
+      "source_seconds": 5298.75,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "悲伤承认失去，也容纳关系留下的东西",
+      "source_seconds": 5494.96,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "儿童的想象可以参与医疗，但需要成人结构",
+      "source_seconds": 5744.73,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "群体、药物与GABA，相关性不等于自行配药的理由",
+      "source_seconds": 5923.63,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "呼吸是一个入口，最终目标仍是具体生活能力",
+      "source_seconds": 6148.65,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T05:55:17Z"
+}

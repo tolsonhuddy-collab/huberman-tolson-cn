@@ -1,0 +1,110 @@
+{
+  "id": "ep-feb85c65063a",
+  "title_zh": "当进食不再只是选择：饥饿、奖赏与进食障碍的脑内回路",
+  "title_en": "Healthy Eating & Eating Disorders - Anorexia, Bulimia, Binging",
+  "source_url": "https://www.hubermanlab.com/episode/healthy-eating-and-eating-disorders-anorexia-bulimia-binging",
+  "published": "2021-09-06T08:00:00Z",
+  "editor_note": "依据2021年节目原创精读。删广告和重复口播；不复现限制、清除或增加消耗的操作技巧。人体蛋白研究、旧诊断、患病率、GLP-1、DBS及安非他酮禁忌在正文就地辨析；本篇不是现行诊疗指南。",
+  "source_intro": "节目首发采用官方RSS记录2021-09-06T08:00:00Z（原始-0000为UTC），不采用2025索引日期。原节目身份和官方封面由本批登记冻结。本地TXT全文阅读，并逐节检查VTT真实cue邻文；章节为真实本地字幕cue起点，未原音回听或独立音画对齐。VTT末端8176.979秒比RSS时长7884秒长292.979秒，原因未明，不推定广告偏移。",
+  "dek": "从胃肠与瘦素信号，到限制和暴食的习惯回路，理解知道风险却仍难以改变的疾病；保留临床边界并修正节目药物疑误。",
+  "hosts": [
+    {
+      "name": "安德鲁·休伯曼（Andrew Huberman）",
+      "role": "主持人",
+      "bio": "斯坦福大学神经生物学与眼科学教授，Huberman Lab主持人。"
+    }
+  ],
+  "sections": [
+    {
+      "title": "健康饮食的问题，比进食时间表更大",
+      "source_seconds": 482.06,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "蛋白质与肌肉时钟：小鼠机制和人体关联要分开",
+      "source_seconds": 575.05,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "从普通担忧到临床疾病，不能靠外观划线",
+      "source_seconds": 1616.04,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "胃的体积、肠道营养与脂肪储备，都在向脑传信",
+      "source_seconds": 2411.792,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "知道该做什么，与当下做得到之间，隔着两套系统",
+      "source_seconds": 3116.91,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "青春期、遗传易感与营养不足，形成彼此影响的循环",
+      "source_seconds": 3739.27,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "一个神经递质的故事，解释不了全部厌食症",
+      "source_seconds": 4225.56,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "食物选择研究：知识丰富，也可能被限制习惯接管",
+      "source_seconds": 4389.54,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "前额叶的计划，与纹状体的自动化，不是善恶两种脑",
+      "source_seconds": 4783.9,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "细节特别清楚，整体却难以重新进入视野",
+      "source_seconds": 5426.35,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "家庭支持的目标，是让治疗更可能持续",
+      "source_seconds": 5623.32,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "实验性精神活性治疗，不能从可塑性直接跳到疗效",
+      "source_seconds": 5742.79,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "运动能否帮助恢复，要先看身体是否允许",
+      "source_seconds": 6034.86,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "身体意象可以失真，反复争论外观未必能改变它",
+      "source_seconds": 6214.36,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "贪食与暴食的关键，是失控和痛苦，不能只数食物",
+      "source_seconds": 6474.24,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "抑制控制与处方药：机制有帮助，药名清单却可能有危险",
+      "source_seconds": 6790.68,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "深部脑刺激探索的是线索，侵入性和研究阶段不能省略",
+      "source_seconds": 7094.8,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    },
+    {
+      "title": "回到餐桌：弹性、求助和少一点道德评判",
+      "source_seconds": 7603.82,
+      "timestamp_provenance": "local_vtt_unverified_audio"
+    }
+  ],
+  "updated": "2026-11-04T05:53:43Z"
+}

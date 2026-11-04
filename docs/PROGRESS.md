@@ -1,5 +1,13 @@
 # 生产进度快照
 
+## 当前状态
+
+已发布 320 篇中文精读，目录 412 条；本轮恰好新增 10 篇。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
+
+## 历史交付快照（2026-10-20）
+
+以下保留原始记录和当时数字，不代表当前库存或授权范围。
+
 更新于2026-10-20T06:52:06+00:00。累计61/279篇独立全文审核通过，剩余218篇。本页为交付快照；本机精确状态以pipeline status与private/progress.json为准。
 
 | 范围 | 实际状态 |
