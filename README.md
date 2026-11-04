@@ -14,6 +14,8 @@
 
 当前目录 412 条：长节目 321、Essentials 62、AMA 19、现场问答 10。已发布 350 篇：321 篇长节目、19 篇 AMA（3 篇公开全长、16 篇公开节选，不是会员版完整节目）、10 篇公开发行现场问答（非整场演讲）。其余 62 条 Essentials 保留在目录中：61 条确认是原节目重剪，不重复编写；1 条独立增量待核。目录数、官方 Feed 条目数与精读数不是同一口径。
 
+官方RSS另有41条未入现有目录的Essentials：7份取得的公开文本经比对未见实质独立增量，34条尚未取得完整可用文本，不能据此认定仅有音频或全部重复。全部103条的对应原集、处理结果和材料缺口见[Essentials覆盖清单](docs/ESSENTIALS_COVERAGE.md)。
+
 ## 访问地址
 
 - 主站：https://huberman-reading-001.tolsonhuddy.chatgpt.site
@@ -61,6 +63,8 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 Coverage is not limited to long interviews. Full episodes, standalone Q&As, and other substantive programmes are eligible; duplicate material, promotions, and trailers are excluded. Essentials must be checked against their original episodes. An AMA excerpt is labelled with its actual scope and is never presented as a full episode. Usable complete source material, independent full-text review, and revision checks remain required.
 
 The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. The 350 published essays comprise 321 long episodes, 19 AMAs (3 publicly released full episodes and 16 public excerpts, not the complete member editions), and 10 released live Q&As, not entire event lectures. The remaining 62 Essentials stay in the catalog: 61 are verified recuts, and 1 has no confirmed independent increment. Catalog, official-feed, and essay counts have different meanings.
+
+The official RSS also lists 41 Essentials outside the current catalog: 7 obtained public texts show no substantive independent increment after comparison, while 34 still lack a complete usable text in this source check. This does not establish audio-only availability or duplication. See the [Essentials coverage inventory](docs/ESSENTIALS_COVERAGE.md) for all 103 relationships and material gaps.
 
 ## Where to read
 

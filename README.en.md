@@ -8,6 +8,8 @@ Coverage is not limited to long interviews. Full episodes, standalone Q&As, and 
 
 The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. The 350 published essays comprise 321 long episodes, 19 AMAs (3 publicly released full episodes and 16 public excerpts, not the complete member editions), and 10 released live Q&As, not entire event lectures. The remaining 62 Essentials stay in the catalog: 61 are verified recuts, and 1 has no confirmed independent increment. Catalog, official-feed, and essay counts have different meanings.
 
+The official RSS also lists 41 Essentials outside the current catalog: 7 obtained public texts show no substantive independent increment after comparison, while 34 still lack a complete usable text in this source check. This does not establish audio-only availability or duplication. See the [Essentials coverage inventory](docs/ESSENTIALS_COVERAGE.md) for all 103 relationships and material gaps.
+
 ## Where to read
 
 - Primary: https://huberman-reading-001.tolsonhuddy.chatgpt.site

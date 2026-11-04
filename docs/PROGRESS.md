@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已发布 350 篇中文精读，目录 412 条；本轮请求新增 50 篇，来源与独立性核查支持 30 篇，实际新增 30 篇；尚缺 20 份独立完整来源。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
+已发布 350 篇中文精读，目录 412 条；本轮新增 30 篇；后续范围已改为逐期处理全部 103 条 Essentials，而非机械补足旧的 50 篇数量。已分类：68 条无需独立编写、1 条版本差异待核、34 条缺完整可用文本；当前未确认额外可制作的独立 Essentials。详见 [覆盖清单](ESSENTIALS_COVERAGE.md)。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
 
 ## 历史交付快照（2026-10-20）
 

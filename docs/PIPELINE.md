@@ -59,6 +59,14 @@ python3 scripts/build_site.py --published --out dist
 
 `build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。节目封面和人物肖像不在 `site/zh/` 中，页面使用占位肖像，封面显示「节目封面待核实」。
 
+## Essentials 覆盖登记
+
+可选 `catalog/essentials-coverage.json` 只登记内容关系，不生成文章。`episodes` 中每项为既有 Essentials 的 `episode_id`、`classification`（`covered_by_original` 或 `difference_unresolved`）、关联长节目的 `original_episode_id` 及可选公开说明。关系须经实际来源对照，不可仅按题名或原集链接判重复；公开文件不带原文、私有审稿记录或本机路径。
+
+只有关联原集在本次实际文章集合中，目录才显示“原集已有精读”及阅读链接；否则显示“原集精读待上线”且无死链。差异未决保留“内容差异待核”。已有原集覆盖的条目既不算新增精读，也不算待整理；全部和 Essentials 类别仍可看到它。已有独立文章的条目不得用覆盖关系替代。 `status` 仍反映正文生产进度，不把跳过的重剪记为 `reviewed`；规划候选时须同时读取覆盖登记，不能因正文状态仍为 pending 而重复制作。`outside_catalog` 仅为资料清单，不添目录卡片、编号或 feed 条目。无此文件时输出保持兼容，CSS/JS及文章正文不因此变更。
+
+此更新须在首批 30 篇成功双站发布后再应用；先拉取最新 main，保留用户修改，重新核验真实目录、订阅及旧资源不变。全量 feed 与 OPML 仍只由构建器生成。
+
 ## Git 提交署名
 
 本项目的 Git author 与 committer 必须显式使用 `Tolson` 和当前账号已核实的 GitHub noreply 邮箱 `295500140+tolsonhuddy-collab@users.noreply.github.com`。禁止使用或自动回退到 Mac 账户中文全名。

@@ -1,0 +1,830 @@
+{
+  "schema_version": 1,
+  "episodes": [
+    {
+      "episode_id": "ep-78461cb15467",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-0bd47ae75b19",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-15ac5a12216e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-78efd7a453d6",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-3507e782c54b",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-38cec3806ff4",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-f49222a7d05c",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-e10487e653f6",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-6d7059c94d82",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-3e33ee9bd2ef",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-17c1dc3dd9bd",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-70278eeab12a",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-7d61f989657d",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-c21e01009e70",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-26617c443535",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-8d57fef211ff",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-8b15772976ea",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-1ab6a0a40b82",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-66c7617c1540",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-5efd8ffc8237",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-a6ad206056f4",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-7d45eb03e05f",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-62986fbec659",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-7ea326c07fa9",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-54c61b15c54e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-7c336f78df2b",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-1a7a239acdc5",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-a2532a0ebef0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-c896423e6285",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-98e26b9d135c",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-4aa23dd28289",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-6add29747eed",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-3702b1c45de7",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-736f1d2af0e0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-ce9bf920b6c3",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-c9c2a889d370",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-673b1412960f",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-eedf6643a888",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-fe47c1d2f0df",
+      "classification": "covered_by_original",
+      "original_episode_id": "003-sapolsky",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-5e40b50cbfe6",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-e553004d8669",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-b282586c0469",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-5ec86cf31868",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-a05bb4455c1e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-d20d0a3e1eb0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-62dcbb286ce1",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-28507c2c30b1",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-f1e7d1a1115e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-989a9d70f69b",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-ed6695a51b45",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-905d691a83c8",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-4d7b6475bb39",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-a87101e989b0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-a9ead45fee8d",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-feb85c65063a",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-9ebc412101ff",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-556969a758b9",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-35d461981999",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-cb36c2c01e20",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-71d6bca42a82",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-06f005a22800",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-77ac85f6e36a",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-e685f81b7b76",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-2566ace94f6d",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-3401f0283896",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-79c656e88f95",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-cb6194a3fe03",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-44f13ebee3a9",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-56fb89bddccc",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-e2d6e8196779",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-bcc92ce7c473",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-89187427e63b",
+      "classification": "difference_unresolved",
+      "original_episode_id": "ep-d8d3b65405d0",
+      "public_note": "与关联原集的现有转录有少量差异，独立增量尚未确认。"
+    },
+    {
+      "episode_id": "ep-39b468572cb3",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-09e733036355",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-1dbf6f22acc6",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-8ae736ddcdb7",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-af77c0fe930b",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-e01a59e75af3",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-584e72a3d36a",
+      "classification": "covered_by_original",
+      "original_episode_id": "002-master-sleep",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-895a7db049ec",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-fd18fdd68e77",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-f059d592997e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-8939b0a441d0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-bcf30a2b8761",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-583f2161a425",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-6e2afeed2a99",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-c23e5161bc41",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-b5a9bb24ef40",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-35b37c0bf008",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-a4c08e4caf1f",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-32af6553b37c",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-0dd97645fb33",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-1890a5d1c003",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-ffa22816fbad",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-65c82bf624e6",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-3d4700a5ab8b",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-4138b2a25494",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-8124970c1564",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-948b863e4da0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-dca181ff2326",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-ce4420417789",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-68a8061f36a1",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-edf9c7b0bd51",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-d0ad2a27e06e",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-8df982eb97ef",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-379209fa3b7d",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-bec9035385f0",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-f24e1cc09ea4",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-123493f9b6d4",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-de6bbfcdaf82",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-d519991ddcd5",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-db9fd581ae63",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-14f44ad3adb1",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-d4ea162b9ee3",
+      "classification": "covered_by_original",
+      "original_episode_id": "001-nervous-system",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-bbf81c7384bb",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-dc4f55a3eaa4",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-b4959fd76067",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-e832534ef954",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    },
+    {
+      "episode_id": "ep-5b119239d6ae",
+      "classification": "covered_by_original",
+      "original_episode_id": "ep-db8344d1f7e6",
+      "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
+    }
+  ],
+  "outside_catalog": [
+    {
+      "GUID": "0e7652e4-d35f-11f1-b3a7-b7d05ab514d4",
+      "title": "Essentials: How Smells Influence Our Hormones, Health & Behavior | Dr. Noam Sobel",
+      "published_UTC": "2026-10-29T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-smells-influence-our-hormones-health-and-behavior-noam-sobel",
+      "video_URL": "https://youtu.be/arMMF0ISRRM",
+      "original_id": "ep-f72bed32a4ca",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "6244ca0c-cdda-11f1-be2a-4fdc8347f8b3",
+      "title": "Essentials: Developing a Rational Approach to Supplementation for Health & Performance",
+      "published_UTC": "2026-10-22T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-developing-a-rational-approach-to-supplementation-for-health-and-performance",
+      "video_URL": "https://www.youtube.com/watch?v=eYSOabR3YP0",
+      "original_id": "ep-da2dd5c9edc1",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "7f829250-c850-11f1-b9bb-1feaa173d4c1",
+      "title": "Essentials: Neuralink & Technologies to Enhance Human Brains | Dr. Matt MacDougall",
+      "published_UTC": "2026-10-15T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-neuralink-and-technologies-to-enhance-human-brains-matt-macdougall",
+      "video_URL": "https://youtu.be/YdIJW8RTptU",
+      "original_id": "ep-937713fcdae3",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "aaccd642-c2b9-11f1-a1ef-2385c10f4819",
+      "title": "Essentials: Manage Stress & Build Resilience | Dr. Elissa Epel",
+      "published_UTC": "2026-10-08T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-manage-stress-and-build-resilience-elissa-epel",
+      "video_URL": "https://youtu.be/RqMWvhvt0DQ",
+      "original_id": "ep-b04750aa86b4",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "6e6186c8-bd49-11f1-9d60-eb7961313029",
+      "title": "Essentials: Tools to Improve Your Focus & Concentration",
+      "published_UTC": "2026-10-01T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-tools-to-improve-your-focus-and-concentration",
+      "video_URL": "https://youtu.be/8e3RC1L5V_Y",
+      "original_id": "ep-937a22ccf186",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "3214407a-b7e5-11f1-a48a-3f6aff694931",
+      "title": "Essentials: Optimal Protocols to Build Strength & Grow Muscles | Dr. Andy Galpin",
+      "published_UTC": "2026-09-24T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-optimal-protocols-to-build-strength-and-grow-muscles-andy-galpin",
+      "video_URL": "https://youtu.be/Gu04f6aFuBY",
+      "original_id": "ep-febed2076dce",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "07e9f8b8-b244-11f1-b80b-9fee5bb32f26",
+      "title": "Essentials: How to Assess & Improve All Aspects of Your Fitness | Dr. Andy Galpin",
+      "published_UTC": "2026-09-17T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-to-assess-and-improve-all-aspects-of-your-fitness-andy-galpin",
+      "video_URL": null,
+      "original_id": "ep-6700648fa987",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "a8e086bc-acd4-11f1-9687-3bc4959b6315",
+      "title": "Essentials: Genes & the Inheritance of Memories Across Generations | Dr. Oded Rechavi",
+      "published_UTC": "2026-09-10T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-genes-and-the-inheritance-of-memories-across-generations-oded-rechavi",
+      "video_URL": "https://youtu.be/1_iNTFSw4Nc",
+      "original_id": "ep-cc7e1bf819d8",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "5e716144-a74a-11f1-9b49-9bef3cb4a30a",
+      "title": "Essentials: Use Sleep to Enhance Learning, Memory & Emotional State | Dr. Gina Poe",
+      "published_UTC": "2026-09-03T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-use-sleep-to-enhance-learning-memory-and-emotional-state-gina-poe",
+      "video_URL": "https://youtu.be/f1NNmiz547U",
+      "original_id": "ep-fe785edf7982",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "fc952864-a1b5-11f1-b8de-73cba0073142",
+      "title": "Essentials: Diet & Nutrition for Mental Health | Dr. Chris Palmer",
+      "published_UTC": "2026-08-27T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-diet-and-nutrition-for-mental-health-chris-palmer",
+      "video_URL": "https://youtu.be/E56LSFCNdkI",
+      "original_id": "ep-2ce30114c99d",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "5565a244-9c51-11f1-b8ea-e308145cac46",
+      "title": "Essentials: How to Access Your Creativity | Rick Rubin",
+      "published_UTC": "2026-08-20T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-to-access-your-creativity-rick-rubin",
+      "video_URL": "https://youtu.be/QP8Kpf1UQwM",
+      "original_id": "ep-12fc192566f8",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "d5bc4646-96ca-11f1-aaf8-2bcc5308b57c",
+      "title": "Essentials: How to Optimize Female Hormone Health for Vitality & Longevity | Dr. Sara Gottfried",
+      "published_UTC": "2026-08-13T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-to-optimize-female-hormone-health-for-vitality-and-longevity-sara-gottfried",
+      "video_URL": null,
+      "original_id": "ep-4af18b8da139",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "bc8da5d2-9145-11f1-aca1-2777bebad8e7",
+      "title": "Essentials: Control Your Brain Chemistry for Focus, Motivation & Well-Being ",
+      "published_UTC": "2026-08-06T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-control-brain-chemistry-for-focus-motivation-and-well-being",
+      "video_URL": "https://youtu.be/xKvlK7OqZso",
+      "original_id": "ep-4cdbcadf770c",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "20b30760-8bd2-11f1-a696-b36351beadba",
+      "title": "Essentials: How to Become Resilient, Forge Your Identity & Lead Others | Jocko Willink",
+      "published_UTC": "2026-07-30T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-to-become-resilient-forge-your-identity-and-lead-others-jocko-willink",
+      "video_URL": "https://youtu.be/lxDf8uEypJU",
+      "original_id": "ep-aa1dd6fcd762",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "明确候选只开放至04:33锚，后文为付费内容，未取得全文。"
+    },
+    {
+      "GUID": "4cce45d0-8650-11f1-bfef-b3259654b6b2",
+      "title": "Essentials: Using Meditation to Focus, View Consciousness & Expand Your Mind | Dr. Sam Harris",
+      "published_UTC": "2026-07-23T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-using-meditation-to-focus-view-consciousness-and-expand-your-mind-sam-harris",
+      "video_URL": "https://youtu.be/LQI8tl8S2PE",
+      "original_id": "ep-9fa5af54c85c",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "e614eff6-80d7-11f1-a215-df69293e9c50",
+      "title": "Essentials: The Science & Treatment of Bipolar Disorder",
+      "published_UTC": "2026-07-16T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-and-treatment-of-bipolar-disorder",
+      "video_URL": "https://youtu.be/UTB5gAkjevk",
+      "original_id": "ep-362ba7ab07f1",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "明确候选只开放预览，剩余约24分钟需付费，未取得全文。"
+    },
+    {
+      "GUID": "4770a1ce-7b55-11f1-b552-7395758b62d8",
+      "title": "Essentials: The Science & Treatment of Obsessive Compulsive Disorder (OCD)",
+      "published_UTC": "2026-07-09T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-and-treatment-of-obsessive-compulsive-disorder",
+      "video_URL": "https://youtu.be/AtU3EvMzZDY",
+      "original_id": "ep-d98f43f2ef91",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "3447d81e-75d4-11f1-bdd9-fff21f539a49",
+      "title": "Essentials: Tools for Hormone Optimization in Males | Dr. Kyle Gillett",
+      "published_UTC": "2026-07-02T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-tools-for-hormone-optimization-in-males-kyle-gillett",
+      "video_URL": "https://youtu.be/O-groYMqrQw",
+      "original_id": "ep-d22cec685b58",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "明确候选只见至01:27锚的开头，后文为付费内容，未取得全文。"
+    },
+    {
+      "GUID": "c53f0060-7041-11f1-8287-d3035b745a86",
+      "title": "Essentials: The Science of Eating for Health, Fat Loss & Lean Muscle | Dr. Layne Norton",
+      "published_UTC": "2026-06-25T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-of-eating-for-health-fat-loss-and-lean-muscle-layne-norton",
+      "video_URL": "https://youtu.be/WWe4up63hb4",
+      "original_id": "ep-e7e00141aaf8",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "3b42bd84-6a51-11f1-b442-0f78f81b3455",
+      "title": "Essentials: Improve Flexibility with Research-Supported Stretching Protocols",
+      "published_UTC": "2026-06-18T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-improve-flexibility-with-research-supported-stretching-protocols",
+      "video_URL": "https://youtu.be/syJYZm5OZhE",
+      "original_id": "ep-1a28fc43e593",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "主候选工具不可访问；备用仅摘要和短开头，获取全文要求邮箱，未提交。"
+    },
+    {
+      "GUID": "f70fb0f4-64b5-11f1-a007-8f725da7d012",
+      "title": "Essentials: Sleep Toolkit for Optimizing Sleep & Sleep-Wake Timing",
+      "published_UTC": "2026-06-11T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-sleep-toolkit-for-optimizing-sleep-and-sleep-wake-timing",
+      "video_URL": "https://youtu.be/RTgJSQtvo88",
+      "original_id": "ep-f626bf9dc4eb",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "2d042ec8-5fd0-11f1-a583-d34f98bf1200",
+      "title": "Essentials: Psychedelics & Neurostimulation for Brain Rewiring | Dr. Nolan Williams",
+      "published_UTC": "2026-06-04T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-psychedelics-neurostimulation-for-brain-rewiring-nolan-williams",
+      "video_URL": "https://youtu.be/GkG1hMhIQ_Q",
+      "original_id": "ep-8080fb5eb21b",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "99e90962-5a5f-11f1-ba4d-eb43c61a17f9",
+      "title": "Essentials: The Science & Process of Healing from Grief",
+      "published_UTC": "2026-05-28T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-and-process-of-healing-from-grief",
+      "video_URL": "https://youtu.be/PlQyGIIAGNo",
+      "original_id": "ep-5da22a397b4f",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "763cf880-54cd-11f1-873c-5798e0b960a6",
+      "title": "Essentials: The Science of Learning & Speaking Languages | Dr. Eddie Chang",
+      "published_UTC": "2026-05-21T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-of-learning-and-speaking-languages-eddie-chang",
+      "video_URL": "https://youtu.be/MOPqSEK6GvA",
+      "original_id": "ep-fc64b125a761",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "2f4d884c-4f26-11f1-ba88-474650216222",
+      "title": "Essentials: Understanding & Controlling Aggression",
+      "published_UTC": "2026-05-14T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-understanding-and-controlling-aggression",
+      "video_URL": "https://youtu.be/916vhhUsmgE",
+      "original_id": "ep-18420b80e283",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "46facd70-496c-11f1-be87-afc03e1435f1",
+      "title": "Essentials: Compulsive Behaviors & Deep Brain Stimulation | Dr. Casey Halpern",
+      "published_UTC": "2026-05-07T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-compulsive-behaviors-deep-brain-stimulation-casey-halpern",
+      "video_URL": "https://youtu.be/aKDzF_fMMrc",
+      "original_id": "ep-5ac2087d8bb1",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "996cb320-444e-11f1-9918-8b74615a3b82",
+      "title": "Essentials: Control Sugar Cravings & Metabolism with Science-Based Tools",
+      "published_UTC": "2026-04-30T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-control-sugar-cravings-and-metabolism-with-science-based-tools",
+      "video_URL": "https://youtu.be/qUUfucHC7tU",
+      "original_id": "ep-44adc3af31a0",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "仅取得开头若干可见窗口、末锚15:15，不保证此前连续完整；约18:43后段未取得。"
+    },
+    {
+      "GUID": "c43eecb2-3ec7-11f1-ba1c-678e21968de5",
+      "title": "Essentials: The Neuroscience of Speech, Language & Music | Dr. Erich Jarvis",
+      "published_UTC": "2026-04-23T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-neuroscience-of-speech-language-and-music-erich-jarvis",
+      "video_URL": "https://youtu.be/3bnLgOxHMB8",
+      "original_id": "ep-71bfbc25c9a4",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "b6628e5a-394a-11f1-8c45-d771da3d89a4",
+      "title": "Essentials: Understand & Improve Memory Using Science-Based Tools",
+      "published_UTC": "2026-04-16T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-understand-and-mprove-memory-using-science-based-tools",
+      "video_URL": "https://youtu.be/U6dnOVth7-I",
+      "original_id": "ep-5daff5b0516e",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "179fc9fa-339f-11f1-bfdc-23c7ba4982f2",
+      "title": "Essentials: The Biology of Aggression, Mating & Arousal | Dr. David Anderson",
+      "published_UTC": "2026-04-09T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-biology-of-aggression-mating-and-arousal-david-anderson",
+      "video_URL": "https://youtu.be/xZ4I2aE8zQA",
+      "original_id": "ep-74d5535e8425",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "73f0c80a-2e4d-11f1-9770-17ae1ea27b2c",
+      "title": "Essentials: How to Build Strength, Muscle Size & Endurance | Dr. Andy Galpin",
+      "published_UTC": "2026-04-02T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-how-to-build-strength-muscle-size-and-endurance-andy-galpin",
+      "video_URL": "https://youtu.be/0VSOoMuStvg",
+      "original_id": "ep-8a07b95897ff",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "3794bcf8-2895-11f1-849c-a3fc51f323d9",
+      "title": "Essentials: Using Salt to Optimize Mental & Physical Performance",
+      "published_UTC": "2026-03-26T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-using-salt-to-optimize-mental-and-physical-performance",
+      "video_URL": "https://youtu.be/hnzrPKvRBD8",
+      "original_id": "ep-a39c9a50f0d6",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "99fba850-2347-11f1-b301-77c034c99428",
+      "title": "Essentials: Tools for Setting & Achieving Goals | Dr. Emily Balcetis",
+      "published_UTC": "2026-03-19T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-tools-for-setting-and-achieving-goals-emily-balcetis",
+      "video_URL": "https://youtu.be/RECLTp_YxSU",
+      "original_id": "ep-72f2a377b0e1",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "923b1d74-1dc7-11f1-bca5-eb04b3218f04",
+      "title": "Essentials: Benefits of Sauna & Deliberate Heat Exposure",
+      "published_UTC": "2026-03-12T08:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-benefits-of-sauna-and-deliberate-heat-exposure",
+      "video_URL": "https://youtu.be/iuPQmw4Ax00",
+      "original_id": "ep-20ef86a02150",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "e9960488-182e-11f1-b650-0f8dc737850c",
+      "title": "Essentials: The Biology of Taste Perception & Sugar Craving | Dr. Charles Zuker",
+      "published_UTC": "2026-03-05T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-biology-of-taste-perception-and-sugar-craving-charles-zuker",
+      "video_URL": "https://youtu.be/cru_4P6qVYQ",
+      "original_id": "ep-11fa6fb3bf3c",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "373771a0-128e-11f1-8e9a-e7159f1580b6",
+      "title": "Essentials: Using Light to Optimize Health",
+      "published_UTC": "2026-02-26T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-using-light-to-optimize-health",
+      "video_URL": "https://youtu.be/7UeojKTzeHE",
+      "original_id": "ep-dd43875884ec",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "2544007c-0d5b-11f1-8ed1-d36fdc75f1ae",
+      "title": "Essentials: Optimize Your Exercise Program with Science-Based Tools | Jeff Cavaliere",
+      "published_UTC": "2026-02-19T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-optimize-your-exercise-program-with-science-based-tools-jeff-cavaliere",
+      "video_URL": "https://youtu.be/9GzlbLIU5dU",
+      "original_id": "ep-f8859e32b2d6",
+      "classification": "covered_by_original",
+      "complete_text_available": true,
+      "reason": "本次公开精华文本未见实质增量，无需独立编写"
+    },
+    {
+      "GUID": "27764768-0777-11f1-ae6a-2349a01fcc14",
+      "title": "Essentials: The Science of Love, Desire & Attachment",
+      "published_UTC": "2026-02-12T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-of-love-desire-and-attachment",
+      "video_URL": "https://youtu.be/NEkUNahduWY",
+      "original_id": "ep-5bca88cab850",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "3af15e04-0245-11f1-a871-3b49da6996da",
+      "title": "Essentials: The Science & Practice of Movement | Ido Portal",
+      "published_UTC": "2026-02-05T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-the-science-and-practice-of-movement-ido-portal",
+      "video_URL": "https://youtu.be/JsICN9ZiSjA",
+      "original_id": "ep-fb41d70f5225",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "591a819e-fcc8-11f0-b36b-93e1183366b1",
+      "title": "Essentials: Using Play to Rewire & Improve Your Brain",
+      "published_UTC": "2026-01-29T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-using-play-to-rewire-and-improve-your-brain",
+      "video_URL": "https://youtu.be/BRG4_KfTxbs",
+      "original_id": "ep-6903b71aabfc",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    },
+    {
+      "GUID": "93e24316-f70f-11f0-99c5-735c7152e7d3",
+      "title": "Essentials: Therapy, Treating Trauma & Other Life Challenges | Dr. Paul Conti",
+      "published_UTC": "2026-01-22T09:00:00Z",
+      "official_URL": "https://www.hubermanlab.com/episode/essentials-therapy-treating-trauma-and-other-life-challenges-paul-conti",
+      "video_URL": "https://youtu.be/iNL_BFlHYZ8",
+      "original_id": "ep-f0efe678db99",
+      "classification": "source_unverified",
+      "complete_text_available": false,
+      "reason": "限定检索及已见缓存未取得可用完整正文；与原集的独立增量未确认。"
+    }
+  ]
+}

@@ -439,8 +439,44 @@ def directory_numbers(episodes: list[dict], progress: dict, articles: dict) -> d
     return {ep["id"]: number for number, ep in enumerate(ordered, 1)}
 
 
+def read_essentials_coverage(root: Path, episodes: list[dict], articles: dict) -> dict[str, dict]:
+    """Optional catalog relationships; never create articles or catalog entries."""
+    path = root / "catalog/essentials-coverage.json"
+    if not path.exists():
+        return {}
+    data = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(data, dict) or type(data.get("schema_version")) is not int or data["schema_version"] != 1 or not isinstance(data.get("episodes"), list):
+        raise ValueError("essentials-coverage must contain schema_version 1 and an episodes list")
+    if "outside_catalog" in data and not isinstance(data["outside_catalog"], list):
+        raise ValueError("essentials-coverage.outside_catalog must be a list; it is data only")
+    by_id, result = {ep["id"]: ep for ep in episodes}, {}
+    for entry in data["episodes"]:
+        if not isinstance(entry, dict):
+            raise ValueError("Essentials coverage entries must be objects")
+        eid = entry.get("episode_id")
+        if not isinstance(eid, str) or eid not in by_id or eid in result or by_id[eid]["kind"] != "essentials":
+            raise ValueError("Coverage requires a unique existing Essentials catalog ID")
+        if eid in articles:
+            raise ValueError("Coverage cannot override an existing independent article")
+        classification = entry.get("classification")
+        if classification not in {"covered_by_original", "difference_unresolved"}:
+            raise ValueError(f"Unknown Essentials coverage classification: {eid}")
+        original = entry.get("original_episode_id")
+        if classification == "covered_by_original" and original is None:
+            raise ValueError(f"Covered Essentials requires an original_episode_id: {eid}")
+        if original is not None and (not isinstance(original, str) or original == eid or original not in by_id or by_id[original]["kind"] != "long_episode"):
+            raise ValueError(f"Original episode must be an existing long-episode catalog ID: {eid}")
+        if not isinstance(entry.get("public_note", ""), str):
+            raise ValueError(f"Essentials public_note must be text: {eid}")
+        result[eid] = entry
+    # outside_catalog is intentionally not appended, numbered, linked, or fed.
+    return result
+
+
 def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: dict, articles: dict, private: bool, covers: dict | None = None) -> str:
     covers = covers or {}
+    coverage = read_essentials_coverage(root, episodes, articles) if private else {}
+    covered_ids = {eid for eid, entry in coverage.items() if entry["classification"] == "covered_by_original" and entry["original_episode_id"] in articles}
     numbers = directory_numbers(episodes, progress, articles)
     cards = []
     ordered = sorted(episodes, key=lambda ep: numbers[ep["id"]])
@@ -450,6 +486,7 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         meta = metadata.get(episode_id, {})
         status = progress.get(episode_id, {}).get("status", "pending")
         readable = episode_id in articles and status in READY
+        availability = "covered" if episode_id in covered_ids else "readable" if readable else "pending"
         state_text = STATUSES[status] if not (status in READY and not readable) else "稿件文件缺失 · 暂不可读"
         title = str(meta.get("title_zh") or ep["title_en"])
         host_names = " · ".join(str(h.get("name", "")) for h in meta.get("hosts", []))
@@ -476,7 +513,15 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         cover = covers.get(episode_id)
         media = f'<a class="card-cover" href="episodes/{episode_id}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" loading="lazy"></a>' if cover and readable else '<p class="cover-status">节目封面待核实</p>'
         status_html = "" if status == "reviewed" and readable else f'<p class="card-status {"is-readable" if readable else ""}">{escape(state_text)}</p>'
-        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{"readable" if readable else "pending"}" data-search="{escape(search, quote=True)}">{media}<div class="card-content"><div class="card-category"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span>{badges}</div><h3>{title_html}</h3>{english}<div class="card-byline">{byline_portrait}<p class="card-people">{escape(host_names)}</p></div>{status_html}</div></article>')
+        if episode_id in coverage:
+            entry = coverage[episode_id]
+            original = entry.get("original_episode_id")
+            state_text = "内容差异待核" if entry["classification"] == "difference_unresolved" else "原集已有精读" if original in articles else "原集精读待上线"
+            cta = f' · <a href="episodes/{original}.html">{"阅读原集精读" if entry["classification"] == "covered_by_original" else "查看相关原集精读"}</a>' if original in articles else ""
+            status_html = f'<p class="card-status">{escape(state_text)}{cta}</p>'
+            if entry.get("public_note"):
+                status_html += f'<p class="card-status">{escape(entry["public_note"])}</p>'
+        cards.append(f'<article class="episode-card" data-kind="{ep["kind"]}" data-availability="{availability}" data-search="{escape(search, quote=True)}">{media}<div class="card-content"><div class="card-category"><span class="card-number" title="目录顺序 {number}；不是原节目期号" aria-label="目录顺序 {number}">{number:03}</span>{badges}</div><h3>{title_html}</h3>{english}<div class="card-byline">{byline_portrait}<p class="card-people">{escape(host_names)}</p></div>{status_html}</div></article>')
     counts = Counter(ep["kind"] for ep in episodes)
     readable_count = len(articles)
     reviewed_count = sum(ep["id"] in articles and progress.get(ep["id"], {}).get("status") == "reviewed" for ep in episodes)
@@ -491,8 +536,10 @@ def render_catalog(root: Path, episodes: list[dict], progress: dict, metadata: d
         dek = str(meta.get("homepage_dek") or meta.get("dek") or "")
         feature = f'<section id="front-story" class="front-story" aria-labelledby="front-story-title"><a class="front-story-image" href="episodes/{eid}.html"><img src="{escape(cover["path"], quote=True)}" alt="{escape(cover["alt"], quote=True)}" width="1920" height="1080" fetchpriority="high"></a><div class="front-story-copy"><p class="front-story-label">编辑精选</p><h2 id="front-story-title"><a href="episodes/{eid}.html">{escape(title)}</a></h2><p class="front-story-english" lang="en">{escape(ep["title_en"])}</p><p class="front-story-dek">{escape(dek)}</p><p class="front-story-meta">{escape(people)} · <a href="{escape(cover["source_url"], quote=True)}" target="_blank" rel="noopener noreferrer">官方节目页</a></p><a class="front-story-read" href="episodes/{eid}.html">阅读全文</a></div></section>'
     notice = "中文精读为独立编辑整理。正文、节目封面与人物肖像不属于 MIT 代码许可；原节目及素材权利归各自权利人所有。" if private else "纯版式演示：目录、人物与短文均为虚构占位，不代表真实节目或制作进度。"
+    if coverage:
+        notice += " Essentials的内容关系按目录标注；原集已覆盖的条目可从卡片进入原集，不计作新增精读或待整理。"
     values = {"description": escape(notice, quote=True), "notice": escape(notice), "total": str(len(episodes)), "cards": "\n".join(cards),
-        "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count),
+        "feature": feature, "readable_count": str(readable_count), "reviewed_count": str(reviewed_count), "pending_count": str(len(episodes) - readable_count - len(covered_ids)),
         "counts": escape(" · ".join(f"{KINDS[k]} {counts[k]}" for k in KINDS if counts[k]) + f" · 已有本地稿 {readable_count}"),
         "kind_options": "".join(f'<option value="{kind}">{label}</option>' for kind, label in KINDS.items()),
         "feed_href": "feed.xml",
