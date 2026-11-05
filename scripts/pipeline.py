@@ -29,7 +29,7 @@ TRANSITIONS = {
 }
 PUBLIC_ROOT_FILES = {".gitignore", "README.md", "README.en.md", "LICENSE", "CONTENT_RIGHTS.md", "DEPENDENCIES.md", "Makefile"}
 PUBLIC_DIRS = {"scripts", "tests", "docs", "catalog", "web", ".github", "site"}
-# User-merged README assets only. Episode imagery remains outside the repository.
+# Pinned README assets; registered homepage imagery is allowed separately below.
 PUBLIC_DOC_IMAGES = {
     "docs/screenshot-home.png": "ad3c7c21b334ba11e24cfa654aa7e6460a16b233de446a236c1967641beede98",
     "docs/xiaohongshu.jpg": "85f58e322174ef5f34b2ae7f7623aa9de0765b0d745c1435ff3dba1ae440f0a5",
@@ -340,6 +340,8 @@ def public_path(name):
         return False
     if name in PUBLIC_DOC_IMAGES or name in PUBLIC_ROOT_FILES:
         return True
+    if name.startswith("site/homepage-media/"):
+        return bool(re.fullmatch(r"site/homepage-media/(?:covers|portraits)/[a-z0-9][a-z0-9-]{0,81}\.(?:jpg|jpeg|png|webp)", name))
     if len(path.parts) <= 1 or path.parts[0] not in PUBLIC_DIRS:
         return False
     if any(part.startswith(".") and part != ".github" for part in path.parts) or "__pycache__" in path.parts:
@@ -356,6 +358,17 @@ def audit_git():
     symlinks = [name for name in names if name and (ROOT / name).is_symlink()]
     if bad or symlinks:
         raise ValueError("Git index contains non-allowlisted paths or symlinks: " + ", ".join(bad + symlinks))
+    media = {name for name in names if name.startswith("site/homepage-media/")}
+    if media:
+        manifest = read_json(ROOT / "site/homepage.json")
+        registered = {"site/homepage-media/" + image["path"]: image["sha256"]
+                      for entry in manifest["episodes"].values() for image in entry.values()}
+        if set(registered) != media:
+            raise ValueError("Homepage media index must exactly match its image register")
+        for name, expected in registered.items():
+            indexed = subprocess.check_output(["git", "show", ":" + name], cwd=ROOT)
+            if hashlib.sha256(indexed).hexdigest() != expected or sha(ROOT / name) != expected:
+                raise ValueError("Registered homepage image bytes changed: " + name)
     for name in names:
         if name in PUBLIC_DOC_IMAGES:
             if any((ROOT / parent).is_symlink() for parent in Path(name).parents):

@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 from collections import Counter
+from copy import deepcopy
 from datetime import datetime, timezone
 import hashlib
 from html import escape
@@ -431,6 +432,53 @@ def copy_covers(root: Path, staging: Path, metadata: dict, articles: dict, priva
         covers[episode_id] = {"path": relative, "source_url": source,
                               "alt": str(cover.get("alt") or "节目封面：" + metadata[episode_id].get("title_en", episode_id))}
     return covers
+
+
+def published_homepage(root: Path, staging: Path, metadata: dict, articles: dict, covers: dict) -> tuple[dict, dict]:
+    """Apply registered homepage imagery only; article/feed metadata stays untouched."""
+    manifest = root / "site/homepage.json"
+    if not manifest.exists():
+        return metadata, covers
+    data = json.loads(manifest.read_text(encoding="utf-8"))
+    if type(data.get("schema_version")) is not int or data["schema_version"] != 1 or not isinstance(data.get("episodes"), dict):
+        raise ValueError("Homepage needs schema_version 1 and episode imagery")
+    entries, featured = data["episodes"], data.get("featured_episode_id")
+    if featured not in entries or featured not in articles:
+        raise ValueError("Homepage featured episode needs an existing essay and cover")
+    home, home_covers = deepcopy(metadata), dict(covers)
+    base = root / "site/homepage-media"
+    for eid, entry in entries.items():
+        if eid not in articles or not isinstance(entry, dict) or set(entry) - {"cover", "portrait"}:
+            raise ValueError("Homepage imagery must belong to an existing essay")
+        for kind, item in entry.items():
+            if not isinstance(item, dict):
+                raise ValueError("Homepage image registration must be an object")
+            folder, stem = ("covers", eid) if kind == "cover" else ("portraits", eid + "-0")
+            relative = item.get("path", "")
+            if not isinstance(relative, str) or relative not in {f"{folder}/{stem}{ext}" for ext in (".jpg", ".jpeg", ".png", ".webp")}:
+                raise ValueError("Homepage image must have its registered raster filename")
+            path = base / relative
+            if any(p.is_symlink() for p in [path, path.parent, base, base.parent]) or not path.is_file() or not path.resolve().is_relative_to(root.resolve()):
+                raise ValueError("Homepage image must be a local non-symlink file")
+            if hashlib.sha256(path.read_bytes()).hexdigest() != item.get("sha256") or not safe_url(item.get("source_url")):
+                raise ValueError("Homepage image hash/source does not match its register")
+            from PIL import Image
+            with Image.open(path) as image:
+                if image.format not in {"JPEG", "PNG", "WEBP"}:
+                    raise ValueError("Homepage image must contain a supported raster")
+                image.verify()
+            (staging / folder).mkdir(exist_ok=True)
+            shutil.copyfile(path, staging / relative)
+            if kind == "cover":
+                home_covers[eid] = {"path": relative, "alt": str(item.get("alt", "")), "source_url": item["source_url"]}
+            else:
+                if not home[eid].get("hosts"):
+                    raise ValueError("Homepage portrait needs a named speaker")
+                home[eid]["hosts"][0]["portrait"] = str(path.relative_to(root))
+        home[eid]["homepage_featured"] = eid == featured
+    if featured not in home_covers:
+        raise ValueError("Homepage featured episode needs a verified cover")
+    return home, home_covers
 
 
 def directory_numbers(episodes: list[dict], progress: dict, articles: dict) -> dict[str, int]:
@@ -1089,7 +1137,8 @@ def build_site(root: Path, out: Path, private: bool = False, published: bool = F
                 image_sizes[ep["id"]] = card.stat().st_size
                 html = render_article(root, staging, ep, progress[ep["id"]], metadata[ep["id"]], articles[ep["id"]], real, fragment, site_url(base, f"og/{ep['id']}.jpg"))
                 (staging / "episodes" / (ep["id"] + ".html")).write_text(html, encoding="utf-8")
-        (staging / "index.html").write_text(render_catalog(root, episodes, progress, metadata, articles, real, covers), encoding="utf-8")
+        home_metadata, home_covers = published_homepage(root, staging, metadata, articles, covers) if published else (metadata, covers)
+        (staging / "index.html").write_text(render_catalog(root, episodes, progress, home_metadata, articles, real, home_covers), encoding="utf-8")
         feed_entry_count = write_feeds(staging, root, episodes, progress, metadata, fragments, published_mode=published, private=private, base=base, image_sizes=image_sizes)
         (staging / ".nojekyll").write_text("", encoding="utf-8")
         manifest = {

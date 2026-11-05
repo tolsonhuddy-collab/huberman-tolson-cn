@@ -51,13 +51,15 @@ python3 scripts/build_site.py --published --out dist
 
 `audit-git` 检查已跟踪路径是否落在允许的代码、文档、目录和模板范围内，并拒绝符号链接。它不阅读正文质量。
 
-`docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹。其他图片、节目封面和原始转写仍不在允许范围内。`site/zh/` 下的 `.md` 与 `.json` 可以入库。
+`docs/screenshot-home.png` 与 `docs/xiaohongshu.jpg` 是两项固定例外：索引必须为普通非可执行文件，索引和工作区的 SHA256 都须匹配 `PUBLIC_DOC_IMAGES` 中已核定的值。更换这两张图片需要同步审核指纹。经核实的首页图片可放在 `site/homepage-media/covers/`、`site/homepage-media/portraits/`，须与 `site/homepage.json` 的节目、来源、SHA256 一一匹配；不随此授权导入无关媒体。原始转写仍不在允许范围内。`site/zh/` 下的 `.md` 与 `.json` 可以入库。
 
 `build_site.py --demo` 不读取 `catalog/`、`private/` 或 `site/zh/`。输出必须在 `dist/` 内，默认就是 `dist/`。页面是虚构短文。
 
 `build_site.py --private` 读取目录、`private/progress.json`、`private/articles/{id}.md` 和 `private/metadata/{id}.json`。输出必须在 `private/` 下面，且不能盖住文章、元数据、分块、来源映射或审稿目录。默认输出是 `private/site`。构建器只覆盖带有自己标记 `.huberman-build.json` 的旧输出；失败时留下上一份成功结果。构建器不联网，也不部署。
 
-`build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。节目封面和人物肖像不在 `site/zh/` 中，页面使用占位肖像，封面显示「节目封面待核实」。
+`build_site.py --published` 读取 `catalog/episodes.json` 和 `site/zh/{id}.md`、`site/zh/{id}.json`。不读取 `private/`，也不读取英文转写。输出必须在 `dist/` 内。有稿的条目按已审精读渲染；没有稿的条目只留在目录里。
+
+`site/homepage.json` 是独立的首页展示登记，包含精选节目 ID、封面/头像的本地路径、来源与 SHA256；图片来自主站既有核实素材，权利归各自权利人，不属 MIT 代码许可。公开构建仅在生成首页时使用它，复制原图片而不改写；不改变文章页的元数据、肖像或全文订阅。未登记的图片仍用占位，不根据标题猜图。更新精选或首页素材时同时更新登记与图片，运行测试并验证正文、OG、RSS/OPML 和 CSS/JS 不变。不得以私有审稿资料替代此公开登记。
 
 ## Essentials 覆盖登记
 

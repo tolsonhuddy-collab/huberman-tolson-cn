@@ -31,7 +31,7 @@ python3 -m http.server 8000 --bind 127.0.0.1 --directory dist
 python3 scripts/build_site.py --published --out dist
 ```
 
-它只读 `catalog/episodes.json` 与 `site/zh/`，输出到 `dist/`。页面用与主站相同的读者文案。不传 `--base-url` 时，Feed 链接指向主站；GitHub Pages 构建会传入备用站地址。`site/zh/` 不含节目封面和人物肖像，构建结果使用占位肖像，并另行生成 `dist/og/` 文字卡片。
+它读取 `catalog/episodes.json` 与 `site/zh/`，输出到 `dist/`。页面用与主站相同的读者文案。不传 `--base-url` 时，Feed 链接指向主站；GitHub Pages 构建会传入备用站地址。独立的 `site/homepage.json` 与 `site/homepage-media/` 只为首页提供已核实的精选、封面和头像，来源与文件哈希须匹配；不改变文章页或订阅正文。未登记的首页图片及文章页继续使用原占位行为，`dist/og/` 文字卡片仍单独生成。
 
 私有阅读稿使用独立命令：
 
