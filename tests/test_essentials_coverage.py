@@ -128,6 +128,22 @@ class EssentialsCoverageTests(unittest.TestCase):
         self.assertIn("待整理 <span>2</span>", after["index.html"].decode())
         self.assertNotIn("Outside catalog data only", after["index.html"].decode())
 
+    def test_removed_unresolved_entry_stays_out_of_catalog_and_keeps_original(self):
+        episodes = self.inputs()
+        self.coverage([{"episode_id": "episode-essentials", "classification": "difference_unresolved", "original_episode_id": "episode-b"}])
+        site.build_site(self.root, Path("private/before-removal"), private=True)
+        before = self.tree(self.root / "private/before-removal")
+        self.write_json("catalog/episodes.json", {"episodes": [ep for ep in episodes if ep["id"] != "episode-essentials"]})
+        self.coverage([])
+        result = site.build_site(self.root, Path("private/after-removal"), private=True)
+        after = self.tree(self.root / "private/after-removal")
+        self.assertEqual(result["article_count"], 2)
+        self.assertNotIn("An Essentials episode", after["index.html"].decode())
+        self.assertNotIn("内容差异待核", after["index.html"].decode())
+        self.assertEqual(before["episodes/episode-b.html"], after["episodes/episode-b.html"])
+        for rel in ["feed.xml", "podcasts/huberman/feed.xml", "tolson-rss.opml"]:
+            self.assertEqual(before[rel], after[rel])
+
     def test_bad_relationships_cannot_override_catalog_or_articles(self):
         self.inputs()
         valid = {"episode_id": "episode-essentials", "classification": "covered_by_original", "original_episode_id": "episode-b"}

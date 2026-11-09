@@ -2,7 +2,7 @@
   "schema_version": 1,
   "counts": {
     "long_episode": 321,
-    "essentials": 62,
+    "essentials": 61,
     "ama": 19,
     "live_qa": 10
   },
@@ -3845,26 +3845,6 @@
       "timeline": {
         "start_seconds": 0.0,
         "end_seconds": 15732.17,
-        "provenance": "local_vtt_unverified"
-      }
-    },
-    {
-      "id": "ep-89187427e63b",
-      "title_en": "How to Optimize Testosterone & Estrogen ｜ Huberman Lab Essentials",
-      "source_file": "How to Optimize Testosterone & Estrogen ｜ Huberman Lab Essentials.txt",
-      "kind": "essentials",
-      "guest_series": false,
-      "word_count": 5455,
-      "source_sha256": "21ede8e9b9e3772f7aed66f9aea64c74dd8ddb624dacbd26d1b22d4e96b58d87",
-      "vtt_sha256": "ae721305247bc8079d78f260e9757b322e5d69d5d6c9c82298d91c4d02bf4b4e",
-      "source_index_date": "2025-02-20",
-      "source_provider": "github(mrlong0129)",
-      "source_url": null,
-      "video_id": null,
-      "explicit_excerpt": false,
-      "timeline": {
-        "start_seconds": 0.199,
-        "end_seconds": 1962.049,
         "provenance": "local_vtt_unverified"
       }
     },

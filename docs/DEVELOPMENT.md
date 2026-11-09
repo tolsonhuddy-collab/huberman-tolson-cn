@@ -4,7 +4,7 @@ Reader-facing notes are in the [README](../README.md). Quick start, how the scri
 
 ## Repository and build
 
-This repository holds catalog metadata (412 entries), the published Chinese essays in `site/zh/` (one Markdown file and one metadata file per essay), a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
+This repository holds catalog metadata (411 entries), the published Chinese essays in `site/zh/` (one Markdown file and one metadata file per essay), a stdlib Python site builder, and bookkeeping scripts. English transcripts and original podcast files are not in Git. `python3 scripts/build_site.py --demo --out dist` builds a fictional layout only. `python3 scripts/build_site.py --published --out dist` builds the committed essays.
 
 The backup site is built from those essays. Its feed links point at the backup site. A primary-site build omits `--base-url` and keeps primary-site links.
 
@@ -16,8 +16,8 @@ Coverage and deduplication rules are in [PIPELINE](PIPELINE.md#收录范围与�
 
 Examples: [神经系统如何工作，又如何被经验改变](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/001-nervous-system.html), [好睡眠从白天开始](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/002-master-sleep.html).
 
-1. **Catalog.** The repository lists 412 episode records: 321 long episodes (including 16 Guest Series), 62 Essentials, 19 AMAs, and 10 live Q&As. Filter by Chinese title, English title, person, and kind, or show only essays that exist or entries still waiting.
-2. **Chinese essays.** Long essays that follow the episode structure, one page each. The published count is in the [README](../README.md). The 350 published essays include 321 long programmes, 19 AMAs (16 public excerpts), and 10 released event Q&As. The 62 Essentials are catalog-only: 61 recuts and 1 unconfirmed increment.
+1. **Catalog.** The repository lists 411 episode records: 321 long episodes (including 16 Guest Series), 61 Essentials, 19 AMAs, and 10 live Q&As. Filter by Chinese title, English title, person, and kind, or show only essays that exist or entries still waiting.
+2. **Chinese essays.** Long essays that follow the episode structure, one page each. The published count is in the [README](../README.md). The 350 published essays include 321 long programmes, 19 AMAs (16 public excerpts), and 10 released event Q&As. The 61 Essentials are catalog-only verified recuts. The unresolved Testosterone & Estrogen recut was removed from the catalog on 2026-11-09; its original essay remains available.
 3. **Static reading pages.** A chapter list on the right on desktop, collapsible on phones. Type size 16–24px, light or dark background, and reading progress on the page. Editing and source notes at the end are collapsed by default.
 
 ## Capabilities
@@ -25,7 +25,7 @@ Examples: [神经系统如何工作，又如何被经验改变](https://huberman
 | Capability | What it does |
 |---|---|
 | Chinese essays | Keep the arguments, mechanisms, examples, and research limits. Drop ads, small talk, and repetition. Interviews name the speaker. Transcript doubts stay in the text. |
-| Catalog | 412 records in `catalog/episodes.json`. Cards with an essay link to their own page. Cards without one show the title and kind only. |
+| Catalog | 411 records in `catalog/episodes.json`. Cards with an essay link to their own page. Cards without one show the title and kind only. |
 | Filters | The home page matches Chinese title, English title, person, and kind, and can show only published essays or entries still waiting. The featured block hides while a filter is on. |
 | Reading page | The desktop chapter list highlights with scrolling. The phone list collapses. Type size and background are stored on the device. Source notes at the end can be expanded. |
 | Sources | Verified episode links are at the end of the essay. An unverified video address is left blank, not invented. Chapter times come from the local subtitles. |

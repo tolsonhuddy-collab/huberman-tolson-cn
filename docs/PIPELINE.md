@@ -8,7 +8,7 @@
 
 收录范围不限于长访谈。完整节目、独立问答和其他有实质内容的节目均可评估；重复内容、推广与预告不制作。Essentials 须先与原节目去重，AMA 节选明确标注实际覆盖范围，不称为完整一期。制作仍要求可用的完整来源、独立全文审核和修订复验。
 
-当前目录为 412 条：`long_episode` 321（含 Guest Series 16）、`essentials` 62、`ama` 19、`live_qa` 10；16 条 AMA 的 `explicit_excerpt` 为真。已发布 350 篇：长节目 321、AMA 19（公开全长 3、公开节选 16）、现场问答 10；其余 62 条 Essentials 为目录项，61 条重剪跳过、1 条独立增量未确认。目录数量不代表已发布数量，也不是官方节目总量。
+当前目录为 411 条：`long_episode` 321（含 Guest Series 16）、`essentials` 61、`ama` 19、`live_qa` 10；16 条 AMA 的 `explicit_excerpt` 为真。已发布 350 篇：长节目 321、AMA 19（公开全长 3、公开节选 16）、现场问答 10；其余 61 条 Essentials 均为重剪目录项，不重复制作。2026-11-09 已删除睾酮与雌激素精华版目录项，原集精读不变；待整理为 0。目录数量不代表已发布数量，也不是官方节目总量。
 
 `prepare`、`record` 与构建器现已支持四种类别。新非长节目必须在元数据声明 `source_scope` 和 `source_scope_note`：`public_excerpt`（公开 AMA 节选）、`full_episode`（公开全长 AMA）、`released_qa`（已发行现场问答段，非整场演讲）、`independent_essentials`（确证有独立增量的 Essentials）。范围必须与目录类别和 `explicit_excerpt` 一致，不能把类型改成长节目，也不能为短来源填字数。旧 370 份 TXT/VTT 是原始输入批次，后来补充的目录不能靠重新 ingest 旧批次覆盖。
 

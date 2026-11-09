@@ -218,12 +218,6 @@
       "public_note": "原节目重剪，未发现需要独立编写的实质增量。"
     },
     {
-      "episode_id": "ep-89187427e63b",
-      "classification": "difference_unresolved",
-      "original_episode_id": "ep-d8d3b65405d0",
-      "public_note": "与关联原集的现有转录有少量差异，独立增量尚未确认。"
-    },
-    {
       "episode_id": "ep-39b468572cb3",
       "classification": "covered_by_original",
       "original_episode_id": "ep-09e733036355",

@@ -1,8 +1,10 @@
 # Essentials 覆盖与材料清单
 
-这是103条Essentials的来源关系清单，不是103篇新增精读。62条在现有节目目录，41条仅列入本清单，不改变目录编号、精读篇数或全文订阅。
+这是103条Essentials的来源关系清单，不是103篇新增精读。截至 2026-11-09，61 条在现有节目目录，41 条原本仅列入本清单，另 1 条睾酮与雌激素精华版目录项已删除。历史核对记录保留，不代表新增精读或待制作任务。
 
 2026-11-05逐篇核对用户补充的35组TXT/SRT后，103条中100条由已有原集精读覆盖，3条保留版本差异待核，确认可新增的独立精读为0条。此前34条缺文均已收到可读文本版本，不再列为缺全文或待STT；取得文字不自动证明独立增量。原集关联或机械匹配率本身都不能证明重剪。
+
+2026-11-09 处理：睾酮与雌激素精华版不再作为待整理条目。现有核验未能可靠确定差句的制作来源，因此删除该目录项，保留原集精读；没有把差异改标为已确认覆盖，也没有改写原集正文。当前 100 条已覆盖、2 条目录外差异未决、1 条已删除目录项。
 
 公开视频机器转录未与原音逐秒校准；其中7条按实际取得的视频/发布方文本版本比较，不宣称与RSS广告版逐字相同。会员/访问限制不绕过；需要付费、STT或补全文的条目等待合法材料，不据摘要补写。
 
@@ -96,7 +98,7 @@
 |2025-03-13|Essentials: Boost Your Energy & Immune System with Cortisol & Adrenaline|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-boost-your-energy-immune-system-with-cortisol-adrenaline)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-78efd7a453d6.html)|
 |2025-03-06|Essentials: How to Control Your Metabolism by Thyroid & Growth Hormone|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-how-to-control-your-metabolism-by-thyroid-growth-hormone)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-bec9035385f0.html)|
 |2025-02-27|Essentials: How to Control Hunger, Eating & Satiety|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-how-to-control-hunger-eating-satiety)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-3401f0283896.html)|
-|2025-02-20|Essentials: How to Optimize Testosterone & Estrogen|版本差异待核|[节目](https://www.hubermanlab.com/episode/essentials-how-to-optimize-testosterone-estrogen)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-d8d3b65405d0.html)|
+|2025-02-20|Essentials: How to Optimize Testosterone & Estrogen|已删除目录项；原集精读保留|[节目](https://www.hubermanlab.com/episode/essentials-how-to-optimize-testosterone-estrogen)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-d8d3b65405d0.html)|
 |2025-02-13|Essentials: How Hormones Shape Sexual Development|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-how-hormones-shape-sexual-development)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-8df982eb97ef.html)|
 |2025-02-06|Essentials: The Science of Emotions & Relationships|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-the-science-of-emotions-relationships)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-e832534ef954.html)|
 |2025-01-30|Essentials: How to Increase Motivation & Drive|无需另篇|[节目](https://www.hubermanlab.com/episode/essentials-how-to-increase-motivation-drive)|地址待核|[精读](https://huberman-reading-001.tolsonhuddy.chatgpt.site/episodes/ep-14f44ad3adb1.html)|
@@ -120,6 +122,10 @@
 
 - **2026-10-22 补充剂**：用户SRT约07:54–08:23的行为/化学支持过渡及27:55–28:30的omega-3单成分排序，在所查原集文本未定位。需可靠的同版来源或定点原音核实，不能直接认作新增科学结论。
 - **2026-02-26 光照**：用户SRT约25:08–25:38有93词的低位夜灯和视网膜/视野说明，未在原TXT、VTT及既有官方原集缓存定位。尚不能区分原转录缺段与剪辑/改录。
-- **2025-02-20 睾酮与雌激素**：用户SRT约03:23–03:34的竞争/肾上腺句仍在，2021原集对应约15:45转场的文本无该句；新精华字幕不能独自证明原录音漏转或后来补录。
 
-以上时间仅为字幕定位，未回听校准。三项均不再要求重交整份Essentials字幕；即使版本归属确认，仍须判断是否有足够实质独立内容。转录中数字、否定词和药名疑误保留，未用新字幕自动覆盖已发布正文。
+
+以上时间仅为字幕定位，未回听校准。这两项均不再要求重交整份 Essentials 字幕；即使版本归属确认，仍须判断是否有足够实质独立内容。转录中数字、否定词和药名疑误保留，未用新字幕自动覆盖已发布正文。
+
+## 已删除的目录项
+
+2026-11-09 删除 2025-02-20《Essentials: How to Optimize Testosterone & Estrogen》的目录项（ep-89187427e63b）。短音频 ASR 及共享声学锚点支持当前发行版本在对应位置有编辑差异，但不能确定差句来源或录制年份；未人工回听，也不声称已解决历史版本归属。该条不再作为待整理或待制作事项，原集 ep-d8d3b65405d0 的既有精读、正文与订阅保持不变。

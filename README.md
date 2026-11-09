@@ -12,9 +12,9 @@
 
 收录范围不限于长访谈。完整节目、独立问答和其他有实质内容的节目均可评估；重复内容、推广与预告不制作。Essentials 须先与原节目去重，AMA 节选明确标注实际覆盖范围，不称为完整一期。制作仍要求可用的完整来源、独立全文审核和修订复验。
 
-当前目录 412 条：长节目 321、Essentials 62、AMA 19、现场问答 10。已发布 350 篇：321 篇长节目、19 篇 AMA（3 篇公开全长、16 篇公开节选，不是会员版完整节目）、10 篇公开发行现场问答（非整场演讲）。其余 62 条 Essentials 保留在目录中：61 条确认是原节目重剪，不重复编写；1 条独立增量待核。目录数、官方 Feed 条目数与精读数不是同一口径。
+当前目录 411 条：长节目 321、Essentials 61、AMA 19、现场问答 10。已发布 350 篇：321 篇长节目、19 篇 AMA（3 篇公开全长、16 篇公开节选，不是会员版完整节目）、10 篇公开发行现场问答（非整场演讲）。其余 61 条 Essentials 为已确认的原节目重剪，不重复编写。2026-11-09 已移除《How to Optimize Testosterone & Estrogen》的精华版目录项，原集精读保留，目录待整理为 0。目录数、官方 Feed 条目数与精读数不是同一口径。
 
-官方RSS另有41条未入现有目录的Essentials。2026-11-05补齐34组TXT/SRT后，41条均有可读文本版本：39条由原集覆盖，2条保留少量版本差异待核。合计103条Essentials为100条已覆盖、3条版本待核，不计作新增精读。逐项对应与核对限制见[Essentials覆盖清单](docs/ESSENTIALS_COVERAGE.md)。
+官方RSS另有41条未入现有目录的Essentials。2026-11-05补齐34组TXT/SRT后，41条均有可读文本版本：39条由原集覆盖，2条保留少量版本差异待核。截至 2026-11-09，103 条历史核对记录中，100 条由原集覆盖，2 条目录外版本差异未决，1 条精华版目录项已删除。删除不代表差句来源已核实，以上均不计作新增精读。逐项对应与核对限制见[Essentials覆盖清单](docs/ESSENTIALS_COVERAGE.md)。
 
 ## 访问地址
 
@@ -62,9 +62,9 @@ A static Chinese reading companion to the [Huberman Lab](https://www.hubermanlab
 
 Coverage is not limited to long interviews. Full episodes, standalone Q&As, and other substantive programmes are eligible; duplicate material, promotions, and trailers are excluded. Essentials must be checked against their original episodes. An AMA excerpt is labelled with its actual scope and is never presented as a full episode. Usable complete source material, independent full-text review, and revision checks remain required.
 
-The catalog contains 412 records: 321 long episodes, 62 Essentials, 19 AMAs, and 10 live Q&As. The 350 published essays comprise 321 long episodes, 19 AMAs (3 publicly released full episodes and 16 public excerpts, not the complete member editions), and 10 released live Q&As, not entire event lectures. The remaining 62 Essentials stay in the catalog: 61 are verified recuts, and 1 has no confirmed independent increment. Catalog, official-feed, and essay counts have different meanings.
+The catalog contains 411 records: 321 long episodes, 61 Essentials, 19 AMAs, and 10 live Q&As. The 350 published essays comprise 321 long episodes, 19 AMAs (3 publicly released full episodes and 16 public excerpts, not the complete member editions), and 10 released live Q&As, not entire event lectures. The remaining 61 Essentials are verified recuts. On 2026-11-09, the Testosterone & Estrogen Essentials catalog entry was removed; its original-episode essay remains available, and no catalog entries await processing. Catalog, official-feed, and essay counts have different meanings.
 
-The official RSS also lists 41 Essentials outside the current catalog. After 34 TXT/SRT pairs were supplied on 2026-11-05, all 41 have readable text versions: 39 are covered by their originals and 2 retain unresolved version differences. Across all 103 Essentials, 100 are covered and 3 remain under version review; these are not new essays. See the [Essentials coverage inventory](docs/ESSENTIALS_COVERAGE.md) for individual relationships and verification limits.
+The official RSS also lists 41 Essentials outside the current catalog. After 34 TXT/SRT pairs were supplied on 2026-11-05, all 41 have readable text versions: 39 are covered by their originals and 2 retain unresolved version differences. As of 2026-11-09, the 103 historical review records comprise 100 covered recuts, 2 unresolved versions outside the catalog, and 1 removed catalog entry. Removal does not establish the disputed sentence’s provenance; none is counted as a new essay. See the [Essentials coverage inventory](docs/ESSENTIALS_COVERAGE.md) for individual relationships and verification limits.
 
 ## Where to read
 

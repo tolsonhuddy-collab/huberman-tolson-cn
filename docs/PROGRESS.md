@@ -2,7 +2,7 @@
 
 ## 当前状态
 
-已发布 350 篇中文精读，目录 412 条；本轮新增 30 篇；后续范围已改为逐期处理全部 103 条 Essentials，而非机械补足旧的 50 篇数量。已分类：68 条无需独立编写、1 条版本差异待核、34 条缺完整可用文本；当前未确认额外可制作的独立 Essentials。详见 [覆盖清单](ESSENTIALS_COVERAGE.md)。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。本机逐篇审核与部署证据由 `private/HANDOFF.json` 的 `authoritative_current_state` 指向；不再制作 Library 阅读包。
+已发布 350 篇中文精读，目录 411 条：321 长节目、61 Essentials、19 AMA、10 现场问答。2026-11-09 已删除睾酮与雌激素精华版目录项，原集精读保留，目录待整理为 0。103 条历史 Essentials 核对记录中，100 条由原集覆盖，2 条目录外版本差异未决，1 条已删除目录项；没有新增精读，也未将来源差异冒称为已解决。详见 [覆盖清单](ESSENTIALS_COVERAGE.md)。当前数量与双站入口见 [README](../README.md)，维护流程见 [PIPELINE](PIPELINE.md)。
 
 ## 历史交付快照（2026-10-20）
 
